@@ -595,6 +595,30 @@
     {
       "key": "menuConnectTimeout",
       "value": "Connection timed out. Check the server and retry."
+    },
+    {
+      "key": "menuCurrencyLabel",
+      "value": "Village coins"
+    },
+    {
+      "key": "menuDiagnostics",
+      "value": "Dev diagnostics"
+    },
+    {
+      "key": "menuPracticeTip",
+      "value": "Practice placement and aiming. Weapons differ only in appearance."
+    },
+    {
+      "key": "menuAbout",
+      "value": "How to play"
+    },
+    {
+      "key": "menuAboutBody",
+      "value": "Tap to place, drag to aim, then READY. Everyone throws simultaneously after the round locks."
+    },
+    {
+      "key": "menuMatchAlreadyStarted",
+      "value": "The match has started; reopen the room to resume."
     }
   ]
 }

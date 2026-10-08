@@ -1,0 +1,35 @@
+{
+  "modified": [
+    "unity-client/Assets/HitMe/Resources/Localization/en.json",
+    "unity-client/Assets/HitMe/Resources/Localization/vi.json",
+    "unity-client/Assets/HitMe/Scripts/UI/MainMenu/MainMenuController.cs",
+    "unity-client/Assets/HitMe/Scripts/UI/MainMenu/MainMenuView.cs",
+    "unity-client/Assets/HitMe/Scripts/UI/MainMenu/MenuNavigationService.cs",
+    "unity-client/Assets/HitMe/Scripts/UI/MainMenu/SafeAreaAdapter.cs"
+  ],
+  "created": [
+    "docs/HITME_MASTER_IMPLEMENTATION_STATUS.md",
+    "docs/MAIN_MENU_PHASE_1_REPORT.md",
+    "docs/PHASE1_FILE_INVENTORY.json",
+    "docs/PHASE1_TEST_SUMMARY.json",
+    "docs/PHASE1_WEB_BUILD.json",
+    "docs/Phase1-EditMode-results.xml",
+    "docs/Phase1-PlayMode-results.xml",
+    "docs/screenshots/Phase1-MainMenu-360x800.png",
+    "docs/screenshots/Phase1-MainMenu-375x812.png",
+    "docs/screenshots/Phase1-MainMenu-390x844.png",
+    "docs/screenshots/Phase1-MainMenu-393x852.png",
+    "docs/screenshots/Phase1-MainMenu-402x874.png",
+    "docs/screenshots/Phase1-MainMenu-412x915.png",
+    "docs/screenshots/Phase1-MainMenu-430x932.png",
+    "unity-client/Assets/HitMe/Scripts/UI/MainMenu/MenuScreenState.cs",
+    "unity-client/Assets/HitMe/Scripts/UI/MainMenu/MenuScreenState.cs.meta",
+    "unity-client/Assets/HitMe/Tests/CharacterEditMode/MenuScreenStateTests.cs",
+    "unity-client/Assets/HitMe/Tests/CharacterEditMode/MenuScreenStateTests.cs.meta",
+    "unity-client/Assets/HitMe/Tests/PlayMode/Phase1MenuFlowTests.cs",
+    "unity-client/Assets/HitMe/Tests/PlayMode/Phase1MenuFlowTests.cs.meta"
+  ],
+  "checkpointBefore": "86ec5bc",
+  "sceneAndPrefab": "Existing MainMenu scene and root prefab reused; no duplicate scene/prefab.",
+  "newArtworkImported": 0
+}

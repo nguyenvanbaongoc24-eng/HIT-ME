@@ -1,0 +1,50 @@
+{
+  "gate1": "PARTIAL",
+  "checkpointBefore": "86ec5bc",
+  "checkpointAfterTag": "hitme-master-phase1-20261009",
+  "backend": {
+    "passed": 16,
+    "failed": 0,
+    "realWSMatch": true,
+    "verifiedTestCAWSS": true
+  },
+  "build": {
+    "result": "Succeeded",
+    "bytes": 21395100,
+    "errors": 0,
+    "warnings": 5,
+    "seconds": 191.8225892
+  },
+  "browserSmoke": "BLOCKED: existing data:error-page; user reopen requested",
+  "realEditorServerUI": {
+    "executed": true,
+    "privateCreateLeave": true,
+    "quickLeave": true,
+    "inventoryRoute": true,
+    "navigationRewardCoins": 0
+  },
+  "newPictureRuntimeImports": 0,
+  "iPhoneSafariDeviceTest": "NOT RUN",
+  "chromeAndroidDeviceTest": "NOT RUN",
+  "sizes": [
+    "360x800",
+    "375x812",
+    "390x844",
+    "393x852",
+    "402x874",
+    "412x915",
+    "430x932"
+  ],
+  "EditMode": {
+    "passed": 75,
+    "failed": 0,
+    "skipped": 0,
+    "startedUTC": "2026-10-08 18:52:15Z"
+  },
+  "PlayMode": {
+    "passed": 19,
+    "failed": 0,
+    "skipped": 0,
+    "startedUTC": "2026-10-08 18:52:44Z"
+  }
+}

@@ -595,6 +595,30 @@
     {
       "key": "menuConnectTimeout",
       "value": "Hết thời gian chờ. Kiểm tra server và thử lại."
+    },
+    {
+      "key": "menuCurrencyLabel",
+      "value": "Xu Làng"
+    },
+    {
+      "key": "menuDiagnostics",
+      "value": "Chẩn đoán Dev"
+    },
+    {
+      "key": "menuPracticeTip",
+      "value": "Luyện chọn vị trí và hướng ném. Vũ khí chỉ khác hình ảnh."
+    },
+    {
+      "key": "menuAbout",
+      "value": "Hướng dẫn"
+    },
+    {
+      "key": "menuAboutBody",
+      "value": "Chạm để chọn vị trí, kéo để ngắm rồi SẴN SÀNG. Mọi người ném đồng thời sau khi khóa lượt."
+    },
+    {
+      "key": "menuMatchAlreadyStarted",
+      "value": "Trận đã bắt đầu; hãy mở lại phòng để tiếp tục."
     }
   ]
 }
