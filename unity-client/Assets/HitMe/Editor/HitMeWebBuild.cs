@@ -12,6 +12,8 @@ public static class HitMeWebBuild {
  public static void BuildSprint4()=>BuildTo("SPRINT4_WEB_BUILD.json");
  [MenuItem("HIT ME/Build Sprint 5 Web")]
  public static void BuildSprint5(){MainMenuAssetSetup.Configure();BuildTo("SPRINT5_WEB_BUILD.json");}
+ public static void BuildMasterPhase0()=>BuildTo("PHASE0_WEB_BUILD.json");
+ public static void BuildMasterPhase1(){MainMenuAssetSetup.Configure();BuildTo("PHASE1_WEB_BUILD.json");}
  static void BuildTo(string reportFile){
   if(!BuildPipeline.IsBuildTargetSupported(BuildTargetGroup.WebGL,BuildTarget.WebGL))throw new InvalidOperationException("Web Build Support missing.");
   string[] scenes=FoundationSetup.Scenes.Select(s=>"Assets/HitMe/Scenes/"+s+".unity").ToArray();

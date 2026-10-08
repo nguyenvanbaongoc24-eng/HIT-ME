@@ -1,0 +1,26 @@
+{
+  "gate0": "PASS",
+  "checkpointBefore": "72bea53",
+  "referenceFiles": 5,
+  "newPictureAssetsIntegrated": 0,
+  "existingRuntimeSprites": 27,
+  "build": {
+    "result": "Succeeded",
+    "bytes": 21398041,
+    "errors": 0,
+    "warnings": 1,
+    "seconds": 143.6939638
+  },
+  "iPhoneSafariDeviceTest": "NOT RUN",
+  "browserSmoke": "BLOCKED: tab is a data:error page; user reopen requested",
+  "EditMode": {
+    "passed": 71,
+    "failed": 0,
+    "startedUTC": "2026-10-08 18:39:09Z"
+  },
+  "PlayMode": {
+    "passed": 17,
+    "failed": 0,
+    "startedUTC": "2026-10-08 18:39:40Z"
+  }
+}

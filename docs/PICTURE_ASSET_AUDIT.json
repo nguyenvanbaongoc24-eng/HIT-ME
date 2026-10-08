@@ -1,0 +1,679 @@
+{
+  "referenceFiles": [
+    {
+      "asset_id": "ref_concept_characters_2",
+      "source_path": "D:\\HIT ME\\Picture\\Concept characters 2.png",
+      "extension": ".png",
+      "size_bytes": 3097500,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "alpha": false,
+      "alpha_extrema": null,
+      "sha256": "b2837e15bdd58d133ff395821ef254c113f399bbd118ea44bd144e4ca7301ed4",
+      "category": "reference_composite",
+      "status": "reference_only",
+      "target_path": null,
+      "pivot": null,
+      "ppu": null,
+      "slicing": "none",
+      "atlas": null,
+      "usage": "Characters, pets, weapons, reactions and VFX",
+      "license_notes": "User-provided concept reference; third-party rights not independently confirmed. Not redistributed as runtime art.",
+      "missing_requirements": "Seven illustrated subjects on one board; frames/poses are not independent production sprites."
+    },
+    {
+      "asset_id": "ref_concept_characters",
+      "source_path": "D:\\HIT ME\\Picture\\Concept characters.png",
+      "extension": ".png",
+      "size_bytes": 2975709,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "alpha": false,
+      "alpha_extrema": null,
+      "sha256": "1df2dc6ee8b270dfd42ebd1ec1ccd79018fa6fe18ffc43cf28cc095ff901450f",
+      "category": "reference_composite",
+      "status": "reference_only",
+      "target_path": null,
+      "pivot": null,
+      "ppu": null,
+      "slicing": "none",
+      "atlas": null,
+      "usage": "Human characters, weapons, reactions and VFX",
+      "license_notes": "User-provided concept reference; third-party rights not independently confirmed. Not redistributed as runtime art.",
+      "missing_requirements": "Labeled concept board; no reliable frame grid, foot pivots or transparent exported poses."
+    },
+    {
+      "asset_id": "ref_main_menu",
+      "source_path": "D:\\HIT ME\\Picture\\MAIN MENU.png",
+      "extension": ".png",
+      "size_bytes": 2786372,
+      "dimensions": [
+        941,
+        1672
+      ],
+      "mode": "RGB",
+      "alpha": false,
+      "alpha_extrema": null,
+      "sha256": "84baaac099e8ef6076f345ab30f7f171a67c3242845e11a54e4966b2da5a2798",
+      "category": "reference_composite",
+      "status": "reference_only",
+      "target_path": null,
+      "pivot": null,
+      "ppu": null,
+      "slicing": "none",
+      "atlas": null,
+      "usage": "Main Menu composition",
+      "license_notes": "User-provided concept reference; third-party rights not independently confirmed. Not redistributed as runtime art.",
+      "missing_requirements": "Profile values, logo and button text baked in. Reference only; no standalone background layers."
+    },
+    {
+      "asset_id": "ref_play_in_game",
+      "source_path": "D:\\HIT ME\\Picture\\Play in game.png",
+      "extension": ".png",
+      "size_bytes": 2836209,
+      "dimensions": [
+        967,
+        1627
+      ],
+      "mode": "RGB",
+      "alpha": false,
+      "alpha_extrema": null,
+      "sha256": "d2eebdf4317b335cd7e5ee8d30e2c5b66c9f162ece6cbbc8216ed0e4f80a06cf",
+      "category": "reference_composite",
+      "status": "reference_only",
+      "target_path": null,
+      "pivot": null,
+      "ppu": null,
+      "slicing": "none",
+      "atlas": null,
+      "usage": "Battle/HUD composition",
+      "license_notes": "User-provided concept reference; third-party rights not independently confirmed. Not redistributed as runtime art.",
+      "missing_requirements": "Characters, HP and input UI baked into arena. Not a playable arena/background asset."
+    },
+    {
+      "asset_id": "ref_ui_concept",
+      "source_path": "D:\\HIT ME\\Picture\\UI CONCEPT.png",
+      "extension": ".png",
+      "size_bytes": 3215000,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "alpha": true,
+      "alpha_extrema": [
+        19,
+        252
+      ],
+      "sha256": "97ba21d9b28ba189f0f8ee610412a4486002c2ba9549240f0a17268760e11de0",
+      "category": "reference_composite",
+      "status": "reference_only",
+      "target_path": null,
+      "pivot": null,
+      "ppu": null,
+      "slicing": "none",
+      "atlas": null,
+      "usage": "UI design system",
+      "license_notes": "User-provided concept reference; third-party rights not independently confirmed. Not redistributed as runtime art.",
+      "missing_requirements": "Design board includes labels and mock data; RGBA does not make the compound board a ready sprite."
+    }
+  ],
+  "existingRuntimeSprites": [
+    {
+      "asset_id": "runtime_Arenas_LangQueBacBo_backdrop",
+      "source_path": "unity-client/Assets/HitMe/Art/Arenas/LangQueBacBo/backdrop.png",
+      "category": "production_sprite",
+      "status": "integrated_standalone",
+      "target_path": "unity-client/Assets/HitMe/Art/Arenas/LangQueBacBo/backdrop.png",
+      "dimensions": [
+        853,
+        1844
+      ],
+      "alpha": false,
+      "pivot": "{x: 0.5, y: 0.5}",
+      "ppu": "100",
+      "slicing": "{x: 0, y: 0, z: 0, w: 0}",
+      "atlas": null,
+      "usage": "Existing weapon/environment sprite",
+      "license_notes": "See Assets/HitMe/Art/LICENSES.md and Sprint3A provenance.",
+      "missing_requirements": "Polished art skin/portrait/real frames/layered environment as applicable."
+    },
+    {
+      "asset_id": "runtime_Arenas_LangQueBacBo_sand",
+      "source_path": "unity-client/Assets/HitMe/Art/Arenas/LangQueBacBo/sand.png",
+      "category": "production_sprite",
+      "status": "integrated_standalone",
+      "target_path": "unity-client/Assets/HitMe/Art/Arenas/LangQueBacBo/sand.png",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "alpha": false,
+      "pivot": "{x: 0.5, y: 0.5}",
+      "ppu": "100",
+      "slicing": "{x: 0, y: 0, z: 0, w: 0}",
+      "atlas": null,
+      "usage": "Existing weapon/environment sprite",
+      "license_notes": "See Assets/HitMe/Art/LICENSES.md and Sprint3A provenance.",
+      "missing_requirements": "Polished art skin/portrait/real frames/layered environment as applicable."
+    },
+    {
+      "asset_id": "runtime_Characters_Char01_Player_Idle_frame_000",
+      "source_path": "unity-client/Assets/HitMe/Art/Characters/Char01_Player/Idle/frame_000.png",
+      "category": "production_sprite",
+      "status": "integrated_single_frame",
+      "target_path": "unity-client/Assets/HitMe/Art/Characters/Char01_Player/Idle/frame_000.png",
+      "dimensions": [
+        1146,
+        1373
+      ],
+      "alpha": true,
+      "pivot": "{x: 0.518, y: 0.0095}",
+      "ppu": "100",
+      "slicing": "{x: 0, y: 0, z: 0, w: 0}",
+      "atlas": "HitMeCharacters.spriteatlas",
+      "usage": "One Idle sprite, code tween fallback",
+      "license_notes": "See Assets/HitMe/Art/LICENSES.md and Sprint3A provenance.",
+      "missing_requirements": "Polished art skin/portrait/real frames/layered environment as applicable."
+    },
+    {
+      "asset_id": "runtime_Characters_Char02_BotMale_Idle_frame_000",
+      "source_path": "unity-client/Assets/HitMe/Art/Characters/Char02_BotMale/Idle/frame_000.png",
+      "category": "production_sprite",
+      "status": "integrated_single_frame",
+      "target_path": "unity-client/Assets/HitMe/Art/Characters/Char02_BotMale/Idle/frame_000.png",
+      "dimensions": [
+        1223,
+        1286
+      ],
+      "alpha": true,
+      "pivot": "{x: 0.505, y: 0.0311}",
+      "ppu": "100",
+      "slicing": "{x: 0, y: 0, z: 0, w: 0}",
+      "atlas": "HitMeCharacters.spriteatlas",
+      "usage": "One Idle sprite, code tween fallback",
+      "license_notes": "See Assets/HitMe/Art/LICENSES.md and Sprint3A provenance.",
+      "missing_requirements": "Polished art skin/portrait/real frames/layered environment as applicable."
+    },
+    {
+      "asset_id": "runtime_Characters_Char03_BotFemale_Idle_frame_000",
+      "source_path": "unity-client/Assets/HitMe/Art/Characters/Char03_BotFemale/Idle/frame_000.png",
+      "category": "production_sprite",
+      "status": "integrated_single_frame",
+      "target_path": "unity-client/Assets/HitMe/Art/Characters/Char03_BotFemale/Idle/frame_000.png",
+      "dimensions": [
+        1239,
+        1269
+      ],
+      "alpha": true,
+      "pivot": "{x: 0.51, y: 0.0134}",
+      "ppu": "100",
+      "slicing": "{x: 0, y: 0, z: 0, w: 0}",
+      "atlas": "HitMeCharacters.spriteatlas",
+      "usage": "One Idle sprite, code tween fallback",
+      "license_notes": "See Assets/HitMe/Art/LICENSES.md and Sprint3A provenance.",
+      "missing_requirements": "Polished art skin/portrait/real frames/layered environment as applicable."
+    },
+    {
+      "asset_id": "runtime_UI_Buttons_brick",
+      "source_path": "unity-client/Assets/HitMe/Art/UI/Buttons/brick.png",
+      "category": "production_sprite",
+      "status": "integrated_minimal_ui_fallback",
+      "target_path": "unity-client/Assets/HitMe/Art/UI/Buttons/brick.png",
+      "dimensions": [
+        128,
+        128
+      ],
+      "alpha": true,
+      "pivot": "{x: 0.5, y: 0.5}",
+      "ppu": "100",
+      "slicing": "{x: 32, y: 32, z: 32, w: 32}",
+      "atlas": "MainMenu.spriteatlas",
+      "usage": "Native UI element; not production art polish",
+      "license_notes": "See Assets/HitMe/Art/LICENSES.md and Sprint3A provenance.",
+      "missing_requirements": "Polished art skin/portrait/real frames/layered environment as applicable."
+    },
+    {
+      "asset_id": "runtime_UI_Buttons_card",
+      "source_path": "unity-client/Assets/HitMe/Art/UI/Buttons/card.png",
+      "category": "production_sprite",
+      "status": "integrated_minimal_ui_fallback",
+      "target_path": "unity-client/Assets/HitMe/Art/UI/Buttons/card.png",
+      "dimensions": [
+        128,
+        128
+      ],
+      "alpha": true,
+      "pivot": "{x: 0.5, y: 0.5}",
+      "ppu": "100",
+      "slicing": "{x: 32, y: 32, z: 32, w: 32}",
+      "atlas": "MainMenu.spriteatlas",
+      "usage": "Native UI element; not production art polish",
+      "license_notes": "See Assets/HitMe/Art/LICENSES.md and Sprint3A provenance.",
+      "missing_requirements": "Polished art skin/portrait/real frames/layered environment as applicable."
+    },
+    {
+      "asset_id": "runtime_UI_Buttons_ink",
+      "source_path": "unity-client/Assets/HitMe/Art/UI/Buttons/ink.png",
+      "category": "production_sprite",
+      "status": "integrated_minimal_ui_fallback",
+      "target_path": "unity-client/Assets/HitMe/Art/UI/Buttons/ink.png",
+      "dimensions": [
+        128,
+        128
+      ],
+      "alpha": true,
+      "pivot": "{x: 0.5, y: 0.5}",
+      "ppu": "100",
+      "slicing": "{x: 32, y: 32, z: 32, w: 32}",
+      "atlas": "MainMenu.spriteatlas",
+      "usage": "Native UI element; not production art polish",
+      "license_notes": "See Assets/HitMe/Art/LICENSES.md and Sprint3A provenance.",
+      "missing_requirements": "Polished art skin/portrait/real frames/layered environment as applicable."
+    },
+    {
+      "asset_id": "runtime_UI_Buttons_paper",
+      "source_path": "unity-client/Assets/HitMe/Art/UI/Buttons/paper.png",
+      "category": "production_sprite",
+      "status": "integrated_minimal_ui_fallback",
+      "target_path": "unity-client/Assets/HitMe/Art/UI/Buttons/paper.png",
+      "dimensions": [
+        128,
+        128
+      ],
+      "alpha": true,
+      "pivot": "{x: 0.5, y: 0.5}",
+      "ppu": "100",
+      "slicing": "{x: 32, y: 32, z: 32, w: 32}",
+      "atlas": "MainMenu.spriteatlas",
+      "usage": "Native UI element; not production art polish",
+      "license_notes": "See Assets/HitMe/Art/LICENSES.md and Sprint3A provenance.",
+      "missing_requirements": "Polished art skin/portrait/real frames/layered environment as applicable."
+    },
+    {
+      "asset_id": "runtime_UI_Icons_arrow",
+      "source_path": "unity-client/Assets/HitMe/Art/UI/Icons/arrow.png",
+      "category": "production_sprite",
+      "status": "integrated_minimal_ui_fallback",
+      "target_path": "unity-client/Assets/HitMe/Art/UI/Icons/arrow.png",
+      "dimensions": [
+        192,
+        192
+      ],
+      "alpha": true,
+      "pivot": "{x: 0.5, y: 0.5}",
+      "ppu": "100",
+      "slicing": "{x: 0, y: 0, z: 0, w: 0}",
+      "atlas": "MainMenu.spriteatlas",
+      "usage": "Native UI element; not production art polish",
+      "license_notes": "See Assets/HitMe/Art/LICENSES.md and Sprint3A provenance.",
+      "missing_requirements": "Polished art skin/portrait/real frames/layered environment as applicable."
+    },
+    {
+      "asset_id": "runtime_UI_Icons_bag",
+      "source_path": "unity-client/Assets/HitMe/Art/UI/Icons/bag.png",
+      "category": "production_sprite",
+      "status": "integrated_minimal_ui_fallback",
+      "target_path": "unity-client/Assets/HitMe/Art/UI/Icons/bag.png",
+      "dimensions": [
+        192,
+        192
+      ],
+      "alpha": true,
+      "pivot": "{x: 0.5, y: 0.5}",
+      "ppu": "100",
+      "slicing": "{x: 0, y: 0, z: 0, w: 0}",
+      "atlas": "MainMenu.spriteatlas",
+      "usage": "Native UI element; not production art polish",
+      "license_notes": "See Assets/HitMe/Art/LICENSES.md and Sprint3A provenance.",
+      "missing_requirements": "Polished art skin/portrait/real frames/layered environment as applicable."
+    },
+    {
+      "asset_id": "runtime_UI_Icons_cancel",
+      "source_path": "unity-client/Assets/HitMe/Art/UI/Icons/cancel.png",
+      "category": "production_sprite",
+      "status": "integrated_minimal_ui_fallback",
+      "target_path": "unity-client/Assets/HitMe/Art/UI/Icons/cancel.png",
+      "dimensions": [
+        192,
+        192
+      ],
+      "alpha": true,
+      "pivot": "{x: 0.5, y: 0.5}",
+      "ppu": "100",
+      "slicing": "{x: 0, y: 0, z: 0, w: 0}",
+      "atlas": "MainMenu.spriteatlas",
+      "usage": "Native UI element; not production art polish",
+      "license_notes": "See Assets/HitMe/Art/LICENSES.md and Sprint3A provenance.",
+      "missing_requirements": "Polished art skin/portrait/real frames/layered environment as applicable."
+    },
+    {
+      "asset_id": "runtime_UI_Icons_coin",
+      "source_path": "unity-client/Assets/HitMe/Art/UI/Icons/coin.png",
+      "category": "production_sprite",
+      "status": "integrated_minimal_ui_fallback",
+      "target_path": "unity-client/Assets/HitMe/Art/UI/Icons/coin.png",
+      "dimensions": [
+        192,
+        192
+      ],
+      "alpha": true,
+      "pivot": "{x: 0.5, y: 0.5}",
+      "ppu": "100",
+      "slicing": "{x: 0, y: 0, z: 0, w: 0}",
+      "atlas": "MainMenu.spriteatlas",
+      "usage": "Native UI element; not production art polish",
+      "license_notes": "See Assets/HitMe/Art/LICENSES.md and Sprint3A provenance.",
+      "missing_requirements": "Polished art skin/portrait/real frames/layered environment as applicable."
+    },
+    {
+      "asset_id": "runtime_UI_Icons_home",
+      "source_path": "unity-client/Assets/HitMe/Art/UI/Icons/home.png",
+      "category": "production_sprite",
+      "status": "integrated_minimal_ui_fallback",
+      "target_path": "unity-client/Assets/HitMe/Art/UI/Icons/home.png",
+      "dimensions": [
+        192,
+        192
+      ],
+      "alpha": true,
+      "pivot": "{x: 0.5, y: 0.5}",
+      "ppu": "100",
+      "slicing": "{x: 0, y: 0, z: 0, w: 0}",
+      "atlas": "MainMenu.spriteatlas",
+      "usage": "Native UI element; not production art polish",
+      "license_notes": "See Assets/HitMe/Art/LICENSES.md and Sprint3A provenance.",
+      "missing_requirements": "Polished art skin/portrait/real frames/layered environment as applicable."
+    },
+    {
+      "asset_id": "runtime_UI_Icons_mail",
+      "source_path": "unity-client/Assets/HitMe/Art/UI/Icons/mail.png",
+      "category": "production_sprite",
+      "status": "integrated_minimal_ui_fallback",
+      "target_path": "unity-client/Assets/HitMe/Art/UI/Icons/mail.png",
+      "dimensions": [
+        192,
+        192
+      ],
+      "alpha": true,
+      "pivot": "{x: 0.5, y: 0.5}",
+      "ppu": "100",
+      "slicing": "{x: 0, y: 0, z: 0, w: 0}",
+      "atlas": "MainMenu.spriteatlas",
+      "usage": "Native UI element; not production art polish",
+      "license_notes": "See Assets/HitMe/Art/LICENSES.md and Sprint3A provenance.",
+      "missing_requirements": "Polished art skin/portrait/real frames/layered environment as applicable."
+    },
+    {
+      "asset_id": "runtime_UI_Icons_map",
+      "source_path": "unity-client/Assets/HitMe/Art/UI/Icons/map.png",
+      "category": "production_sprite",
+      "status": "integrated_minimal_ui_fallback",
+      "target_path": "unity-client/Assets/HitMe/Art/UI/Icons/map.png",
+      "dimensions": [
+        192,
+        192
+      ],
+      "alpha": true,
+      "pivot": "{x: 0.5, y: 0.5}",
+      "ppu": "100",
+      "slicing": "{x: 0, y: 0, z: 0, w: 0}",
+      "atlas": "MainMenu.spriteatlas",
+      "usage": "Native UI element; not production art polish",
+      "license_notes": "See Assets/HitMe/Art/LICENSES.md and Sprint3A provenance.",
+      "missing_requirements": "Polished art skin/portrait/real frames/layered environment as applicable."
+    },
+    {
+      "asset_id": "runtime_UI_Icons_people",
+      "source_path": "unity-client/Assets/HitMe/Art/UI/Icons/people.png",
+      "category": "production_sprite",
+      "status": "integrated_minimal_ui_fallback",
+      "target_path": "unity-client/Assets/HitMe/Art/UI/Icons/people.png",
+      "dimensions": [
+        192,
+        192
+      ],
+      "alpha": true,
+      "pivot": "{x: 0.5, y: 0.5}",
+      "ppu": "100",
+      "slicing": "{x: 0, y: 0, z: 0, w: 0}",
+      "atlas": "MainMenu.spriteatlas",
+      "usage": "Native UI element; not production art polish",
+      "license_notes": "See Assets/HitMe/Art/LICENSES.md and Sprint3A provenance.",
+      "missing_requirements": "Polished art skin/portrait/real frames/layered environment as applicable."
+    },
+    {
+      "asset_id": "runtime_UI_Icons_practice",
+      "source_path": "unity-client/Assets/HitMe/Art/UI/Icons/practice.png",
+      "category": "production_sprite",
+      "status": "integrated_minimal_ui_fallback",
+      "target_path": "unity-client/Assets/HitMe/Art/UI/Icons/practice.png",
+      "dimensions": [
+        192,
+        192
+      ],
+      "alpha": true,
+      "pivot": "{x: 0.5, y: 0.5}",
+      "ppu": "100",
+      "slicing": "{x: 0, y: 0, z: 0, w: 0}",
+      "atlas": "MainMenu.spriteatlas",
+      "usage": "Native UI element; not production art polish",
+      "license_notes": "See Assets/HitMe/Art/LICENSES.md and Sprint3A provenance.",
+      "missing_requirements": "Polished art skin/portrait/real frames/layered environment as applicable."
+    },
+    {
+      "asset_id": "runtime_UI_Icons_quest",
+      "source_path": "unity-client/Assets/HitMe/Art/UI/Icons/quest.png",
+      "category": "production_sprite",
+      "status": "integrated_minimal_ui_fallback",
+      "target_path": "unity-client/Assets/HitMe/Art/UI/Icons/quest.png",
+      "dimensions": [
+        192,
+        192
+      ],
+      "alpha": true,
+      "pivot": "{x: 0.5, y: 0.5}",
+      "ppu": "100",
+      "slicing": "{x: 0, y: 0, z: 0, w: 0}",
+      "atlas": "MainMenu.spriteatlas",
+      "usage": "Native UI element; not production art polish",
+      "license_notes": "See Assets/HitMe/Art/LICENSES.md and Sprint3A provenance.",
+      "missing_requirements": "Polished art skin/portrait/real frames/layered environment as applicable."
+    },
+    {
+      "asset_id": "runtime_UI_Icons_settings",
+      "source_path": "unity-client/Assets/HitMe/Art/UI/Icons/settings.png",
+      "category": "production_sprite",
+      "status": "integrated_minimal_ui_fallback",
+      "target_path": "unity-client/Assets/HitMe/Art/UI/Icons/settings.png",
+      "dimensions": [
+        192,
+        192
+      ],
+      "alpha": true,
+      "pivot": "{x: 0.5, y: 0.5}",
+      "ppu": "100",
+      "slicing": "{x: 0, y: 0, z: 0, w: 0}",
+      "atlas": "MainMenu.spriteatlas",
+      "usage": "Native UI element; not production art polish",
+      "license_notes": "See Assets/HitMe/Art/LICENSES.md and Sprint3A provenance.",
+      "missing_requirements": "Polished art skin/portrait/real frames/layered environment as applicable."
+    },
+    {
+      "asset_id": "runtime_UI_Icons_shop",
+      "source_path": "unity-client/Assets/HitMe/Art/UI/Icons/shop.png",
+      "category": "production_sprite",
+      "status": "integrated_minimal_ui_fallback",
+      "target_path": "unity-client/Assets/HitMe/Art/UI/Icons/shop.png",
+      "dimensions": [
+        192,
+        192
+      ],
+      "alpha": true,
+      "pivot": "{x: 0.5, y: 0.5}",
+      "ppu": "100",
+      "slicing": "{x: 0, y: 0, z: 0, w: 0}",
+      "atlas": "MainMenu.spriteatlas",
+      "usage": "Native UI element; not production art polish",
+      "license_notes": "See Assets/HitMe/Art/LICENSES.md and Sprint3A provenance.",
+      "missing_requirements": "Polished art skin/portrait/real frames/layered environment as applicable."
+    },
+    {
+      "asset_id": "runtime_UI_Icons_trophy",
+      "source_path": "unity-client/Assets/HitMe/Art/UI/Icons/trophy.png",
+      "category": "production_sprite",
+      "status": "integrated_minimal_ui_fallback",
+      "target_path": "unity-client/Assets/HitMe/Art/UI/Icons/trophy.png",
+      "dimensions": [
+        192,
+        192
+      ],
+      "alpha": true,
+      "pivot": "{x: 0.5, y: 0.5}",
+      "ppu": "100",
+      "slicing": "{x: 0, y: 0, z: 0, w: 0}",
+      "atlas": "MainMenu.spriteatlas",
+      "usage": "Native UI element; not production art polish",
+      "license_notes": "See Assets/HitMe/Art/LICENSES.md and Sprint3A provenance.",
+      "missing_requirements": "Polished art skin/portrait/real frames/layered environment as applicable."
+    },
+    {
+      "asset_id": "runtime_UI_MainMenu_logo",
+      "source_path": "unity-client/Assets/HitMe/Art/UI/MainMenu/logo.png",
+      "category": "production_sprite",
+      "status": "integrated_minimal_ui_fallback",
+      "target_path": "unity-client/Assets/HitMe/Art/UI/MainMenu/logo.png",
+      "dimensions": [
+        640,
+        170
+      ],
+      "alpha": true,
+      "pivot": "{x: 0.5, y: 0.5}",
+      "ppu": "100",
+      "slicing": "{x: 0, y: 0, z: 0, w: 0}",
+      "atlas": "MainMenu.spriteatlas",
+      "usage": "Native UI element; not production art polish",
+      "license_notes": "See Assets/HitMe/Art/LICENSES.md and Sprint3A provenance.",
+      "missing_requirements": "Polished art skin/portrait/real frames/layered environment as applicable."
+    },
+    {
+      "asset_id": "runtime_UI_MainMenu_shadow",
+      "source_path": "unity-client/Assets/HitMe/Art/UI/MainMenu/shadow.png",
+      "category": "production_sprite",
+      "status": "integrated_minimal_ui_fallback",
+      "target_path": "unity-client/Assets/HitMe/Art/UI/MainMenu/shadow.png",
+      "dimensions": [
+        256,
+        90
+      ],
+      "alpha": true,
+      "pivot": "{x: 0.5, y: 0.5}",
+      "ppu": "100",
+      "slicing": "{x: 0, y: 0, z: 0, w: 0}",
+      "atlas": "MainMenu.spriteatlas",
+      "usage": "Native UI element; not production art polish",
+      "license_notes": "See Assets/HitMe/Art/LICENSES.md and Sprint3A provenance.",
+      "missing_requirements": "Polished art skin/portrait/real frames/layered environment as applicable."
+    },
+    {
+      "asset_id": "runtime_Weapons_Chao_held",
+      "source_path": "unity-client/Assets/HitMe/Art/Weapons/Chao/held.png",
+      "category": "production_sprite",
+      "status": "integrated_standalone",
+      "target_path": "unity-client/Assets/HitMe/Art/Weapons/Chao/held.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "alpha": true,
+      "pivot": "{x: 0.5, y: 0.5}",
+      "ppu": "100",
+      "slicing": "{x: 0, y: 0, z: 0, w: 0}",
+      "atlas": "HitMeCharacters.spriteatlas",
+      "usage": "Existing weapon/environment sprite",
+      "license_notes": "See Assets/HitMe/Art/LICENSES.md and Sprint3A provenance.",
+      "missing_requirements": "Polished art skin/portrait/real frames/layered environment as applicable."
+    },
+    {
+      "asset_id": "runtime_Weapons_DepToOng_held",
+      "source_path": "unity-client/Assets/HitMe/Art/Weapons/DepToOng/held.png",
+      "category": "production_sprite",
+      "status": "integrated_standalone",
+      "target_path": "unity-client/Assets/HitMe/Art/Weapons/DepToOng/held.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "alpha": true,
+      "pivot": "{x: 0.5, y: 0.5}",
+      "ppu": "100",
+      "slicing": "{x: 0, y: 0, z: 0, w: 0}",
+      "atlas": "HitMeCharacters.spriteatlas",
+      "usage": "Existing weapon/environment sprite",
+      "license_notes": "See Assets/HitMe/Art/LICENSES.md and Sprint3A provenance.",
+      "missing_requirements": "Polished art skin/portrait/real frames/layered environment as applicable."
+    },
+    {
+      "asset_id": "runtime_Weapons_Vot_held",
+      "source_path": "unity-client/Assets/HitMe/Art/Weapons/Vot/held.png",
+      "category": "production_sprite",
+      "status": "integrated_standalone",
+      "target_path": "unity-client/Assets/HitMe/Art/Weapons/Vot/held.png",
+      "dimensions": [
+        1774,
+        887
+      ],
+      "alpha": true,
+      "pivot": "{x: 0.5, y: 0.5}",
+      "ppu": "100",
+      "slicing": "{x: 0, y: 0, z: 0, w: 0}",
+      "atlas": "HitMeCharacters.spriteatlas",
+      "usage": "Existing weapon/environment sprite",
+      "license_notes": "See Assets/HitMe/Art/LICENSES.md and Sprint3A provenance.",
+      "missing_requirements": "Polished art skin/portrait/real frames/layered environment as applicable."
+    }
+  ],
+  "missingProductionAssets": {
+    "characters": [
+      "Nam Lang matching new concept (existing Char01 is visual fallback)",
+      "Nu Nang Dong pink-haired standalone (current Char03 brown-haired fallback)",
+      "Quay Boy",
+      "Co Ba",
+      "Anh Teen",
+      "Cho Vang",
+      "Meo Mun"
+    ],
+    "states": [
+      "Real Idle/Aim/Throw/Hit/Eliminated/Victory frames or rig-ready layers for each character; current3 characters have only1 Idle frame"
+    ],
+    "weapons": [
+      "Standalone variants: colored slippers, phone, mosquito racket, pickleball racket, beer prop, TV, mini fridge, plastic chair, rice cooker, conical hat, paper fan",
+      "Pets as safe cartoon participants only; no violent throwing"
+    ],
+    "ui": [
+      "Dedicated portraits",
+      "Illustrated feature/map/character/weapon cards",
+      "Production material skins",
+      "Independent HUD/chat/popup art"
+    ],
+    "environment": [
+      "Village-gate far/mid/foreground layers",
+      "Flags, lanterns, leaves, crowd as separate exports",
+      "Five other arena art sets"
+    ],
+    "fx": [
+      "Dust, impact, trail, sparkle, confetti, leaf, HP reaction sprites/frames"
+    ],
+    "font": [
+      "Be Vietnam Pro not provided; existing licensed Nunito supports Vietnamese and remains in use"
+    ]
+  },
+  "sourceEdited": false,
+  "referenceImportedIntoRuntime": false
+}
