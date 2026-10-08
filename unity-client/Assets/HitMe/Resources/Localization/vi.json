@@ -1,0 +1,188 @@
+{
+  "entries": [
+    {
+      "key": "arenaPlaceholder",
+      "value": "SÂN CÁT • PLACEHOLDER"
+    },
+    {
+      "key": "you",
+      "value": "Bạn"
+    },
+    {
+      "key": "bot",
+      "value": "Bot"
+    },
+    {
+      "key": "round",
+      "value": "VÒNG"
+    },
+    {
+      "key": "settings",
+      "value": "VI / EN"
+    },
+    {
+      "key": "chat",
+      "value": "CHAT"
+    },
+    {
+      "key": "ready",
+      "value": "SẴN SÀNG"
+    },
+    {
+      "key": "weapon",
+      "value": "VŨ KHÍ\nPH"
+    },
+    {
+      "key": "preview",
+      "value": "XEM BỐ CỤC • Bấm SẴN SÀNG để thử đặt vị trí"
+    },
+    {
+      "key": "hint",
+      "value": "Chạm để đặt vị trí, kéo để ngắm"
+    },
+    {
+      "key": "locked",
+      "value": "ĐÃ KHÓA"
+    },
+    {
+      "key": "reveal",
+      "value": "LỘ DIỆN • PLACEHOLDER"
+    },
+    {
+      "key": "awaitingRules",
+      "value": "Demo kết thúc • Chờ xác nhận luật xử lý lượt"
+    },
+    {
+      "key": "retry",
+      "value": "THỬ LẠI"
+    },
+    {
+      "key": "close",
+      "value": "ĐÓNG"
+    },
+    {
+      "key": "chatMock",
+      "value": "Chat placeholder • Chưa kết nối online"
+    },
+    {
+      "key": "weaponMock",
+      "value": "Vũ khí placeholder • Chưa có sprite"
+    },
+    {
+      "key": "sceneMainMenu",
+      "value": "Menu chính"
+    },
+    {
+      "key": "sceneLobby",
+      "value": "Phòng chờ • Placeholder"
+    },
+    {
+      "key": "sceneCharacterSelect",
+      "value": "Chọn nhân vật • Placeholder"
+    },
+    {
+      "key": "sceneResult",
+      "value": "Kết quả • Chưa xử lý trận"
+    },
+    {
+      "key": "openBattle",
+      "value": "MỞ BATTLE FOUNDATION"
+    },
+    {
+      "key": "playOffline",
+      "value": "CHƠI VỚI BOT"
+    },
+    {
+      "key": "phaseReveal",
+      "value": "LỘ DIỆN"
+    },
+    {
+      "key": "phaseThrow",
+      "value": "NÉM!"
+    },
+    {
+      "key": "phaseResolve",
+      "value": "KẾT QUẢ VÒNG"
+    },
+    {
+      "key": "phaseRoundResult",
+      "value": "KẾT QUẢ VÒNG"
+    },
+    {
+      "key": "phaseMatchResult",
+      "value": "KẾT QUẢ TRẬN"
+    },
+    {
+      "key": "spectating",
+      "value": "THEO DÕI"
+    },
+    {
+      "key": "timeoutUnconfirmed",
+      "value": "Timeout đang chờ chốt luật"
+    },
+    {
+      "key": "skipThrow",
+      "value": "Không ném"
+    },
+    {
+      "key": "hit",
+      "value": "TRÚNG!"
+    },
+    {
+      "key": "miss",
+      "value": "Ném trượt"
+    },
+    {
+      "key": "eliminated",
+      "value": "Bị loại:"
+    },
+    {
+      "key": "draw",
+      "value": "HÒA"
+    },
+    {
+      "key": "victory",
+      "value": "CHIẾN THẮNG"
+    },
+    {
+      "key": "defeat",
+      "value": "THẤT BẠI"
+    },
+    {
+      "key": "winner",
+      "value": "Người thắng"
+    },
+    {
+      "key": "roundsPlayed",
+      "value": "Số vòng đã chơi"
+    },
+    {
+      "key": "replay",
+      "value": "CHƠI LẠI"
+    },
+    {
+      "key": "backMenu",
+      "value": "VỀ MENU"
+    },
+    {
+      "key": "botCount",
+      "value": "Số bot"
+    },
+    {
+      "key": "difficulty",
+      "value": "Độ khó"
+    },
+    {
+      "key": "easy",
+      "value": "Dễ"
+    },
+    {
+      "key": "normal",
+      "value": "Thường"
+    },
+    {
+      "key": "timeoutProposal",
+      "value": "Bản thử nghiệm: timeout thiếu input giữ vị trí cũ, không ném (đề xuất spec 2.5.1)."
+    }
+  ]
+}

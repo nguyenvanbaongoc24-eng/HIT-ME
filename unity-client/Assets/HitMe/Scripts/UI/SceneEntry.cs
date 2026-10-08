@@ -1,0 +1,30 @@
+using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems;
+using UnityEngine.InputSystem.UI;
+
+namespace HitMe.UI
+{
+    public sealed class SceneEntry : MonoBehaviour
+    {
+        void Start()
+        {
+            // Web uses the portrait canvas; browser orientation locking is not universally available.
+#if !UNITY_WEBGL || UNITY_EDITOR
+            Screen.orientation = ScreenOrientation.Portrait;
+#endif
+            Application.targetFrameRate = 60; // Target only, not a measured performance claim.
+            if (FindAnyObjectByType<EventSystem>() == null)
+                new GameObject("EventSystem", typeof(EventSystem), typeof(InputSystemUIInputModule));
+            if (Camera.main == null)
+            {
+                var c = new GameObject("Main Camera", typeof(Camera)).GetComponent<Camera>();
+                c.tag = "MainCamera"; c.orthographic = true; c.backgroundColor = new Color(.42f, .26f, .22f);
+            }
+            string scene = SceneManager.GetActiveScene().name;
+            if (scene == "Boot") { SceneManager.LoadScene("MainMenu"); return; }
+            if (scene == "Battle") { var view=gameObject.AddComponent<BattleView>(); view.Initialize(); OfflineRunContext.LoadDefaults(); if(OfflineRunContext.Requested) { OfflineRunContext.Requested=false; view.StartOffline(OfflineRunContext.Settings); } else view.AddOfflineLauncher(); }
+            else gameObject.AddComponent<FoundationMenu>().sceneName = scene;
+        }
+    }
+}

@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a9cb75c70a0b4d4588bdff5eff76796, type: 3}
+  m_Name: Char03_BotFemale
+  m_EditorClassIdentifier: HitMe.Runtime::HitMe.Characters.CharacterDefinition
+  characterId: Char03_BotFemale
+  displayName: "C\xF4 b\xE9 tinh ngh\u1ECBch"
+  artBrief: "N\u1EEF t\xF3c bu\u1ED9c hoa h\u1ED3ng, hoodie h\u1ED3ng h\xECnh th\u1ECF, short \u0111en, d\xE9p h\u1ED3ng."
+  animations:
+  - state: 0
+    frames:
+    - {fileID: 21300000, guid: ffedbf93f43a70942b849b97257bef3b, type: 3}
+    clip: {fileID: 0}
+    framesPerSecond: 8
+    loop: 1
+  - state: 1
+    frames: []
+    clip: {fileID: 0}
+    framesPerSecond: 8
+    loop: 1
+  - state: 2
+    frames: []
+    clip: {fileID: 0}
+    framesPerSecond: 8
+    loop: 0
+  - state: 3
+    frames: []
+    clip: {fileID: 0}
+    framesPerSecond: 8
+    loop: 0
+  - state: 4
+    frames: []
+    clip: {fileID: 0}
+    framesPerSecond: 8
+    loop: 0
+  - state: 5
+    frames: []
+    clip: {fileID: 0}
+    framesPerSecond: 8
+    loop: 1
+  defaultWeapon: {fileID: 11400000, guid: 8f5197c4b48de174eb7a33ce19c9061e, type: 2}
+  footPivot: {x: 0.51, y: 0.0134}
+  visualScale: 1.025
+  referenceHeight: 74
+  authoredFacing: -1
+  portrait: {fileID: 0}
+  visualPrefab: {fileID: 8117850123794079012, guid: a6ccbd67f65718e4fb7ca4a8be305fc0, type: 3}

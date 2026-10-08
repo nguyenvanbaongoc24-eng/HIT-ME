@@ -1,0 +1,19 @@
+{
+  "name": "@hit-me/client",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "tsc -p tsconfig.json && vite build",
+    "preview": "vite preview --host 127.0.0.1"
+  },
+  "dependencies": {
+    "@hit-me/game-core": "file:../../packages/game-core",
+    "@hit-me/shared-config": "file:../../packages/shared-config",
+    "phaser": "3.87.0"
+  },
+  "devDependencies": {
+    "vite": "8.3.3"
+  }
+}

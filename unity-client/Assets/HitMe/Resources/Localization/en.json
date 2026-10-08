@@ -1,0 +1,188 @@
+{
+  "entries": [
+    {
+      "key": "arenaPlaceholder",
+      "value": "SAND • PLACEHOLDER"
+    },
+    {
+      "key": "you",
+      "value": "You"
+    },
+    {
+      "key": "bot",
+      "value": "Bot"
+    },
+    {
+      "key": "round",
+      "value": "ROUND"
+    },
+    {
+      "key": "settings",
+      "value": "VI / EN"
+    },
+    {
+      "key": "chat",
+      "value": "CHAT"
+    },
+    {
+      "key": "ready",
+      "value": "READY"
+    },
+    {
+      "key": "weapon",
+      "value": "WEAPON\nPH"
+    },
+    {
+      "key": "preview",
+      "value": "LAYOUT PREVIEW • Press READY to try placement"
+    },
+    {
+      "key": "hint",
+      "value": "Tap to place, drag to aim"
+    },
+    {
+      "key": "locked",
+      "value": "LOCKED"
+    },
+    {
+      "key": "reveal",
+      "value": "REVEAL • PLACEHOLDER"
+    },
+    {
+      "key": "awaitingRules",
+      "value": "Demo ended • Round rules await confirmation"
+    },
+    {
+      "key": "retry",
+      "value": "RETRY"
+    },
+    {
+      "key": "close",
+      "value": "CLOSE"
+    },
+    {
+      "key": "chatMock",
+      "value": "Chat placeholder • Offline"
+    },
+    {
+      "key": "weaponMock",
+      "value": "Weapon placeholder • Missing sprite"
+    },
+    {
+      "key": "sceneMainMenu",
+      "value": "Main menu"
+    },
+    {
+      "key": "sceneLobby",
+      "value": "Lobby • Placeholder"
+    },
+    {
+      "key": "sceneCharacterSelect",
+      "value": "Characters • Placeholder"
+    },
+    {
+      "key": "sceneResult",
+      "value": "Result • Match not resolved"
+    },
+    {
+      "key": "openBattle",
+      "value": "OPEN BATTLE FOUNDATION"
+    },
+    {
+      "key": "playOffline",
+      "value": "PLAY WITH BOTS"
+    },
+    {
+      "key": "phaseReveal",
+      "value": "REVEAL"
+    },
+    {
+      "key": "phaseThrow",
+      "value": "THROW!"
+    },
+    {
+      "key": "phaseResolve",
+      "value": "ROUND RESULT"
+    },
+    {
+      "key": "phaseRoundResult",
+      "value": "ROUND RESULT"
+    },
+    {
+      "key": "phaseMatchResult",
+      "value": "MATCH RESULT"
+    },
+    {
+      "key": "spectating",
+      "value": "SPECTATING"
+    },
+    {
+      "key": "timeoutUnconfirmed",
+      "value": "Timeout policy needs confirmation"
+    },
+    {
+      "key": "skipThrow",
+      "value": "No throw"
+    },
+    {
+      "key": "hit",
+      "value": "HIT!"
+    },
+    {
+      "key": "miss",
+      "value": "Miss"
+    },
+    {
+      "key": "eliminated",
+      "value": "Eliminated:"
+    },
+    {
+      "key": "draw",
+      "value": "DRAW"
+    },
+    {
+      "key": "victory",
+      "value": "VICTORY"
+    },
+    {
+      "key": "defeat",
+      "value": "DEFEAT"
+    },
+    {
+      "key": "winner",
+      "value": "Winner"
+    },
+    {
+      "key": "roundsPlayed",
+      "value": "Rounds played"
+    },
+    {
+      "key": "replay",
+      "value": "PLAY AGAIN"
+    },
+    {
+      "key": "backMenu",
+      "value": "MAIN MENU"
+    },
+    {
+      "key": "botCount",
+      "value": "Bots"
+    },
+    {
+      "key": "difficulty",
+      "value": "Difficulty"
+    },
+    {
+      "key": "easy",
+      "value": "Easy"
+    },
+    {
+      "key": "normal",
+      "value": "Normal"
+    },
+    {
+      "key": "timeoutProposal",
+      "value": "Trial: incomplete timeout keeps prior position and skips throwing (spec 2.5.1 proposal)."
+    }
+  ]
+}

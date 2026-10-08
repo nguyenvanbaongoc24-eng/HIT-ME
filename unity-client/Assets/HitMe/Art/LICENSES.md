@@ -1,0 +1,19 @@
+# Foundation assets
+
+Arena, stand bands, actor blocks, circular foot hitboxes and portraits are procedural UI placeholders made for this project. No third-party game art was copied. `PH` labels mean placeholder.
+
+Manifest animation lists are intentionally empty. Replace them with sprites with documented licenses before art acceptance. No Windows font file is copied or redistributed.
+
+Bundled fonts under Resources/Fonts:
+
+- Nunito from https://github.com/google/fonts/tree/main/ofl/nunito, SIL Open Font License 1.1. Copyright 2014 The Nunito Project Authors. The variable font was instantiated at weight 400 with fontTools and the modified family renamed **HitMe Nunito**. License is preserved as OFL.txt. Used for Vietnamese/English text; source URL: https://raw.githubusercontent.com/google/fonts/main/ofl/nunito/Nunito%5Bwght%5D.ttf.
+- Noto Sans Symbols 2 Regular from https://github.com/google/fonts/tree/main/ofl/notosanssymbols2, SIL Open Font License 1.1. Copyright 2022 The Noto Project Authors. Unmodified; license preserved as NotoSansSymbols2-OFL.txt. Used for heart glyphs only.
+
+Both fonts retain their original copyright/license metadata. Runtime validates representative Vietnamese glyphs and U+2665; using bundled fonts avoids relying on Editor OS fallback that is absent in a Web build.
+
+No audio, finished chibi art, crowds, or environment sprite atlas is supplied. Create Sprite Atlases for licensed sprites when assets become available.
+
+
+## Sprint 3A generated art — 2026-10-08
+
+Current production art contains three standalone Idle character PNGs, three held weapon PNGs and two LangQueBacBo environment PNGs. Created with built-in image_gen at the user's request from their approved reference boards. Reference boards are preserved in docs/art-reference; prompts and provenance are in docs/SPRINT3A_ART_PROMPTS.json and docs/SPRINT3A_ARENA_PROMPTS.json. No reference collage was imported as a sprite sheet. Historical missing-art statements above describe the foundation before this update. Multi-frame animation and separate portraits remain missing.

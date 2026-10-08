@@ -1,0 +1,16 @@
+{
+  "arenaA": 1000,
+  "arenaB": 1750,
+  "playerRadius": 90,
+  "projectileRadius": 30,
+  "placementSeconds": 5,
+  "maxHp": 3,
+  "minPlayers": 2,
+  "maxPlayers": 6,
+  "wallLogic": 140,
+  "hudFraction": 0.1,
+  "aimDragPixels": 12,
+  "revealSeconds": 0.3,
+  "referenceWidth": 390,
+  "referenceHeight": 844
+}

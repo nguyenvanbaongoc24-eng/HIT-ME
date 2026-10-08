@@ -1,0 +1,6 @@
+{
+  "name": "HitMe.EditMode",
+  "references": ["HitMe.Core"],
+  "includePlatforms": ["Editor"],
+  "optionalUnityReferences": ["TestAssemblies"]
+}

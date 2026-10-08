@@ -1,0 +1,5 @@
+{
+  "name": "HitMe.PlayMode",
+  "references": ["HitMe.Core", "HitMe.Runtime", "Unity.ugui"],
+  "optionalUnityReferences": ["TestAssemblies"]
+}

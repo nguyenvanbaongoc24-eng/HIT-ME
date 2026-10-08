@@ -1,0 +1,37 @@
+{
+  "date": "2026-10-08",
+  "browser": "Codex IAB Chromium",
+  "url": "http://127.0.0.1:8790/",
+  "viewports": [
+    [
+      360,
+      800
+    ],
+    [
+      390,
+      844
+    ],
+    [
+      412,
+      915
+    ],
+    [
+      430,
+      932
+    ]
+  ],
+  "observed": [
+    "placement",
+    "mouse drag aim",
+    "ready lock before timeout",
+    "opponents hidden during placement",
+    "throw with projectile",
+    "hp loss",
+    "result defeat round4 bot1",
+    "replay round1 hp3",
+    "menu return"
+  ],
+  "capturedErrors": [],
+  "capturedWarnings": [],
+  "touchBrowserVerified": false
+}

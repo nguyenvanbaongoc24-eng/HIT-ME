@@ -1,0 +1,8 @@
+{
+  "botCount": 2,
+  "seed": 2026,
+  "difficulty": 1,
+  "proposedTimeout": true,
+  "throwSeconds": 0.7,
+  "roundResultSeconds": 0.6
+}

@@ -1,0 +1,1 @@
+{"name":"HitMe.CharacterEditMode","references":["HitMe.Runtime","HitMe.Core","HitMe.Editor","Unity.ugui"],"includePlatforms":["Editor"],"optionalUnityReferences":["TestAssemblies"]}

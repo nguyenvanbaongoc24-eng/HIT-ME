@@ -1,0 +1,4 @@
+{
+  "name": "HitMe.Runtime",
+  "references": ["HitMe.Core", "Unity.ugui", "Unity.InputSystem"]
+}

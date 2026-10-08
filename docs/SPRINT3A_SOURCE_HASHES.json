@@ -1,0 +1,50 @@
+[
+  {
+    "path": "unity-client/Assets/HitMe/Editor/ArenaArtSetup.cs",
+    "sha256": "34a77c16a552ec4cfa8e1995374e1aadde7b1ae73b2edfc5ab302ca5d64c33c4"
+  },
+  {
+    "path": "unity-client/Assets/HitMe/Editor/CharacterAssetPipeline.cs",
+    "sha256": "388f395878883289cc293631742be9f6f8f815eee111c3b413fe5274074dae3a"
+  },
+  {
+    "path": "unity-client/Assets/HitMe/Editor/CharacterPngImporter.cs",
+    "sha256": "ce59610f5aa7d2f3b61bfe56aa728d99c94b16007537414f813faf02af70f912"
+  },
+  {
+    "path": "unity-client/Assets/HitMe/Tests/CharacterEditMode/CharacterAssetTests.cs",
+    "sha256": "30d2fe75b9dfaf3f71ca5b1dc3bc33987bc3e7caa5efd9917b6c51696df38d45"
+  },
+  {
+    "path": "unity-client/Assets/HitMe/Tests/PlayMode/CharacterVisualTests.cs",
+    "sha256": "9760fad2757bd827ecc8bd1252c17f513bdc15bf09a23f0b30a4f70d6c5cc588"
+  },
+  {
+    "path": "unity-client/Assets/HitMe/Scripts/Characters/CharacterAtlasRegistry.cs",
+    "sha256": "0d48d8b45a62f8b25ab39b7d1a8681907a14710b501c2c67293fee1c8f266b76"
+  },
+  {
+    "path": "unity-client/Assets/HitMe/Scripts/Characters/CharacterCatalog.cs",
+    "sha256": "1346dd3f59b898cb09141812db0c37de5bc9a1f2a228eb8c002f965bddd0eb82"
+  },
+  {
+    "path": "unity-client/Assets/HitMe/Scripts/Characters/CharacterDefinition.cs",
+    "sha256": "b8d454a0cd5f8198fdf2c42ee8a06e2af0d21ff21f38b68274c8fcb705326162"
+  },
+  {
+    "path": "unity-client/Assets/HitMe/Scripts/Characters/CharacterManifest.cs",
+    "sha256": "a82d26405de2faf8ddd8efe16c5f013889c68fcd5f1205c63cf8f9094d57cc79"
+  },
+  {
+    "path": "unity-client/Assets/HitMe/Scripts/Characters/CharacterVisual.cs",
+    "sha256": "84909a72975bfe206c0c7c58b03285589c4f8d2adfc5436a412b5cc29c1b523c"
+  },
+  {
+    "path": "unity-client/Assets/HitMe/Scripts/Characters/WeaponDefinition.cs",
+    "sha256": "041960afa38f5d5e245a4fe3c76c92304eed7238ead1535ae265018e387281e2"
+  },
+  {
+    "path": "unity-client/Assets/HitMe/Scripts/UI/ArenaArtDefinition.cs",
+    "sha256": "30f5751e360f7fddb0a1a5553dcc466bd02a523f1fb3dfde785e1747a330b7c8"
+  }
+]

@@ -1,0 +1,87 @@
+{
+  "version": 1,
+  "characters": [
+    {
+      "id": "male-placeholder",
+      "gender": "male",
+      "customizationSlots": [
+        "body",
+        "face",
+        "hair",
+        "outfit",
+        "weapon"
+      ],
+      "feetAnchor": {
+        "x": 0.5,
+        "y": 0
+      },
+      "states": [
+        {
+          "state": "Idle",
+          "resourcePaths": []
+        },
+        {
+          "state": "Aim",
+          "resourcePaths": []
+        },
+        {
+          "state": "Throw",
+          "resourcePaths": []
+        },
+        {
+          "state": "Hit",
+          "resourcePaths": []
+        },
+        {
+          "state": "Dead",
+          "resourcePaths": []
+        },
+        {
+          "state": "Win",
+          "resourcePaths": []
+        }
+      ]
+    },
+    {
+      "id": "female-placeholder",
+      "gender": "female",
+      "customizationSlots": [
+        "body",
+        "face",
+        "hair",
+        "outfit",
+        "weapon"
+      ],
+      "feetAnchor": {
+        "x": 0.5,
+        "y": 0
+      },
+      "states": [
+        {
+          "state": "Idle",
+          "resourcePaths": []
+        },
+        {
+          "state": "Aim",
+          "resourcePaths": []
+        },
+        {
+          "state": "Throw",
+          "resourcePaths": []
+        },
+        {
+          "state": "Hit",
+          "resourcePaths": []
+        },
+        {
+          "state": "Dead",
+          "resourcePaths": []
+        },
+        {
+          "state": "Win",
+          "resourcePaths": []
+        }
+      ]
+    }
+  ]
+}

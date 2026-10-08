@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "characters": {
+    "char01": {
+      "frames": { "idle": [], "aim": [], "throw": [], "hit": [], "dead": [], "win": [] },
+      "anchor": { "feet": [64, 116] },
+      "pivots": { "shoulder": [75, 58], "hand": [103, 74] },
+      "faceFacing": "right"
+    }
+  },
+  "weapons": {
+    "dep_to_ong": { "icon": "", "sprite": "", "trail": "" }
+  },
+  "slots": {
+    "character.body": { "width": 256, "height": 256 },
+    "character.hair": { "width": 256, "height": 256 },
+    "weapon.dep_to_ong": { "width": 256, "height": 256 },
+    "arena.roman_wall": { "width": 512, "height": 256 },
+    "fx.hit": { "width": 256, "height": 256 }
+  }
+}

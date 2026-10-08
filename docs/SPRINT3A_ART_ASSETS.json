@@ -1,0 +1,134 @@
+[
+  {
+    "path": "unity-client/Assets/HitMe/Art/Weapons/Chao/held.png",
+    "size": [
+      1536,
+      1024
+    ],
+    "mode": "RGBA",
+    "sha256": "381d10fedab4a80a944a31d479ef1934c5a84c85bae5024b3ba989fb5d498e12",
+    "alphaExtrema": [
+      0,
+      254
+    ],
+    "visibleBoundsAlpha128": [
+      106,
+      131,
+      1453,
+      872
+    ]
+  },
+  {
+    "path": "unity-client/Assets/HitMe/Art/Weapons/DepToOng/held.png",
+    "size": [
+      1536,
+      1024
+    ],
+    "mode": "RGBA",
+    "sha256": "212e648b75dbeeb728dec52ea7884b8685a3f7ab135635a93cdc1eb52d3b3c9a",
+    "alphaExtrema": [
+      0,
+      254
+    ],
+    "visibleBoundsAlpha128": [
+      37,
+      225,
+      1508,
+      803
+    ]
+  },
+  {
+    "path": "unity-client/Assets/HitMe/Art/Weapons/Vot/held.png",
+    "size": [
+      1774,
+      887
+    ],
+    "mode": "RGBA",
+    "sha256": "e4070f1a2423b436a72d23497667699ab679b5cafe7f1f5227b8f080cf0c9de1",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "visibleBoundsAlpha128": [
+      49,
+      170,
+      1741,
+      721
+    ]
+  },
+  {
+    "path": "unity-client/Assets/HitMe/Art/Characters/Char03_BotFemale/Idle/frame_000.png",
+    "size": [
+      1239,
+      1269
+    ],
+    "mode": "RGBA",
+    "sha256": "6efc5c3d1ae27ec765cd2696fbd3bad002f96fd3d8fbd478b278bd812c8e7d0d",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "visibleBoundsAlpha128": [
+      243,
+      13,
+      1002,
+      1252
+    ]
+  },
+  {
+    "path": "unity-client/Assets/HitMe/Art/Characters/Char02_BotMale/Idle/frame_000.png",
+    "size": [
+      1223,
+      1286
+    ],
+    "mode": "RGBA",
+    "sha256": "d731d8c7766eb9b8dd23a63f00e833d6405145f43e5a592a543fc4c717183b8a",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "visibleBoundsAlpha128": [
+      237,
+      59,
+      1026,
+      1246
+    ]
+  },
+  {
+    "path": "unity-client/Assets/HitMe/Art/Characters/Char01_Player/Idle/frame_000.png",
+    "size": [
+      1146,
+      1373
+    ],
+    "mode": "RGBA",
+    "sha256": "7b95ab3b9dfd14c9ccd1858191eeb06979f8fca7166efff657a832c5489f8d9c",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "visibleBoundsAlpha128": [
+      185,
+      21,
+      1002,
+      1360
+    ]
+  },
+  {
+    "path": "unity-client/Assets/HitMe/Art/Arenas/LangQueBacBo/backdrop.png",
+    "size": [
+      853,
+      1844
+    ],
+    "mode": "RGB",
+    "sha256": "af8b39868cfb933aa2500c81b5c7222ca52f67e3e2c53d9675bfa750a350faf1"
+  },
+  {
+    "path": "unity-client/Assets/HitMe/Art/Arenas/LangQueBacBo/sand.png",
+    "size": [
+      1254,
+      1254
+    ],
+    "mode": "RGB",
+    "sha256": "b725e256ee679696f2b5654e626a22964fe87aa9ca293cf86a4595ac736e7906"
+  }
+]

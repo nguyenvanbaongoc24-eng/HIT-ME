@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f511ff86f6f3c84488537f9436b02a43, type: 3}
+  m_Name: Chao
+  m_EditorClassIdentifier: HitMe.Runtime::HitMe.Characters.WeaponDefinition
+  weaponId: Chao
+  displayName: Chao
+  heldSprite: {fileID: 21300000, guid: f93b594f6be030e4c99270caa3ed59e1, type: 3}
+  projectileSprite: {fileID: 0}
+  icon: {fileID: 0}
+  handAnchor: {x: 0.77, y: 0.36}
+  gripPivot: {x: 0.21, y: 0.5}
+  visualSize: 20
