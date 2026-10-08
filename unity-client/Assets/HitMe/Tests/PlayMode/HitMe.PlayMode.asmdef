@@ -1,5 +1,12 @@
 {
   "name": "HitMe.PlayMode",
-  "references": ["HitMe.Core", "HitMe.Runtime", "Unity.ugui"],
-  "optionalUnityReferences": ["TestAssemblies"]
+  "references": [
+    "HitMe.Core",
+    "HitMe.Runtime",
+    "Unity.ugui",
+    "Unity.TextMeshPro"
+  ],
+  "optionalUnityReferences": [
+    "TestAssemblies"
+  ]
 }

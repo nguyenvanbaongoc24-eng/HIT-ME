@@ -6,25 +6,28 @@
   <title>HIT ME</title>
   <style>
     *{box-sizing:border-box}html,body{width:100%;height:100%;margin:0;overflow:hidden;background:#6b4239;font-family:Arial,sans-serif}
-    #game{position:relative;width:100%;height:100%;max-width:min(540px,calc(100vh * 390 / 844));margin:auto}
+    #game{position:relative;width:100%;height:100dvh;max-width:min(540px,calc(100dvh * 430 / 932));margin:auto}
     canvas{display:block;width:100%;height:100%;touch-action:none}
     #loading{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;background:#6b4239;color:white;padding:env(safe-area-inset-top) 20px env(safe-area-inset-bottom)}
     progress{width:70%;height:16px;accent-color:#238c81}#message{text-align:center;margin:20px;max-width:320px}
   </style>
 </head>
 <body>
-<main id="game"><canvas id="unity-canvas" tabindex="0" aria-label="HIT ME"></canvas><div id="loading"><h1>HIT ME</h1><progress id="progress" value="0" max="1"></progress><p id="message">Đang tải…</p></div></main>
+<main id="game"><canvas id="unity-canvas" tabindex="0" aria-label="HIT ME"></canvas><div id="loading"><h1>HIT ME</h1><progress id="progress" value="0" max="1"></progress><p id="message">Đang tải…</p></div></main><output id="performance" style="position:fixed;top:0;left:0;background:#15202ddd;color:white;font:12px monospace;pointer-events:none"></output><div id="safe-area-probe" style="position:fixed;visibility:hidden;padding:env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left)"></div>
 <script>
 const canvas=document.getElementById('unity-canvas'),loading=document.getElementById('loading'),message=document.getElementById('message');
 canvas.addEventListener('webglcontextlost',e=>{e.preventDefault();loading.style.display='flex';message.textContent='Mất kết nối đồ họa. Tải lại trang để tiếp tục.';});
 const buildUrl='Build',config={
  dataUrl:buildUrl+'/{{{ DATA_FILENAME }}}',frameworkUrl:buildUrl+'/{{{ FRAMEWORK_FILENAME }}}',codeUrl:buildUrl+'/{{{ CODE_FILENAME }}}',
  streamingAssetsUrl:'StreamingAssets',companyName:'{{{ COMPANY_NAME }}}',productName:'{{{ PRODUCT_NAME }}}',productVersion:'{{{ PRODUCT_VERSION }}}',
- devicePixelRatio:Math.min(window.devicePixelRatio||1,3),matchWebGLToCanvasSize:true
+ autoSyncPersistentDataPath:true,devicePixelRatio:Math.min(window.devicePixelRatio||1,2),matchWebGLToCanvasSize:true
 };
 const script=document.createElement('script');script.src=buildUrl+'/{{{ LOADER_FILENAME }}}';
-script.onload=()=>createUnityInstance(canvas,config,p=>document.getElementById('progress').value=p).then(instance=>{window.hitMeUnity=instance;loading.style.display='none';}).catch(error=>{message.textContent='Không tải được game: '+error;});
+script.onload=()=>createUnityInstance(canvas,config,p=>document.getElementById('progress').value=p).then(instance=>{window.hitMeUnity=instance;loading.style.display='none';syncSafeArea();}).catch(error=>{message.textContent='Không tải được game: '+error;});
 script.onerror=()=>message.textContent='Không tải được Unity loader. Kiểm tra máy chủ và kết nối.';
+function syncSafeArea(){if(!window.hitMeUnity)return;const style=getComputedStyle(document.getElementById('safe-area-probe')),bounds=canvas.getBoundingClientRect();const num=x=>parseFloat(x)||0;window.hitMeUnity.SendMessage('WebMobileBridge','SetSafeArea',JSON.stringify({left:Math.max(0,num(style.paddingLeft)-bounds.left)/bounds.width,right:Math.max(0,num(style.paddingRight)-(innerWidth-bounds.right))/bounds.width,top:num(style.paddingTop)/bounds.height,bottom:num(style.paddingBottom)/bounds.height}));}
+window.addEventListener('resize',syncSafeArea);if(window.visualViewport)visualViewport.addEventListener('resize',syncSafeArea);
+if(!new URLSearchParams(location.search).has('performance'))document.getElementById('performance').remove();
 document.body.appendChild(script);
 </script>
 </body>

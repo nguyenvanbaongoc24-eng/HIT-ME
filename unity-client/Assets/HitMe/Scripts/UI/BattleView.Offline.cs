@@ -11,6 +11,8 @@ namespace HitMe.UI
     public sealed partial class BattleView
     {
         public OfflineMatch Match { get; private set; }
+        static readonly string[] Hearts={"","♥","♥♥","♥♥♥"};
+        readonly List<(string id,BotDecision decision,BotContext context)> scheduledBots=new List<(string,BotDecision,BotContext)>(); int scheduledRound=-1;
         readonly Dictionary<string,BotController> bots = new Dictionary<string,BotController>();
         Button offlineLaunch; readonly List<RectTransform> projectiles = new List<RectTransform>();
         double presentationThrowSeconds;
@@ -23,7 +25,7 @@ namespace HitMe.UI
         public void StartOffline(MatchSettings settings)
         {
             Initialize(); presentationThrowSeconds=settings.ThrowSeconds; Match=new OfflineMatch(Config,settings,Time.unscaledTimeAsDouble);
-            bots.Clear(); for(int i=1;i<=settings.BotCount;i++) bots.Add("bot-"+i,new BotController(settings.Seed+(uint)i*7919,settings.Difficulty));
+            scheduledRound=-1;scheduledBots.Clear();bots.Clear(); for(int i=1;i<=settings.BotCount;i++) bots.Add("bot-"+i,new BotController(settings.Seed+(uint)i*7919,settings.Difficulty));
             actors=new RectTransform[settings.BotCount+1]; portraitItems=new RectTransform[actors.Length*3]; portraitPositions=new Vector2[portraitItems.Length];
             paintedPhase=(MatchPhase)(-1); paintedRound=-1; resultNavigated=false; Rebuild();
             if(offlineLaunch!=null) Destroy(offlineLaunch.gameObject); offlineLaunch=null;
@@ -31,16 +33,19 @@ namespace HitMe.UI
         void PumpBots(double now)
         {
             if(Match.Phase!=MatchPhase.Placement)return;
-            var due=new List<(string id, BotDecision decision)>();
-            foreach(var item in bots) { var context=Match.BotContextFor(item.Key); var decision=item.Value.Decide(context,Config,Match.PhaseStarted); if(decision!=null && now>=decision.LockAt)due.Add((item.Key,decision)); }
-            foreach(var item in due.OrderBy(x=>x.decision.LockAt).ThenBy(x=>x.id,StringComparer.Ordinal))
-                bots[item.id].Submit(Match.BotContextFor(item.id),item.decision.LockAt,Match.Place,Match.Aim,Match.Lock);
+            if(scheduledRound!=Match.Round){
+                scheduledRound=Match.Round;scheduledBots.Clear();
+                foreach(var item in bots){var context=Match.BotContextFor(item.Key);var decision=item.Value.Decide(context,Config,Match.PhaseStarted);if(decision!=null)scheduledBots.Add((item.Key,decision,context));}
+                scheduledBots.Sort((a,b)=>{int order=a.decision.LockAt.CompareTo(b.decision.LockAt);return order!=0?order:StringComparer.Ordinal.Compare(a.id,b.id);});
+            }
+            while(scheduledBots.Count>0 && now>=scheduledBots[0].decision.LockAt){var item=scheduledBots[0];scheduledBots.RemoveAt(0);bots[item.id].Submit(item.context,item.decision.LockAt,Match.Place,Match.Aim,Match.Lock);}
+
         }
         void MatchPlace(Vector2 screen)
         {
             double now=Time.unscaledTimeAsDouble; PumpBots(now); Match.Tick(now);
-            Point p=FromPointer(screen); if(!Geometry.Contains(p,Config.arenaA,Config.arenaB))return;
-            Match.Place("player",Geometry.Clamp(p,Config.arenaA,Config.arenaB,Config.playerRadius),now); PaintMatch();
+            Point p=FromPointer(screen); if(!Config.ArenaGeometry.PointInside(p))return;
+            Match.Place("player",Config.ArenaGeometry.ClampPosition(p,Config.playerRadius),now); PaintMatch();
         }
         void MatchAim(Vector2 screen)
         {
@@ -57,7 +62,7 @@ namespace HitMe.UI
         }
         void PaintMatch()
         {
-            floor.Find("ArenaLabel").gameObject.SetActive(false);
+            floor.Find("ArenaLabel").gameObject.SetActive(ArenaMaps.Selected!=0);
             var view=Match.ViewFor("player"); bool placement=Match.Phase==MatchPhase.Placement;
             bool changed=paintedPhase!=Match.Phase || paintedRound!=Match.Round;
             if(changed) { foreach(var p in projectiles) if(p!=null)Destroy(p.gameObject); projectiles.Clear(); }
@@ -77,9 +82,9 @@ namespace HitMe.UI
                     presentation.Visual.SetFacing(new Vector2((float)action.Direction.X,(float)action.Direction.Y));
                     presentation.Present(pose,body.color);
                     var spriteLabel=body.GetComponentInChildren<Text>(); if(spriteLabel!=null)spriteLabel.text=f.Hp==0?"X":"PH\n"+(i==0?"P":"B"+i);
-                    actors[i].Find("NameHealth/HealthSymbols").GetComponent<Text>().text=new string('♥',f.Hp);
+                    actors[i].Find("NameHealth/HealthSymbols").GetComponent<Text>().text=Hearts[f.Hp];
                 }
-                portraitItems[i*3+2].GetComponent<Text>().text=f.Hp==0?"X":new string('♥',f.Hp);
+                portraitItems[i*3+2].GetComponent<Text>().text=f.Hp==0?"X":Hearts[f.Hp];
                 portraitItems[i*3].GetComponent<EllipseGraphic>().color=f.Hp==0?Color.gray:i==0?C(43,157,147):C(190,100,89);
             }
             // Sort every visible/revealed group, including rounds after the human is eliminated.
@@ -101,7 +106,7 @@ namespace HitMe.UI
             aim.gameObject.SetActive(placement && view[0].Action!=null && view[0].Action.CanThrow);
             if(aim.gameObject.activeSelf)
             {
-                var a=view[0].Action; var start=ToCanvas(a.Position); var end=ToCanvas(Geometry.RayWallPoint(a.Position,a.Direction,Config.arenaA,Config.arenaB)); var delta=end-start;
+                var a=view[0].Action; var start=ToCanvas(a.Position); var end=ToCanvas(Config.ArenaGeometry.ProjectileCollision(a.Position,a.Direction,Config.projectileRadius)); var delta=end-start;
                 aim.anchoredPosition=(start+end)/2; aim.sizeDelta=new Vector2(delta.magnitude,2); aim.localRotation=Quaternion.Euler(0,0,Mathf.Atan2(delta.y,delta.x)*Mathf.Rad2Deg);
             }
             if(Match.Phase==MatchPhase.Throw)
@@ -112,16 +117,21 @@ namespace HitMe.UI
             }
             paintedPhase=Match.Phase; paintedRound=Match.Round;
         }
+        readonly List<Rect> occupiedBounds=new List<Rect>(48);
+        readonly Vector3[] boundsCorners=new Vector3[4];
+        static readonly int[] LabelSides={0,-1,1};
+        static readonly string[] HudWidgets={"Round","Timer","Settings","Ready","Chat","Weapon","Status"};
         void LayoutOpponentLabels()
         {
             // Keep HUD clear for all actors and separate name plates even when logical hitboxes overlap.
-            var occupied=new List<Rect>();
-            foreach(var item in portraitItems)occupied.Add(LocalBounds(item));
-            foreach(string widget in new[]{"Round","Timer","Settings","Ready","Chat","Weapon","Status"})occupied.Add(LocalBounds(hud.Find(widget).GetComponent<RectTransform>()));
+            occupiedBounds.Clear();var occupied=occupiedBounds;
+            float hudBottom=float.PositiveInfinity;
+            foreach(var item in portraitItems){var bounds=LocalBounds(item);occupied.Add(bounds);hudBottom=Mathf.Min(hudBottom,bounds.yMin);}
+            foreach(string widget in HudWidgets)occupied.Add(LocalBounds(hud.Find(widget).GetComponent<RectTransform>()));
             for(int i=0;i<actors.Length;i++) if(actors[i].gameObject.activeSelf)
             {
                 var body=actors[i].Find("CharacterSpritePlaceholder").GetComponent<RectTransform>();
-                float hudBottom=portraitItems.Min(item=>LocalBounds(item).yMin);
+
                 var visual=body.GetComponent<CharacterVisual>();
                 float maxHeight=Mathf.Clamp(hudBottom-actors[i].anchoredPosition.y-7,8,visual.DesiredHeight);
                 if(visual.HasSprite)visual.Fit(maxHeight,2*(root.rect.width/2-Mathf.Abs(actors[i].anchoredPosition.x))-8);
@@ -135,11 +145,12 @@ namespace HitMe.UI
             {
                 var label=actors[i].Find("NameHealth").GetComponent<RectTransform>(); Vector2 foot=actors[i].anchoredPosition;
                 bool found=false;
-                for(int row=0;row<18 && !found;row++)foreach(int side in new[]{0,-1,1})
+                for(int row=0;row<18 && !found;row++)foreach(int side in LabelSides)
                 {
                     Vector2 candidate=new Vector2(Mathf.Clamp(foot.x+side*132,root.rect.xMin+65,root.rect.xMax-65),Mathf.Clamp(foot.y+Mathf.Max(72,actors[i].Find("CharacterSpritePlaceholder").GetComponent<RectTransform>().rect.height+18)-row*26,root.rect.yMin+108,root.rect.yMax-110));
                     Rect bounds=new Rect(candidate-new Vector2(63,12),new Vector2(126,24));
-                    if(occupied.Any(r=>r.Overlaps(bounds)))continue;
+                    bool overlaps=false;for(int k=0;k<occupied.Count;k++)if(occupied[k].Overlaps(bounds)){overlaps=true;break;}
+                    if(overlaps)continue;
                     label.anchoredPosition=candidate-foot; occupied.Add(bounds); found=true; break;
                 }
                 label.gameObject.SetActive(found); // HP remains public in roster if there is no collision-free plate.
@@ -147,8 +158,12 @@ namespace HitMe.UI
         }
         void SortActorsByFeet()
         {
-            var sorted=actors.Select((actor,index)=>(actor,index)).OrderByDescending(x=>x.actor.anchoredPosition.y).ThenBy(x=>x.index).ToArray();
-            for(int rank=0;rank<sorted.Length;rank++)sorted[rank].actor.SetSiblingIndex(rank);
+            // Fix ranks in ascending order; later moves cannot disturb already sorted siblings.
+            for(int rank=0;rank<actors.Length;rank++)for(int i=0;i<actors.Length;i++){
+                int targetRank=0;for(int j=0;j<actors.Length;j++)if(j!=i && (actors[j].anchoredPosition.y>actors[i].anchoredPosition.y || actors[j].anchoredPosition.y==actors[i].anchoredPosition.y && j<i))targetRank++;
+                if(targetRank==rank){if(actors[i].GetSiblingIndex()!=rank)actors[i].SetSiblingIndex(rank);break;}
+            }
+
         }
         RectTransform CreateWeaponProjectile(string thrower,Point origin)
         {
@@ -162,7 +177,7 @@ namespace HitMe.UI
         }
         Rect LocalBounds(RectTransform r)
         {
-            var corners=new Vector3[4]; r.GetWorldCorners(corners);
+            var corners=boundsCorners; r.GetWorldCorners(corners);
             float minX=float.PositiveInfinity,minY=float.PositiveInfinity,maxX=float.NegativeInfinity,maxY=float.NegativeInfinity;
             foreach(var corner in corners) { var p=root.InverseTransformPoint(corner); minX=Mathf.Min(minX,p.x);minY=Mathf.Min(minY,p.y);maxX=Mathf.Max(maxX,p.x);maxY=Mathf.Max(maxY,p.y); }
             return UnityEngine.Rect.MinMaxRect(minX,minY,maxX,maxY);

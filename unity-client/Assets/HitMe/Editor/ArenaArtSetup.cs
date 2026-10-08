@@ -20,15 +20,14 @@ namespace HitMe.Editor
     {
         public static void Configure()
         {
-            const string art="Assets/HitMe/Art/Arenas/LangQueBacBo/";
-            if(!File.Exists(art+"backdrop.png"))return;
             const string folder="Assets/HitMe/Resources/Arenas";Directory.CreateDirectory(folder);AssetDatabase.Refresh();
-            const string path=folder+"/LangQueBacBo.asset";
-            var definition=AssetDatabase.LoadAssetAtPath<ArenaArtDefinition>(path);
-            if(definition==null){definition=ScriptableObject.CreateInstance<ArenaArtDefinition>();AssetDatabase.CreateAsset(definition,path);}
-            definition.backdrop=AssetDatabase.LoadAssetAtPath<Sprite>(art+"backdrop.png");
-            definition.sand=AssetDatabase.LoadAssetAtPath<Sprite>(art+"sand.png");
-            EditorUtility.SetDirty(definition);
+            foreach(string id in ArenaMaps.Ids){
+                string art="Assets/HitMe/Art/Arenas/"+id+"/";if(!File.Exists(art+"backdrop.png"))continue;
+                string path=folder+"/"+id+".asset";var definition=AssetDatabase.LoadAssetAtPath<ArenaArtDefinition>(path);
+                if(definition==null){definition=ScriptableObject.CreateInstance<ArenaArtDefinition>();AssetDatabase.CreateAsset(definition,path);}
+                definition.backdrop=AssetDatabase.LoadAssetAtPath<Sprite>(art+"backdrop.png");definition.sand=AssetDatabase.LoadAssetAtPath<Sprite>(art+"sand.png");EditorUtility.SetDirty(definition);
+            }
+
         }
     }
 }

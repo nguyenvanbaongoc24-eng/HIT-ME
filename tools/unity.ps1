@@ -5,7 +5,12 @@ param(
 $workspacePath = Split-Path -Parent $PSScriptRoot
 $projectPath = Join-Path $workspacePath 'unity-client'
 if (!(Test-Path -LiteralPath $Editor)) { throw "Unity Editor missing: $Editor" }
-$arguments = @('-projectPath', ('"' + $projectPath + '"'))
+if($Action -eq 'BuildWeb'){ & (Join-Path $PSScriptRoot 'build-web.ps1') -Editor $Editor; exit }
+if($Action -ne 'Open'){
+    $lockPath=Join-Path $projectPath 'Temp/UnityLockfile'
+    if(Test-Path -LiteralPath $lockPath){try{$handle=[IO.File]::Open($lockPath,'Open','ReadWrite','None');$handle.Dispose()}catch{throw 'Unity project is locked. Close its Editor first.'}}
+}
+$arguments = @('-projectPath' , ('"' + $projectPath + '"'))
 if ($Action -eq 'Open') {
     Start-Process -FilePath $Editor -ArgumentList $arguments -WindowStyle Hidden
     exit

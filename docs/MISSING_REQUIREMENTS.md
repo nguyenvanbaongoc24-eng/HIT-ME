@@ -40,3 +40,14 @@ Không thiếu ba tài liệu yêu cầu: đã tìm thấy ở root và chép v�
 Thông số elip 1000/1750, player radius 90 và projectile radius 30 đã được master prompt hiện tại cho phép làm mặc định cấu hình. Không coi các giá trị đề xuất về kinh tế/AFK trong spec là phạm vi giai đoạn này.
 
 Tiến độ foundation và kết quả Unity thực thi mới nhất: xem SPRINT1_REPORT.md. Vẫn cần trận offline hoàn chỉnh sau khi chốt luật, Safari iOS/Chrome Android trên máy thật, số liệu FPS/texture memory và context loss. Test TS 9/9 trong audit không thay thế kiểm chứng Unity.
+
+
+## Sprint 3B — phạm vi được cập nhật
+
+Prompt Sprint 3B thay arena elip mặc định bằng chữ nhật bo góc 2000 × 3500, radius 300; player 90/projectile 30 không đổi. Elip còn trong core để rollback. Các luật timeout còn đề xuất, chồng vị trí, sudden death và Hard bot trong bảng trên vẫn chưa được chốt; không tự bổ sung.
+
+- Chỉ Làng quê Bắc Bộ có PNG art riêng từ Sprint 3A; năm bối cảnh khác có lựa chọn và fallback được ghi rõ thiếu art. Nền Làng quê hiện được dùng lại, chưa phải bộ environment mới khớp hoàn toàn concept Sprint 3B.
+- HUD dùng thumbnail từ sprite Idle thật; vẫn thiếu portrait PNG riêng, frame animation nhiều tư thế, audio, crowd animation và bộ VFX hoàn chỉnh.
+- Chat vẫn là UI mock; không có online/multiplayer, kết bạn, kinh tế, shop hoặc ranking production. Lobby/CharacterSelect chưa có luồng tài khoản/lựa chọn hoàn chỉnh.
+- Preset 60/30 FPS là cấu hình mục tiêu. Đo browser desktop không thay cho Safari iOS/Chrome Android thật, notch/Dynamic Island thật hay benchmark nhiệt/memory dài hạn.
+- Kết quả thực thi Sprint 3B được ghi riêng tại SPRINT_3B_UNITY_INTEGRATION_REPORT.md; không dùng báo cáo này để khẳng định các mục còn thiếu đã hoàn tất.

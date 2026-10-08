@@ -1,0 +1,44 @@
+{
+  "editMode": {
+    "total": "70",
+    "passed": "70",
+    "failed": "0",
+    "result": "Passed",
+    "start-time": "2026-10-08 14:45:52Z",
+    "end-time": "2026-10-08 14:45:53Z"
+  },
+  "playMode": {
+    "total": "15",
+    "passed": "15",
+    "failed": "0",
+    "result": "Passed",
+    "start-time": "2026-10-08 15:06:47Z",
+    "end-time": "2026-10-08 15:07:03Z"
+  },
+  "build": {
+    "result": "Succeeded",
+    "bytes": 21283266,
+    "errors": 0,
+    "warnings": 1,
+    "seconds": 11.4045839
+  },
+  "desktopPerformance": {
+    "HIGH": {
+      "samples": 10,
+      "fpsMin": 60.0,
+      "fpsMax": 60.0,
+      "largestFrameMs": 22.0
+    },
+    "LOW": {
+      "samples": 10,
+      "fpsMin": 30.0,
+      "fpsMax": 30.0,
+      "largestFrameMs": 42.0
+    }
+  },
+  "guards": {
+    "lockedProject": "Rejected; actual batch build PID 26048 was holding UnityLockfile",
+    "missingEditorExitCode": 1
+  },
+  "physicalMobileTested": false
+}

@@ -61,3 +61,18 @@ Mở Battle trực tiếp giữ preview Sprint 1 có nhãn để các test cũ c
 `Assets/HitMe/Resources/offline-match-config.json`: botCount 1–5, difficulty 0 Easy/1 Normal (2 Hard chưa bật), seed, throwSeconds, roundResultSeconds. `proposedTimeout: true` chỉ dùng đề xuất spec 2.5.1: thiếu input thì giữ vị trí cũ, không ném; false dừng timeout thiếu input chờ luật chính thức. Thông số arena/HP/timer vẫn ở foundation-config.json.
 
 Kiểm tra giữ nguyên prototype/Sprint 1: `python tests/verify-prototype.py`, `python tests/verify-sprint2.py`. Kiểm tra font: `python tests/verify-fonts.py`. Test Unity và Web build dùng tools/unity.ps1 như phần trước; chạy từng Editor operation tuần tự. Web được serve bằng HTTP, không mở index.html trực tiếp.
+
+
+## Workflow Sprint 3B
+
+Project duy nhất: `D:/HIT ME/unity-client`, Editor `D:/App/UNITY/6000.6.4f1/Editor/Unity.exe`.
+
+- Đóng Editor đang mở project trước khi batch test/build. Script kiểm tra UnityLockfile.
+- Test: `./tools/unity.ps1 -Action EditMode` và `./tools/unity.ps1 -Action PlayMode`.
+- Web: `./tools/build-web.ps1`; menu Editor **HIT ME → Build Web** cũng gọi `HitMeWebBuild.Build`.
+- HTTP: `python tools/serve-web.py --port 8791`, mở `http://127.0.0.1:8791/`.
+- Đo FPS debug: URL `http://127.0.0.1:8791/?performance=1`. Nhãn lấy từ frame counter Unity mỗi 2 giây; max ms là khoảng khung hình lớn nhất của cửa sổ đó, không phải p95.
+- Mở Battle: Unity Hub → Add project `D:/HIT ME/unity-client` → dùng Editor 6000.6.4f1 → mở `Assets/HitMe/Scenes/Battle.unity` hoặc **HIT ME → Open Battle**. Play từ Battle mặc định là preview, bấm Chơi với bot để vào trận; Boot/MainMenu là luồng thông thường.
+- Font: **HIT ME → Prepare Sprint 3B** bake Nunito/Noto Sans Symbols 2 vào static SDF; TMP Essential Resources lấy từ package UGUI đã cài, không tải một package mới.
+- Art: thêm PNG riêng vào `Assets/HitMe/Art/Arenas/<MapID>/backdrop.png` và tùy chọn `sand.png`. Importer cấu hình Sprite; build cập nhật ArenaArtDefinition chỉ cho map thực sự có PNG. Không tách concept tổng hợp thành frame giả.
+- Rollback hình học: đặt `arenaShape` thành `ellipse` trong `Assets/HitMe/Resources/foundation-config.json`, build lại. Rollback toàn sprint: xem commit bằng `git log --oneline`; dùng `git revert <commit Sprint 3B>` trên working tree sạch. Baseline trước Sprint 3B là `56ca54b`.

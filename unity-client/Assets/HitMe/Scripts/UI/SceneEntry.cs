@@ -13,7 +13,7 @@ namespace HitMe.UI
 #if !UNITY_WEBGL || UNITY_EDITOR
             Screen.orientation = ScreenOrientation.Portrait;
 #endif
-            Application.targetFrameRate = 60; // Target only, not a measured performance claim.
+            WebMobileBridge.Ensure(); // Preserve the selected 60/30 FPS target across scenes.
             if (FindAnyObjectByType<EventSystem>() == null)
                 new GameObject("EventSystem", typeof(EventSystem), typeof(InputSystemUIInputModule));
             if (Camera.main == null)

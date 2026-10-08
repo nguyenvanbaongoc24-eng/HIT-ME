@@ -21,7 +21,7 @@ namespace HitMe.UI
             Button(safe,"BackToMenu",Strings.Get("backMenu"),-124,OfflineRunContext.Menu);
         }
         void Label(Transform parent,string name,string text,float y,int size)
-        { var go=new GameObject(name,typeof(RectTransform),typeof(Text)); go.transform.SetParent(parent,false); var r=go.GetComponent<RectTransform>(); r.sizeDelta=new Vector2(340,56); r.anchoredPosition=new Vector2(0,y); var t=go.GetComponent<Text>(); t.font=FoundationFonts.Text; t.fontSize=size; t.alignment=TextAnchor.MiddleCenter; t.text=text; t.color=Color.white; t.raycastTarget=false; }
+        { var go=new GameObject(name,typeof(RectTransform),typeof(HitMeText)); go.transform.SetParent(parent,false); var r=go.GetComponent<RectTransform>(); r.sizeDelta=new Vector2(340,56); r.anchoredPosition=new Vector2(0,y); var t=go.GetComponent<Text>(); t.font=FoundationFonts.Text; t.fontSize=size; t.alignment=TextAnchor.MiddleCenter; t.text=text; t.color=Color.white; t.raycastTarget=false; }
         void Button(Transform parent,string name,string text,float y,UnityEngine.Events.UnityAction action)
         { var go=new GameObject(name,typeof(RectTransform),typeof(Image),typeof(Button)); go.transform.SetParent(parent,false); var r=go.GetComponent<RectTransform>(); r.sizeDelta=new Vector2(290,48); r.anchoredPosition=new Vector2(0,y); go.GetComponent<Image>().color=new Color(.12f,.55f,.50f); go.GetComponent<Button>().onClick.AddListener(action); Label(go.transform,"Label",text,0,19); }
     }

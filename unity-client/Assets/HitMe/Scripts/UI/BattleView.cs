@@ -12,7 +12,7 @@ namespace HitMe.UI
         public ArenaViewport Viewport { get; private set; }
         public int VisibleActorCount { get; private set; }
         public Rect? SafeAreaOverride { get; set; }
-        public Rect CurrentSafeArea => SafeAreaOverride ?? Screen.safeArea;
+        public Rect CurrentSafeArea => SafeAreaOverride ?? WebMobileBridge.SafeArea;
         public bool CanPlace => Match != null ? Match.Phase == MatchPhase.Placement && Match.ViewFor("player")[0].Hp > 0 && Match.ViewFor("player")[0].Stage != InputStage.Locked : Session.Phase == BattlePhase.Placement && !Session.Locked;
         public float DragThreshold => (float)Config.aimDragPixels * canvas.scaleFactor;
         Canvas canvas;
@@ -39,7 +39,7 @@ namespace HitMe.UI
             if (initialized) return;
             initialized = true;
             Config = JsonUtility.FromJson<FoundationConfig>(Resources.Load<TextAsset>("foundation-config").text);
-            Config.Validate(); Session = new PlacementSession(Config); Strings.Load(language);
+            WebMobileBridge.Ensure(); Config.Validate(); Session = new PlacementSession(Config); Strings.Load(language);
             FoundationFonts.Validate(); font = FoundationFonts.Text;
             GameObject go = new GameObject("BattleCanvas", typeof(RectTransform), typeof(Canvas), typeof(CanvasScaler), typeof(GraphicRaycaster));
             go.transform.SetParent(transform, false);
@@ -65,9 +65,17 @@ namespace HitMe.UI
         {
             var r = Rect(name, parent, size, pos); var g = r.gameObject.AddComponent<EllipseGraphic>(); g.color = color; g.innerRatio = inner; g.raycastTarget = false; return g;
         }
+        MaskableGraphic ArenaSurface(string name, Transform parent, Vector2 size, Vector2 pos, Color color, float inner=0)
+        {
+            if(Config.arenaShape!="roundedRectangle") return Ellipse(name,parent,size,pos,color,inner);
+            if(parent==root)pos+=ArenaOffset;
+            var r=Rect(name,parent,size,pos); var g=r.gameObject.AddComponent<RoundedRectangleGraphic>();
+            g.cornerRadius=(float)(Config.cornerRadius*Viewport.Scale)+Mathf.Max(0,(size.x-(float)(Config.arenaWidth*Viewport.Scale))/2);
+            g.color=color;g.innerRatio=inner;g.raycastTarget=false;return g;
+        }
         Text Label(string name, Transform parent, string value, Vector2 size, Vector2 pos, int fontSize = 14)
         {
-            var r = Rect(name, parent, size, pos); var t = r.gameObject.AddComponent<Text>();
+            var r = Rect(name, parent, size, pos); var t = r.gameObject.AddComponent<HitMeText>();
             t.font = font; t.text = value; t.fontSize = fontSize; t.fontStyle = FontStyle.Bold; t.alignment = TextAnchor.MiddleCenter;
             t.color = Color.white; t.raycastTarget = false; t.horizontalOverflow = HorizontalWrapMode.Wrap;
             var outline = r.gameObject.AddComponent<Outline>(); outline.effectColor = ink; outline.effectDistance = new Vector2(1, -1);
@@ -85,17 +93,17 @@ namespace HitMe.UI
             Canvas.ForceUpdateCanvases();
             float w = root.rect.width, h = root.rect.height;
             if (w <= 0 || h <= 0) { w = Config.referenceWidth; h = Config.referenceHeight; }
-            Viewport = new ArenaViewport(w, h, Config);
-            var arenaArt=Resources.Load<ArenaArtDefinition>("Arenas/LangQueBacBo");
+            Viewport = new ArenaViewport(w, h, Config,(Screen.height-CurrentSafeArea.yMax)/canvas.scaleFactor,CurrentSafeArea.yMin/canvas.scaleFactor);
+            var arenaArt=ArenaMaps.LoadSelected();
             bool hasBackdrop=arenaArt!=null && arenaArt.backdrop!=null;
             var bg = Box("StandsPlaceholder", root, new Vector2(w, h), Vector2.zero, C(107, 66, 57)); Stretch(bg.rectTransform);
             if(hasBackdrop) {bg.sprite=arenaArt.backdrop;bg.color=Color.white;}
             for (int i = 0; !hasBackdrop && i < 4; i++)
-                Ellipse("StandTierPlaceholder", root, new Vector2((float)Viewport.OuterWidth + 38 + i * 70, (float)Viewport.OuterHeight + 40 + i * 80), Vector2.zero, i % 2 == 0 ? C(139, 86, 66) : C(179, 114, 77), .965f);
-            Ellipse("WallShadow", root, new Vector2((float)Viewport.OuterWidth + 8, (float)Viewport.OuterHeight + 10), new Vector2(0, -4), ink);
-            Ellipse("WallPlaceholder", root, new Vector2((float)Viewport.OuterWidth, (float)Viewport.OuterHeight), Vector2.zero, C(223, 162, 79));
-            Ellipse("WallInnerPlaceholder", root, new Vector2((float)Viewport.OuterWidth - 9, (float)Viewport.OuterHeight - 9), Vector2.zero, C(146, 84, 48));
-            var arena = Ellipse("ArenaSandPlaceholder", root, new Vector2((float)(2 * Config.arenaA * Viewport.Scale), (float)(2 * Config.arenaB * Viewport.Scale)), Vector2.zero, C(238, 192, 121));
+                ArenaSurface("StandTierPlaceholder", root, new Vector2((float)Viewport.OuterWidth + 38 + i * 70, (float)Viewport.OuterHeight + 40 + i * 80), Vector2.zero, i % 2 == 0 ? C(139, 86, 66) : C(179, 114, 77), .965f);
+            ArenaSurface("WallShadow", root, new Vector2((float)Viewport.OuterWidth + 8, (float)Viewport.OuterHeight + 10), new Vector2(0, -4), ink);
+            ArenaSurface("WallPlaceholder", root, new Vector2((float)Viewport.OuterWidth, (float)Viewport.OuterHeight), Vector2.zero, C(223, 162, 79));
+            ArenaSurface("WallInnerPlaceholder", root, new Vector2((float)Viewport.OuterWidth - 9, (float)Viewport.OuterHeight - 9), Vector2.zero, C(146, 84, 48));
+            var arena = ArenaSurface("ArenaSandPlaceholder", root, new Vector2((float)(2 * Config.ArenaGeometry.Bounds.MaxX * Viewport.Scale), (float)(2 * Config.ArenaGeometry.Bounds.MaxY * Viewport.Scale)), Vector2.zero, C(238, 192, 121));
             floor = arena.rectTransform; arena.raycastTarget = true;
             arena.gameObject.AddComponent<ArenaInput>().view = this;
             if(arenaArt!=null && arenaArt.sand!=null)
@@ -103,8 +111,8 @@ namespace HitMe.UI
                 arena.gameObject.AddComponent<Mask>().showMaskGraphic=false;
                 var sand=Box("ArenaSandSprite",floor,floor.sizeDelta,Vector2.zero,Color.white);Stretch(sand.rectTransform);sand.sprite=arenaArt.sand;
             }
-            Ellipse("FloorMark", floor, floor.sizeDelta * .94f, Vector2.zero, C(215, 157, 89), .993f);
-            Label("ArenaLabel", floor, hasBackdrop?"":Strings.Get("arenaPlaceholder"), new Vector2(200, 48), new Vector2(0, -110), 14).color = C(160, 100, 55);
+            ArenaSurface("FloorMark", floor, floor.sizeDelta * .94f, Vector2.zero, C(215, 157, 89), .993f);
+            Label("ArenaLabel", floor, hasBackdrop?"":ArenaMaps.DisplayName+"\n"+Strings.Get("arenaPlaceholder"), new Vector2(200, 48), new Vector2(0, -110), 14).color = C(160, 100, 55);
             CharacterManifest manifest = CharacterManifest.Load();
             var catalog = CharacterCatalog.Load();
             var actorLayer = Rect("ActorLayer", root, Vector2.zero, Vector2.zero); Stretch(actorLayer);
@@ -138,28 +146,31 @@ namespace HitMe.UI
             hud = Rect("SafeAreaHUD", root, Vector2.zero, Vector2.zero); Stretch(hud); UpdateSafeArea();
             float top = hud.rect.height / 2 - 23, bottom = -hud.rect.height / 2 + 34;
             float safeW = hud.rect.width;
-            Label("Round", hud, Strings.Get("round") + " 1", new Vector2(100, 30), new Vector2(-safeW / 2 + 59, top), 17);
-            timer = Label("Timer", hud, "5", new Vector2(70, 43), new Vector2(0, top), 30);
-            Button("Settings", hud, Strings.Get("settings"), new Vector2(84, 34), new Vector2(safeW / 2 - 50, top), Settings, C(47, 102, 103));
+            Label("Round", hud, Strings.Get("round") + " 1", new Vector2(100, 24), new Vector2(-safeW / 2 + 59, top), 17);
+            timer = Label("Timer", hud, "5", new Vector2(70, 28), new Vector2(0, top), 22);
+            Button("Settings", hud, Strings.Get("settings"), new Vector2(84, 28), new Vector2(safeW / 2 - 50, top), Settings, C(47, 102, 103));
             for (int i = 0; i < actors.Length; i++)
             {
                 float x = (i - (actors.Length - 1) / 2f) * Mathf.Min(66, (safeW - 24) / actors.Length);
-                portraitItems[i * 3] = Ellipse("PortraitPlaceholder" + i, hud, new Vector2(Match == null ? 30 : 24, Match == null ? 30 : 24), new Vector2(x, top - (Match == null ? 43 : 35)), i == 0 ? C(43, 157, 147) : C(190, 100, 89)).rectTransform;
+                portraitItems[i * 3] = Ellipse("PortraitPlaceholder" + i, hud, new Vector2(Match == null ? 30 : 24, Match == null ? 30 : 24), new Vector2(x, top - (Match == null ? 27 : 27)), i == 0 ? C(43, 157, 147) : C(190, 100, 89)).rectTransform;
                 var portraitDefinition=catalog!=null?catalog.ForSlot(i):null;
-                if(portraitDefinition!=null && portraitDefinition.portrait!=null)
+                if(portraitDefinition!=null && portraitDefinition.Frame(HitMe.Characters.VisualState.Idle,0)!=null)
                 {
                     var portrait=Box("PortraitSprite",portraitItems[i*3],portraitItems[i*3].sizeDelta,Vector2.zero,Color.white);
-                    portrait.sprite=portraitDefinition.portrait;portrait.preserveAspect=true;
+                    portrait.sprite=portraitDefinition.portrait!=null?portraitDefinition.portrait:portraitDefinition.Frame(HitMe.Characters.VisualState.Idle,0);portrait.preserveAspect=true;
                 }
-                portraitItems[i * 3 + 1] = Label("PortraitNumber", hud, (i + 1).ToString(), new Vector2(30, Match == null ? 28 : 24), new Vector2(x, top - (Match == null ? 43 : 35)), 13).rectTransform;
-                var hearts = Label("Hearts", hud, "♥♥♥", new Vector2(60, Match == null ? 24 : 18), new Vector2(x, top - (Match == null ? 65 : 53)), Match == null ? 12 : 10); hearts.color = C(255, 165, 139); hearts.font = FoundationFonts.Symbols;
+                portraitItems[i * 3 + 1] = Label("PortraitNumber", hud, portraitDefinition!=null && portraitDefinition.Frame(HitMe.Characters.VisualState.Idle,0)!=null?"":(i + 1).ToString(), new Vector2(30, Match == null ? 28 : 24), new Vector2(x, top - (Match == null ? 27 : 27)), 13).rectTransform;
+                var hearts = Label("Hearts", hud, "♥♥♥", new Vector2(60, Match == null ? 24 : 18), new Vector2(x, top - (Match == null ? 49 : 49)), Match == null ? 12 : 10); hearts.color = C(255, 165, 139); hearts.font = FoundationFonts.Symbols;
                 portraitItems[i * 3 + 2] = hearts.rectTransform;
                 for (int k = 0; k < 3; k++) portraitPositions[i * 3 + k] = portraitItems[i * 3 + k].anchoredPosition;
             }
             Button("Chat", hud, Strings.Get("chat"), new Vector2(62, 46), new Vector2(-safeW / 2 + 40, bottom), () => Message(Strings.Get("chatMock")), C(48, 104, 107));
-            ready = Button("Ready", hud, Strings.Get("ready"), new Vector2(164, 48), new Vector2(0, bottom), OnReady, C(31, 140, 129));
-            readyText = ready.GetComponentInChildren<Text>();
-            Button("Weapon", hud, Strings.Get("weapon"), new Vector2(70, 46), new Vector2(safeW / 2 - 44, bottom), () => Message(Strings.Get("weaponMock")), C(159, 95, 56));
+            ready = Button("Ready", hud, Strings.Get("ready"), new Vector2(164, 48), new Vector2(0, bottom), OnReady, C(247, 186, 58));
+            readyText = ready.GetComponentInChildren<Text>(); readyText.color=ink;
+            var equipped=catalog!=null?catalog.ForSlot(0)?.defaultWeapon:null;
+            var weaponButton=Button("Weapon",hud,Strings.Get("weapon"),new Vector2(70,46),new Vector2(safeW/2-44,bottom),()=>Message(equipped!=null?equipped.displayName+"\n"+Strings.Get("cosmeticWeapon"):Strings.Get("weaponMock")),C(159,95,56));
+            if(equipped!=null && equipped.heldSprite!=null){weaponButton.GetComponentInChildren<Text>().text="";var icon=Box("EquippedWeaponIcon",weaponButton.transform,new Vector2(34,34),Vector2.zero,Color.white);icon.sprite=equipped.icon!=null?equipped.icon:equipped.heldSprite;icon.preserveAspect=true;}
+
             status = Label("Status", hud, Strings.Get("preview"), new Vector2(safeW - 20, 34), new Vector2(0, bottom + 49), 12);
             lastTimerSecond = -1;
             SortActorsByFeet();
@@ -173,11 +184,12 @@ namespace HitMe.UI
             hud.offsetMin = hud.offsetMax = Vector2.zero;
             Canvas.ForceUpdateCanvases();
         }
-        Vector2 ToCanvas(Point p) => new Vector2((float)(p.X * Viewport.Scale), (float)(p.Y * Viewport.Scale));
+        Vector2 ArenaOffset=>new Vector2(0,root.rect.height/2-(float)Viewport.CenterY);
+        Vector2 ToCanvas(Point p) => new Vector2((float)(p.X * Viewport.Scale), (float)(p.Y * Viewport.Scale))+ArenaOffset;
         Point FromPointer(Vector2 screen)
         {
             RectTransformUtility.ScreenPointToLocalPointInRectangle(root, screen, null, out Vector2 p);
-            return new Point(p.x / Viewport.Scale, p.y / Viewport.Scale);
+            p-=ArenaOffset;return new Point(p.x / Viewport.Scale, p.y / Viewport.Scale);
         }
         public void Place(Vector2 screen)
         {
@@ -214,7 +226,7 @@ namespace HitMe.UI
         {
             if (Match != null) { MatchAim(screen); return; }
             if (!Session.Aim(FromPointer(screen), Time.unscaledTimeAsDouble)) return;
-            Point end = Geometry.RayWallPoint(Session.Position, Session.Direction, Config.arenaA, Config.arenaB);
+            Point end = Config.ArenaGeometry.ProjectileCollision(Session.Position, Session.Direction, Config.projectileRadius);
             Vector2 a = ToCanvas(Session.Position), b = ToCanvas(end), delta = b - a;
             aim.gameObject.SetActive(true); aim.anchoredPosition = (a + b) / 2;
             aim.sizeDelta = new Vector2(delta.magnitude, 2); aim.localRotation = Quaternion.Euler(0, 0, Mathf.Atan2(delta.y, delta.x) * Mathf.Rad2Deg);
@@ -278,7 +290,7 @@ namespace HitMe.UI
             if (panel != null) { Destroy(panel); panel = null; return; }
             panel = Box("MockPanel", hud, new Vector2(300, 138), Vector2.zero, C(73, 59, 53)).gameObject;
             Label("Message", panel.transform, message, new Vector2(274, 78), new Vector2(0, 20), 14);
-            Button("Close", panel.transform, Strings.Get("close"), new Vector2(120, 32), new Vector2(0, -43), () => { Destroy(panel); panel = null; }, C(31, 140, 129));
+            Button("Close", panel.transform, Strings.Get("close"), new Vector2(120, 32), new Vector2(0, -43), () => { Destroy(panel); panel = null; }, C(247, 186, 58));
         }
         void Settings()
         {

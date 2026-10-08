@@ -1,0 +1,1 @@
+mergeInto(LibraryManager.library,{HitMePerformance:function(fps,maxMs,target){var panel=document.getElementById('performance');if(panel){panel.textContent='Unity '+fps.toFixed(1)+' FPS · max '+maxMs.toFixed(1)+' ms · target '+target;}}});

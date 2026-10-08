@@ -40,17 +40,20 @@ namespace HitMe.Core
         public MatchPhase Phase { get; private set; } public int Round { get; private set; }
         public double Deadline { get; private set; } public double PhaseStarted { get; private set; }
         public RoundResolution Resolution { get; private set; } public bool NeedsTimeoutConfirmation { get; private set; }
-        public IReadOnlyList<PublicRound> History => history.AsReadOnly();
-        public IReadOnlyList<string> Ids => Array.AsReadOnly(fighters.Select(f => f.Id).ToArray());
+        readonly Dictionary<string,IReadOnlyList<PublicFighter>> publicViews=new Dictionary<string,IReadOnlyList<PublicFighter>>(StringComparer.Ordinal);
+        readonly IReadOnlyList<PublicRound> historyView; readonly IReadOnlyList<string> ids;
+        public IReadOnlyList<PublicRound> History => historyView;
+        public IReadOnlyList<string> Ids => ids;
         public OfflineMatch(FoundationConfig config,MatchSettings options,double now)
         {
             config.Validate(); options.Validate(); if (!Geometry.Finite(now)) throw new ArgumentException("Invalid clock.");
             c=config; settings=new MatchSettings { BotCount=options.BotCount,Seed=options.Seed,Difficulty=options.Difficulty,Timeout=options.Timeout,ThrowSeconds=options.ThrowSeconds,RoundResultSeconds=options.RoundResultSeconds };
             var rng = new SeededRandom(options.Seed);
             for (int i=0;i<=options.BotCount;i++) fighters.Add(new Fighter { Id=i==0?"player":"bot-"+i,Hp=c.maxHp,Previous=BotController.RandomPosition(rng,c) });
+            ids=Array.AsReadOnly(fighters.Select(f=>f.Id).ToArray());historyView=history.AsReadOnly();
             SetPhase(MatchPhase.MatchStart,now); StartRound(now);
         }
-        void SetPhase(MatchPhase phase,double now) { Phase=phase; PhaseStarted=now; events.Add(new GameEvent(phase,Round,now)); }
+        void SetPhase(MatchPhase phase,double now) { publicViews.Clear();Phase=phase; PhaseStarted=now; events.Add(new GameEvent(phase,Round,now)); }
         void StartRound(double now)
         {
             Round++; Resolution=null; SetPhase(MatchPhase.RoundStart,now);
@@ -60,25 +63,27 @@ namespace HitMe.Core
         Fighter Editable(string id,double now) => Phase==MatchPhase.Placement && Geometry.Finite(now) && now>=PhaseStarted && now<Deadline ? fighters.FirstOrDefault(f=>f.Id==id && f.Hp>0 && !f.Locked) : null;
         public bool Place(string id,Point position,double now)
         {
-            var f=Editable(id,now); if(f==null || !Geometry.ValidPlacement(position,c.arenaA,c.arenaB,c.playerRadius)) return false;
-            f.Position=position; f.HasPosition=true; f.HasAim=false; return true;
+            var f=Editable(id,now); if(f==null || !c.ArenaGeometry.PlayerPlacementValidation(position,c.playerRadius)) return false;
+            publicViews.Clear();f.Position=position; f.HasPosition=true; f.HasAim=false; return true;
         }
         public bool Aim(string id,Point direction,double now)
         {
             var f=Editable(id,now); double length=Math.Sqrt(direction.X*direction.X+direction.Y*direction.Y);
             if(f==null || !f.HasPosition || !Geometry.Finite(length) || length<1e-9) return false;
-            f.Direction=new Point(direction.X/length,direction.Y/length); f.HasAim=true; return true;
+            publicViews.Clear();f.Direction=new Point(direction.X/length,direction.Y/length); f.HasAim=true; return true;
         }
         public bool Lock(string id,double now)
         {
             var f=Editable(id,now); if(f==null || !f.HasPosition || !f.HasAim) return false;
-            f.Locked=f.CanThrow=true; if(fighters.All(p=>p.Hp==0 || p.Locked)) Reveal(now); return true;
+            publicViews.Clear();f.Locked=f.CanThrow=true; if(fighters.All(p=>p.Hp==0 || p.Locked)) Reveal(now); return true;
         }
         public IReadOnlyList<PublicFighter> ViewFor(string viewer)
         {
+            viewer=viewer??"";if(publicViews.TryGetValue(viewer,out var cached))return cached;
             bool revealed=Phase!=MatchPhase.Placement && Phase!=MatchPhase.RoundStart && Phase!=MatchPhase.MatchStart;
-            return Array.AsReadOnly(fighters.Select(f=>new PublicFighter(f.Id,f.Hp,f.Hp==0?InputStage.Eliminated:f.Locked?InputStage.Locked:f.HasPosition?InputStage.Aim:InputStage.Placement,
+            var snapshot=Array.AsReadOnly(fighters.Select(f=>new PublicFighter(f.Id,f.Hp,f.Hp==0?InputStage.Eliminated:f.Locked?InputStage.Locked:f.HasPosition?InputStage.Aim:InputStage.Placement,
                 f.Hp>0 && f.HasPosition && (revealed || f.Id==viewer) ? new LockedAction(f.Id,f.Position,f.Direction,f.CanThrow || f.HasAim):null)).ToArray());
+            publicViews[viewer]=snapshot;return snapshot;
         }
         public BotContext BotContextFor(string id)
         {
@@ -125,6 +130,6 @@ namespace HitMe.Core
                 return;
             }
         }
-        public IReadOnlyList<GameEvent> DrainEvents() { var result=Array.AsReadOnly(events.ToArray()); events.Clear(); return result; }
+        public IReadOnlyList<GameEvent> DrainEvents() { if(events.Count==0)return Array.Empty<GameEvent>();var result=Array.AsReadOnly(events.ToArray()); events.Clear(); return result; }
     }
 }

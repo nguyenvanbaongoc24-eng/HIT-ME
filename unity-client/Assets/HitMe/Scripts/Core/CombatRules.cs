@@ -51,14 +51,15 @@ namespace HitMe.Core
             var input = actions.ToArray();
             if (input.Select(a => a.Id).Distinct().Count() != input.Length || input.Length != alive.Length || input.Any(a => !alive.Any(p => p.Id == a.Id))) throw new ArgumentException("One locked action per survivor required.");
             foreach (var a in input)
-                if (!Geometry.ValidPlacement(a.Position, c.arenaA, c.arenaB, c.playerRadius) || (a.CanThrow && (!Geometry.Finite(a.Direction.X) || !Geometry.Finite(a.Direction.Y) || !Geometry.Finite(Math.Sqrt(a.Direction.X*a.Direction.X+a.Direction.Y*a.Direction.Y)) || Math.Sqrt(a.Direction.X*a.Direction.X+a.Direction.Y*a.Direction.Y) < 1e-9))) throw new ArgumentException("Invalid action.");
+                if (!c.ArenaGeometry.PlayerPlacementValidation(a.Position,c.playerRadius) || (a.CanThrow && (!Geometry.Finite(a.Direction.X) || !Geometry.Finite(a.Direction.Y) || !Geometry.Finite(Math.Sqrt(a.Direction.X*a.Direction.X+a.Direction.Y*a.Direction.Y)) || Math.Sqrt(a.Direction.X*a.Direction.X+a.Direction.Y*a.Direction.Y) < 1e-9))) throw new ArgumentException("Invalid action.");
             var hits = new List<ThrowResult>(); var damage = people.ToDictionary(p => p.Id, p => 0);
             foreach (var a in input.OrderBy(a => a.Id, StringComparer.Ordinal))
             {
                 if (!a.CanThrow) continue;
                 double len = Math.Sqrt(a.Direction.X*a.Direction.X+a.Direction.Y*a.Direction.Y);
                 Point d = new Point(a.Direction.X/len, a.Direction.Y/len);
-                double wall = Geometry.RayWallDistance(a.Position,d,c.arenaA,c.arenaB);
+                Point boundary=c.ArenaGeometry.RayBoundaryIntersection(a.Position,d,c.arenaShape=="roundedRectangle"?c.projectileRadius:0);
+                double wall=(boundary.X-a.Position.X)*d.X+(boundary.Y-a.Position.Y)*d.Y;
                 LockedAction target = null; double nearest = double.PositiveInfinity;
                 foreach (var b in input.OrderBy(b => b.Id, StringComparer.Ordinal))
                 {
@@ -66,7 +67,7 @@ namespace HitMe.Core
                     double t = (b.Position.X-a.Position.X)*d.X+(b.Position.Y-a.Position.Y)*d.Y;
                     if (t < nearest) { nearest = t; target = b; }
                 }
-                Point end = target == null ? Geometry.RayWallPoint(a.Position,d,c.arenaA,c.arenaB) : new Point(a.Position.X+d.X*nearest,a.Position.Y+d.Y*nearest);
+                Point end = target == null ? boundary : new Point(a.Position.X+d.X*nearest,a.Position.Y+d.Y*nearest);
                 hits.Add(new ThrowResult(a.Id,target?.Id,a.Position,end)); if (target != null) damage[target.Id]++;
             }
             return new RoundResolution(hits,people.Select(p => new HealthResult(p.Id,p.Hp,Math.Max(0,p.Hp-damage[p.Id]))).ToList());

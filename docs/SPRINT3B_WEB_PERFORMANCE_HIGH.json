@@ -1,0 +1,45 @@
+{
+  "environment": "Final Sprint 3B runtime; Codex in-app Chromium desktop Windows; 390x844; 20-second battle sample, not physical mobile",
+  "samples": [
+    {
+      "at": "2026-10-08T15:02:07.654Z",
+      "text": "Unity 60.0 FPS · max 18.0 ms · target 60"
+    },
+    {
+      "at": "2026-10-08T15:02:09.696Z",
+      "text": "Unity 60.0 FPS · max 19.0 ms · target 60"
+    },
+    {
+      "at": "2026-10-08T15:02:11.720Z",
+      "text": "Unity 60.0 FPS · max 18.0 ms · target 60"
+    },
+    {
+      "at": "2026-10-08T15:02:13.741Z",
+      "text": "Unity 60.0 FPS · max 18.0 ms · target 60"
+    },
+    {
+      "at": "2026-10-08T15:02:15.758Z",
+      "text": "Unity 60.0 FPS · max 18.0 ms · target 60"
+    },
+    {
+      "at": "2026-10-08T15:02:17.777Z",
+      "text": "Unity 60.0 FPS · max 18.0 ms · target 60"
+    },
+    {
+      "at": "2026-10-08T15:02:19.794Z",
+      "text": "Unity 60.0 FPS · max 18.0 ms · target 60"
+    },
+    {
+      "at": "2026-10-08T15:02:21.810Z",
+      "text": "Unity 60.0 FPS · max 18.0 ms · target 60"
+    },
+    {
+      "at": "2026-10-08T15:02:23.828Z",
+      "text": "Unity 60.0 FPS · max 22.0 ms · target 60"
+    },
+    {
+      "at": "2026-10-08T15:02:25.847Z",
+      "text": "Unity 60.0 FPS · max 18.0 ms · target 60"
+    }
+  ]
+}

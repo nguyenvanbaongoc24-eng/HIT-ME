@@ -1,0 +1,45 @@
+{
+  "environment": "Codex in-app Chromium, desktop Windows, 390x844; not a physical mobile benchmark",
+  "samples": [
+    {
+      "at": "2026-10-08T14:40:24.044Z",
+      "text": "Unity 51.6 FPS · max 98.0 ms · target 60"
+    },
+    {
+      "at": "2026-10-08T14:40:26.060Z",
+      "text": "Unity 60.0 FPS · max 18.0 ms · target 60"
+    },
+    {
+      "at": "2026-10-08T14:40:28.089Z",
+      "text": "Unity 60.0 FPS · max 18.0 ms · target 60"
+    },
+    {
+      "at": "2026-10-08T14:40:30.124Z",
+      "text": "Unity 60.0 FPS · max 18.0 ms · target 60"
+    },
+    {
+      "at": "2026-10-08T14:40:32.147Z",
+      "text": "Unity 60.0 FPS · max 22.0 ms · target 60"
+    },
+    {
+      "at": "2026-10-08T14:40:34.172Z",
+      "text": "Unity 60.0 FPS · max 18.0 ms · target 60"
+    },
+    {
+      "at": "2026-10-08T14:40:36.198Z",
+      "text": "Unity 60.0 FPS · max 18.0 ms · target 60"
+    },
+    {
+      "at": "2026-10-08T14:40:38.222Z",
+      "text": "Unity 60.0 FPS · max 18.0 ms · target 60"
+    },
+    {
+      "at": "2026-10-08T14:40:40.243Z",
+      "text": "Unity 60.0 FPS · max 18.0 ms · target 60"
+    },
+    {
+      "at": "2026-10-08T14:40:42.264Z",
+      "text": "Unity 60.0 FPS · max 18.0 ms · target 60"
+    }
+  ]
+}

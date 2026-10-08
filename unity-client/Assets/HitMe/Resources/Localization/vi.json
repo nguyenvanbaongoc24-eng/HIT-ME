@@ -183,6 +183,46 @@
     {
       "key": "timeoutProposal",
       "value": "Bản thử nghiệm: timeout thiếu input giữ vị trí cũ, không ném (đề xuất spec 2.5.1)."
+    },
+    {
+      "key": "mapLangQueBacBo",
+      "value": "Làng quê Bắc Bộ"
+    },
+    {
+      "key": "mapChoVietNam",
+      "value": "Chợ Việt Nam"
+    },
+    {
+      "key": "mapVinhHaLong",
+      "value": "Vịnh Hạ Long"
+    },
+    {
+      "key": "mapCoDoHue",
+      "value": "Cố đô Huế"
+    },
+    {
+      "key": "mapChoNoiCaiRang",
+      "value": "Chợ nổi Cái Răng"
+    },
+    {
+      "key": "mapTayBac",
+      "value": "Tây Bắc"
+    },
+    {
+      "key": "missingArenaArt",
+      "value": "chưa có art"
+    },
+    {
+      "key": "qualityLow",
+      "value": "Tiết kiệm · 30 FPS"
+    },
+    {
+      "key": "qualityHigh",
+      "value": "Mượt · 60 FPS"
+    },
+    {
+      "key": "cosmeticWeapon",
+      "value": "Vũ khí chỉ đổi hình ảnh; mỗi hit vẫn mất 1 HP."
     }
   ]
 }

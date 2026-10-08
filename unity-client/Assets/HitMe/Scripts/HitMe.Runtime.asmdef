@@ -1,4 +1,9 @@
 {
   "name": "HitMe.Runtime",
-  "references": ["HitMe.Core", "Unity.ugui", "Unity.InputSystem"]
+  "references": [
+    "HitMe.Core",
+    "Unity.ugui",
+    "Unity.InputSystem",
+    "Unity.TextMeshPro"
+  ]
 }

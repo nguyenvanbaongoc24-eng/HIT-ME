@@ -1,0 +1,31 @@
+{
+  "checkedAt": "2026-10-08T15:19:16.812Z",
+  "url": "http://127.0.0.1:8791/",
+  "errors": [],
+  "warnings": [
+    {
+      "level": "warn",
+      "message": "Manual synchronization of Unity Application.persistentDataPath via JS_FileSystem_Sync() is deprecated and will be later removed in a future Unity version. The persistent data directory will be automatically synchronized instead on file modification. Pass config.autoSyncPersistentDataPath = true; to configuration in createUnityInstance() to opt in to the new behavior.",
+      "timestamp": "2026-10-08T14:35:30.258Z",
+      "url": "blob:http://127.0.0.1:8791/47fe76be-c4f5-415a-8568-bef9baffb793"
+    },
+    {
+      "level": "warn",
+      "message": "Manual synchronization of Unity Application.persistentDataPath via JS_FileSystem_Sync() is deprecated and will be later removed in a future Unity version. The persistent data directory will be automatically synchronized instead on file modification. Pass config.autoSyncPersistentDataPath = true; to configuration in createUnityInstance() to opt in to the new behavior.",
+      "timestamp": "2026-10-08T14:39:11.143Z",
+      "url": "blob:http://127.0.0.1:8791/b1507987-8e75-4f34-aab8-b95cc4939d5a"
+    }
+  ],
+  "warningsSinceFinalRuntime": [],
+  "flows": [
+    "MainMenu to Battle",
+    "drag aim and Ready",
+    "Reveal and Throw",
+    "HP and elimination",
+    "Result after 21 rounds",
+    "Replay",
+    "map selector and missing-art labels",
+    "VI/EN switch"
+  ],
+  "physicalMobile": false
+}

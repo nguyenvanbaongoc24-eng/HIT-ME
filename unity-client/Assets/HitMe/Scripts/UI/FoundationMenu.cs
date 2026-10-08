@@ -9,15 +9,15 @@ namespace HitMe.UI
         public string sceneName;
         void Start()
         {
-            Strings.Load("vi");
+            WebMobileBridge.Ensure(); Strings.Load("vi");
             if(sceneName=="Result" && OfflineRunContext.Result!=null) { gameObject.AddComponent<OfflineResultView>(); return; }
             OfflineRunContext.LoadDefaults();
             var go = new GameObject("MenuCanvas", typeof(Canvas), typeof(CanvasScaler), typeof(GraphicRaycaster)); go.transform.SetParent(transform);
             go.GetComponent<Canvas>().renderMode = RenderMode.ScreenSpaceOverlay;
             var scaler = go.GetComponent<CanvasScaler>(); scaler.uiScaleMode = CanvasScaler.ScaleMode.ScaleWithScreenSize; scaler.referenceResolution = new Vector2(390, 844);
             FoundationFonts.Validate(); var font = FoundationFonts.Text;
-            var title = new GameObject("Title", typeof(RectTransform), typeof(Text)); title.transform.SetParent(go.transform, false);
-            var r = title.GetComponent<RectTransform>(); r.sizeDelta = new Vector2(350, 120); r.anchoredPosition = new Vector2(0, 130);
+            var title = new GameObject("Title", typeof(RectTransform), typeof(HitMeText)); title.transform.SetParent(go.transform, false);
+            var r = title.GetComponent<RectTransform>(); r.sizeDelta = new Vector2(350, 120); r.anchoredPosition = new Vector2(0, 230);
             var text = title.GetComponent<Text>(); text.font = font; text.fontSize = 28; text.alignment = TextAnchor.MiddleCenter; text.text = "HIT ME\n" + Strings.Get("scene" + sceneName);
             Add(go.transform, font, Strings.Get("playOffline"), 0, "Battle");
             if (sceneName == "MainMenu") { Add(go.transform, font, Strings.Get("sceneLobby"), -64, "Lobby"); Add(go.transform, font, Strings.Get("sceneCharacterSelect"), -128, "CharacterSelect"); }
@@ -26,7 +26,9 @@ namespace HitMe.UI
             {
                 AddOption(go.transform,font,"BotCount",-192,()=>Strings.Get("botCount")+": "+OfflineRunContext.Settings.BotCount,()=>OfflineRunContext.Settings.BotCount=OfflineRunContext.Settings.BotCount%5+1);
                 AddOption(go.transform,font,"BotDifficulty",-256,()=>Strings.Get("difficulty")+": "+Strings.Get(OfflineRunContext.Settings.Difficulty==HitMe.Core.BotDifficulty.Easy?"easy":"normal"),()=>OfflineRunContext.Settings.Difficulty=OfflineRunContext.Settings.Difficulty==HitMe.Core.BotDifficulty.Easy?HitMe.Core.BotDifficulty.Normal:HitMe.Core.BotDifficulty.Easy);
-                var note=new GameObject("TimeoutPolicyNote",typeof(RectTransform),typeof(Text)); note.transform.SetParent(go.transform,false); var nr=note.GetComponent<RectTransform>(); nr.sizeDelta=new Vector2(340,64); nr.anchoredPosition=new Vector2(0,-322); var nt=note.GetComponent<Text>(); nt.font=font; nt.fontSize=13; nt.alignment=TextAnchor.MiddleCenter; nt.text=Strings.Get("timeoutProposal");
+                AddOption(go.transform,font,"ArenaMap",-314,()=>ArenaMaps.DisplayName,()=>ArenaMaps.Selected=(ArenaMaps.Selected+1)%ArenaMaps.Ids.Length);
+                AddOption(go.transform,font,"Quality",-370,()=>Strings.Get(WebMobileBridge.LowQuality?"qualityLow":"qualityHigh"),()=>WebMobileBridge.SetQuality(!WebMobileBridge.LowQuality));
+                var note=new GameObject("TimeoutPolicyNote",typeof(RectTransform),typeof(HitMeText)); note.transform.SetParent(go.transform,false); var nr=note.GetComponent<RectTransform>(); nr.sizeDelta=new Vector2(340,64); nr.anchoredPosition=new Vector2(0,145); var nt=note.GetComponent<Text>(); nt.font=font; nt.fontSize=13; nt.alignment=TextAnchor.MiddleCenter; nt.text=Strings.Get("timeoutProposal");
             }
         }
         void AddOption(Transform parent,Font font,string name,float y,System.Func<string> label,UnityEngine.Events.UnityAction change)
@@ -38,7 +40,7 @@ namespace HitMe.UI
             var go = new GameObject(label, typeof(RectTransform), typeof(Image), typeof(Button)); go.transform.SetParent(parent, false);
             var r = go.GetComponent<RectTransform>(); r.sizeDelta = new Vector2(290, 48); r.anchoredPosition = new Vector2(0, y);
             go.GetComponent<Image>().color = new Color(.12f, .55f, .50f); go.GetComponent<Button>().onClick.AddListener(() => { if(scene=="Battle") OfflineRunContext.Play(); else SceneManager.LoadScene(scene); });
-            var child = new GameObject("Label", typeof(RectTransform), typeof(Text)); child.transform.SetParent(go.transform, false);
+            var child = new GameObject("Label", typeof(RectTransform), typeof(HitMeText)); child.transform.SetParent(go.transform, false);
             child.GetComponent<RectTransform>().sizeDelta = r.sizeDelta;
             var text = child.GetComponent<Text>(); text.font = font; text.fontSize = 19; text.alignment = TextAnchor.MiddleCenter; text.text = label; text.raycastTarget = false;
         }

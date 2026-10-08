@@ -183,6 +183,46 @@
     {
       "key": "timeoutProposal",
       "value": "Trial: incomplete timeout keeps prior position and skips throwing (spec 2.5.1 proposal)."
+    },
+    {
+      "key": "mapLangQueBacBo",
+      "value": "Northern Village"
+    },
+    {
+      "key": "mapChoVietNam",
+      "value": "Vietnam Market"
+    },
+    {
+      "key": "mapVinhHaLong",
+      "value": "Ha Long Bay"
+    },
+    {
+      "key": "mapCoDoHue",
+      "value": "Hue Imperial City"
+    },
+    {
+      "key": "mapChoNoiCaiRang",
+      "value": "Cai Rang Floating Market"
+    },
+    {
+      "key": "mapTayBac",
+      "value": "Northwest Highlands"
+    },
+    {
+      "key": "missingArenaArt",
+      "value": "art missing"
+    },
+    {
+      "key": "qualityLow",
+      "value": "Battery · 30 FPS"
+    },
+    {
+      "key": "qualityHigh",
+      "value": "Smooth · 60 FPS"
+    },
+    {
+      "key": "cosmeticWeapon",
+      "value": "Weapons change appearance only; each hit still deals 1 HP."
     }
   ]
 }

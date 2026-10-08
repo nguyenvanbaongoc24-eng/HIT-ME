@@ -1,0 +1,80 @@
+[
+  {
+    "scene": "Battle",
+    "viewport": {
+      "width": 360,
+      "height": 800
+    },
+    "canvas": {
+      "cssHeight": 800,
+      "cssWidth": 360,
+      "renderHeight": 800,
+      "renderWidth": 360
+    }
+  },
+  {
+    "scene": "Battle",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "canvas": {
+      "cssHeight": 844,
+      "cssWidth": 389.3984375,
+      "renderHeight": 844,
+      "renderWidth": 389
+    }
+  },
+  {
+    "scene": "Battle",
+    "viewport": {
+      "width": 393,
+      "height": 852
+    },
+    "canvas": {
+      "cssHeight": 852,
+      "cssWidth": 393,
+      "renderHeight": 852,
+      "renderWidth": 393
+    }
+  },
+  {
+    "scene": "Battle",
+    "viewport": {
+      "width": 402,
+      "height": 874
+    },
+    "canvas": {
+      "cssHeight": 874,
+      "cssWidth": 402,
+      "renderHeight": 874,
+      "renderWidth": 402
+    }
+  },
+  {
+    "scene": "Battle",
+    "viewport": {
+      "width": 412,
+      "height": 915
+    },
+    "canvas": {
+      "cssHeight": 915,
+      "cssWidth": 412,
+      "renderHeight": 915,
+      "renderWidth": 412
+    }
+  },
+  {
+    "scene": "Battle",
+    "viewport": {
+      "width": 430,
+      "height": 932
+    },
+    "canvas": {
+      "cssHeight": 932,
+      "cssWidth": 430,
+      "renderHeight": 932,
+      "renderWidth": 430
+    }
+  }
+]

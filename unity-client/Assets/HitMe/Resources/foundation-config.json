@@ -12,5 +12,9 @@
   "aimDragPixels": 12,
   "revealSeconds": 0.3,
   "referenceWidth": 390,
-  "referenceHeight": 844
+  "referenceHeight": 844,
+  "arenaShape": "roundedRectangle",
+  "arenaWidth": 2000,
+  "arenaHeight": 3500,
+  "cornerRadius": 300
 }

@@ -28,7 +28,14 @@ namespace HitMe.Core
         BotDecision pending;
         public BotController(uint seed,BotDifficulty difficulty) { if(difficulty==BotDifficulty.Hard) throw new NotSupportedException("Hard is a scaffold, not enabled."); rng=new SeededRandom(seed); this.difficulty=difficulty; }
         public static Point RandomPosition(SeededRandom rng,FoundationConfig c)
-        { double angle=rng.Next()*Math.PI*2,radius=Math.Sqrt(rng.Next()); return new Point(Math.Cos(angle)*radius*(c.arenaA-c.playerRadius),Math.Sin(angle)*radius*(c.arenaB-c.playerRadius)); }
+        {
+            if(c.arenaShape=="roundedRectangle")
+            {
+                var bounds=c.ArenaGeometry.Bounds;
+                for(int i=0;i<64;i++){var p=new Point((rng.Next()*2-1)*(bounds.MaxX-c.playerRadius),(rng.Next()*2-1)*(bounds.MaxY-c.playerRadius));if(c.ArenaGeometry.PlayerPlacementValidation(p,c.playerRadius))return p;}
+                return new Point();
+            }
+            double angle=rng.Next()*Math.PI*2,radius=Math.Sqrt(rng.Next()); return new Point(Math.Cos(angle)*radius*(c.arenaA-c.playerRadius),Math.Sin(angle)*radius*(c.arenaB-c.playerRadius)); }
         public BotDecision Decide(BotContext context,FoundationConfig c,double roundStarted)
         {
             if(context.Hp<=0) return null; if(decidedRound==context.Round)return pending;

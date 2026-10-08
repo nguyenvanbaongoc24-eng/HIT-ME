@@ -22,7 +22,7 @@ namespace HitMe.Core
         public bool Place(Point p, double now)
         {
             if (Phase != BattlePhase.Placement || Locked || now >= Deadline) return false;
-            Position = Geometry.Clamp(p, config.arenaA, config.arenaB, config.playerRadius);
+            Position = config.ArenaGeometry.ClampPosition(p,config.playerRadius);
             HasPosition = true; HasAim = false; return true;
         }
         public bool Aim(Point target, double now)

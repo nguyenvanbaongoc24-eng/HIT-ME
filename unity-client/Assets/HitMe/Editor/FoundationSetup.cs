@@ -57,12 +57,7 @@ namespace HitMe.Editor
         [MenuItem("HIT ME/Build Web")]
         public static void BuildWeb()
         {
-            Configure();
-            if (!BuildPipeline.IsBuildTargetSupported(BuildTargetGroup.WebGL, BuildTarget.WebGL)) throw new System.InvalidOperationException("Web Build Support missing.");
-            string[] paths = new string[Scenes.Length]; for (int i = 0; i < paths.Length; i++) paths[i] = "Assets/HitMe/Scenes/" + Scenes[i] + ".unity";
-            var report = BuildPipeline.BuildPlayer(new BuildPlayerOptions { scenes = paths, locationPathName = "Builds/Web", target = BuildTarget.WebGL, options = BuildOptions.None });
-            Debug.Log("HITME_WEB_BUILD: " + report.summary.result + ", bytes=" + report.summary.totalSize);
-            if (report.summary.result != BuildResult.Succeeded) throw new System.Exception("Web build failed. See build report.");
+            HitMeWebBuild.Build();
         }
     }
 }
