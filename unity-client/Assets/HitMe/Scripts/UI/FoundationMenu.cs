@@ -9,7 +9,9 @@ namespace HitMe.UI
         public string sceneName;
         void Start()
         {
-            WebMobileBridge.Ensure(); Strings.Load("vi");
+            WebMobileBridge.Ensure(); Strings.Load(Strings.Language);
+            if(sceneName=="MainMenu") { var theme=Resources.Load<UIThemeDefinition>("UI/MainMenuTheme"); if(theme?.entryPrefab!=null)Instantiate(theme.entryPrefab,transform);else gameObject.AddComponent<MainMenuController>(); return; }
+            if(sceneName=="Lobby") { gameObject.AddComponent<NetworkLobbyView>(); return; }
             if(sceneName=="Result" && OfflineRunContext.Result!=null) { gameObject.AddComponent<OfflineResultView>(); return; }
             OfflineRunContext.LoadDefaults();
             var go = new GameObject("MenuCanvas", typeof(Canvas), typeof(CanvasScaler), typeof(GraphicRaycaster)); go.transform.SetParent(transform);

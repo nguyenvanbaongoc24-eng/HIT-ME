@@ -23,7 +23,7 @@ namespace HitMe.UI
             }
             string scene = SceneManager.GetActiveScene().name;
             if (scene == "Boot") { SceneManager.LoadScene("MainMenu"); return; }
-            if (scene == "Battle") { var view=gameObject.AddComponent<BattleView>(); view.Initialize(); OfflineRunContext.LoadDefaults(); if(OfflineRunContext.Requested) { OfflineRunContext.Requested=false; view.StartOffline(OfflineRunContext.Settings); } else view.AddOfflineLauncher(); }
+            if (scene == "Battle") { var view=gameObject.AddComponent<BattleView>(); view.Initialize(); OfflineRunContext.LoadDefaults(); if(NetworkSession.Instance!=null && NetworkSession.Instance.OnlineBattle) view.StartOnline(); else if(OfflineRunContext.Requested) { OfflineRunContext.Requested=false; view.StartOffline(OfflineRunContext.Settings); } else view.AddOfflineLauncher(); }
             else gameObject.AddComponent<FoundationMenu>().sceneName = scene;
         }
     }

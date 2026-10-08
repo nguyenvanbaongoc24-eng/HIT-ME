@@ -13,7 +13,7 @@ namespace HitMe.UI
         public int VisibleActorCount { get; private set; }
         public Rect? SafeAreaOverride { get; set; }
         public Rect CurrentSafeArea => SafeAreaOverride ?? WebMobileBridge.SafeArea;
-        public bool CanPlace => Match != null ? Match.Phase == MatchPhase.Placement && Match.ViewFor("player")[0].Hp > 0 && Match.ViewFor("player")[0].Stage != InputStage.Locked : Session.Phase == BattlePhase.Placement && !Session.Locked;
+        public bool CanPlace => online ? NetworkSession.Instance.Connected && NetworkSession.Instance.Room?.phase=="Placement" && NetworkSession.Instance.Self!=null && NetworkSession.Instance.Self.hp>0 && !NetworkSession.Instance.Self.locked : Match != null ? Match.Phase == MatchPhase.Placement && Match.ViewFor("player")[0].Hp > 0 && Match.ViewFor("player")[0].Stage != InputStage.Locked : Session.Phase == BattlePhase.Placement && !Session.Locked;
         public float DragThreshold => (float)Config.aimDragPixels * canvas.scaleFactor;
         Canvas canvas;
         RectTransform root, hud, floor, aim;
@@ -38,6 +38,7 @@ namespace HitMe.UI
         {
             if (initialized) return;
             initialized = true;
+            language=Strings.Language;
             Config = JsonUtility.FromJson<FoundationConfig>(Resources.Load<TextAsset>("foundation-config").text);
             WebMobileBridge.Ensure(); Config.Validate(); Session = new PlacementSession(Config); Strings.Load(language);
             FoundationFonts.Validate(); font = FoundationFonts.Text;
@@ -123,7 +124,8 @@ namespace HitMe.UI
                 Ellipse("FootShadow", actor, new Vector2(radius * 2, radius), Vector2.zero, new Color(0,0,0,.18f));
                 Ellipse("FeetHitbox", actor, new Vector2(radius * 2, radius * 2), Vector2.zero, C(52, 61, 49), .78f);
                 Color tint = i == 0 ? C(43, 157, 147) : (i == 1 ? C(218, 109, 76) : C(121, 105, 182));
-                var definition=catalog!=null?catalog.ForSlot(i):null;
+                int visualSlot=online&&onlinePlayers!=null?onlinePlayers[i].avatar=="Char02_BotMale"?1:onlinePlayers[i].avatar=="Char03_BotFemale"?2:0:i;
+                var definition=catalog!=null?catalog.ForSlot(visualSlot):null;
                 Image body;
                 if(definition!=null && definition.visualPrefab!=null)
                 {
@@ -153,7 +155,7 @@ namespace HitMe.UI
             {
                 float x = (i - (actors.Length - 1) / 2f) * Mathf.Min(66, (safeW - 24) / actors.Length);
                 portraitItems[i * 3] = Ellipse("PortraitPlaceholder" + i, hud, new Vector2(Match == null ? 30 : 24, Match == null ? 30 : 24), new Vector2(x, top - (Match == null ? 27 : 27)), i == 0 ? C(43, 157, 147) : C(190, 100, 89)).rectTransform;
-                var portraitDefinition=catalog!=null?catalog.ForSlot(i):null;
+                var portraitDefinition=catalog!=null?catalog.ForSlot(online&&onlinePlayers!=null?onlinePlayers[i].avatar=="Char02_BotMale"?1:onlinePlayers[i].avatar=="Char03_BotFemale"?2:0:i):null;
                 if(portraitDefinition!=null && portraitDefinition.Frame(HitMe.Characters.VisualState.Idle,0)!=null)
                 {
                     var portrait=Box("PortraitSprite",portraitItems[i*3],portraitItems[i*3].sizeDelta,Vector2.zero,Color.white);
@@ -167,7 +169,7 @@ namespace HitMe.UI
             Button("Chat", hud, Strings.Get("chat"), new Vector2(62, 46), new Vector2(-safeW / 2 + 40, bottom), () => Message(Strings.Get("chatMock")), C(48, 104, 107));
             ready = Button("Ready", hud, Strings.Get("ready"), new Vector2(164, 48), new Vector2(0, bottom), OnReady, C(247, 186, 58));
             readyText = ready.GetComponentInChildren<Text>(); readyText.color=ink;
-            var equipped=catalog!=null?catalog.ForSlot(0)?.defaultWeapon:null;
+            var equipped=online?OnlineWeapon(NetworkSession.Instance.Self?.weapon):catalog!=null?catalog.ForSlot(0)?.defaultWeapon:null;
             var weaponButton=Button("Weapon",hud,Strings.Get("weapon"),new Vector2(70,46),new Vector2(safeW/2-44,bottom),()=>Message(equipped!=null?equipped.displayName+"\n"+Strings.Get("cosmeticWeapon"):Strings.Get("weaponMock")),C(159,95,56));
             if(equipped!=null && equipped.heldSprite!=null){weaponButton.GetComponentInChildren<Text>().text="";var icon=Box("EquippedWeaponIcon",weaponButton.transform,new Vector2(34,34),Vector2.zero,Color.white);icon.sprite=equipped.icon!=null?equipped.icon:equipped.heldSprite;icon.preserveAspect=true;}
 
@@ -193,6 +195,7 @@ namespace HitMe.UI
         }
         public void Place(Vector2 screen)
         {
+            if (online) { OnlinePlace(screen); return; }
             if (Match != null) { MatchPlace(screen); return; }
             if (Session.Place(FromPointer(screen), Time.unscaledTimeAsDouble)) { actors[0].gameObject.SetActive(true); actors[0].anchoredPosition = ToCanvas(Session.Position); aim.gameObject.SetActive(false); AdaptHudToPlayer(); }
         }
@@ -224,6 +227,7 @@ namespace HitMe.UI
         }
         public void Aim(Vector2 screen)
         {
+            if (online) { OnlineAim(screen); return; }
             if (Match != null) { MatchAim(screen); return; }
             if (!Session.Aim(FromPointer(screen), Time.unscaledTimeAsDouble)) return;
             Point end = Config.ArenaGeometry.ProjectileCollision(Session.Position, Session.Direction, Config.projectileRadius);
@@ -239,6 +243,7 @@ namespace HitMe.UI
         }
         void OnReady()
         {
+            if (online) { NetworkSession.Instance.Action("lock"); return; }
             if (Match != null) { PumpBots(Time.unscaledTimeAsDouble); Match.Tick(Time.unscaledTimeAsDouble); Match.Lock("player", Time.unscaledTimeAsDouble); PaintMatch(); return; }
             if (Session.Phase == BattlePhase.LayoutPreview || Session.Phase == BattlePhase.AwaitingRules) StartPlacement();
             else if (Session.Ready(Time.unscaledTimeAsDouble)) readyText.text = Strings.Get("locked");
@@ -248,6 +253,7 @@ namespace HitMe.UI
             if (!initialized) return;
             if (root.rect.size != previousSize || CurrentSafeArea != previousSafeArea) { Rebuild(); return; }
             if (offlineLaunch != null) offlineLaunch.gameObject.SetActive(Session.Phase == BattlePhase.LayoutPreview);
+            if (online) { PaintOnline(); return; }
             if (Match != null) { UpdateMatch(); return; }
             BattlePhase old = Session.Phase; Session.Tick(Time.unscaledTimeAsDouble);
             if (Session.Phase == BattlePhase.Placement)
@@ -272,8 +278,10 @@ namespace HitMe.UI
         void Rebuild()
         {
             // Rebuild only on a viewport/safe-area change; never allocate the scene in normal Update.
+            if(online)onlineResultShown=false;
             for (int i = root.childCount - 1; i >= 0; i--) { var child = root.GetChild(i); child.gameObject.SetActive(false); Destroy(child.gameObject); }
             panel = null; projectiles.Clear(); Build();
+            if (online) { PaintOnline(); return; }
             if (Match != null) { PaintMatch(); return; }
             AddOfflineLauncher();
             if (Session.Phase != BattlePhase.LayoutPreview)

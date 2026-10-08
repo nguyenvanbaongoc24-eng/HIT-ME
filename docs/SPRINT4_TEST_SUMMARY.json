@@ -1,0 +1,47 @@
+{
+  "backend": {
+    "passed": 16,
+    "failed": 0,
+    "realWSFullMatch": true,
+    "verifiedWSS": true
+  },
+  "EditMode": {
+    "passed": 71,
+    "failed": 0
+  },
+  "PlayMode": {
+    "passed": 16,
+    "failed": 0
+  },
+  "twoUnityWebClients": {
+    "room": "0345337E",
+    "round": 13,
+    "outcome": "Draw",
+    "coinsEach": 65,
+    "xpEach": 30,
+    "additionalQuickMatches": [
+      {
+        "room": "0D6C553D",
+        "round": 3,
+        "outcome": "Draw"
+      },
+      {
+        "room": "597E0D25",
+        "round": 3,
+        "outcome": "Draw",
+        "balanceCoinsEach": 195,
+        "balanceXpEach": 90
+      }
+    ]
+  },
+  "supabaseApplied": false,
+  "publicWSSBrowserTest": false,
+  "build": {
+    "result": "Succeeded",
+    "bytes": 21310908,
+    "errors": 0,
+    "warnings": 5,
+    "seconds": 176.1602595
+  },
+  "productionAuditAdvisories": 0
+}

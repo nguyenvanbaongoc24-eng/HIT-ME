@@ -10,6 +10,9 @@ namespace HitMe.Characters
     {
         [SerializeField] CharacterDefinition definition;
         public CharacterDefinition Definition => definition;
+        WeaponDefinition weaponOverride;
+        public WeaponDefinition Weapon=>weaponOverride!=null?weaponOverride:definition?.defaultWeapon;
+        public void SetCosmeticWeapon(WeaponDefinition weapon){if(weaponOverride==weapon)return;weaponOverride=weapon;UpdateWeapon();}
         public VisualState State { get; private set; }
         public FacingDirection Facing { get; private set; } = FacingDirection.Right;
         public bool HasSprite => image!=null && image.sprite!=null;
@@ -64,7 +67,7 @@ namespace HitMe.Characters
         }
         void UpdateWeapon()
         {
-            var weapon=definition!=null?definition.defaultWeapon:null;
+            var weapon=Weapon;
             bool visible=weapon!=null && weapon.heldSprite!=null && State!=VisualState.Eliminated && State!=VisualState.Throw;
             if(!visible){if(heldWeapon!=null)heldWeapon.gameObject.SetActive(false);return;}
             if(heldWeapon==null) { var go=new GameObject("HeldWeaponSprite",typeof(RectTransform),typeof(Image));go.transform.SetParent(transform,false);heldWeapon=go.GetComponent<Image>();heldWeapon.raycastTarget=false; }

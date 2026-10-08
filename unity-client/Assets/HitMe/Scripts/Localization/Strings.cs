@@ -9,8 +9,10 @@ namespace HitMe.UI
         [Serializable] public sealed class Entry { public string key; public string value; }
         [Serializable] public sealed class Table { public Entry[] entries; }
         static readonly Dictionary<string, string> values = new Dictionary<string, string>();
+        public static string Language { get; private set; } = "vi";
         public static void Load(string language)
         {
+            Language = language;
             values.Clear();
             TextAsset asset = Resources.Load<TextAsset>("Localization/" + language);
             if (asset == null) throw new InvalidOperationException("Missing localization: " + language);

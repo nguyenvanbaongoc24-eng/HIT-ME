@@ -74,7 +74,7 @@
     },
     {
       "key": "sceneLobby",
-      "value": "Phòng chờ • Placeholder"
+      "value": "SẢNH ONLINE"
     },
     {
       "key": "sceneCharacterSelect",
@@ -223,6 +223,378 @@
     {
       "key": "cosmeticWeapon",
       "value": "Vũ khí chỉ đổi hình ảnh; mỗi hit vẫn mất 1 HP."
+    },
+    {
+      "key": "online",
+      "value": "SẢNH ONLINE"
+    },
+    {
+      "key": "connect",
+      "value": "Kết nối"
+    },
+    {
+      "key": "guestDevelopment",
+      "value": "Tài khoản khách thử nghiệm · thưởng thử nghiệm\nLocal dùng WS; bản triển khai yêu cầu WSS."
+    },
+    {
+      "key": "networkDisconnected",
+      "value": "Mất kết nối · đang thử lại"
+    },
+    {
+      "key": "networkConnectionFailed",
+      "value": "Không kết nối được server"
+    },
+    {
+      "key": "quickMatch",
+      "value": "Ghép trận nhanh"
+    },
+    {
+      "key": "createRoom",
+      "value": "Tạo phòng riêng"
+    },
+    {
+      "key": "joinRoom",
+      "value": "Tham gia bằng mã"
+    },
+    {
+      "key": "roomCode",
+      "value": "Mã phòng"
+    },
+    {
+      "key": "notReady",
+      "value": "Chưa sẵn sàng"
+    },
+    {
+      "key": "leaveRoom",
+      "value": "Rời phòng"
+    },
+    {
+      "key": "profile",
+      "value": "Hồ sơ"
+    },
+    {
+      "key": "inventory",
+      "value": "Kho vật phẩm"
+    },
+    {
+      "key": "dailyQuests",
+      "value": "Nhiệm vụ"
+    },
+    {
+      "key": "level",
+      "value": "Cấp"
+    },
+    {
+      "key": "coins",
+      "value": "Vàng"
+    },
+    {
+      "key": "equipped",
+      "value": "Đang dùng"
+    },
+    {
+      "key": "equip",
+      "value": "Trang bị"
+    },
+    {
+      "key": "back",
+      "value": "Quay lại"
+    },
+    {
+      "key": "claimQuest",
+      "value": "Ghi nhận hoàn thành"
+    },
+    {
+      "key": "questActive",
+      "value": "Đang làm"
+    },
+    {
+      "key": "questCompleted",
+      "value": "Hoàn thành"
+    },
+    {
+      "key": "questClaimed",
+      "value": "Đã nhận"
+    },
+    {
+      "key": "questExpired",
+      "value": "Hết hạn"
+    },
+    {
+      "key": "questPayoutPending",
+      "value": "Chưa chốt phần thưởng nhiệm vụ. Nút chỉ ghi nhận hoàn thành."
+    },
+    {
+      "key": "networkWaiting",
+      "value": "Chờ 2–6 người · tất cả sẵn sàng để bắt đầu"
+    },
+    {
+      "key": "networkCountdown",
+      "value": "Đang đếm ngược"
+    },
+    {
+      "key": "networkPlacement",
+      "value": "Chạm đặt · kéo ngắm · SẴN SÀNG"
+    },
+    {
+      "key": "networkReveal",
+      "value": "Hiện vị trí"
+    },
+    {
+      "key": "networkThrow",
+      "value": "Ném đồng thời"
+    },
+    {
+      "key": "networkRoundResult",
+      "value": "Kết quả vòng"
+    },
+    {
+      "key": "networkMatchResult",
+      "value": "Kết quả trận"
+    },
+    {
+      "key": "networkRequirementsBlocked",
+      "value": "Timeout chưa xác nhận"
+    },
+    {
+      "key": "serverConfirmed",
+      "value": "Kết quả và số dư do server xác nhận"
+    },
+    {
+      "key": "trialRewards",
+      "value": "Mức thưởng thử nghiệm Sprint 4"
+    },
+    {
+      "key": "weeklyQuests",
+      "value": "Đổi ngày / tuần"
+    },
+    {
+      "key": "roomOwner",
+      "value": "Chủ phòng"
+    },
+    {
+      "key": "history",
+      "value": "Trận đã lưu"
+    },
+    {
+      "key": "itemchao",
+      "value": "Chảo"
+    },
+    {
+      "key": "itemvot",
+      "value": "Vợt"
+    },
+    {
+      "key": "itemdep-to-ong",
+      "value": "Dép tổ ong"
+    },
+    {
+      "key": "questEventMatchCompleted",
+      "value": "Hoàn tất trận"
+    },
+    {
+      "key": "questEventMatchWon",
+      "value": "Thắng trận"
+    },
+    {
+      "key": "questEventValidHit",
+      "value": "Ném trúng"
+    },
+    {
+      "key": "questEventMapPlayed",
+      "value": "Chơi bản đồ"
+    },
+    {
+      "key": "questEventFriendMatchCompleted",
+      "value": "Trận phòng riêng"
+    },
+    {
+      "key": "errorincomplete_action",
+      "value": "Hãy đặt vị trí và kéo ngắm trước khi khóa."
+    },
+    {
+      "key": "errorinvalid_code",
+      "value": "Mã phòng không hợp lệ."
+    },
+    {
+      "key": "errorroom_unavailable",
+      "value": "Phòng đã bắt đầu, đầy hoặc hết hạn."
+    },
+    {
+      "key": "erroralready_in_room",
+      "value": "Bạn đang ở trong phòng."
+    },
+    {
+      "key": "errorquest_not_claimable",
+      "value": "Nhiệm vụ chưa hoàn thành hoặc đã nhận."
+    },
+    {
+      "key": "errornot_owned",
+      "value": "Bạn chưa sở hữu vật phẩm này."
+    },
+    {
+      "key": "erroraction_locked",
+      "value": "Hành động đã khóa hoặc hết giờ."
+    },
+    {
+      "key": "errorinvalid_session",
+      "value": "Phiên khách hết hạn. Cần phiên khách mới."
+    },
+    {
+      "key": "errorinvalid_position",
+      "value": "Vị trí ngoài sân."
+    },
+    {
+      "key": "errorinvalid_aim",
+      "value": "Hãy kéo để chọn hướng."
+    },
+    {
+      "key": "errorplace_first",
+      "value": "Hãy đặt vị trí trước."
+    },
+    {
+      "key": "errormatch_in_progress",
+      "value": "Trận đang diễn ra."
+    },
+    {
+      "key": "errormatch_started",
+      "value": "Trận đã bắt đầu."
+    },
+    {
+      "key": "errorrate_limited",
+      "value": "Thao tác quá nhanh. Hãy thử lại."
+    },
+    {
+      "key": "matchReward",
+      "value": "Thưởng trận"
+    },
+    {
+      "key": "balance",
+      "value": "Số dư"
+    },
+    {
+      "key": "menuTrial",
+      "value": "Thử nghiệm"
+    },
+    {
+      "key": "menuTagline",
+      "value": "NÉM LÀ VUI"
+    },
+    {
+      "key": "menuGuest",
+      "value": "Khách"
+    },
+    {
+      "key": "menuNotConnected",
+      "value": "Chưa kết nối"
+    },
+    {
+      "key": "menuQuick",
+      "value": "CHƠI NHANH"
+    },
+    {
+      "key": "menuQuickDesc",
+      "value": "Vào trận 2–6 người"
+    },
+    {
+      "key": "menuPrivate",
+      "value": "PHÒNG RIÊNG"
+    },
+    {
+      "key": "menuPrivateDesc",
+      "value": "Tạo phòng • Mời bạn bè"
+    },
+    {
+      "key": "menuMaps",
+      "value": "Bản đồ"
+    },
+    {
+      "key": "menuCharacters",
+      "value": "Nhân vật"
+    },
+    {
+      "key": "menuCollection",
+      "value": "Bộ sưu tập"
+    },
+    {
+      "key": "menuRanking",
+      "value": "Xếp hạng"
+    },
+    {
+      "key": "menuSoon",
+      "value": "Sắp ra mắt"
+    },
+    {
+      "key": "menuExplore",
+      "value": "Khám phá"
+    },
+    {
+      "key": "menuHome",
+      "value": "Trang chủ"
+    },
+    {
+      "key": "menuShop",
+      "value": "Cửa hàng"
+    },
+    {
+      "key": "menuTravel",
+      "value": "Sổ tay"
+    },
+    {
+      "key": "menuCommunity",
+      "value": "Cộng đồng"
+    },
+    {
+      "key": "menuPractice",
+      "value": "Luyện tập với Bot"
+    },
+    {
+      "key": "menuArtFallback",
+      "value": "Art sân đình đang bổ sung"
+    },
+    {
+      "key": "menuLoading",
+      "value": "ĐANG KẾT NỐI"
+    },
+    {
+      "key": "menuCancel",
+      "value": "Hủy"
+    },
+    {
+      "key": "menuUnavailable",
+      "value": "Sắp ra mắt. Tính năng này chưa được triển khai."
+    },
+    {
+      "key": "menuInbox",
+      "value": "Thông báo"
+    },
+    {
+      "key": "menuLanguage",
+      "value": "Ngôn ngữ"
+    },
+    {
+      "key": "menuAudioPending",
+      "value": "Âm thanh: chưa có asset nhạc và SFX hoàn chỉnh."
+    },
+    {
+      "key": "menuMapPolicy",
+      "value": "Chọn sân cho luyện tập. Phòng online hiện dùng Làng quê."
+    },
+    {
+      "key": "menuCharacterPolicy",
+      "value": "Xem 3 nhân vật MVP. Chưa hỗ trợ đổi avatar online hoặc trang phục theo layer. Vũ khí thay tại Túi đồ."
+    },
+    {
+      "key": "menuGuestConsent",
+      "value": "Kết nối khách để giữ tiến trình trong tab này. Xu là phần thưởng thử nghiệm."
+    },
+    {
+      "key": "menuNetworkError",
+      "value": "Không thể kết nối"
+    },
+    {
+      "key": "menuConnectTimeout",
+      "value": "Hết thời gian chờ. Kiểm tra server và thử lại."
     }
   ]
 }

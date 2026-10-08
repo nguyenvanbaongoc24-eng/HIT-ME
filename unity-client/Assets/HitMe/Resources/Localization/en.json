@@ -74,7 +74,7 @@
     },
     {
       "key": "sceneLobby",
-      "value": "Lobby • Placeholder"
+      "value": "ONLINE LOBBY"
     },
     {
       "key": "sceneCharacterSelect",
@@ -223,6 +223,378 @@
     {
       "key": "cosmeticWeapon",
       "value": "Weapons change appearance only; each hit still deals 1 HP."
+    },
+    {
+      "key": "online",
+      "value": "ONLINE LOBBY"
+    },
+    {
+      "key": "connect",
+      "value": "Connect"
+    },
+    {
+      "key": "guestDevelopment",
+      "value": "Development guest · trial rewards\nLocal WS; deployed client requires WSS."
+    },
+    {
+      "key": "networkDisconnected",
+      "value": "Disconnected · retrying"
+    },
+    {
+      "key": "networkConnectionFailed",
+      "value": "Cannot connect to server"
+    },
+    {
+      "key": "quickMatch",
+      "value": "Quick Match"
+    },
+    {
+      "key": "createRoom",
+      "value": "Create Private Room"
+    },
+    {
+      "key": "joinRoom",
+      "value": "Join by Code"
+    },
+    {
+      "key": "roomCode",
+      "value": "Room Code"
+    },
+    {
+      "key": "notReady",
+      "value": "Not Ready"
+    },
+    {
+      "key": "leaveRoom",
+      "value": "Leave Room"
+    },
+    {
+      "key": "profile",
+      "value": "Profile"
+    },
+    {
+      "key": "inventory",
+      "value": "Inventory"
+    },
+    {
+      "key": "dailyQuests",
+      "value": "Quests"
+    },
+    {
+      "key": "level",
+      "value": "Level"
+    },
+    {
+      "key": "coins",
+      "value": "Coins"
+    },
+    {
+      "key": "equipped",
+      "value": "Equipped"
+    },
+    {
+      "key": "equip",
+      "value": "Equip"
+    },
+    {
+      "key": "back",
+      "value": "Back"
+    },
+    {
+      "key": "claimQuest",
+      "value": "Claim Completion"
+    },
+    {
+      "key": "questActive",
+      "value": "Active"
+    },
+    {
+      "key": "questCompleted",
+      "value": "Completed"
+    },
+    {
+      "key": "questClaimed",
+      "value": "Claimed"
+    },
+    {
+      "key": "questExpired",
+      "value": "Expired"
+    },
+    {
+      "key": "questPayoutPending",
+      "value": "Quest payouts pending. Claim records completion only."
+    },
+    {
+      "key": "networkWaiting",
+      "value": "Waiting for 2–6 players · all ready to start"
+    },
+    {
+      "key": "networkCountdown",
+      "value": "Starting countdown"
+    },
+    {
+      "key": "networkPlacement",
+      "value": "Tap to place · drag to aim · READY"
+    },
+    {
+      "key": "networkReveal",
+      "value": "Reveal"
+    },
+    {
+      "key": "networkThrow",
+      "value": "Simultaneous throw"
+    },
+    {
+      "key": "networkRoundResult",
+      "value": "Round Result"
+    },
+    {
+      "key": "networkMatchResult",
+      "value": "Match Result"
+    },
+    {
+      "key": "networkRequirementsBlocked",
+      "value": "Timeout rule unconfirmed"
+    },
+    {
+      "key": "serverConfirmed",
+      "value": "Server verified result and balance"
+    },
+    {
+      "key": "trialRewards",
+      "value": "Sprint 4 trial reward rates"
+    },
+    {
+      "key": "weeklyQuests",
+      "value": "Toggle daily / weekly"
+    },
+    {
+      "key": "roomOwner",
+      "value": "Owner"
+    },
+    {
+      "key": "history",
+      "value": "Saved Matches"
+    },
+    {
+      "key": "itemchao",
+      "value": "Frying Pan"
+    },
+    {
+      "key": "itemvot",
+      "value": "Racket"
+    },
+    {
+      "key": "itemdep-to-ong",
+      "value": "Slipper"
+    },
+    {
+      "key": "questEventMatchCompleted",
+      "value": "Finish matches"
+    },
+    {
+      "key": "questEventMatchWon",
+      "value": "Win matches"
+    },
+    {
+      "key": "questEventValidHit",
+      "value": "Land hits"
+    },
+    {
+      "key": "questEventMapPlayed",
+      "value": "Play maps"
+    },
+    {
+      "key": "questEventFriendMatchCompleted",
+      "value": "Private matches"
+    },
+    {
+      "key": "errorincomplete_action",
+      "value": "Place and aim before locking."
+    },
+    {
+      "key": "errorinvalid_code",
+      "value": "Invalid room code."
+    },
+    {
+      "key": "errorroom_unavailable",
+      "value": "Room started, full or expired."
+    },
+    {
+      "key": "erroralready_in_room",
+      "value": "Already in a room."
+    },
+    {
+      "key": "errorquest_not_claimable",
+      "value": "Quest incomplete or already claimed."
+    },
+    {
+      "key": "errornot_owned",
+      "value": "Item not owned."
+    },
+    {
+      "key": "erroraction_locked",
+      "value": "Action locked or deadline passed."
+    },
+    {
+      "key": "errorinvalid_session",
+      "value": "Guest session expired. A new guest session is required."
+    },
+    {
+      "key": "errorinvalid_position",
+      "value": "Position outside arena."
+    },
+    {
+      "key": "errorinvalid_aim",
+      "value": "Drag to choose a direction."
+    },
+    {
+      "key": "errorplace_first",
+      "value": "Place first."
+    },
+    {
+      "key": "errormatch_in_progress",
+      "value": "Match in progress."
+    },
+    {
+      "key": "errormatch_started",
+      "value": "Match already started."
+    },
+    {
+      "key": "errorrate_limited",
+      "value": "Too many actions. Try again."
+    },
+    {
+      "key": "matchReward",
+      "value": "Match reward"
+    },
+    {
+      "key": "balance",
+      "value": "Balance"
+    },
+    {
+      "key": "menuTrial",
+      "value": "Trial"
+    },
+    {
+      "key": "menuTagline",
+      "value": "THROW FOR FUN"
+    },
+    {
+      "key": "menuGuest",
+      "value": "Guest"
+    },
+    {
+      "key": "menuNotConnected",
+      "value": "Not connected"
+    },
+    {
+      "key": "menuQuick",
+      "value": "QUICK PLAY"
+    },
+    {
+      "key": "menuQuickDesc",
+      "value": "Join a 2–6 player match"
+    },
+    {
+      "key": "menuPrivate",
+      "value": "PRIVATE ROOM"
+    },
+    {
+      "key": "menuPrivateDesc",
+      "value": "Create a room • Invite friends"
+    },
+    {
+      "key": "menuMaps",
+      "value": "Maps"
+    },
+    {
+      "key": "menuCharacters",
+      "value": "Characters"
+    },
+    {
+      "key": "menuCollection",
+      "value": "Collection"
+    },
+    {
+      "key": "menuRanking",
+      "value": "Ranking"
+    },
+    {
+      "key": "menuSoon",
+      "value": "Coming soon"
+    },
+    {
+      "key": "menuExplore",
+      "value": "Explore"
+    },
+    {
+      "key": "menuHome",
+      "value": "Home"
+    },
+    {
+      "key": "menuShop",
+      "value": "Shop"
+    },
+    {
+      "key": "menuTravel",
+      "value": "Travel"
+    },
+    {
+      "key": "menuCommunity",
+      "value": "Community"
+    },
+    {
+      "key": "menuPractice",
+      "value": "Practice with Bots"
+    },
+    {
+      "key": "menuArtFallback",
+      "value": "Village menu art pending"
+    },
+    {
+      "key": "menuLoading",
+      "value": "CONNECTING"
+    },
+    {
+      "key": "menuCancel",
+      "value": "Cancel"
+    },
+    {
+      "key": "menuUnavailable",
+      "value": "Coming soon. This feature is not available yet."
+    },
+    {
+      "key": "menuInbox",
+      "value": "Inbox"
+    },
+    {
+      "key": "menuLanguage",
+      "value": "Language"
+    },
+    {
+      "key": "menuAudioPending",
+      "value": "Audio: music and complete SFX assets pending."
+    },
+    {
+      "key": "menuMapPolicy",
+      "value": "Choose a practice arena. Online rooms currently use Village."
+    },
+    {
+      "key": "menuCharacterPolicy",
+      "value": "Preview 3 MVP characters. Online avatar and layered outfits are pending. Equip weapons in Inventory."
+    },
+    {
+      "key": "menuGuestConsent",
+      "value": "Connect as a guest to keep progress in this tab. Coins are trial rewards."
+    },
+    {
+      "key": "menuNetworkError",
+      "value": "Connection failed"
+    },
+    {
+      "key": "menuConnectTimeout",
+      "value": "Connection timed out. Check the server and retry."
     }
   ]
 }

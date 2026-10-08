@@ -51,3 +51,13 @@ Prompt Sprint 3B thay arena elip mặc định bằng chữ nhật bo góc 2000 
 - Chat vẫn là UI mock; không có online/multiplayer, kết bạn, kinh tế, shop hoặc ranking production. Lobby/CharacterSelect chưa có luồng tài khoản/lựa chọn hoàn chỉnh.
 - Preset 60/30 FPS là cấu hình mục tiêu. Đo browser desktop không thay cho Safari iOS/Chrome Android thật, notch/Dynamic Island thật hay benchmark nhiệt/memory dài hạn.
 - Kết quả thực thi Sprint 3B được ghi riêng tại SPRINT_3B_UNITY_INTEGRATION_REPORT.md; không dùng báo cáo này để khẳng định các mục còn thiếu đã hoàn tất.
+
+## Sprint 4 — cập nhật thực thi
+
+Online Classic/Private, room/quick match, guest resume, profile/inventory, quest và reward thử nghiệm đã được triển khai; hai Unity Web client đã hoàn tất trận thật. Mục Sprint 3B “chưa có online” ở trên là trạng thái lịch sử. Xem SPRINT_4_MULTIPLAYER_REPORT.md.
+
+Vẫn thiếu Supabase credentials/provider cấu hình và runtime adapter (migration chưa apply), domain/chứng chỉ public WSS, luật AFK/leave/forfeit trong trận, policy bot fallback, recipe/chi phí chế tạo, thưởng quest, gameplay mode mở rộng, chat/friend/ranking/shop production. Rooms RAM chưa hồi phục sau restart; SQLite giữ profile/inventory/reward. Quest tuần thử nghiệm theo bucket7ngày UTC, chưa chốt lịch tuần production. Portrait/frame thật, art5map, audio/VFX và test máy di động vẫn thiếu. Không tự đặt thêm luật để lấp các mục này.
+
+## Sprint5 — Main Menu
+
+Menu tương tác, logo độc lập, UI9-slice/atlas, bảy viewport/safearea giả lập, profile thật và các entry bot/online/inventory đã có. Vẫn thiếu background sân đình nhiều lớp, portrait riêng, artwork feature card và texture art hoàn thiện; dùng backdrop/sprite cũ và icon/frame fallback có ghi rõ. Không coi visual art thương mại đã hoàn tất. Shop/rank/social/audio/layer character chưa triển khai. Browser Sprint5 chờ người dùng reload tab lỗi bị công cụ chặn; Web Build thành công không thay bằng chứng browser/device thật. Xem SPRINT_5_MAIN_MENU_REPORT.md.

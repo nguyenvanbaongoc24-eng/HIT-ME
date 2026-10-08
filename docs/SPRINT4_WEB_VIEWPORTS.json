@@ -1,0 +1,42 @@
+[
+  {
+    "requested": {
+      "width": 360,
+      "height": 800
+    },
+    "canvas": {
+      "height": 800,
+      "width": 360
+    }
+  },
+  {
+    "requested": {
+      "width": 390,
+      "height": 844
+    },
+    "canvas": {
+      "height": 844,
+      "width": 389.3984375
+    }
+  },
+  {
+    "requested": {
+      "width": 412,
+      "height": 915
+    },
+    "canvas": {
+      "height": 915,
+      "width": 412
+    }
+  },
+  {
+    "requested": {
+      "width": 430,
+      "height": 932
+    },
+    "canvas": {
+      "height": 932,
+      "width": 430
+    }
+  }
+]

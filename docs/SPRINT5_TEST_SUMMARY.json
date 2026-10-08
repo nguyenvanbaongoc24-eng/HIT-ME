@@ -1,0 +1,39 @@
+{
+  "EditMode": {
+    "result": "Passed",
+    "passed": 71,
+    "failed": 0,
+    "startedUTC": "2026-10-08 18:23:57Z"
+  },
+  "PlayMode": {
+    "result": "Passed",
+    "passed": 17,
+    "failed": 0,
+    "startedUTC": "2026-10-08 18:26:13Z"
+  },
+  "testedMenuSizes": [
+    "360x800",
+    "375x812",
+    "390x844",
+    "393x852",
+    "402x874",
+    "412x915",
+    "430x932"
+  ],
+  "simulatedSafeAreaInsetsPx": {
+    "top": 59,
+    "bottom": 34
+  },
+  "realPhoneTested": false,
+  "WebBuild": {
+    "result": "Succeeded",
+    "bytes": 21397238,
+    "errors": 0,
+    "warnings": 6,
+    "seconds": 249.0134269
+  },
+  "browserVerification": {
+    "executed": false,
+    "blocked": "Existing browser tab is an error page with a protocol disallowed by the browser tool; user reload requested."
+  }
+}

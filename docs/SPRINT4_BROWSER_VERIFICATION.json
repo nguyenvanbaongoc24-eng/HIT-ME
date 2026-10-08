@@ -1,0 +1,46 @@
+{
+  "testedAt": "2026-10-08",
+  "url": "http://127.0.0.1:8791/",
+  "twoIndependentUnityWebClients": true,
+  "finalRoom": "597E0D25",
+  "finalRound": 3,
+  "outcome": "Draw",
+  "rewardEach": {
+    "coins": 65,
+    "xp": 30
+  },
+  "balanceEach": {
+    "coins": 195,
+    "xp": 90
+  },
+  "viewports": [
+    {
+      "width": 360,
+      "height": 800,
+      "stableResultVisible": true
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "stableResultVisible": true
+    },
+    {
+      "width": 412,
+      "height": 915,
+      "stableResultVisible": true
+    },
+    {
+      "width": 430,
+      "height": 932,
+      "stableResultVisible": true
+    }
+  ],
+  "settingsLanguageRebuildRetainsResult": true,
+  "consoleAfterFinalBuild": {
+    "errors": 0,
+    "warnings": 0,
+    "olderFixedLogsRetainedByBrowser": true
+  },
+  "publicWSSBrowserTest": false,
+  "realMobileDevicesTested": false
+}

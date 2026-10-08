@@ -1,0 +1,13 @@
+scenario,id,hp,x,y,dx,dy,canThrow,hpAfter,target,outcome
+first_target,a,3,-600,0,1,0,true,3,b,Ongoing
+first_target,b,3,0,0,0,1,true,2,,Ongoing
+first_target,c,3,500,0,0,1,true,3,,Ongoing
+simultaneous,a,1,-400,0,1,0,true,0,b,Draw
+simultaneous,b,1,400,0,-1,0,true,0,a,Draw
+winner,a,3,-400,0,1,0,true,2,b,Winner
+winner,b,1,400,0,-1,0,true,0,a,Winner
+ordinal_tie,a,3,-600,0,1,0,true,3,b,Ongoing
+ordinal_tie,b,3,0,50,0,1,false,2,,Ongoing
+ordinal_tie,c,3,0,-50,0,-1,false,3,,Ongoing
+behind,a,3,400,0,1,0,true,3,,Ongoing
+behind,b,3,-400,0,-1,0,true,3,,Ongoing
