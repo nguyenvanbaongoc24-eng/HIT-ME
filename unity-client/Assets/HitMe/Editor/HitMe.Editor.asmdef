@@ -5,7 +5,7 @@
     "HitMe.Runtime",
     "Unity.RenderPipelines.Universal.Runtime",
     "Unity.RenderPipelines.Universal.2D.Runtime",
-    "Unity.TextMeshPro"
+    "Unity.TextMeshPro", "Unity.ugui"
   ],
   "includePlatforms": [
     "Editor"

@@ -1,1 +1,1 @@
-{"name":"HitMe.CharacterEditMode","references":["HitMe.Runtime","HitMe.Core","HitMe.Editor","Unity.ugui"],"includePlatforms":["Editor"],"optionalUnityReferences":["TestAssemblies"]}
+{"name":"HitMe.CharacterEditMode","references":["HitMe.Runtime","HitMe.Core","HitMe.Editor","Unity.ugui","Unity.TextMeshPro"],"includePlatforms":["Editor"],"optionalUnityReferences":["TestAssemblies"]}

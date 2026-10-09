@@ -1,0 +1,162 @@
+[
+  {
+    "asset_id": "HitMeButtonPrimary",
+    "source_path": "unity-client/Assets/HitMe/Resources/UI/Kit/HitMeButtonPrimary.prefab",
+    "category": "unity_prefab",
+    "status": "implemented_reusable_component_owner_binding_required",
+    "skin": "existing_native_png_fallback",
+    "atlas": "MainMenu.spriteatlas",
+    "concept_imported": false,
+    "missing_requirements": "Production skin/portraits/card art; owner binding when migrating additional screens"
+  },
+  {
+    "asset_id": "HitMeButtonSecondary",
+    "source_path": "unity-client/Assets/HitMe/Resources/UI/Kit/HitMeButtonSecondary.prefab",
+    "category": "unity_prefab",
+    "status": "implemented_reusable_component_owner_binding_required",
+    "skin": "existing_native_png_fallback",
+    "atlas": "MainMenu.spriteatlas",
+    "concept_imported": false,
+    "missing_requirements": "Production skin/portraits/card art; owner binding when migrating additional screens"
+  },
+  {
+    "asset_id": "HitMeButtonTertiary",
+    "source_path": "unity-client/Assets/HitMe/Resources/UI/Kit/HitMeButtonTertiary.prefab",
+    "category": "unity_prefab",
+    "status": "runtime_reused_mainmenu_lobby",
+    "skin": "existing_native_png_fallback",
+    "atlas": "MainMenu.spriteatlas",
+    "concept_imported": false,
+    "missing_requirements": "Production skin/portraits/card art; owner binding when migrating additional screens"
+  },
+  {
+    "asset_id": "HitMeIconButton",
+    "source_path": "unity-client/Assets/HitMe/Resources/UI/Kit/HitMeIconButton.prefab",
+    "category": "unity_prefab",
+    "status": "implemented_reusable_component_owner_binding_required",
+    "skin": "existing_native_png_fallback",
+    "atlas": "MainMenu.spriteatlas",
+    "concept_imported": false,
+    "missing_requirements": "Production skin/portraits/card art; owner binding when migrating additional screens"
+  },
+  {
+    "asset_id": "HitMeFeatureCard",
+    "source_path": "unity-client/Assets/HitMe/Resources/UI/Kit/HitMeFeatureCard.prefab",
+    "category": "unity_prefab",
+    "status": "implemented_reusable_component_owner_binding_required",
+    "skin": "existing_native_png_fallback",
+    "atlas": "MainMenu.spriteatlas",
+    "concept_imported": false,
+    "missing_requirements": "Production skin/portraits/card art; owner binding when migrating additional screens"
+  },
+  {
+    "asset_id": "HitMeCharacterCard",
+    "source_path": "unity-client/Assets/HitMe/Resources/UI/Kit/HitMeCharacterCard.prefab",
+    "category": "unity_prefab",
+    "status": "implemented_reusable_component_owner_binding_required",
+    "skin": "existing_native_png_fallback",
+    "atlas": "MainMenu.spriteatlas",
+    "concept_imported": false,
+    "missing_requirements": "Production skin/portraits/card art; owner binding when migrating additional screens"
+  },
+  {
+    "asset_id": "HitMeWeaponCard",
+    "source_path": "unity-client/Assets/HitMe/Resources/UI/Kit/HitMeWeaponCard.prefab",
+    "category": "unity_prefab",
+    "status": "implemented_reusable_component_owner_binding_required",
+    "skin": "existing_native_png_fallback",
+    "atlas": "MainMenu.spriteatlas",
+    "concept_imported": false,
+    "missing_requirements": "Production skin/portraits/card art; owner binding when migrating additional screens"
+  },
+  {
+    "asset_id": "HitMeMapCard",
+    "source_path": "unity-client/Assets/HitMe/Resources/UI/Kit/HitMeMapCard.prefab",
+    "category": "unity_prefab",
+    "status": "implemented_reusable_component_owner_binding_required",
+    "skin": "existing_native_png_fallback",
+    "atlas": "MainMenu.spriteatlas",
+    "concept_imported": false,
+    "missing_requirements": "Production skin/portraits/card art; owner binding when migrating additional screens"
+  },
+  {
+    "asset_id": "HitMeTopBar",
+    "source_path": "unity-client/Assets/HitMe/Resources/UI/Kit/HitMeTopBar.prefab",
+    "category": "unity_prefab",
+    "status": "implemented_reusable_component_owner_binding_required",
+    "skin": "existing_native_png_fallback",
+    "atlas": "MainMenu.spriteatlas",
+    "concept_imported": false,
+    "missing_requirements": "Production skin/portraits/card art; owner binding when migrating additional screens"
+  },
+  {
+    "asset_id": "HitMeBottomNavigation",
+    "source_path": "unity-client/Assets/HitMe/Resources/UI/Kit/HitMeBottomNavigation.prefab",
+    "category": "unity_prefab",
+    "status": "implemented_reusable_component_owner_binding_required",
+    "skin": "existing_native_png_fallback",
+    "atlas": "MainMenu.spriteatlas",
+    "concept_imported": false,
+    "missing_requirements": "Production skin/portraits/card art; owner binding when migrating additional screens"
+  },
+  {
+    "asset_id": "HitMePopup",
+    "source_path": "unity-client/Assets/HitMe/Resources/UI/Kit/HitMePopup.prefab",
+    "category": "unity_prefab",
+    "status": "implemented_reusable_component_owner_binding_required",
+    "skin": "existing_native_png_fallback",
+    "atlas": "MainMenu.spriteatlas",
+    "concept_imported": false,
+    "missing_requirements": "Production skin/portraits/card art; owner binding when migrating additional screens"
+  },
+  {
+    "asset_id": "HitMePlayerHUD",
+    "source_path": "unity-client/Assets/HitMe/Resources/UI/Kit/HitMePlayerHUD.prefab",
+    "category": "unity_prefab",
+    "status": "implemented_reusable_component_owner_binding_required",
+    "skin": "existing_native_png_fallback",
+    "atlas": "MainMenu.spriteatlas",
+    "concept_imported": false,
+    "missing_requirements": "Production skin/portraits/card art; owner binding when migrating additional screens"
+  },
+  {
+    "asset_id": "HitMeChatPanel",
+    "source_path": "unity-client/Assets/HitMe/Resources/UI/Kit/HitMeChatPanel.prefab",
+    "category": "unity_prefab",
+    "status": "implemented_reusable_component_owner_binding_required",
+    "skin": "existing_native_png_fallback",
+    "atlas": "MainMenu.spriteatlas",
+    "concept_imported": false,
+    "missing_requirements": "Production skin/portraits/card art; owner binding when migrating additional screens"
+  },
+  {
+    "asset_id": "HitMeCharacterSelection",
+    "source_path": "unity-client/Assets/HitMe/Resources/UI/Kit/HitMeCharacterSelection.prefab",
+    "category": "unity_prefab",
+    "status": "implemented_reusable_component_owner_binding_required",
+    "skin": "existing_native_png_fallback",
+    "atlas": "MainMenu.spriteatlas",
+    "concept_imported": false,
+    "missing_requirements": "Production skin/portraits/card art; owner binding when migrating additional screens"
+  },
+  {
+    "asset_id": "HitMeWeaponSelection",
+    "source_path": "unity-client/Assets/HitMe/Resources/UI/Kit/HitMeWeaponSelection.prefab",
+    "category": "unity_prefab",
+    "status": "implemented_reusable_component_owner_binding_required",
+    "skin": "existing_native_png_fallback",
+    "atlas": "MainMenu.spriteatlas",
+    "concept_imported": false,
+    "missing_requirements": "Production skin/portraits/card art; owner binding when migrating additional screens"
+  },
+  {
+    "asset_id": "HitMeMapSelection",
+    "source_path": "unity-client/Assets/HitMe/Resources/UI/Kit/HitMeMapSelection.prefab",
+    "category": "unity_prefab",
+    "status": "implemented_reusable_component_owner_binding_required",
+    "skin": "existing_native_png_fallback",
+    "atlas": "MainMenu.spriteatlas",
+    "concept_imported": false,
+    "missing_requirements": "Production skin/portraits/card art; owner binding when migrating additional screens"
+  }
+]

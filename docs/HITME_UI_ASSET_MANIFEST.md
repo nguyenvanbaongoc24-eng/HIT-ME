@@ -74,3 +74,6 @@ License notes and missing_requirements are included for each record in JSON. Ref
 ### font
 - Be Vietnam Pro not provided; existing licensed Nunito supports Vietnamese and remains in use
 
+
+## UI Kit follow-up — 09/10/2026
+16 independent prefab records: UIKIT_COMPONENT_MANIFEST.json. MainMenu and OnlineLobby reuse HitMeButtonTertiary in the real Web build. Other components are owner-bound reusable UI; no Picture art imported. Existing native PNG skins remain fallback, not accepted Phase 2 production artwork.

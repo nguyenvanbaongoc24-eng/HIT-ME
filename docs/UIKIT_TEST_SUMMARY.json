@@ -1,0 +1,26 @@
+{
+  "pictureHashesUnchanged": true,
+  "backend": {
+    "total": 16,
+    "passed": 16
+  },
+  "deviceTests": "NOT RUN",
+  "editmode": {
+    "total": 77,
+    "passed": 77
+  },
+  "pictureImports": 0,
+  "playmode": {
+    "passed": 21,
+    "total": 21,
+    "skipped": 0
+  },
+  "build": {
+    "result": "Succeeded",
+    "bytes": 21431101,
+    "errors": 0,
+    "warnings": 5,
+    "seconds": 169.2594495
+  },
+  "showcase": "docs/screenshots/UIKit-Showcase.png"
+}

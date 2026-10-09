@@ -11,7 +11,7 @@ namespace HitMe.UI
             var scaler=go.GetComponent<CanvasScaler>();scaler.uiScaleMode=CanvasScaler.ScaleMode.ScaleWithScreenSize;scaler.referenceResolution=new Vector2(390,844);scaler.matchWidthOrHeight=0;content=go.transform;var art=ArenaMaps.LoadSelected();if(art?.backdrop!=null){var background=go.AddComponent<Image>();background.sprite=art.backdrop;background.color=new Color(.36f,.30f,.26f);background.raycastTarget=false;}Build();}
         RectTransform R(string id,float y,float height=42){var r=new GameObject(id,typeof(RectTransform)).GetComponent<RectTransform>();r.SetParent(content,false);r.sizeDelta=new Vector2(342,height);r.anchoredPosition=new Vector2(0,y);return r;}
         Text T(string id,string value,float y,int size=16,float height=42){var r=R(id,y,height);var t=r.gameObject.AddComponent<HitMeText>();t.font=FoundationFonts.Text;t.fontSize=size;t.alignment=TextAnchor.MiddleCenter;t.color=Color.white;t.text=value;t.raycastTarget=false;return t;}
-        void B(string key,float y,UnityEngine.Events.UnityAction action){var r=R(key,y);var image=r.gameObject.AddComponent<Image>();image.color=new Color(.13f,.50f,.46f);var b=r.gameObject.AddComponent<Button>();b.onClick.AddListener(action);var text=T(key+"Label",L(key),y);text.transform.SetParent(r,false);text.rectTransform.anchoredPosition=Vector2.zero;}
+        void B(string key,float y,UnityEngine.Events.UnityAction action){var widget=HitMeWidgetFactory.Create("HitMeButtonTertiary",content);var r=widget.GetComponent<RectTransform>();r.name=key;r.sizeDelta=new Vector2(342,44);r.anchoredPosition=new Vector2(0,y);widget.title.gameObject.SetActive(false);widget.icon.gameObject.SetActive(false);widget.action.onClick.AddListener(action);var text=T(key+"Label",L(key),y);text.transform.SetParent(r,false);text.rectTransform.anchoredPosition=Vector2.zero;}
         InputField Input(string id,string value,float y){var r=R(id,y);r.gameObject.AddComponent<Image>().color=new Color(.24f,.20f,.16f);var input=r.gameObject.AddComponent<InputField>();var text=T(id+"Text",value,y);text.transform.SetParent(r,false);text.rectTransform.anchoredPosition=Vector2.zero;input.textComponent=text;input.characterLimit=256;input.text=value;return input;}
         void Build(){for(int i=content.childCount-1;i>=0;i--){content.GetChild(i).gameObject.SetActive(false);Destroy(content.GetChild(i).gameObject);}T("Title","HIT ME · "+L("online"),340,26);
             B("settings",290,()=>{Strings.Load(Strings.Language=="vi"?"en":"vi");Build();});
@@ -32,3 +32,4 @@ namespace HitMe.UI
         string lastFingerprint="";
     }
 }
+

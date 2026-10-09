@@ -1,3 +1,7 @@
+# Update 09/10/2026: Gate 1 PASS
+
+Browser đã mở HTTP và được xác minh thực tế; xem GATE1_BROWSER_VERIFICATION.md. Các trạng thái PARTIAL/BLOCKED bên dưới là lịch sử tại thời điểm báo cáo ban đầu, không phải trạng thái hiện tại.
+
 # Main Menu — Phase1 functional/responsive report
 
 Date:09/10/2026 Asia/Bangkok. Checkpoint before phase:`86ec5bc`; Phase0 Gate0 passed first. Work uses the existing Unity6000.6.4f1 project.
@@ -58,3 +62,4 @@ Web Build **Succeeded**,21,395,100bytes,0errors,5warnings,191.82seconds. Inherit
 **Gate1:PARTIAL** pending browser smoke/final Web Console verification. The existing tab remains a data:error page; browser policy blocks binding it. User was asked to reopen the validHTTP URL. No bypass attempted. Unity PlayMode screenshots and realEditor-server tests are valid evidence but not mislabeled as Web/device tests. No transition to UI Kit/Phase2/Motion.
 
 Phase1 checkpoint:local tag hitme-master-phase1-20261009. Source files listed in PHASE1_FILE_INVENTORY.json. All5Picture original hashes still match the Phase0audit.
+
