@@ -11,3 +11,7 @@ Regenerate a release after Unity build by copying index.html, Build/, and Stream
 Requested URL `https://hit-me-eta.vercel.app/` returned HTTP 404 at inspection. The connected Vercel account/team did not expose the matching project/alias. No deployment to a different project is claimed. Connect the account owning the intended project (or confirm the intended new project/team) to complete production deployment.
 
 Supabase requirements and pending runtime work: `SUPABASE_CONNECTION_HANDOFF.md`.
+
+GitHub source/release push was VERIFIED on main at c998b3151471b65701a834532b82af75f107ece6; subsequent handoff commit records the supplied Supabase project and release SHA-256 manifest. Existing starter Assets/Packages/ProjectSettings, Phaser apps/packages and multiplayer source were preserved. Supplied SFX/HitMe_Audio_Placeholders is preserved as source material only: it has not been imported into Unity, mixed or validated as production sound.
+
+Browser fallback for Vercel opened the Dashboard and was redirected to the login page. No signed-in session for the intended project was available. Vercel deployment remains BLOCKED_BY_PROJECT_ACCESS, not a Unity build failure.

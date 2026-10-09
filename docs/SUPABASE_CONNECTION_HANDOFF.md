@@ -13,3 +13,13 @@ Needed information:
 Next engineering work after configuration: server JWT verification, account linking, PostgreSQL transactional Store adapter, existing reward/idempotency/security tests, reviewed migration, then client Auth flow. Existing gameplay and trial reward rules remain unchanged.
 
 This release is playable offline on static hosting. Online production and Supabase persistence remain pending those integrations.
+
+## Selected Supabase project
+
+User supplied dashboard: https://supabase.com/dashboard/project/ucvnnovebjawcmavgxyg
+Project reference: `ucvnnovebjawcmavgxyg`.
+Expected API URL: `https://ucvnnovebjawcmavgxyg.supabase.co` (confirm in Dashboard Connect).
+
+Still needed: publishable key from Settings > API Keys, desired Auth providers, confirmation whether database is empty / migration applied, and backend hosting/WSS endpoint. Configure secret key and database password directly in the server secret environment; do not send them in chat. These configuration names are a handoff, not an implemented runtime adapter.
+
+Official references: https://supabase.com/docs/guides/getting-started/api-keys and https://supabase.com/docs/guides/auth/redirect-urls .

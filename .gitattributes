@@ -177,3 +177,4 @@ docs/** -filter
 Picture/** -filter
 web-release/** -filter
 Assets/Welcome/2d-template.png -filter
+SFX/** -filter

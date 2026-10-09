@@ -1,0 +1,210 @@
+{
+  "sampleRate": 44100,
+  "bitDepth": 16,
+  "assets": [
+    {
+      "id": "sfx_tap_place",
+      "file": "sfx_tap_place.wav",
+      "kind": "sfx",
+      "event": "place_position",
+      "bus": "SFX",
+      "loop": false,
+      "description": "Chạm đặt vị trí trên sân",
+      "channels": 1
+    },
+    {
+      "id": "sfx_countdown_tick",
+      "file": "sfx_countdown_tick.wav",
+      "kind": "sfx",
+      "event": "countdown_tick",
+      "bus": "SFX",
+      "loop": false,
+      "description": "Tích mỗi giây (giây 5 đến 3)",
+      "channels": 1
+    },
+    {
+      "id": "sfx_countdown_last",
+      "file": "sfx_countdown_last.wav",
+      "kind": "sfx",
+      "event": "countdown_last",
+      "bus": "SFX",
+      "loop": false,
+      "description": "Tích cao hơn (2 giây cuối)",
+      "channels": 1
+    },
+    {
+      "id": "sfx_ready",
+      "file": "sfx_ready.wav",
+      "kind": "sfx",
+      "event": "ready_pressed",
+      "bus": "UI",
+      "loop": false,
+      "description": "Bấm nút SẴN SÀNG",
+      "channels": 1
+    },
+    {
+      "id": "sfx_reveal",
+      "file": "sfx_reveal.wav",
+      "kind": "sfx",
+      "event": "round_reveal",
+      "bus": "SFX",
+      "loop": false,
+      "description": "Tất cả nhân vật lộ diện",
+      "channels": 1
+    },
+    {
+      "id": "sfx_throw",
+      "file": "sfx_throw.wav",
+      "kind": "sfx",
+      "event": "weapon_throw",
+      "bus": "SFX",
+      "loop": false,
+      "description": "Vũ khí bay (vút)",
+      "channels": 1
+    },
+    {
+      "id": "sfx_hit_bop",
+      "file": "sfx_hit_bop.wav",
+      "kind": "sfx",
+      "event": "player_hit",
+      "bus": "SFX",
+      "loop": false,
+      "description": "Trúng người (BỐP) - có công tắc riêng trong cài đặt",
+      "channels": 1
+    },
+    {
+      "id": "sfx_wall_thud",
+      "file": "sfx_wall_thud.wav",
+      "kind": "sfx",
+      "event": "weapon_hit_wall",
+      "bus": "SFX",
+      "loop": false,
+      "description": "Vũ khí chạm tường",
+      "channels": 1
+    },
+    {
+      "id": "sfx_heart_break",
+      "file": "sfx_heart_break.wav",
+      "kind": "sfx",
+      "event": "heart_lost",
+      "bus": "SFX",
+      "loop": false,
+      "description": "Mất một trái tim",
+      "channels": 1
+    },
+    {
+      "id": "sfx_eliminate",
+      "file": "sfx_eliminate.wav",
+      "kind": "sfx",
+      "event": "player_eliminated",
+      "bus": "SFX",
+      "loop": false,
+      "description": "Người chơi bị loại",
+      "channels": 1
+    },
+    {
+      "id": "sfx_win",
+      "file": "sfx_win.wav",
+      "kind": "sfx",
+      "event": "match_win",
+      "bus": "SFX",
+      "loop": false,
+      "description": "Thắng trận (fanfare ngắn)",
+      "channels": 1
+    },
+    {
+      "id": "sfx_lose",
+      "file": "sfx_lose.wav",
+      "kind": "sfx",
+      "event": "match_lose",
+      "bus": "SFX",
+      "loop": false,
+      "description": "Thua trận",
+      "channels": 1
+    },
+    {
+      "id": "sfx_coin",
+      "file": "sfx_coin.wav",
+      "kind": "sfx",
+      "event": "gold_gain",
+      "bus": "UI",
+      "loop": false,
+      "description": "Nhận vàng",
+      "channels": 1
+    },
+    {
+      "id": "sfx_purchase",
+      "file": "sfx_purchase.wav",
+      "kind": "sfx",
+      "event": "purchase_success",
+      "bus": "UI",
+      "loop": false,
+      "description": "Mua trang bị thành công",
+      "channels": 1
+    },
+    {
+      "id": "sfx_ui_click",
+      "file": "sfx_ui_click.wav",
+      "kind": "sfx",
+      "event": "ui_click",
+      "bus": "UI",
+      "loop": false,
+      "description": "Bấm nút thường",
+      "channels": 1
+    },
+    {
+      "id": "sfx_chat_pop",
+      "file": "sfx_chat_pop.wav",
+      "kind": "sfx",
+      "event": "chat_message",
+      "bus": "UI",
+      "loop": false,
+      "description": "Có tin nhắn chat",
+      "channels": 1
+    },
+    {
+      "id": "sfx_error",
+      "file": "sfx_error.wav",
+      "kind": "sfx",
+      "event": "ui_error",
+      "bus": "UI",
+      "loop": false,
+      "description": "Lỗi, không đủ vàng",
+      "channels": 1
+    },
+    {
+      "id": "bgm_match_loop",
+      "file": "bgm_match_loop.wav",
+      "kind": "music",
+      "event": "music_match",
+      "bus": "Music",
+      "loop": true,
+      "bpm": 120,
+      "bars": 8,
+      "description": "Nhạc nền trong trận, vui nhộn, pentatonic",
+      "channels": 2
+    },
+    {
+      "id": "bgm_menu_loop",
+      "file": "bgm_menu_loop.wav",
+      "kind": "music",
+      "event": "music_menu",
+      "bus": "Music",
+      "loop": true,
+      "bpm": 90,
+      "bars": 8,
+      "description": "Nhạc sảnh/menu, nhẹ nhàng",
+      "channels": 2
+    },
+    {
+      "id": "amb_crowd_murmur_loop",
+      "file": "amb_crowd_murmur_loop.wav",
+      "kind": "ambience",
+      "event": "ambience_crowd",
+      "bus": "Ambience",
+      "loop": true,
+      "description": "Tiếng khán giả xì xào (tổng hợp từ nhiễu, chỉ là tạm)",
+      "channels": 2
+    }
+  ]
+}
