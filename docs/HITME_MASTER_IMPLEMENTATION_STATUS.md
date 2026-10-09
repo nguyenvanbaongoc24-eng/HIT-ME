@@ -15,11 +15,11 @@
 | Gate | Status | Evidence / remaining condition |
 |---|---|---|
 | Gate0 — Picture audit | **PASS** | All5files reviewed and measured; all reference_composite; missing production exports listed; original SHA256 hashes unchanged. |
-| Gate1 — functional MainMenu | **PARTIAL** | Unity compile/tests/real-server UI/7sizes/screenshots/Web Build pass. Browser smoke and final Web Console verification blocked by existing data:error-page tab. |
+| Gate1 — functional MainMenu | **PASS** | HTTP and browser Main Menu/Bot/Settings/private/quick/inventory smoke verified; see GATE1_BROWSER_VERIFICATION.md. Full Web match Result/device QA still pending. |
 | Independent UI Kit | **NOT RUN** | Root menu/theme reused; independent widget prefabs and showcase still needed. |
 | Gate2 — Artwork | **NOT RUN** | No new Picture art integrated; standalone production exports missing. |
 | Gate6 — Motion | **NOT RUN** | No new rig/frame/pet/environment/VFX work. Existing single-frame tween is fallback. |
-| Browser QA | **BLOCKED** | Browser tool only allowsHTTP/HTTPS and rejects the existing data:error page. User reopen of valid local URL requested. |
+| Browser QA | **PARTIAL** | HTTP Web runs, 390×844/430×932 and captured Console checked; full-match Result/device QA pending. |
 | iPhone Safari device test | **NOT RUN** | No device test in this run. |
 | Chrome Android device test | **NOT RUN** | No device test in this run. |
 | FPS / memory acceptance | **NOT RUN** | No performance claim based on desktop resize tests. |
@@ -63,3 +63,4 @@ Build directory:`unity-client/Builds/Web`; local HTTP8791 and WS8788 are running
 5. Run actual iPhone/Safari and Android/Chrome safe area, keyboard/touch, background/reconnect and measured performance QA.
 
 Risks still open: production art/readability, layer/animation availability, real-device safe area/keyboard, Safari background reconnect, overdraw/performance, missing social/shop/rank/Supabase production setup. No gameplay/economy rule was invented to resolve these.
+
