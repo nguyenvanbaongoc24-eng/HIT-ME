@@ -1,66 +1,65 @@
 # HIT ME — Master implementation status
 
-09/10/2026 Asia/Bangkok. Scope executed in this run:Phase0 + Phase1. Overall:**PARTIAL**; not a finished art/motion release.
+09/10/2026, Asia/Bangkok. Overall: **PARTIAL**. Current run completed Gate 1 browser verification and independent UI Kit core; Phase 2 is blocked at production-art preflight. Sprint 6 not started.
 
-## Verified environment and checkpoints
+## Environment / checkpoints
 
-- Project:`D:/HIT ME/unity-client`, Unity6000.6.4f1 / URP2D.
-- Editor:`D:/App/UNITY/6000.6.4f1/Editor/Unity.exe`; Web Build Support verified.
-- Before Phase0:`72bea53` (includes the existing Sprint4/5 workspace, master plan and Picture originals).
-- Phase0 complete / before Phase1:`86ec5bc`.
-- Phase1 checkpoint is identified by local tag`hitme-master-phase1-20261009`; no remote push/deployment performed.
+- Existing Unity project: D:/HIT ME/unity-client, Unity 6000.6.4f1 / URP 2D.
+- Editor: D:/App/UNITY/6000.6.4f1/Editor/Unity.exe; Web Build Support verified.
+- Before Phase 0: 72bea53. Phase 0 / before Phase 1: 86ec5bc.
+- Phase 1: f50ec3f, tag hitme-master-phase1-20261009.
+- Gate 1 Web verification / before UI Kit: 7bbbf1e.
+- UI Kit core / before Phase 2 asset preflight: f65fe17.
+- No new project, remote push, production deployment or backend/economy changes.
 
 ## Gates
 
-| Gate | Status | Evidence / remaining condition |
+| Gate | Status | Actual evidence / limitation |
 |---|---|---|
-| Gate0 — Picture audit | **PASS** | All5files reviewed and measured; all reference_composite; missing production exports listed; original SHA256 hashes unchanged. |
-| Gate1 — functional MainMenu | **PASS** | HTTP and browser Main Menu/Bot/Settings/private/quick/inventory smoke verified; see GATE1_BROWSER_VERIFICATION.md. Full Web match Result/device QA still pending. |
-| Independent UI Kit | **NOT RUN** | Root menu/theme reused; independent widget prefabs and showcase still needed. |
-| Gate2 — Artwork | **NOT RUN** | No new Picture art integrated; standalone production exports missing. |
-| Gate6 — Motion | **NOT RUN** | No new rig/frame/pet/environment/VFX work. Existing single-frame tween is fallback. |
-| Browser QA | **PARTIAL** | HTTP Web runs, 390×844/430×932 and captured Console checked; full-match Result/device QA pending. |
-| iPhone Safari device test | **NOT RUN** | No device test in this run. |
-| Chrome Android device test | **NOT RUN** | No device test in this run. |
-| FPS / memory acceptance | **NOT RUN** | No performance claim based on desktop resize tests. |
+| Gate 0 — Picture audit | PASS | 5 reference boards classified; original hashes rechecked unchanged |
+| Gate 1 — Main Menu | PASS | Unity suites/Web Build, real HTTP browser Bot/Settings/VI-EN/private/quick/inventory/back; 390×844 and 430×932 |
+| UI Kit core | PASS | 16 independent editable prefabs, Showcase, states/events/binding; MainMenu and OnlineLobby reuse button prefab; final tests/build/browser pass |
+| Gate 2 — Artwork | BLOCKED | Existing sprites remain integrated; no new production exports in Picture. Native UI skins are fallback, not finished concept art |
+| Gate 6 — Motion | NOT RUN | Gate 2 unmet; pet/weapon/environment layers/frames missing. Existing pose/press tween does not count as completed Sprint 6 |
+| Full Web match Result QA | PENDING | Bot Battle/placement/Ready smoke run; no complete Web match Result asserted. Unity/server result regression tests pass |
+| iPhone Safari / Android Chrome device tests | NOT RUN | Desktop viewport checks do not substitute device touch/keyboard/safe area/background/reconnect |
+| FPS / memory acceptance | NOT RUN | Web counter observed; no device benchmark claim |
 
-No later phase was started while Gate1 remains partial.
+Browser is no longer blocked by data:error. Actual tab uses http://127.0.0.1:8791/?performance=1. HTTP listener PID 21644; WS 8788 PID 31352 verified. HTML + loader/data/framework/wasm return 200. Final UI Kit build loaded, MainMenu/Practice/Connection/OnlineLobby/Back checked; captured Console warn/error empty in this smoke window. All viewport overrides reset afterwards.
 
 ## Executed validation
 
-| Phase | EditMode | PlayMode | Web Build |
-|---|---|---|---|
-|0|71/71|17/17|Succeeded21,398,041bytes;0errors,1warning;143.69s|
-|1|75/75|19/19,0skipped|Succeeded21,395,100bytes;0errors,5warnings;191.82s|
+| Stage | EditMode | PlayMode | Backend | Web Build |
+|---|---|---|---|---|
+| Phase 0 | 71/71 | 17/17 | — | Succeeded, 0 errors/1 warning |
+| Phase 1 | 75/75 | 19/19 | 16/16 | Succeeded, 0 errors/5 warnings |
+| UI Kit final | 77/77 | 21/21, 0 skipped | 16/16 rerun | Succeeded, 21,431,101 bytes, 0 errors/5 warnings, 169.26s |
 
-Backend rerun16/16pass. Phase1Editor UI test used a real local server to guest-connect/create/leave/private/quick/inventory, with0coins after navigation. Existing gameplay and network suites still pass. This does not substitute two Web clients or device tests. Build warnings include inherited LobbyCS0108, TMP shader deprecation and compiler splitting; build is not warning-free.
+Build directory: unity-client/Builds/Web. UIKIT_WEB_BUILD.json, UIKIT_HTTP_VERIFICATION.json, UIKIT_TEST_SUMMARY.json, UIKit-EditMode-results.xml, UIKit-PlayMode-results.xml. Existing tests cover gameplay/network/privacy/result/rewards. UI tests use real local server; backend tests use two real WS clients and WSS CA. Do not equate these with two browser clients or devices. Compiler/TMP/build-splitting warnings remain; build is not warning-free.
 
-Build directory:`unity-client/Builds/Web`; local HTTP8791 and WS8788 are running. Browser URL:http://127.0.0.1:8791/?performance=1. The current tab still exposes a data:error page instead of the game. No bypass or alternate surface used to evade the tool policy.
+Showcase QA initially exposed a zero-scale Canvas generated in batchmode and an untranslated loading label. Fixed and reran tests/render/build; final Showcase visible with localized loading label. No MissingReference/NullReference recorded by passing suites or captured browser smoke.
 
-## Artwork distinction
+Phase 2 stopped at asset preflight with no runtime change after UI Kit; no separate Phase 2 or Sprint 6 build/test success claimed.
 
-- Picture:5concept/reference boards, **0new runtime imports**.
-- Existing runtime:27independentPNGassets (3Idlecharacters,3weapons,2arena images,19nativeUI fallbacks).
-- These are not the newly approved complete7-character/pet set; no real multi-frame animations, separated environment layers or commercial UI artwork inferred from the boards.
-- Concept damage/speed/range labels do not alter cosmetic-only weapon rules or combat parameters.
-- See PICTURE_ASSET_AUDIT.md, PICTURE_ASSET_AUDIT.json and HITME_UI_ASSET_MANIFEST.md.
+## Implemented vs artwork
 
-## Files, reports and screenshots
+- UI Kit: 16 actual Unity prefabs + a development Showcase prefab. Generic panels/cards/HUD/chat support owner binding; they have not replaced every production screen/controller. Real runtime reuse proven for button in MainMenu/Lobby.
+- Picture: 5 concept/reference composites, 0 new runtime imports; no slicing/cropping into fake sprite sheets.
+- Existing art: 27 independent runtime PNGs — 3 single-Idle characters, 3 weapons, 2 arena images, 19 minimal native UI sprites. All retained; not the complete new five-human/two-pet set or final premium UI skin.
+- Missing: production UI skin/card/portrait assets, complete character/pet sprites/frames/rig layers, new weapon PNGs, separated environment/VFX layers. Be Vietnam Pro optional asset absent; licensed Nunito/Symbols existing glyph checks pass.
+- Phaser/apps/packages, server source, Unity Core gameplay and scene YAML unchanged in this run. Historical sprint screenshots/XML/generated wasm restored after fresh UI Kit evidence copied.
 
-- Phase0:PHASE_0_PROJECT_AUDIT.md; PHASE0_TEST_SUMMARY.json; Phase0-EditMode-results.xml; Phase0-PlayMode-results.xml; PHASE0_WEB_BUILD.json.
-- Phase1:MAIN_MENU_PHASE_1_REPORT.md; PHASE1_TEST_SUMMARY.json; Phase1-EditMode-results.xml; Phase1-PlayMode-results.xml; PHASE1_WEB_BUILD.json; PHASE1_FILE_INVENTORY.json.
-- Unity screenshots:screenshots/Phase0-MainMenu-390x844.png,430x932.png; Phase1-MainMenu-{size}.png for7sizes. **Unity PlayMode renders, not browser screenshots or mockups.**
-- Logs:docs/unity-EditMode.log,unity-PlayMode.log,phase0-WebBuild.log,phase1-WebBuild.log (Gitignored).
-- Phase0tooling:tools/audit-picture-assets.py,tools/master-phase.ps1; Editor build entry points.
-- Phase1source:MenuScreenState,MainMenuController/View,MenuNavigationService,SafeAreaAdapter,VI/ENstrings and focused tests. Phaser/apps/packages, server, gameplay Core and scene YAML unchanged during these phases.
+## Reports / files
 
-## Missing assets / next actions
+- Gate 1: GATE1_BROWSER_VERIFICATION.md, GATE1_HTTP_VERIFICATION.json; original Phase 1 report updated with current gate result.
+- UI Kit: HITME_UI_KIT_IMPLEMENTATION.md, UIKIT_COMPONENT_MANIFEST.json, UIKIT_FILE_INVENTORY.txt.
+- Artwork: MAIN_MENU_PHASE_2_REPORT.md, PICTURE_RECHECK_20261009.json, existing PICTURE_ASSET_AUDIT.md/json and updated HITME_UI_ASSET_MANIFEST.md.
+- Motion dependency: SPRINT_6_MOTION_REPORT.md (NOT RUN, not animation completion report).
+- Actual Unity screenshots: screenshots/UIKit-Showcase.png, UIKit-MainMenu-{7 sizes}.png. Browser images were displayed in tool; no local browser screenshot files saved. These screenshots are not concept mockups.
+- Sources: UIKitSetup, HitMeWidget, HitMePanel, UIShowcaseController, existing MainMenuView/NetworkLobbyView button factories, Editor build entry point, focused tests/asmdef references. Logs in docs/uikit-Configure.log, uikit-WebBuild.log and unity test logs (ignored by Git).
 
-1. Reopen the valid local game URL in the browser tab, then complete MainMenu→BotBattle→Result, Quick/Private/Inventory/Back and WebConsole checks. Close Gate1 before UI Kit.
-2. Produce independent widget prefabs/showcase and prove real reuse in a second screen; do not claim the root controller prefab is a completed UI Kit.
-3. Obtain separate character/pet poses or rig layers, weapon variants, portrait/card art and layered village-gate/environment/VFX exports with provenance. Do not crop labeled concept cells as final animation frames.
-4. Only after the appropriate gates, integrate Phase2art and then Sprint6motion without moving logical hitboxes or changing damage.
-5. Run actual iPhone/Safari and Android/Chrome safe area, keyboard/touch, background/reconnect and measured performance QA.
+## Next required input / sequence
 
-Risks still open: production art/readability, layer/animation availability, real-device safe area/keyboard, Safari background reconnect, overdraw/performance, missing social/shop/rank/Supabase production setup. No gameplay/economy rule was invented to resolve these.
+Supply separate production exports described in MAIN_MENU_PHASE_2_REPORT.md: UI skin/portraits/cards/background layers, character/pet poses or rigs, weapon variants and environment/VFX layers with provenance. Do not send another labeled concept composite as a replacement for these assets.
 
+Then import/validate art in existing prefabs → verify Gate 2 with tests/build/screenshots → Sprint 6 visual-only motion with pooling/quality/reduced motion → full Web match and real-device QA. Preserve logical roots/hitboxes/resolver/bot/network and do not infer unresolved timeout/sudden-death/economy rules.
