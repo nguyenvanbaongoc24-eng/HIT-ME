@@ -1,3 +1,10 @@
+# Current release
+
+Open **unity-client/** in Unity Hub. The root Assets/Packages/ProjectSettings are the preserved GitHub starter; current gameplay and artwork live in unity-client.
+
+The tested Unity Web release is **web-release/**. Vercel deploys it using the root vercel.json (Framework Other, Root Directory repository root). Latest validation: 83/83 EditMode, 32/32 PlayMode; Web Build succeeded with 0 errors / 4 warnings. See docs/HITME_AIM_VISUAL_QA.md and docs/DEPLOYMENT_HANDOFF.md. Supabase is not runtime-connected yet; see docs/SUPABASE_CONNECTION_HANDOFF.md. The older foundation notes below describe earlier stages.
+
+---
 # HIT ME
 
 Unity 6 Web-first foundation lives in `unity-client/`. The original Phaser prototype remains under `apps/client`, with TypeScript gameplay/config under `packages/`; it is preserved independently.

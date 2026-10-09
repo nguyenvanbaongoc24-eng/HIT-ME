@@ -169,3 +169,11 @@ Packages/packages-lock.json linguist-generated
 
 # Exceptions for .asset files such as lightning pre-baking
 LightingData.asset     binary
+
+# Current HIT ME assets/builds are regular Git blobs, all below GitHub's file limit.
+# Preserve the existing starter attributes while avoiding LFS smudging non-pointer history.
+unity-client/** -filter
+docs/** -filter
+Picture/** -filter
+web-release/** -filter
+Assets/Welcome/2d-template.png -filter
