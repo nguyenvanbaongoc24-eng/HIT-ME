@@ -19,7 +19,7 @@ public sealed class HitMePanel : MonoBehaviour {
  void Update(){if(language!=Strings.Language)Refresh();}
  void Refresh(){language=Strings.Language;if(heading!=null&&!string.IsNullOrEmpty(headingKey))heading.text=Strings.Get(headingKey);}
  public void Open(string title,string message){if(heading!=null)heading.text=title;if(body!=null)body.text=message;gameObject.SetActive(true);}
- public void Close(){gameObject.SetActive(false);}
+ public void Close(){var motion=GetComponent<UIMotionController>();if(motion!=null)motion.Exit(()=>gameObject.SetActive(false));else gameObject.SetActive(false);}
  public void BindValue(string data){if(value!=null)value.text=data??"—";}
  public void Select(int index){if(items==null)return;for(int i=0;i<items.Length;i++)if(items[i].State!=WidgetState.Locked&&items[i].State!=WidgetState.Disabled)items[i].SetState(i==index?WidgetState.Selected:WidgetState.Normal);}
  public void BindHealth(string playerName,int hp,bool eliminated){if(body!=null)body.text=playerName;if(value!=null)value.text=new string('♥',Mathf.Clamp(hp,0,3));if(items!=null)foreach(var item in items)item.SetState(eliminated?WidgetState.Eliminated:WidgetState.Normal);}

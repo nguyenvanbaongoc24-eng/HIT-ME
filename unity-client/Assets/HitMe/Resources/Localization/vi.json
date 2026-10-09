@@ -619,6 +619,38 @@
     {
       "key": "menuMatchAlreadyStarted",
       "value": "Trận đã bắt đầu; hãy mở lại phòng để tiếp tục."
+    },
+    {
+      "key": "motionQuality",
+      "value": "Mức chuyển động"
+    },
+    {
+      "key": "enabled",
+      "value": "Bật"
+    },
+    {
+      "key": "motionHigh",
+      "value": "Cao"
+    },
+    {
+      "key": "motionMedium",
+      "value": "Vừa"
+    },
+    {
+      "key": "reducedMotion",
+      "value": "Giảm chuyển động"
+    },
+    {
+      "key": "motionLow",
+      "value": "Thấp"
+    },
+    {
+      "key": "disabled",
+      "value": "Tắt"
+    },
+    {
+      "key": "offlineVisualChoice",
+      "value": "Hình ảnh cho Bot/preview; tài khoản online do server quản lý."
     }
   ]
 }

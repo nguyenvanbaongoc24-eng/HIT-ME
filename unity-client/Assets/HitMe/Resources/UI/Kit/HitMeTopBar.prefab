@@ -429,6 +429,7 @@ GameObject:
   - component: {fileID: 8387610730970946060}
   - component: {fileID: 1177701796772564422}
   - component: {fileID: 2121040747962895753}
+  - component: {fileID: 5581836739148962638}
   - component: {fileID: 4625577648323110496}
   - component: {fileID: 5141480168639656159}
   m_Layer: 0
@@ -516,6 +517,19 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   headingKey: profile
+--- !u!114 &5581836739148962638
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3477534347531597552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7eebc16e21945db4c8ee6db363c3370c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: HitMe.Runtime::HitMe.UI.UIMotionController
+  duration: 0.16
 --- !u!222 &4625577648323110496
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1145,7 +1159,7 @@ GameObject:
   - component: {fileID: 3912769072499684698}
   - component: {fileID: 7620879815355666817}
   - component: {fileID: 5706273900035161592}
-  - component: {fileID: 9042766463631687175}
+  - component: {fileID: 8730012496455836477}
   - component: {fileID: 7665703111546056340}
   m_Layer: 0
   m_Name: HitMeIconButton
@@ -1214,7 +1228,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: HitMe.Runtime::HitMe.UI.HitMeWidget
   theme: {fileID: 11400000, guid: cae655714092c8844b65d8d95d92a031, type: 2}
-  action: {fileID: 9042766463631687175}
+  action: {fileID: 8730012496455836477}
   background: {fileID: 5706273900035161592}
   icon: {fileID: 239719355304054212}
   title: {fileID: 2856425850505643294}
@@ -1266,7 +1280,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &9042766463631687175
+--- !u!114 &8730012496455836477
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1275,9 +1289,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 7358407300962730507}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Script: {fileID: 11500000, guid: 7986e0cc40cb81744b4ea2bb8966fa98, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
+  m_EditorClassIdentifier: HitMe.Runtime::HitMe.UI.DebouncedButton
   m_Navigation:
     m_Mode: 3
     m_WrapAround: 0
@@ -1310,6 +1324,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+  clickInterval: 0.18
 --- !u!114 &7665703111546056340
 MonoBehaviour:
   m_ObjectHideFlags: 0

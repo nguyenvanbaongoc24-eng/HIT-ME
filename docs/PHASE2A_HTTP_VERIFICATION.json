@@ -1,0 +1,32 @@
+[
+  {
+    "path": "/",
+    "status": 200,
+    "bytes": 3430,
+    "type": "text/html"
+  },
+  {
+    "path": "/Build/Web.data.unityweb",
+    "status": 200,
+    "bytes": 11909464,
+    "type": "application/octet-stream"
+  },
+  {
+    "path": "/Build/Web.framework.js.unityweb",
+    "status": 200,
+    "bytes": 68545,
+    "type": "application/octet-stream"
+  },
+  {
+    "path": "/Build/Web.loader.js",
+    "status": 200,
+    "bytes": 48779,
+    "type": "text/javascript"
+  },
+  {
+    "path": "/Build/Web.wasm.unityweb",
+    "status": 200,
+    "bytes": 9408014,
+    "type": "application/octet-stream"
+  }
+]

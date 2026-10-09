@@ -1,0 +1,37 @@
+[
+  {
+    "path": "/",
+    "status": 200,
+    "bytes": 3430,
+    "sha256": "19167dd5c7a2aebe4eca2f9fff19ba53e9be17d80d21a86b71510bb482efbd8b",
+    "matches_build": true
+  },
+  {
+    "path": "/Build/Web.data.unityweb",
+    "status": 200,
+    "bytes": 11913413,
+    "sha256": "d8255208adda0b68b3a6438349d692563f94b4f4bacc1e957a87e767e8d5bb86",
+    "matches_build": true
+  },
+  {
+    "path": "/Build/Web.framework.js.unityweb",
+    "status": 200,
+    "bytes": 68545,
+    "sha256": "ec25efe924eaa964f56d243e380583e8b16280d255e090ff6e21250c411c3cb8",
+    "matches_build": true
+  },
+  {
+    "path": "/Build/Web.loader.js",
+    "status": 200,
+    "bytes": 48779,
+    "sha256": "141efbd6fce9dcaff002e9b9ca5499f407e70a9116feff4fb65c955c50663a78",
+    "matches_build": true
+  },
+  {
+    "path": "/Build/Web.wasm.unityweb",
+    "status": 200,
+    "bytes": 9406895,
+    "sha256": "60a44e393180963dba4f70ae1298f6f614d3a6f2923d37b33d7a0df9f9a485c9",
+    "matches_build": true
+  }
+]

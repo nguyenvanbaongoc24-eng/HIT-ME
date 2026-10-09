@@ -84,9 +84,8 @@ namespace HitMe.UI
         }
         Button Button(string name, Transform parent, string text, Vector2 size, Vector2 pos, UnityEngine.Events.UnityAction click, Color color)
         {
-            Image image = Box(name, parent, size, pos, color); image.raycastTarget = true;
-            var b = image.gameObject.AddComponent<Button>(); b.targetGraphic = image; b.onClick.AddListener(click);
-            Label("Label", image.transform, text, size - new Vector2(6, 4), Vector2.zero, 14);
+            var widget=HitMeWidgetFactory.Create(name=="Ready"?"HitMeButtonPrimary":"HitMeButtonTertiary",parent);widget.name=name;var image=widget.background;image.color=color;var r=widget.GetComponent<RectTransform>();r.sizeDelta=size;r.anchoredPosition=pos;widget.title.gameObject.SetActive(false);widget.detail.gameObject.SetActive(false);widget.icon.gameObject.SetActive(false);var b=widget.action;b.onClick.AddListener(click);
+            Label("Label", image.transform, text, size-new Vector2(6,4),Vector2.zero,14);
             return b;
         }
         void Build()
@@ -125,7 +124,7 @@ namespace HitMe.UI
                 Ellipse("FeetHitbox", actor, new Vector2(radius * 2, radius * 2), Vector2.zero, C(52, 61, 49), .78f);
                 Color tint = i == 0 ? C(43, 157, 147) : (i == 1 ? C(218, 109, 76) : C(121, 105, 182));
                 int visualSlot=online&&onlinePlayers!=null?onlinePlayers[i].avatar=="Char02_BotMale"?1:onlinePlayers[i].avatar=="Char03_BotFemale"?2:0:i;
-                var definition=catalog!=null?catalog.ForSlot(visualSlot):null;
+                var definition=!online&&i==0?CosmeticPreview.Definition:catalog!=null?catalog.ForSlot(visualSlot):null;
                 Image body;
                 if(definition!=null && definition.visualPrefab!=null)
                 {
@@ -135,6 +134,7 @@ namespace HitMe.UI
                 else body=Box("CharacterSpritePlaceholder",actor,new Vector2(38,58),new Vector2(0,30),tint);
                 var presentation=body.GetComponent<CharacterPresentation>();if(presentation==null)presentation=body.gameObject.AddComponent<CharacterPresentation>();
                 presentation.Initialize(manifest,i%2==0 && i>0?"female-placeholder":"male-placeholder",definition);
+                if(!online&&i==0)presentation.Visual.SetCosmeticWeapon(CosmeticPreview.WeaponDefinition);
                 Label("MissingSpriteLabel",body.transform,"PH\n"+(i==0?"P":"B"+i),new Vector2(36,48),Vector2.zero,12);
                 presentation.Present(CharacterPose.Idle,tint);
                 if(presentation.Visual.HasSprite)presentation.Visual.Fit(presentation.Visual.DesiredHeight);
@@ -143,6 +143,7 @@ namespace HitMe.UI
                 Label("Name", nameHealth, name, new Vector2(70, 24), new Vector2(-24, 0), 12);
                 var health = Label("HealthSymbols", nameHealth, "♥♥♥", new Vector2(40, 24), new Vector2(34, 0), 12);
                 health.font = FoundationFonts.Symbols;
+                health.gameObject.AddComponent<HitMe.Visuals.FeedbackPulse>();
             }
             aim = Box("AimLine", root, new Vector2(1, 2), Vector2.zero, C(18, 109, 103)).rectTransform; aim.gameObject.SetActive(false);
             hud = Rect("SafeAreaHUD", root, Vector2.zero, Vector2.zero); Stretch(hud); UpdateSafeArea();
@@ -150,12 +151,13 @@ namespace HitMe.UI
             float safeW = hud.rect.width;
             Label("Round", hud, Strings.Get("round") + " 1", new Vector2(100, 24), new Vector2(-safeW / 2 + 59, top), 17);
             timer = Label("Timer", hud, "5", new Vector2(70, 28), new Vector2(0, top), 22);
+            BuildKitHUD(safeW,top);hud.Find("Round").GetComponent<Text>().enabled=false;timer.enabled=false;
             Button("Settings", hud, Strings.Get("settings"), new Vector2(84, 28), new Vector2(safeW / 2 - 50, top), Settings, C(47, 102, 103));
             for (int i = 0; i < actors.Length; i++)
             {
                 float x = (i - (actors.Length - 1) / 2f) * Mathf.Min(66, (safeW - 24) / actors.Length);
                 portraitItems[i * 3] = Ellipse("PortraitPlaceholder" + i, hud, new Vector2(Match == null ? 30 : 24, Match == null ? 30 : 24), new Vector2(x, top - (Match == null ? 27 : 27)), i == 0 ? C(43, 157, 147) : C(190, 100, 89)).rectTransform;
-                var portraitDefinition=catalog!=null?catalog.ForSlot(online&&onlinePlayers!=null?onlinePlayers[i].avatar=="Char02_BotMale"?1:onlinePlayers[i].avatar=="Char03_BotFemale"?2:0:i):null;
+                var portraitDefinition=!online&&i==0?CosmeticPreview.Definition:catalog!=null?catalog.ForSlot(online&&onlinePlayers!=null?onlinePlayers[i].avatar=="Char02_BotMale"?1:onlinePlayers[i].avatar=="Char03_BotFemale"?2:0:i):null;
                 if(portraitDefinition!=null && portraitDefinition.Frame(HitMe.Characters.VisualState.Idle,0)!=null)
                 {
                     var portrait=Box("PortraitSprite",portraitItems[i*3],portraitItems[i*3].sizeDelta,Vector2.zero,Color.white);
@@ -166,10 +168,10 @@ namespace HitMe.UI
                 portraitItems[i * 3 + 2] = hearts.rectTransform;
                 for (int k = 0; k < 3; k++) portraitPositions[i * 3 + k] = portraitItems[i * 3 + k].anchoredPosition;
             }
-            Button("Chat", hud, Strings.Get("chat"), new Vector2(62, 46), new Vector2(-safeW / 2 + 40, bottom), () => Message(Strings.Get("chatMock")), C(48, 104, 107));
+            Button("Chat", hud, Strings.Get("chat"), new Vector2(62, 46), new Vector2(-safeW / 2 + 40, bottom), OpenChat, C(48, 104, 107));
             ready = Button("Ready", hud, Strings.Get("ready"), new Vector2(164, 48), new Vector2(0, bottom), OnReady, C(247, 186, 58));
             readyText = ready.GetComponentInChildren<Text>(); readyText.color=ink;
-            var equipped=online?OnlineWeapon(NetworkSession.Instance.Self?.weapon):catalog!=null?catalog.ForSlot(0)?.defaultWeapon:null;
+            var equipped=online?OnlineWeapon(NetworkSession.Instance.Self?.weapon):CosmeticPreview.WeaponDefinition;
             var weaponButton=Button("Weapon",hud,Strings.Get("weapon"),new Vector2(70,46),new Vector2(safeW/2-44,bottom),()=>Message(equipped!=null?equipped.displayName+"\n"+Strings.Get("cosmeticWeapon"):Strings.Get("weaponMock")),C(159,95,56));
             if(equipped!=null && equipped.heldSprite!=null){weaponButton.GetComponentInChildren<Text>().text="";var icon=Box("EquippedWeaponIcon",weaponButton.transform,new Vector2(34,34),Vector2.zero,Color.white);icon.sprite=equipped.icon!=null?equipped.icon:equipped.heldSprite;icon.preserveAspect=true;}
 
@@ -177,6 +179,7 @@ namespace HitMe.UI
             lastTimerSecond = -1;
             SortActorsByFeet();
             VisibleActorCount = actors.Length; previousSize = root.rect.size; previousSafeArea = CurrentSafeArea;
+            BuildMotion();
         }
         void UpdateSafeArea()
         {
@@ -251,6 +254,7 @@ namespace HitMe.UI
         void Update()
         {
             if (!initialized) return;
+            SyncKitHUD();
             if (root.rect.size != previousSize || CurrentSafeArea != previousSafeArea) { Rebuild(); return; }
             if (offlineLaunch != null) offlineLaunch.gameObject.SetActive(Session.Phase == BattlePhase.LayoutPreview);
             if (online) { PaintOnline(); return; }
@@ -293,16 +297,11 @@ namespace HitMe.UI
                 if (Session.HasPosition) AdaptHudToPlayer();
             }
         }
-        void Message(string message)
-        {
-            if (panel != null) { Destroy(panel); panel = null; return; }
-            panel = Box("MockPanel", hud, new Vector2(300, 138), Vector2.zero, C(73, 59, 53)).gameObject;
-            Label("Message", panel.transform, message, new Vector2(274, 78), new Vector2(0, 20), 14);
-            Button("Close", panel.transform, Strings.Get("close"), new Vector2(120, 32), new Vector2(0, -43), () => { Destroy(panel); panel = null; }, C(247, 186, 58));
-        }
+        void Message(string message){ShowKitPanel("HitMePopup",Strings.Get("weapon"),message);}
         void Settings()
         {
             language = language == "vi" ? "en" : "vi"; Strings.Load(language); Rebuild();
         }
     }
 }
+

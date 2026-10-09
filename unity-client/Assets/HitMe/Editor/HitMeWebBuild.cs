@@ -14,6 +14,8 @@ public static class HitMeWebBuild {
  public static void BuildSprint5(){MainMenuAssetSetup.Configure();BuildTo("SPRINT5_WEB_BUILD.json");}
  public static void BuildMasterPhase0()=>BuildTo("PHASE0_WEB_BUILD.json");
  public static void BuildMasterPhase1(){MainMenuAssetSetup.Configure();BuildTo("PHASE1_WEB_BUILD.json");}
+ public static void BuildPhase2A(){UIKitSetup.Configure();BuildTo("PHASE2A_WEB_BUILD.json");}
+ public static void BuildSprint6A(){MotionSetup.Configure();UIKitSetup.Configure();BuildTo("SPRINT6A_WEB_BUILD.json");}
  public static void BuildUIKit(){UIKitSetup.Configure();BuildTo("UIKIT_WEB_BUILD.json");}
  static void BuildTo(string reportFile){
   if(!BuildPipeline.IsBuildTargetSupported(BuildTargetGroup.WebGL,BuildTarget.WebGL))throw new InvalidOperationException("Web Build Support missing.");
@@ -28,3 +30,4 @@ public static class HitMeWebBuild {
   if(report.summary.result!=BuildResult.Succeeded)throw new Exception("Web build failed.");
  }
 }}
+

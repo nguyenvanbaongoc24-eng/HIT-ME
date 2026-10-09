@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7864835027990944241}
   - component: {fileID: 772789233806133982}
   - component: {fileID: 8550152294786669955}
-  - component: {fileID: 7189313674483376174}
+  - component: {fileID: 2922818972031295727}
   - component: {fileID: 8439323318897662205}
   m_Layer: 0
   m_Name: HitMeButtonSecondary
@@ -82,7 +82,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: HitMe.Runtime::HitMe.UI.HitMeWidget
   theme: {fileID: 11400000, guid: cae655714092c8844b65d8d95d92a031, type: 2}
-  action: {fileID: 7189313674483376174}
+  action: {fileID: 2922818972031295727}
   background: {fileID: 8550152294786669955}
   icon: {fileID: 2917194935445245995}
   title: {fileID: 5703270922852331608}
@@ -134,7 +134,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &7189313674483376174
+--- !u!114 &2922818972031295727
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -143,9 +143,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1038091130558575574}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Script: {fileID: 11500000, guid: 7986e0cc40cb81744b4ea2bb8966fa98, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
+  m_EditorClassIdentifier: HitMe.Runtime::HitMe.UI.DebouncedButton
   m_Navigation:
     m_Mode: 3
     m_WrapAround: 0
@@ -178,6 +178,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+  clickInterval: 0.18
 --- !u!114 &8439323318897662205
 MonoBehaviour:
   m_ObjectHideFlags: 0

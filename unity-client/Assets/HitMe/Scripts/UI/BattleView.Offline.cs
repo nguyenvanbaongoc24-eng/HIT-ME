@@ -65,7 +65,7 @@ namespace HitMe.UI
             floor.Find("ArenaLabel").gameObject.SetActive(ArenaMaps.Selected!=0);
             var view=Match.ViewFor("player"); bool placement=Match.Phase==MatchPhase.Placement;
             bool changed=paintedPhase!=Match.Phase || paintedRound!=Match.Round;
-            if(changed) { foreach(var p in projectiles) if(p!=null)Destroy(p.gameObject); projectiles.Clear(); }
+            if(changed) { ReleaseProjectiles();if(Match.Phase==MatchPhase.RoundResult&&Match.Resolution!=null)foreach(var t in Match.Resolution.Throws)impactFeedback.ConfirmedImpact(ToCanvas(t.End),t.Hit); }
             VisibleActorCount=0;
             for(int i=0;i<actors.Length;i++)
             {
@@ -168,12 +168,10 @@ namespace HitMe.UI
         RectTransform CreateWeaponProjectile(string thrower,Point origin)
         {
             int index=Match.Ids.ToList().IndexOf(thrower);
-            var definition=actors[index].Find("CharacterSpritePlaceholder").GetComponent<CharacterVisual>().Definition;
-            var weapon=definition!=null?definition.defaultWeapon:null;
+            var weapon=actors[index].Find("CharacterSpritePlaceholder").GetComponent<CharacterVisual>().Weapon;
             if(weapon==null || weapon.FlightSprite==null)
                 return Ellipse("ProjectilePH",root,Vector2.one*(float)(Config.projectileRadius*Viewport.Scale*2),ToCanvas(origin),C(65,107,104)).rectTransform;
-            var image=Box("ProjectilePH",root,Vector2.one*weapon.visualSize,ToCanvas(origin),Color.white);
-            image.sprite=weapon.FlightSprite;image.preserveAspect=true;return image.rectTransform;
+            return RentProjectile(weapon.FlightSprite,weapon.visualSize,ToCanvas(origin));
         }
         Rect LocalBounds(RectTransform r)
         {

@@ -12,7 +12,8 @@ public sealed class MenuInteraction : MonoBehaviour,IPointerDownHandler,IPointer
  public void OnPointerEnter(PointerEventData e){if(button.interactable&&!held)target=1.015f;}
  public void OnSelect(BaseEventData e){if(button.interactable)target=1.015f;}
  public void OnDeselect(BaseEventData e){target=1;}
- void Update(){transform.localScale=Vector3.Lerp(transform.localScale,Vector3.one*target,1-Mathf.Exp(-Time.unscaledDeltaTime/ .055f));}
+ void Update(){if(HitMe.Visuals.MotionSettings.Reduced){transform.localScale=Vector3.one;return;}transform.localScale=Vector3.Lerp(transform.localScale,Vector3.one*target,1-Mathf.Exp(-Time.unscaledDeltaTime/ .055f));}
 }
-public sealed class MenuSpinner : MonoBehaviour {void Update(){transform.Rotate(0,0,-Time.unscaledDeltaTime*240);}}
+public sealed class MenuSpinner : MonoBehaviour {void Update(){if(!HitMe.Visuals.MotionSettings.Reduced)transform.Rotate(0,0,-Time.unscaledDeltaTime*240*HitMe.Visuals.MotionSettings.Strength); }}
 }
+

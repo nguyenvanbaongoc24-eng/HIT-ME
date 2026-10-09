@@ -19,10 +19,11 @@ public sealed class UIKitFlowTests {
   SceneManager.LoadScene("MainMenu");yield return null;
  }
  [UnityTest]public IEnumerator IndependentPopupChatAndRealScreenReuse(){
-  Strings.Load("vi");var popup=Object.Instantiate(Resources.Load<GameObject>("UI/Kit/HitMePopup")).GetComponent<HitMePanel>();int confirmations=0;popup.confirmed.AddListener(()=>confirmations++);popup.cancelled.AddListener(popup.Close);popup.Open("Kiểm tra","Dữ liệu từ owner");popup.confirm.onClick.Invoke();Assert.AreEqual(1,confirmations);popup.cancel.onClick.Invoke();Assert.IsFalse(popup.gameObject.activeSelf);Object.Destroy(popup.gameObject);
+  Strings.Load("vi");var popup=Object.Instantiate(Resources.Load<GameObject>("UI/Kit/HitMePopup")).GetComponent<HitMePanel>();int confirmations=0;popup.confirmed.AddListener(()=>confirmations++);popup.cancelled.AddListener(popup.Close);popup.Open("Kiểm tra","Dữ liệu từ owner");popup.confirm.onClick.Invoke();Assert.AreEqual(1,confirmations);popup.cancel.onClick.Invoke();yield return new WaitForSecondsRealtime(.22f);Assert.IsFalse(popup.gameObject.activeSelf);Object.Destroy(popup.gameObject);
   var chat=Object.Instantiate(Resources.Load<GameObject>("UI/Kit/HitMeChatPanel")).GetComponent<HitMePanel>();string submitted=null;chat.submitted.AddListener(text=>submitted=text);chat.input.text="Xin chào";chat.confirm.onClick.Invoke();Assert.AreEqual("Xin chào",submitted);chat.SetChatAvailable(false,"Offline");Assert.IsFalse(chat.confirm.interactable);Assert.IsFalse(chat.input.interactable);Object.Destroy(chat.gameObject);
   SceneManager.LoadScene("MainMenu");yield return null;yield return null;Assert.Greater(Object.FindAnyObjectByType<MainMenuView>().GetComponentsInChildren<HitMeWidget>().Length,10);
   MenuNavigationService.Lobby();yield return null;yield return null;Assert.Greater(Object.FindAnyObjectByType<NetworkLobbyView>().GetComponentsInChildren<HitMeWidget>().Length,0);SceneManager.LoadScene("MainMenu");yield return null;
  }
 }
 }
+

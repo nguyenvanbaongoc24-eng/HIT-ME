@@ -619,6 +619,38 @@
     {
       "key": "menuMatchAlreadyStarted",
       "value": "The match has started; reopen the room to resume."
+    },
+    {
+      "key": "motionQuality",
+      "value": "Motion quality"
+    },
+    {
+      "key": "enabled",
+      "value": "On"
+    },
+    {
+      "key": "motionHigh",
+      "value": "High"
+    },
+    {
+      "key": "motionMedium",
+      "value": "Medium"
+    },
+    {
+      "key": "reducedMotion",
+      "value": "Reduced motion"
+    },
+    {
+      "key": "motionLow",
+      "value": "Low"
+    },
+    {
+      "key": "disabled",
+      "value": "Off"
+    },
+    {
+      "key": "offlineVisualChoice",
+      "value": "Bot/preview visuals; online profile is server-owned."
     }
   ]
 }

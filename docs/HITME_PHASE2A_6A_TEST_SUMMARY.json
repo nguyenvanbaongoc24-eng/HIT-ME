@@ -1,0 +1,48 @@
+{
+  "phase2a": {
+    "EditMode": [
+      77,
+      77
+    ],
+    "PlayMode": [
+      23,
+      23
+    ],
+    "web": {
+      "result": "Succeeded",
+      "bytes": 21438232,
+      "errors": 0,
+      "warnings": 4,
+      "seconds": 169.8149816
+    }
+  },
+  "sprint6a": {
+    "EditMode": [
+      77,
+      77
+    ],
+    "PlayMode": [
+      26,
+      26
+    ],
+    "skipped": 0,
+    "backend": [
+      16,
+      16
+    ],
+    "web": {
+      "result": "Succeeded",
+      "bytes": 21441062,
+      "errors": 0,
+      "warnings": 4,
+      "seconds": 149.6267948
+    },
+    "http": {
+      "url": "http://127.0.0.1:8791/",
+      "resources": 5,
+      "all_200_and_match_build": true
+    }
+  },
+  "core_phaser_backend_modified": false,
+  "phase2b": "WAITING_FOR_ARTWORK"
+}

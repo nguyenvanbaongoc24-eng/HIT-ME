@@ -1,0 +1,11 @@
+using UnityEngine;
+using UnityEngine.UI;
+namespace HitMe.UI {
+public sealed partial class BattleView {
+ HitMePanel kitHUD;
+ void BuildKitHUD(float width,float top){var go=Instantiate(Resources.Load<GameObject>("UI/Kit/HitMePlayerHUD"),hud,false);go.name="BattleHUDKit";kitHUD=go.GetComponent<HitMePanel>();var r=go.GetComponent<RectTransform>();r.sizeDelta=new Vector2(width,84);r.anchoredPosition=new Vector2(0,top-28);kitHUD.heading.gameObject.SetActive(false);kitHUD.body.gameObject.SetActive(false);kitHUD.value.gameObject.SetActive(false);foreach(var item in kitHUD.items)item.gameObject.SetActive(false);kitHUD.roundLabel.rectTransform.anchoredPosition=new Vector2(-width/2+59,28);kitHUD.timerLabel.rectTransform.anchoredPosition=new Vector2(0,28);kitHUD.timerLabel.fontSizeMax=22;kitHUD.timerLabel.fontSize=22;go.GetComponent<UIMotionController>().enabled=false;go.GetComponent<CanvasGroup>().alpha=1;go.GetComponent<CanvasGroup>().blocksRaycasts=false;}
+ void SyncKitHUD(){if(kitHUD==null)return;float.TryParse(timer.text,out float seconds);kitHUD.BindBattle(online?NetworkSession.Instance.Room?.round??1:Match?.Round??1,seconds);kitHUD.timerLabel.text=timer.text;kitHUD.timerLabel.color=timer.color;}
+ void OpenChat(){ShowKitPanel("HitMeChatPanel",Strings.Get("chat"),Strings.Get("chatMock"));}
+ void ShowKitPanel(string prefab,string title,string body){if(panel!=null){var old=panel;panel=null;var oldKit=old.GetComponent<HitMePanel>();if(oldKit!=null)oldKit.Close();Destroy(old,.22f);return;}panel=Instantiate(Resources.Load<GameObject>("UI/Kit/"+prefab),hud,false);panel.name=prefab=="HitMeChatPanel"?"ChatUI":"MockPanel";var p=panel.GetComponent<HitMePanel>();var r=panel.GetComponent<RectTransform>();r.anchoredPosition=prefab=="HitMeChatPanel"?new Vector2(0,hud.rect.yMin+210):Vector2.zero;p.Open(title,body);p.confirm.gameObject.SetActive(false);p.cancel.GetComponent<RectTransform>().anchoredPosition=new Vector2(0,-r.rect.height/2+34);p.cancel.GetComponent<HitMeWidget>().titleKey="close";p.cancel.GetComponent<HitMeWidget>().RefreshLocalization();p.cancelled.AddListener(()=>{var old=panel;panel=null;p.Close();Destroy(old,.22f);});if(p.input!=null)p.SetChatAvailable(false,body);}
+}
+}

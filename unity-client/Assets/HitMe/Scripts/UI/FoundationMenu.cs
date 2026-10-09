@@ -11,6 +11,7 @@ namespace HitMe.UI
         {
             WebMobileBridge.Ensure(); Strings.Load(Strings.Language);
             if(sceneName=="MainMenu") { var theme=Resources.Load<UIThemeDefinition>("UI/MainMenuTheme"); if(theme?.entryPrefab!=null)Instantiate(theme.entryPrefab,transform);else gameObject.AddComponent<MainMenuController>(); return; }
+            if(sceneName=="CharacterSelect"){gameObject.AddComponent<CharacterSelectionView>();return;}
             if(sceneName=="Lobby") { gameObject.AddComponent<NetworkLobbyView>(); return; }
             if(sceneName=="Result" && OfflineRunContext.Result!=null) { gameObject.AddComponent<OfflineResultView>(); return; }
             OfflineRunContext.LoadDefaults();
@@ -48,3 +49,4 @@ namespace HitMe.UI
         }
     }
 }
+

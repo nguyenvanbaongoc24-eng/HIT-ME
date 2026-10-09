@@ -2,6 +2,7 @@ using System;
 using HitMe.UI;
 using UnityEngine;
 using UnityEngine.UI;
+using HitMe.Visuals;
 namespace HitMe.Characters
 {
     // The sole sprite/frame/motion renderer. Never writes to a fighter, foot anchor or hitbox.
@@ -18,13 +19,14 @@ namespace HitMe.Characters
         public bool HasSprite => image!=null && image.sprite!=null;
         public float DesiredHeight => HasSprite && definition!=null?definition.referenceHeight*definition.visualScale:58;
         public event Action<VisualState> StateChanged;
-        Image image,heldWeapon; CharacterManifest legacy; string legacyId; float stateStarted;
+        Image image,heldWeapon,artwork; CharacterMotionProfile motion; CharacterManifest legacy; string legacyId; float stateStarted;
         bool initialized,presented; Vector2 direction=Vector2.right;
         public void Initialize(CharacterDefinition data,CharacterManifest fallback=null,string id=null)
         {
             definition=data; legacy=fallback; legacyId=id; image=GetComponent<Image>(); image.raycastTarget=false;
             Facing=data!=null?data.authoredFacing:FacingDirection.Right;
             direction=new Vector2((int)Facing,0); initialized=true; presented=false;
+            motion=Resources.Load<CharacterMotionProfile>("Motion/Character");
         }
         public void SetFacing(Vector2 aim)
         {
@@ -41,7 +43,9 @@ namespace HitMe.Characters
             if(sprite==null && legacy!=null) sprite=legacy.LoadSprite(legacyId,ToLegacy(state));
             image.sprite=sprite;image.enabled=true;image.preserveAspect=sprite!=null;
             image.color=sprite==null?fallbackTint:state==VisualState.Eliminated?new Color(.5f,.5f,.5f,.7f):Color.white;
-            float angle=state==VisualState.Eliminated?65:state==VisualState.Throw?-15:state==VisualState.Aim?8:state==VisualState.Victory?Mathf.Sin(now*8)*8:state==VisualState.Idle?Mathf.Sin(now*3)*2:0;
+            float strength=MotionSettings.Strength;
+            float throwAngle=motion!=null?motion.throwAngle:8;
+            float angle=(state==VisualState.Eliminated?58:state==VisualState.Throw?elapsed<.12f?throwAngle*elapsed/.12f:-throwAngle*Mathf.Exp(-(elapsed-.12f)*8):state==VisualState.Aim?motion!=null?motion.aimAngle:3:0)*strength;
             // Authored multi-frame clips supply their own acting; don't rotate an entire animated sheet.
             var authored=definition?.Animation(state);
             if(sprite!=null && authored?.frames!=null && authored.frames.Length>1) angle=0;
@@ -49,6 +53,18 @@ namespace HitMe.Characters
             float flip=sprite!=null && definition!=null && Facing!=definition.authoredFacing?-1:1;
             transform.localScale=new Vector3(flip,1,1);
             if(state==VisualState.Hit) image.color=Color.Lerp(image.color,new Color(1,.3f,.3f),(.5f+.5f*Mathf.Sin(now*30)));
+            if(sprite!=null){
+                if(artwork==null){var go=new GameObject("MotionArtwork",typeof(RectTransform),typeof(Image));go.transform.SetParent(transform,false);go.transform.SetAsFirstSibling();artwork=go.GetComponent<Image>();artwork.raycastTarget=false;}
+                artwork.gameObject.SetActive(true);artwork.sprite=sprite;artwork.preserveAspect=true;artwork.color=image.color;
+                // The logical foot/root stays fixed. Only this artwork child breathes and bobs.
+                bool procedural=authored?.frames==null||authored.frames.Length<=1;
+                float bob=state==VisualState.Idle?Mathf.Sin(now*3)*(motion!=null?motion.idleBob:.65f):state==VisualState.Victory?Mathf.Abs(Mathf.Sin(now*7))*(motion!=null?motion.victoryBounce:1.6f):0;
+                float shake=state==VisualState.Hit?Mathf.Sin(elapsed*55)*Mathf.Exp(-elapsed*7)*(motion!=null?motion.hitShake:1.3f):0;
+                var ar=artwork.rectTransform;ar.anchorMin=Vector2.zero;ar.anchorMax=Vector2.one;ar.offsetMin=ar.offsetMax=Vector2.zero;ar.pivot=image.rectTransform.pivot;
+                ar.anchoredPosition=new Vector2(shake,bob)*(procedural?strength:0);
+                float breath=state==VisualState.Idle?Mathf.Sin(now*3)*(motion!=null?motion.breathing:.006f)*strength:0;
+                ar.localScale=Vector3.one*(1+(procedural?breath:0));image.enabled=false;
+            }else if(artwork!=null)artwork.gameObject.SetActive(false);
             var label=transform.Find("MissingSpriteLabel");if(label!=null)label.gameObject.SetActive(sprite==null);
             UpdateWeapon();
         }
@@ -60,7 +76,7 @@ namespace HitMe.Characters
             // Reserve rotation envelope so the visible sprite stays out of the HUD.
             float angle=Mathf.Abs(r.localEulerAngles.z>180?r.localEulerAngles.z-360:r.localEulerAngles.z)*Mathf.Deg2Rad;
             float envelope=Mathf.Abs(Mathf.Cos(angle))+aspect*Mathf.Abs(Mathf.Sin(angle));
-            float h=Mathf.Min(DesiredHeight,Mathf.Max(2,height)/Mathf.Max(1,envelope));
+            float h=Mathf.Min(DesiredHeight,Mathf.Max(2,height-2*MotionSettings.Strength)/Mathf.Max(1,envelope));
             h=Mathf.Min(h,Mathf.Max(2,maxWidth)/(aspect+Mathf.Abs(Mathf.Sin(angle))));
             r.pivot=pivot;r.anchoredPosition=Vector2.zero;r.sizeDelta=new Vector2(h*aspect,h);
             UpdateWeapon();
