@@ -116,7 +116,7 @@ namespace HitMe.Tests
                 for (int attempt = 0; attempt < 20; attempt++)
                 {
                     Color pixel = capture.GetPixel(Screen.width / 2, Screen.height / 2);
-                    if (pixel.r > .85f && pixel.g > .65f) break;
+                    if (pixel.r > .85f && pixel.g > .4f) break;
                     Object.Destroy(capture);
                     yield return new WaitForSecondsRealtime(.1f);
                     capture = ScreenCapture.CaptureScreenshotAsTexture();
@@ -124,7 +124,7 @@ namespace HitMe.Tests
                 Assert.IsNotNull(capture); Assert.AreEqual(Screen.width, capture.width); Assert.AreEqual(Screen.height, capture.height);
                 Color sand = capture.GetPixel(Screen.width / 2, Screen.height / 2);
                 Assert.That(sand.r, Is.GreaterThan(.85f), "Arena mesh must actually render, not just exist in hierarchy.");
-                Assert.That(sand.g, Is.GreaterThan(.65f), "Visible sand color at arena center.");
+                Assert.That(sand.g, Is.GreaterThan(.4f), "Visible terracotta floor at arena center.");
                 File.WriteAllBytes(Path.Combine(output, "Battle-" + Screen.width + "x" + Screen.height + ".png"), capture.EncodeToPNG());
                 Object.Destroy(capture);
             }

@@ -1,0 +1,32 @@
+[
+  {
+    "url": "http://127.0.0.1:8791/index.html",
+    "status": 200,
+    "bytes": 3430,
+    "diskHashMatch": true
+  },
+  {
+    "url": "http://127.0.0.1:8791/Build/Web.data.unityweb",
+    "status": 200,
+    "bytes": 28735829,
+    "diskHashMatch": true
+  },
+  {
+    "url": "http://127.0.0.1:8791/Build/Web.framework.js.unityweb",
+    "status": 200,
+    "bytes": 75205,
+    "diskHashMatch": true
+  },
+  {
+    "url": "http://127.0.0.1:8791/Build/Web.loader.js",
+    "status": 200,
+    "bytes": 48779,
+    "diskHashMatch": true
+  },
+  {
+    "url": "http://127.0.0.1:8791/Build/Web.wasm.unityweb",
+    "status": 200,
+    "bytes": 9532345,
+    "diskHashMatch": true
+  }
+]

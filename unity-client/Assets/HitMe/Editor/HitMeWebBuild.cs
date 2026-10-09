@@ -17,6 +17,11 @@ public static class HitMeWebBuild {
  public static void BuildPhase2A(){UIKitSetup.Configure();BuildTo("PHASE2A_WEB_BUILD.json");}
  public static void BuildSprint6A(){MotionSetup.Configure();UIKitSetup.Configure();BuildTo("SPRINT6A_WEB_BUILD.json");}
  public static void BuildUIKit(){UIKitSetup.Configure();BuildTo("UIKIT_WEB_BUILD.json");}
+  public static void BuildMasterProduction()=>BuildTo("MASTER_PRODUCTION_WEB_BUILD.json");
+  public static void BuildMaps()=>BuildTo("MAP_WEB_BUILD.json");
+  public static void BuildNorthernVillage()=>BuildTo("NORTHERN_VILLAGE_WEB_BUILD.json");
+  public static void BuildAimVisual()=>BuildTo("AIM_WEB_BUILD.json");
+ public static void BuildArtwork()=>BuildTo("ARTWORK_WEB_BUILD.json");
  static void BuildTo(string reportFile){
   if(!BuildPipeline.IsBuildTargetSupported(BuildTargetGroup.WebGL,BuildTarget.WebGL))throw new InvalidOperationException("Web Build Support missing.");
   string[] scenes=FoundationSetup.Scenes.Select(s=>"Assets/HitMe/Scenes/"+s+".unity").ToArray();

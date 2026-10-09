@@ -1,0 +1,524 @@
+[
+  {
+    "assetId": "BlondBoy",
+    "category": "Characters",
+    "sourceFile": "C:\\Users\\LENOVO\\.codex\\generated_images\\01a119c8-2e1f-7b80-b157-90323eb08e7e\\exec-bf3a069e-a58e-4eb4-a658-b818b057c56f.png",
+    "targetPath": "unity-client/Assets/HitMe/Art/Production/Characters/BlondBoy.png",
+    "crop": [
+      0,
+      0,
+      512,
+      512
+    ],
+    "trim": [
+      96,
+      12,
+      463,
+      512
+    ],
+    "dimensions": [
+      367,
+      500
+    ],
+    "transparent": true,
+    "alphaRange": [
+      0,
+      254
+    ],
+    "sha256": "7b3a465cd89991fffd59956ee3542b04c71df309606c65b38a995060eb4d4601",
+    "provenance": "AI-derived static illustration; actual alpha preserved; no frames/rig implied"
+  },
+  {
+    "assetId": "NonLaBoy",
+    "category": "Characters",
+    "sourceFile": "C:\\Users\\LENOVO\\.codex\\generated_images\\01a119c8-2e1f-7b80-b157-90323eb08e7e\\exec-bf3a069e-a58e-4eb4-a658-b818b057c56f.png",
+    "targetPath": "unity-client/Assets/HitMe/Art/Production/Characters/NonLaBoy.png",
+    "crop": [
+      512,
+      0,
+      1024,
+      512
+    ],
+    "trim": [
+      31,
+      14,
+      464,
+      512
+    ],
+    "dimensions": [
+      433,
+      498
+    ],
+    "transparent": true,
+    "alphaRange": [
+      0,
+      254
+    ],
+    "sha256": "08b1b82ff391589482d6c0288347719923c243aeb8a0f9f75a89341d1f385406",
+    "provenance": "AI-derived static illustration; actual alpha preserved; no frames/rig implied"
+  },
+  {
+    "assetId": "CapBoy",
+    "category": "Characters",
+    "sourceFile": "C:\\Users\\LENOVO\\.codex\\generated_images\\01a119c8-2e1f-7b80-b157-90323eb08e7e\\exec-bf3a069e-a58e-4eb4-a658-b818b057c56f.png",
+    "targetPath": "unity-client/Assets/HitMe/Art/Production/Characters/CapBoy.png",
+    "crop": [
+      1024,
+      0,
+      1536,
+      512
+    ],
+    "trim": [
+      50,
+      16,
+      416,
+      512
+    ],
+    "dimensions": [
+      366,
+      496
+    ],
+    "transparent": true,
+    "alphaRange": [
+      0,
+      254
+    ],
+    "sha256": "2a1320b2e31490437d25a7c62258f9172e94e6edb5ecf61b46a2657231ae9ac6",
+    "provenance": "AI-derived static illustration; actual alpha preserved; no frames/rig implied"
+  },
+  {
+    "assetId": "GoldenDog",
+    "category": "Animals",
+    "sourceFile": "C:\\Users\\LENOVO\\.codex\\generated_images\\01a119c8-2e1f-7b80-b157-90323eb08e7e\\exec-bf3a069e-a58e-4eb4-a658-b818b057c56f.png",
+    "targetPath": "unity-client/Assets/HitMe/Art/Production/Animals/GoldenDog.png",
+    "crop": [
+      0,
+      512,
+      512,
+      1024
+    ],
+    "trim": [
+      104,
+      0,
+      474,
+      496
+    ],
+    "dimensions": [
+      370,
+      496
+    ],
+    "transparent": true,
+    "alphaRange": [
+      0,
+      254
+    ],
+    "sha256": "d98252fcb8955cc394e05d8d69ec726c98bba8d34f45468fea488f0945b61d7a",
+    "provenance": "AI-derived static illustration; actual alpha preserved; no frames/rig implied"
+  },
+  {
+    "assetId": "BlackCat",
+    "category": "Animals",
+    "sourceFile": "C:\\Users\\LENOVO\\.codex\\generated_images\\01a119c8-2e1f-7b80-b157-90323eb08e7e\\exec-bf3a069e-a58e-4eb4-a658-b818b057c56f.png",
+    "targetPath": "unity-client/Assets/HitMe/Art/Production/Animals/BlackCat.png",
+    "crop": [
+      512,
+      512,
+      1024,
+      1024
+    ],
+    "trim": [
+      84,
+      0,
+      451,
+      494
+    ],
+    "dimensions": [
+      367,
+      494
+    ],
+    "transparent": true,
+    "alphaRange": [
+      0,
+      254
+    ],
+    "sha256": "58a6230e500f4f506563ae8e04b8fe9706f16f42a1015494ba291b2f69e6b10f",
+    "provenance": "AI-derived static illustration; actual alpha preserved; no frames/rig implied"
+  },
+  {
+    "assetId": "Smartphone",
+    "category": "Weapons",
+    "sourceFile": "C:\\Users\\LENOVO\\.codex\\generated_images\\01a119c8-2e1f-7b80-b157-90323eb08e7e\\exec-21f872be-6aa1-44f8-95e7-f711dd23a161.png",
+    "targetPath": "unity-client/Assets/HitMe/Art/Production/Weapons/Smartphone.png",
+    "crop": [
+      512,
+      0,
+      1024,
+      341
+    ],
+    "trim": [
+      99,
+      10,
+      367,
+      333
+    ],
+    "dimensions": [
+      268,
+      323
+    ],
+    "transparent": true,
+    "alphaRange": [
+      0,
+      254
+    ],
+    "sha256": "8f7fa4c69bef76bf8dff658a11640c69a98e8fdec7a30a44128d39f698e5e93b",
+    "provenance": "AI-derived static illustration; actual alpha preserved; no frames/rig implied"
+  },
+  {
+    "assetId": "MosquitoRacket",
+    "category": "Weapons",
+    "sourceFile": "C:\\Users\\LENOVO\\.codex\\generated_images\\01a119c8-2e1f-7b80-b157-90323eb08e7e\\exec-21f872be-6aa1-44f8-95e7-f711dd23a161.png",
+    "targetPath": "unity-client/Assets/HitMe/Art/Production/Weapons/MosquitoRacket.png",
+    "crop": [
+      1024,
+      0,
+      1536,
+      341
+    ],
+    "trim": [
+      37,
+      7,
+      387,
+      336
+    ],
+    "dimensions": [
+      350,
+      329
+    ],
+    "transparent": true,
+    "alphaRange": [
+      0,
+      254
+    ],
+    "sha256": "f4ef454f82856e0233621d6298cbfcee20f644b3faa764de36af12913484e1dc",
+    "provenance": "AI-derived static illustration; actual alpha preserved; no frames/rig implied"
+  },
+  {
+    "assetId": "BeerMug",
+    "category": "Weapons",
+    "sourceFile": "C:\\Users\\LENOVO\\.codex\\generated_images\\01a119c8-2e1f-7b80-b157-90323eb08e7e\\exec-21f872be-6aa1-44f8-95e7-f711dd23a161.png",
+    "targetPath": "unity-client/Assets/HitMe/Art/Production/Weapons/BeerMug.png",
+    "crop": [
+      512,
+      341,
+      1024,
+      682
+    ],
+    "trim": [
+      95,
+      3,
+      412,
+      341
+    ],
+    "dimensions": [
+      317,
+      338
+    ],
+    "transparent": true,
+    "alphaRange": [
+      0,
+      254
+    ],
+    "sha256": "688fc7ebc1edc7ba88a3f0896798eb234dd036cd3fdf91ae040861de65696008",
+    "provenance": "AI-derived static illustration; actual alpha preserved; no frames/rig implied"
+  },
+  {
+    "assetId": "Television",
+    "category": "Weapons",
+    "sourceFile": "C:\\Users\\LENOVO\\.codex\\generated_images\\01a119c8-2e1f-7b80-b157-90323eb08e7e\\exec-21f872be-6aa1-44f8-95e7-f711dd23a161.png",
+    "targetPath": "unity-client/Assets/HitMe/Art/Production/Weapons/Television.png",
+    "crop": [
+      0,
+      682,
+      512,
+      1024
+    ],
+    "trim": [
+      104,
+      0,
+      488,
+      330
+    ],
+    "dimensions": [
+      384,
+      330
+    ],
+    "transparent": true,
+    "alphaRange": [
+      0,
+      254
+    ],
+    "sha256": "88493d0043c4ace128f391417114a4e74beed0f5f425f841e954432e8e52022c",
+    "provenance": "AI-derived static illustration; actual alpha preserved; no frames/rig implied"
+  },
+  {
+    "assetId": "Refrigerator",
+    "category": "Weapons",
+    "sourceFile": "C:\\Users\\LENOVO\\.codex\\generated_images\\01a119c8-2e1f-7b80-b157-90323eb08e7e\\exec-21f872be-6aa1-44f8-95e7-f711dd23a161.png",
+    "targetPath": "unity-client/Assets/HitMe/Art/Production/Weapons/Refrigerator.png",
+    "crop": [
+      512,
+      682,
+      1024,
+      1024
+    ],
+    "trim": [
+      116,
+      0,
+      401,
+      333
+    ],
+    "dimensions": [
+      285,
+      333
+    ],
+    "transparent": true,
+    "alphaRange": [
+      0,
+      254
+    ],
+    "sha256": "ba37ff8166510922eb645b37c9280aeee95d973ffc82cc65baf2a2247b27deaf",
+    "provenance": "AI-derived static illustration; actual alpha preserved; no frames/rig implied"
+  },
+  {
+    "assetId": "PlasticStool",
+    "category": "Weapons",
+    "sourceFile": "C:\\Users\\LENOVO\\.codex\\generated_images\\01a119c8-2e1f-7b80-b157-90323eb08e7e\\exec-21f872be-6aa1-44f8-95e7-f711dd23a161.png",
+    "targetPath": "unity-client/Assets/HitMe/Art/Production/Weapons/PlasticStool.png",
+    "crop": [
+      1024,
+      682,
+      1536,
+      1024
+    ],
+    "trim": [
+      22,
+      10,
+      390,
+      337
+    ],
+    "dimensions": [
+      368,
+      327
+    ],
+    "transparent": true,
+    "alphaRange": [
+      0,
+      254
+    ],
+    "sha256": "82f1c66a59b7880f495e14c2054ca71bf6a4aa3f54ca82aa320433999ae33099",
+    "provenance": "AI-derived static illustration; actual alpha preserved; no frames/rig implied"
+  },
+  {
+    "assetId": "FestivalFlag",
+    "category": "Environments",
+    "sourceFile": "C:\\Users\\LENOVO\\.codex\\generated_images\\01a119c8-2e1f-7b80-b157-90323eb08e7e\\exec-1b43430f-24fc-4ba1-b16b-6d5c794f3841.png",
+    "targetPath": "unity-client/Assets/HitMe/Art/Production/Environments/FestivalFlag.png",
+    "crop": [
+      20,
+      55,
+      525,
+      480
+    ],
+    "trim": [
+      11,
+      16,
+      497,
+      408
+    ],
+    "dimensions": [
+      486,
+      392
+    ],
+    "transparent": true,
+    "alphaRange": [
+      0,
+      254
+    ],
+    "sha256": "6ccb7a52b6dfad71a3750638384662b7594cf00b37d3a2ea5f122413288e32f8",
+    "provenance": "AI-derived static illustration; actual alpha preserved; no frames/rig implied"
+  },
+  {
+    "assetId": "Lantern",
+    "category": "Environments",
+    "sourceFile": "C:\\Users\\LENOVO\\.codex\\generated_images\\01a119c8-2e1f-7b80-b157-90323eb08e7e\\exec-1b43430f-24fc-4ba1-b16b-6d5c794f3841.png",
+    "targetPath": "unity-client/Assets/HitMe/Art/Production/Environments/Lantern.png",
+    "crop": [
+      660,
+      0,
+      945,
+      540
+    ],
+    "trim": [
+      0,
+      0,
+      258,
+      529
+    ],
+    "dimensions": [
+      258,
+      529
+    ],
+    "transparent": true,
+    "alphaRange": [
+      0,
+      254
+    ],
+    "sha256": "1f4d4a125231522a475dacec0813a47ac5f481f523ae0115b9beb3fba8d051ee",
+    "provenance": "AI-derived static illustration; actual alpha preserved; no frames/rig implied"
+  },
+  {
+    "assetId": "BanyanBranch",
+    "category": "Environments",
+    "sourceFile": "C:\\Users\\LENOVO\\.codex\\generated_images\\01a119c8-2e1f-7b80-b157-90323eb08e7e\\exec-1b43430f-24fc-4ba1-b16b-6d5c794f3841.png",
+    "targetPath": "unity-client/Assets/HitMe/Art/Production/Environments/BanyanBranch.png",
+    "crop": [
+      975,
+      55,
+      1536,
+      510
+    ],
+    "trim": [
+      0,
+      12,
+      545,
+      442
+    ],
+    "dimensions": [
+      545,
+      430
+    ],
+    "transparent": true,
+    "alphaRange": [
+      0,
+      254
+    ],
+    "sha256": "a7fce6328a1b038176c4dc9943ffeb6a44a94fa45d5eb8a168565d3dac11af7e",
+    "provenance": "AI-derived static illustration; actual alpha preserved; no frames/rig implied"
+  },
+  {
+    "assetId": "LotusMedallion",
+    "category": "Environments",
+    "sourceFile": "C:\\Users\\LENOVO\\.codex\\generated_images\\01a119c8-2e1f-7b80-b157-90323eb08e7e\\exec-1b43430f-24fc-4ba1-b16b-6d5c794f3841.png",
+    "targetPath": "unity-client/Assets/HitMe/Art/Production/Environments/LotusMedallion.png",
+    "crop": [
+      20,
+      490,
+      510,
+      980
+    ],
+    "trim": [
+      15,
+      6,
+      486,
+      474
+    ],
+    "dimensions": [
+      471,
+      468
+    ],
+    "transparent": true,
+    "alphaRange": [
+      0,
+      254
+    ],
+    "sha256": "2f35f6a6f49cdfbede5878da0699f32ce0fccb6f24ef7879469432f8854d3096",
+    "provenance": "AI-derived static illustration; actual alpha preserved; no frames/rig implied"
+  },
+  {
+    "assetId": "Audience",
+    "category": "Environments",
+    "sourceFile": "C:\\Users\\LENOVO\\.codex\\generated_images\\01a119c8-2e1f-7b80-b157-90323eb08e7e\\exec-1b43430f-24fc-4ba1-b16b-6d5c794f3841.png",
+    "targetPath": "unity-client/Assets/HitMe/Art/Production/Environments/Audience.png",
+    "crop": [
+      515,
+      540,
+      1105,
+      970
+    ],
+    "trim": [
+      14,
+      17,
+      578,
+      416
+    ],
+    "dimensions": [
+      564,
+      399
+    ],
+    "transparent": true,
+    "alphaRange": [
+      0,
+      254
+    ],
+    "sha256": "027d1205dc8a756ef6390aee1a1135f41c1dbbc37ed8b5f1a124a9d609953190",
+    "provenance": "AI-derived static illustration; actual alpha preserved; no frames/rig implied"
+  },
+  {
+    "assetId": "TeaProps",
+    "category": "Environments",
+    "sourceFile": "C:\\Users\\LENOVO\\.codex\\generated_images\\01a119c8-2e1f-7b80-b157-90323eb08e7e\\exec-1b43430f-24fc-4ba1-b16b-6d5c794f3841.png",
+    "targetPath": "unity-client/Assets/HitMe/Art/Production/Environments/TeaProps.png",
+    "crop": [
+      1108,
+      565,
+      1520,
+      975
+    ],
+    "trim": [
+      19,
+      17,
+      392,
+      369
+    ],
+    "dimensions": [
+      373,
+      352
+    ],
+    "transparent": true,
+    "alphaRange": [
+      0,
+      254
+    ],
+    "sha256": "2b8f11c1073810c193d8696868b29ddb9fa91ef4752dc66071b456835cc38e7d",
+    "provenance": "AI-derived static illustration; actual alpha preserved; no frames/rig implied"
+  },
+  {
+    "assetId": "PickleballPaddle",
+    "category": "Weapons",
+    "sourceFile": "C:\\Users\\LENOVO\\.codex\\generated_images\\01a119c8-2e1f-7b80-b157-90323eb08e7e\\exec-c44b557e-b206-46d7-b265-48dd17ebe2fc.png",
+    "targetPath": "unity-client/Assets/HitMe/Art/Production/Weapons/PickleballPaddle.png",
+    "crop": [
+      0,
+      0,
+      1254,
+      1254
+    ],
+    "trim": [
+      0,
+      0,
+      1220,
+      1205
+    ],
+    "dimensions": [
+      1220,
+      1205
+    ],
+    "transparent": true,
+    "alphaRange": [
+      0,
+      255
+    ],
+    "sha256": "2e07137262b5375e715b3848c94b00c621f60f22de75f3ead0f1d87c0f499ccd",
+    "provenance": "AI-derived static illustration; actual alpha preserved; no frames/rig implied"
+  }
+]

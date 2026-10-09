@@ -186,7 +186,7 @@
     },
     {
       "key": "mapLangQueBacBo",
-      "value": "Northern Village"
+      "value": "Northern Village Courtyard"
     },
     {
       "key": "mapChoVietNam",
@@ -651,6 +651,122 @@
     {
       "key": "offlineVisualChoice",
       "value": "Bot/preview visuals; online profile is server-owned."
+    },
+    {
+      "key": "artStaticPreview",
+      "value": "Static artwork · Preview"
+    },
+    {
+      "key": "artPreviewPolicy",
+      "value": "Static AI-edited concept cutout. Rig and animation frames are missing; this preview cannot be equipped in battle."
+    },
+    {
+      "key": "packRoster",
+      "value": "Characters & animals"
+    },
+    {
+      "key": "packWeapons",
+      "value": "Weapon pack · Preview"
+    },
+    {
+      "key": "packStaticPolicy",
+      "value": "7 real static sprites · Six procedural state samples. Rigs/frames pending. Online avatar unchanged."
+    },
+    {
+      "key": "packWeaponPolicy",
+      "value": "Real PNGs and visual definitions. Gallery only: new IDs have no confirmed rules/server support and cannot be equipped."
+    },
+    {
+      "key": "rosterVisual_BlackBoy",
+      "value": "Black-haired boy"
+    },
+    {
+      "key": "rosterVisual_PinkGirl",
+      "value": "Pink-haired girl"
+    },
+    {
+      "key": "rosterVisual_BlondBoy",
+      "value": "Blond boy"
+    },
+    {
+      "key": "rosterVisual_NonLaBoy",
+      "value": "Conical hat"
+    },
+    {
+      "key": "rosterVisual_CapBoy",
+      "value": "Baseball cap"
+    },
+    {
+      "key": "rosterVisual_GoldenDog",
+      "value": "Golden dog"
+    },
+    {
+      "key": "rosterVisual_BlackCat",
+      "value": "Black cat"
+    },
+    {
+      "key": "weaponVisual_Slipper",
+      "value": "Slipper"
+    },
+    {
+      "key": "weaponVisual_Smartphone",
+      "value": "Smartphone"
+    },
+    {
+      "key": "weaponVisual_MosquitoRacket",
+      "value": "Mosquito racket"
+    },
+    {
+      "key": "weaponVisual_PickleballPaddle",
+      "value": "Pickleball paddle"
+    },
+    {
+      "key": "weaponVisual_BeerMug",
+      "value": "Beer mug"
+    },
+    {
+      "key": "weaponVisual_FryingPan",
+      "value": "Frying pan"
+    },
+    {
+      "key": "weaponVisual_Television",
+      "value": "Television"
+    },
+    {
+      "key": "weaponVisual_Refrigerator",
+      "value": "Refrigerator"
+    },
+    {
+      "key": "weaponVisual_PlasticStool",
+      "value": "Plastic stool"
+    },
+    {
+      "key": "mapPhoCoHoiAn",
+      "value": "Hoi An Ancient Town"
+    },
+    {
+      "key": "mapArtPartial",
+      "value": "Integrated art · PARTIAL"
+    },
+    {
+      "key": "mapFallbackPreview",
+      "value": "FALLBACK: shared floor; location artwork missing."
+    },
+    {
+      "key": "mapOfflinePolicy",
+      "value": "Offline map config only. Online map sync is not supported."
+    },
+    {
+      "key": "mapConfirm",
+      "value": "Confirm offline map"
+    },
+    {
+      "key": "mapConfirmFallback",
+      "value": "Use offline fallback"
+    },
+    {
+      "key": "mapSharedFloor",
+      "value": "FALLBACK • SHARED FLOOR"
     }
   ]
 }

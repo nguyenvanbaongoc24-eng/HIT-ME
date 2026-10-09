@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="28" result="Passed" total="28" passed="28" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-10-09 06:59:31Z" end-time="2026-10-09 06:59:56Z" duration="24.977866">
+  <test-suite type="TestSuite" id="1047" name="HIT ME" fullname="HIT ME" runstate="Runnable" testcasecount="28" result="Passed" start-time="2026-10-09 06:59:31Z" end-time="2026-10-09 06:59:56Z" duration="24.977866" total="28" passed="28" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="PlayMode" />
+    </properties>
+    <test-suite type="Assembly" id="1041" name="HitMe.PlayMode.dll" fullname="D:/HIT ME/unity-client/Library/ScriptAssemblies/HitMe.PlayMode.dll" runstate="Runnable" testcasecount="28" result="Passed" start-time="2026-10-09 06:59:31Z" end-time="2026-10-09 06:59:56Z" duration="24.965905" total="28" passed="28" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="27432" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="PlayMode" />
+        <property name="EditorOnly" value="False" />
+      </properties>
+      <test-suite type="TestSuite" id="1042" name="HitMe" fullname="HitMe" runstate="Runnable" testcasecount="27" result="Passed" start-time="2026-10-09 06:59:31Z" end-time="2026-10-09 06:59:55Z" duration="24.736416" total="27" passed="27" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1043" name="Tests" fullname="HitMe.Tests" runstate="Runnable" testcasecount="27" result="Passed" start-time="2026-10-09 06:59:31Z" end-time="2026-10-09 06:59:55Z" duration="24.735810" total="27" passed="27" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestFixture" id="1003" name="BattleSmokeTests" fullname="HitMe.Tests.BattleSmokeTests" classname="HitMe.Tests.BattleSmokeTests" runstate="Runnable" testcasecount="3" result="Passed" start-time="2026-10-09 06:59:31Z" end-time="2026-10-09 06:59:40Z" duration="9.100193" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1006" name="BattleLoadsHidesOpponentsAndCapturesFourSizes" fullname="HitMe.Tests.BattleSmokeTests.BattleLoadsHidesOpponentsAndCapturesFourSizes" methodname="BattleLoadsHidesOpponentsAndCapturesFourSizes" classname="HitMe.Tests.BattleSmokeTests" runstate="Runnable" seed="1233907556" result="Passed" start-time="2026-10-09 06:59:31Z" end-time="2026-10-09 06:59:33Z" duration="2.718576" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1005" name="PlacementPointerInputLocksOnlyPlayerAndRevealsAtDeadline" fullname="HitMe.Tests.BattleSmokeTests.PlacementPointerInputLocksOnlyPlayerAndRevealsAtDeadline" methodname="PlacementPointerInputLocksOnlyPlayerAndRevealsAtDeadline" classname="HitMe.Tests.BattleSmokeTests" runstate="Runnable" seed="1331518620" result="Passed" start-time="2026-10-09 06:59:33Z" end-time="2026-10-09 06:59:39Z" duration="5.642421" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1004" name="RimPlacementKeepsHudAndPlayerPresentationSeparate" fullname="HitMe.Tests.BattleSmokeTests.RimPlacementKeepsHudAndPlayerPresentationSeparate" methodname="RimPlacementKeepsHudAndPlayerPresentationSeparate" classname="HitMe.Tests.BattleSmokeTests" runstate="Runnable" seed="414580172" result="Passed" start-time="2026-10-09 06:59:39Z" end-time="2026-10-09 06:59:40Z" duration="0.720558" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1007" name="CharacterVisualTests" fullname="HitMe.Tests.CharacterVisualTests" classname="HitMe.Tests.CharacterVisualTests" runstate="Runnable" testcasecount="3" result="Passed" start-time="2026-10-09 06:59:40Z" end-time="2026-10-09 06:59:40Z" duration="0.616206" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1010" name="CombatSnapshotDrivesThrowHitEliminationAndVictory" fullname="HitMe.Tests.CharacterVisualTests.CombatSnapshotDrivesThrowHitEliminationAndVictory" methodname="CombatSnapshotDrivesThrowHitEliminationAndVictory" classname="HitMe.Tests.CharacterVisualTests" runstate="Runnable" seed="377065114" result="Passed" start-time="2026-10-09 06:59:40Z" end-time="2026-10-09 06:59:40Z" duration="0.361281" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1009" name="SpriteFramesFacingWeaponAndEveryPoseCannotMoveHitbox" fullname="HitMe.Tests.CharacterVisualTests.SpriteFramesFacingWeaponAndEveryPoseCannotMoveHitbox" methodname="SpriteFramesFacingWeaponAndEveryPoseCannotMoveHitbox" classname="HitMe.Tests.CharacterVisualTests" runstate="Runnable" seed="816991399" result="Passed" start-time="2026-10-09 06:59:40Z" end-time="2026-10-09 06:59:40Z" duration="0.051632" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1008" name="ThreeCharacterSlotsUseOneRendererAndPreserveFeet" fullname="HitMe.Tests.CharacterVisualTests.ThreeCharacterSlotsUseOneRendererAndPreserveFeet" methodname="ThreeCharacterSlotsUseOneRendererAndPreserveFeet" classname="HitMe.Tests.CharacterVisualTests" runstate="Runnable" seed="1320946268" result="Passed" start-time="2026-10-09 06:59:40Z" end-time="2026-10-09 06:59:40Z" duration="0.190645" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1011" name="MainMenuIntegrationTests" fullname="HitMe.Tests.MainMenuIntegrationTests" classname="HitMe.Tests.MainMenuIntegrationTests" runstate="Runnable" testcasecount="1" result="Passed" start-time="2026-10-09 06:59:40Z" end-time="2026-10-09 06:59:42Z" duration="1.271881" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1012" name="MenuSevenSizesSafeAreaLocalizationAndNavigation" fullname="HitMe.Tests.MainMenuIntegrationTests.MenuSevenSizesSafeAreaLocalizationAndNavigation" methodname="MenuSevenSizesSafeAreaLocalizationAndNavigation" classname="HitMe.Tests.MainMenuIntegrationTests" runstate="Runnable" seed="743594630" result="Passed" start-time="2026-10-09 06:59:40Z" end-time="2026-10-09 06:59:42Z" duration="1.264276" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1013" name="MasterProductionFlowTests" fullname="HitMe.Tests.MasterProductionFlowTests" classname="HitMe.Tests.MasterProductionFlowTests" runstate="Runnable" testcasecount="1" result="Passed" start-time="2026-10-09 06:59:42Z" end-time="2026-10-09 06:59:44Z" duration="1.915158" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1014" name="ProductionGalleriesRenderWithoutEquippingUnconfirmedIds" fullname="HitMe.Tests.MasterProductionFlowTests.ProductionGalleriesRenderWithoutEquippingUnconfirmedIds" methodname="ProductionGalleriesRenderWithoutEquippingUnconfirmedIds" classname="HitMe.Tests.MasterProductionFlowTests" runstate="Runnable" seed="988243341" result="Passed" start-time="2026-10-09 06:59:42Z" end-time="2026-10-09 06:59:44Z" duration="1.900570" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1015" name="OfflineBattleTests" fullname="HitMe.Tests.OfflineBattleTests" classname="HitMe.Tests.OfflineBattleTests" runstate="Runnable" testcasecount="5" result="Passed" start-time="2026-10-09 06:59:44Z" end-time="2026-10-09 06:59:48Z" duration="4.434531" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1018" name="BotsAtRimKeepCharactersAndHudSeparate" fullname="HitMe.Tests.OfflineBattleTests.BotsAtRimKeepCharactersAndHudSeparate" methodname="BotsAtRimKeepCharactersAndHudSeparate" classname="HitMe.Tests.OfflineBattleTests" runstate="Runnable" seed="1540362505" result="Passed" start-time="2026-10-09 06:59:44Z" end-time="2026-10-09 06:59:44Z" duration="0.535709" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1017" name="MatchThroughResultReplayAndMenu" fullname="HitMe.Tests.OfflineBattleTests.MatchThroughResultReplayAndMenu" methodname="MatchThroughResultReplayAndMenu" classname="HitMe.Tests.OfflineBattleTests" runstate="Runnable" seed="56845090" result="Passed" start-time="2026-10-09 06:59:44Z" end-time="2026-10-09 06:59:45Z" duration="0.988185" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1016" name="OfflineInputPrivacyTouchAndFourSizes" fullname="HitMe.Tests.OfflineBattleTests.OfflineInputPrivacyTouchAndFourSizes" methodname="OfflineInputPrivacyTouchAndFourSizes" classname="HitMe.Tests.OfflineBattleTests" runstate="Runnable" seed="524813647" result="Passed" start-time="2026-10-09 06:59:45Z" end-time="2026-10-09 06:59:47Z" duration="1.400442" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1019" name="RealClockThrowAnimatesPrecomputedResult" fullname="HitMe.Tests.OfflineBattleTests.RealClockThrowAnimatesPrecomputedResult" methodname="RealClockThrowAnimatesPrecomputedResult" classname="HitMe.Tests.OfflineBattleTests" runstate="Runnable" seed="184246102" result="Passed" start-time="2026-10-09 06:59:47Z" end-time="2026-10-09 06:59:48Z" duration="1.144504" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1020" name="ResultVictoryDefeatDrawAreLocalized" fullname="HitMe.Tests.OfflineBattleTests.ResultVictoryDefeatDrawAreLocalized" methodname="ResultVictoryDefeatDrawAreLocalized" classname="HitMe.Tests.OfflineBattleTests" runstate="Runnable" seed="1349687707" result="Passed" start-time="2026-10-09 06:59:48Z" end-time="2026-10-09 06:59:48Z" duration="0.349477" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1021" name="Phase1MenuFlowTests" fullname="HitMe.Tests.Phase1MenuFlowTests" classname="HitMe.Tests.Phase1MenuFlowTests" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-10-09 06:59:48Z" end-time="2026-10-09 06:59:50Z" duration="1.872605" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1022" name="BackCancelCompactAndBotLaunch" fullname="HitMe.Tests.Phase1MenuFlowTests.BackCancelCompactAndBotLaunch" methodname="BackCancelCompactAndBotLaunch" classname="HitMe.Tests.Phase1MenuFlowTests" runstate="Runnable" seed="1994110740" result="Passed" start-time="2026-10-09 06:59:48Z" end-time="2026-10-09 06:59:49Z" duration="0.657881" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1023" name="RealServerPrivateQuickAndInventoryRoutes" fullname="HitMe.Tests.Phase1MenuFlowTests.RealServerPrivateQuickAndInventoryRoutes" methodname="RealServerPrivateQuickAndInventoryRoutes" classname="HitMe.Tests.Phase1MenuFlowTests" runstate="Runnable" seed="1147268128" result="Passed" start-time="2026-10-09 06:59:49Z" end-time="2026-10-09 06:59:50Z" duration="1.208098" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1024" name="Phase2APolishTests" fullname="HitMe.Tests.Phase2APolishTests" classname="HitMe.Tests.Phase2APolishTests" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-10-09 06:59:50Z" end-time="2026-10-09 06:59:52Z" duration="1.570880" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1025" name="PointerDebounceAndReducedMotion" fullname="HitMe.Tests.Phase2APolishTests.PointerDebounceAndReducedMotion" methodname="PointerDebounceAndReducedMotion" classname="HitMe.Tests.Phase2APolishTests" runstate="Runnable" seed="857937575" result="Passed" start-time="2026-10-09 06:59:50Z" end-time="2026-10-09 06:59:50Z" duration="0.253461" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1026" name="SelectionThenBattleHudAndUnavailableChat" fullname="HitMe.Tests.Phase2APolishTests.SelectionThenBattleHudAndUnavailableChat" methodname="SelectionThenBattleHudAndUnavailableChat" classname="HitMe.Tests.Phase2APolishTests" runstate="Runnable" seed="1334257052" result="Passed" start-time="2026-10-09 06:59:50Z" end-time="2026-10-09 06:59:52Z" duration="1.300350" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1027" name="ProductionArtworkFlowTests" fullname="HitMe.Tests.ProductionArtworkFlowTests" classname="HitMe.Tests.ProductionArtworkFlowTests" runstate="Runnable" testcasecount="1" result="Passed" start-time="2026-10-09 06:59:52Z" end-time="2026-10-09 06:59:52Z" duration="0.513086" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1028" name="StaticPreviewDoesNotEquipCharacterOrWeapon" fullname="HitMe.Tests.ProductionArtworkFlowTests.StaticPreviewDoesNotEquipCharacterOrWeapon" methodname="StaticPreviewDoesNotEquipCharacterOrWeapon" classname="HitMe.Tests.ProductionArtworkFlowTests" runstate="Runnable" seed="1156016263" result="Passed" start-time="2026-10-09 06:59:52Z" end-time="2026-10-09 06:59:52Z" duration="0.502201" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1029" name="Sprint3BIntegrationTests" fullname="HitMe.Tests.Sprint3BIntegrationTests" classname="HitMe.Tests.Sprint3BIntegrationTests" runstate="Runnable" testcasecount="4" result="Passed" start-time="2026-10-09 06:59:52Z" end-time="2026-10-09 06:59:54Z" duration="1.850757" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1033" name="LowQualityTargetSurvivesMenuToBattleSceneChange" fullname="HitMe.Tests.Sprint3BIntegrationTests.LowQualityTargetSurvivesMenuToBattleSceneChange" methodname="LowQualityTargetSurvivesMenuToBattleSceneChange" classname="HitMe.Tests.Sprint3BIntegrationTests" runstate="Runnable" seed="1829698209" result="Passed" start-time="2026-10-09 06:59:52Z" end-time="2026-10-09 06:59:52Z" duration="0.289723" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1031" name="MissingMapUsesExplicitFallbackWithoutChangingGeometry" fullname="HitMe.Tests.Sprint3BIntegrationTests.MissingMapUsesExplicitFallbackWithoutChangingGeometry" methodname="MissingMapUsesExplicitFallbackWithoutChangingGeometry" classname="HitMe.Tests.Sprint3BIntegrationTests" runstate="Runnable" seed="1092916826" result="Passed" start-time="2026-10-09 06:59:52Z" end-time="2026-10-09 06:59:52Z" duration="0.138984" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1030" name="SixPortraitSizesKeepRoundedCornerActorsInsideScreenAndAwayFromHud" fullname="HitMe.Tests.Sprint3BIntegrationTests.SixPortraitSizesKeepRoundedCornerActorsInsideScreenAndAwayFromHud" methodname="SixPortraitSizesKeepRoundedCornerActorsInsideScreenAndAwayFromHud" classname="HitMe.Tests.Sprint3BIntegrationTests" runstate="Runnable" seed="1611416727" result="Passed" start-time="2026-10-09 06:59:52Z" end-time="2026-10-09 06:59:54Z" duration="1.401294" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1032" name="StaticSdfFontsCoverAllVietnameseAndHearts" fullname="HitMe.Tests.Sprint3BIntegrationTests.StaticSdfFontsCoverAllVietnameseAndHearts" methodname="StaticSdfFontsCoverAllVietnameseAndHearts" classname="HitMe.Tests.Sprint3BIntegrationTests" runstate="Runnable" seed="354869160" result="Passed" start-time="2026-10-09 06:59:54Z" end-time="2026-10-09 06:59:54Z" duration="0.004295" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1034" name="Sprint6AMotionTests" fullname="HitMe.Tests.Sprint6AMotionTests" classname="HitMe.Tests.Sprint6AMotionTests" runstate="Runnable" testcasecount="3" result="Passed" start-time="2026-10-09 06:59:54Z" end-time="2026-10-09 06:59:54Z" duration="0.540415" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1035" name="ArtworkMovesWithoutMovingLogicalFeetAndReducedMotionStopsIt" fullname="HitMe.Tests.Sprint6AMotionTests.ArtworkMovesWithoutMovingLogicalFeetAndReducedMotionStopsIt" methodname="ArtworkMovesWithoutMovingLogicalFeetAndReducedMotionStopsIt" classname="HitMe.Tests.Sprint6AMotionTests" runstate="Runnable" seed="716746455" result="Passed" start-time="2026-10-09 06:59:54Z" end-time="2026-10-09 06:59:54Z" duration="0.206164" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1036" name="ConfirmedResolutionAndProjectileReuseCannotChangeHealth" fullname="HitMe.Tests.Sprint6AMotionTests.ConfirmedResolutionAndProjectileReuseCannotChangeHealth" methodname="ConfirmedResolutionAndProjectileReuseCannotChangeHealth" classname="HitMe.Tests.Sprint6AMotionTests" runstate="Runnable" seed="1433418812" result="Passed" start-time="2026-10-09 06:59:54Z" end-time="2026-10-09 06:59:54Z" duration="0.278080" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1037" name="QualityLimitsAmbientAndTrailAndReducedMotion" fullname="HitMe.Tests.Sprint6AMotionTests.QualityLimitsAmbientAndTrailAndReducedMotion" methodname="QualityLimitsAmbientAndTrailAndReducedMotion" classname="HitMe.Tests.Sprint6AMotionTests" runstate="Runnable" seed="1713865786" result="Passed" start-time="2026-10-09 06:59:54Z" end-time="2026-10-09 06:59:54Z" duration="0.048663" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1038" name="UIKitFlowTests" fullname="HitMe.Tests.UIKitFlowTests" classname="HitMe.Tests.UIKitFlowTests" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-10-09 06:59:54Z" end-time="2026-10-09 06:59:55Z" duration="1.047055" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1040" name="IndependentPopupChatAndRealScreenReuse" fullname="HitMe.Tests.UIKitFlowTests.IndependentPopupChatAndRealScreenReuse" methodname="IndependentPopupChatAndRealScreenReuse" classname="HitMe.Tests.UIKitFlowTests" runstate="Runnable" seed="1799858428" result="Passed" start-time="2026-10-09 06:59:54Z" end-time="2026-10-09 06:59:55Z" duration="0.512352" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1039" name="ShowcaseRendersAndPreservesDisabledStates" fullname="HitMe.Tests.UIKitFlowTests.ShowcaseRendersAndPreservesDisabledStates" methodname="ShowcaseRendersAndPreservesDisabledStates" classname="HitMe.Tests.UIKitFlowTests" runstate="Runnable" seed="1069959374" result="Passed" start-time="2026-10-09 06:59:55Z" end-time="2026-10-09 06:59:55Z" duration="0.518142" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+      <test-suite type="TestFixture" id="1001" name="NetworkPresentationTests" fullname="NetworkPresentationTests" classname="NetworkPresentationTests" runstate="Runnable" testcasecount="1" result="Passed" start-time="2026-10-09 06:59:55Z" end-time="2026-10-09 06:59:56Z" duration="0.227855" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-case id="1002" name="ServerSnapshotKeepsOpponentHiddenAndLockedInputDisabled" fullname="NetworkPresentationTests.ServerSnapshotKeepsOpponentHiddenAndLockedInputDisabled" methodname="ServerSnapshotKeepsOpponentHiddenAndLockedInputDisabled" classname="NetworkPresentationTests" runstate="Runnable" seed="1331045540" result="Passed" start-time="2026-10-09 06:59:55Z" end-time="2026-10-09 06:59:56Z" duration="0.214768" asserts="0">
+          <properties>
+            <property name="_JOINTYPE" value="UnityCombinatorial" />
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <output><![CDATA[Saving results to: C:/Users/LENOVO/AppData/LocalLow/HitMe/HIT ME\TestResults.xml
+]]></output>
+        </test-case>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

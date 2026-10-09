@@ -12,13 +12,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7cbf218515b909f4cbf98898e649b87f, type: 3}
   m_Name: MainMenuTheme
   m_EditorClassIdentifier: HitMe.Runtime::HitMe.UI.UIThemeDefinition
-  paper: {fileID: 21300000, guid: ca9944b9c7a269f49a61fa4d246f83c8, type: 3}
-  brick: {fileID: 21300000, guid: f106003a16c1f3d46bdcfce3115358b7, type: 3}
-  ink: {fileID: 21300000, guid: 1fb1632886199be45badaa2a585ae5ac, type: 3}
-  card: {fileID: 21300000, guid: a163730b77456ad43990639d31bc1e2a, type: 3}
-  logo: {fileID: 21300000, guid: 190117574f333d3408b9c4ce030b4c49, type: 3}
+  paper: {fileID: 21300000, guid: 9d5ac2f8a26c7694081e275ae99c362a, type: 3}
+  brick: {fileID: 21300000, guid: 17aac260d7b62024e95c9068fec76078, type: 3}
+  ink: {fileID: 21300000, guid: fa9f7989485910845a01cb9a806d2df6, type: 3}
+  card: {fileID: 21300000, guid: 685151a6fb3d7c9478cbea2c5236807c, type: 3}
+  logo: {fileID: 21300000, guid: 2c4213dc0a2765043927cc910f641815, type: 3}
   shadow: {fileID: 21300000, guid: 055b5cbdb1ff9d049af1c2587e8dea3d, type: 3}
-  background: {fileID: 21300000, guid: d9d3d9d1aa944ad44814771419d4ba32, type: 3}
+  background: {fileID: 21300000, guid: 39b9d59df103d434694faf5f56018914, type: 3}
+  featureArtwork:
+  - {fileID: 21300000, guid: 8cda934f110e0be419e11eefb6e76dd5, type: 3}
+  - {fileID: 21300000, guid: 87dd1fb1cca1d6e41a449d272b3d0078, type: 3}
+  - {fileID: 21300000, guid: ec92c56c1e712294b9bb61c44b0b6071, type: 3}
+  - {fileID: 21300000, guid: 0ca1009e459b2704e94fe959f2d1652e, type: 3}
+  staticCharacterPreview: {fileID: 21300000, guid: 8e4befe12746c164dab993c583067352, type: 3}
   icons:
   - {fileID: 21300000, guid: b5709d9988fcc9c4eac0c8c2d79de8cd, type: 3}
   - {fileID: 21300000, guid: c60f67dede3810548a95fd03f1ecd4c3, type: 3}
@@ -47,7 +53,7 @@ MonoBehaviour:
   - cancel
   - coin
   - practice
-  atlas: {fileID: 4343727234628468602, guid: fac5950c9f89f5a4296b2a6675cc5ed3, type: 2}
+  atlas: {fileID: 4343727234628468602, guid: 8c711588b739a0d429df3e5ca7d3139a, type: 2}
   entryPrefab: {fileID: 2051002111844252858, guid: 1075ae0c1af8f554495ed7289a5e31a9, type: 3}
   cream: {r: 0.98, g: 0.89, b: 0.71, a: 1}
   muted: {r: 0.72, g: 0.75, b: 0.66, a: 1}

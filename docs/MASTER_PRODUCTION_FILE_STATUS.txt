@@ -1,0 +1,163 @@
+ M docs/HITME_MASTER_IMPLEMENTATION_STATUS.md
+ M docs/HITME_PRODUCTION_ASSET_MANIFEST.json
+ M docs/screenshots/Battle-360x800.png
+ M docs/screenshots/Battle-390x844.png
+ M docs/screenshots/Battle-412x915.png
+ M docs/screenshots/Battle-430x932.png
+ M docs/screenshots/Battle-placement-390x844.png
+ M docs/screenshots/Sprint2-Placement-360x800.png
+ M docs/screenshots/Sprint2-Placement-390x844.png
+ M docs/screenshots/Sprint2-Placement-412x915.png
+ M docs/screenshots/Sprint2-Placement-430x932.png
+ M docs/screenshots/Sprint2-Result-390x844.png
+ M docs/screenshots/Sprint2-Reveal-390x844.png
+ M docs/screenshots/Sprint2-Throw-390x844.png
+ M docs/screenshots/Sprint2-Throw-RealClock.png
+ M docs/screenshots/Sprint3A-Battle-Sprites.png
+ M docs/screenshots/Sprint3B-360x800.png
+ M docs/screenshots/Sprint3B-390x844.png
+ M docs/screenshots/Sprint3B-393x852.png
+ M docs/screenshots/Sprint3B-402x874.png
+ M docs/screenshots/Sprint3B-412x915.png
+ M docs/screenshots/Sprint3B-430x932.png
+ M docs/screenshots/Sprint5-Menu-SafeArea-360x800.png
+ M docs/screenshots/Sprint5-Menu-SafeArea-375x812.png
+ M docs/screenshots/Sprint5-Menu-SafeArea-390x844.png
+ M docs/screenshots/Sprint5-Menu-SafeArea-393x852.png
+ M docs/screenshots/Sprint5-Menu-SafeArea-402x874.png
+ M docs/screenshots/Sprint5-Menu-SafeArea-412x915.png
+ M docs/screenshots/Sprint5-Menu-SafeArea-430x932.png
+ M docs/screenshots/Sprint6A-Battle-Actual.png
+ M docs/screenshots/Sprint6A-Lobby-Inventory-Actual.png
+ M docs/screenshots/UIKit-Showcase.png
+ M docs/unity-EditMode-results.xml
+ M docs/unity-PlayMode-results.xml
+ M unity-client/Assets/HitMe/Editor/ArenaArtSetup.cs
+ M unity-client/Assets/HitMe/Editor/HitMeWebBuild.cs
+ M unity-client/Assets/HitMe/Editor/MainMenuAssetSetup.cs
+ M unity-client/Assets/HitMe/Editor/UIKitSetup.cs
+ M unity-client/Assets/HitMe/Prefabs/UI/Showcase/UIShowcase.prefab
+ M unity-client/Assets/HitMe/Resources/Arenas/LangQueBacBo.asset
+ M unity-client/Assets/HitMe/Resources/Localization/en.json
+ M unity-client/Assets/HitMe/Resources/Localization/vi.json
+ M unity-client/Assets/HitMe/Resources/UI/Kit/HitMeBottomNavigation.prefab
+ M unity-client/Assets/HitMe/Resources/UI/Kit/HitMeButtonPrimary.prefab
+ M unity-client/Assets/HitMe/Resources/UI/Kit/HitMeButtonSecondary.prefab
+ M unity-client/Assets/HitMe/Resources/UI/Kit/HitMeButtonTertiary.prefab
+ M unity-client/Assets/HitMe/Resources/UI/Kit/HitMeCharacterCard.prefab
+ M unity-client/Assets/HitMe/Resources/UI/Kit/HitMeCharacterSelection.prefab
+ M unity-client/Assets/HitMe/Resources/UI/Kit/HitMeChatPanel.prefab
+ M unity-client/Assets/HitMe/Resources/UI/Kit/HitMeFeatureCard.prefab
+ M unity-client/Assets/HitMe/Resources/UI/Kit/HitMeIconButton.prefab
+ M unity-client/Assets/HitMe/Resources/UI/Kit/HitMeMapCard.prefab
+ M unity-client/Assets/HitMe/Resources/UI/Kit/HitMeMapSelection.prefab
+ M unity-client/Assets/HitMe/Resources/UI/Kit/HitMePlayerHUD.prefab
+ M unity-client/Assets/HitMe/Resources/UI/Kit/HitMePopup.prefab
+ M unity-client/Assets/HitMe/Resources/UI/Kit/HitMeTopBar.prefab
+ M unity-client/Assets/HitMe/Resources/UI/Kit/HitMeWeaponCard.prefab
+ M unity-client/Assets/HitMe/Resources/UI/Kit/HitMeWeaponSelection.prefab
+ M unity-client/Assets/HitMe/Resources/UI/MainMenuTheme.asset
+ M unity-client/Assets/HitMe/ScriptableObjects/Characters/Char01_Player.asset
+ M unity-client/Assets/HitMe/ScriptableObjects/Characters/Char02_BotMale.asset
+ M unity-client/Assets/HitMe/ScriptableObjects/Characters/Char03_BotFemale.asset
+ M unity-client/Assets/HitMe/Scripts/Characters/CharacterDefinition.cs
+ M unity-client/Assets/HitMe/Scripts/Characters/CharacterVisual.cs
+ M unity-client/Assets/HitMe/Scripts/Characters/WeaponDefinition.cs
+ M unity-client/Assets/HitMe/Scripts/UI/BattleView.Motion.cs
+ M unity-client/Assets/HitMe/Scripts/UI/BattleView.Network.cs
+ M unity-client/Assets/HitMe/Scripts/UI/BattleView.Offline.cs
+ M unity-client/Assets/HitMe/Scripts/UI/BattleView.cs
+ M unity-client/Assets/HitMe/Scripts/UI/MainMenu/MainMenuView.cs
+ M unity-client/Assets/HitMe/Scripts/UI/MainMenu/UIThemeDefinition.cs
+ M unity-client/Assets/HitMe/Scripts/Visuals/ProjectileVisualController.cs
+ M unity-client/Data/Plugins/lib_burst_generated.wasm
+?? "Picture/Ph\341\273\221 C\341\273\225 H\341\273\231i An.jpg"
+?? "Picture/S\303\242n \304\220\303\254nh B\341\272\257c B\341\273\231.jpg"
+?? docs/ARTWORK_EDITMODE_RESULTS.xml
+?? docs/ARTWORK_HTTP_CHECK.json
+?? docs/ARTWORK_PLAYMODE_RESULTS.xml
+?? docs/ARTWORK_WEB_BUILD.json
+?? docs/HITME_ASSET_GAP_REPORT.md
+?? docs/HITME_MASTER_ASSET_DERIVATIONS.json
+?? docs/HITME_MASTER_PICKLEBALL_REPAIR_PROMPT.json
+?? docs/HITME_PRODUCTION_ASSET_MANIFEST_PRE_MASTER.json
+?? docs/HITME_PRODUCTION_INTEGRATION_REPORT.md
+?? docs/HITME_VISUAL_FIDELITY_REPORT.md
+?? docs/MASTER_EDITMODE_RESULTS.xml
+?? docs/MASTER_PLAYMODE_RESULTS.xml
+?? docs/MASTER_PRODUCTION_FILE_STATUS.txt
+?? docs/MASTER_PRODUCTION_HTTP_CHECK.json
+?? docs/MASTER_PRODUCTION_MODIFIED_FILES.txt
+?? docs/MASTER_PRODUCTION_NEW_FILES.txt
+?? docs/MASTER_PRODUCTION_WEB_BUILD.json
+?? docs/PICTURE_ARTWORK_PROMPTS.json
+?? docs/PICTURE_ARTWORK_PROMPTS.md
+?? docs/PICTURE_ASSET_INTEGRATION_AUDIT.md
+?? docs/PICTURE_ASSET_INTEGRATION_FILES.txt
+?? docs/PICTURE_ASSET_INTEGRATION_MANIFEST.json
+?? docs/PICTURE_ASSET_INTEGRATION_REPORT.md
+?? docs/art-candidates/
+?? docs/screenshots/Artwork-Battle-Actual.png
+?? docs/screenshots/Artwork-MainMenu-SafeArea-360x800.png
+?? docs/screenshots/Artwork-MainMenu-SafeArea-375x812.png
+?? docs/screenshots/Artwork-MainMenu-SafeArea-390x844.png
+?? docs/screenshots/Artwork-MainMenu-SafeArea-393x852.png
+?? docs/screenshots/Artwork-MainMenu-SafeArea-402x874.png
+?? docs/screenshots/Artwork-MainMenu-SafeArea-412x915.png
+?? docs/screenshots/Artwork-MainMenu-SafeArea-430x932.png
+?? docs/screenshots/Artwork-Static-Preview.png
+?? docs/screenshots/Master-Before-Battle.png
+?? docs/screenshots/Master-Before-MainMenu.png
+?? docs/screenshots/Master-CharacterSelection.png
+?? docs/screenshots/Master-Followup-Battle.png
+?? docs/screenshots/Master-Followup-MainMenu-SafeArea-360x800.png
+?? docs/screenshots/Master-Followup-MainMenu-SafeArea-375x812.png
+?? docs/screenshots/Master-Followup-MainMenu-SafeArea-390x844.png
+?? docs/screenshots/Master-Followup-MainMenu-SafeArea-393x852.png
+?? docs/screenshots/Master-Followup-MainMenu-SafeArea-402x874.png
+?? docs/screenshots/Master-Followup-MainMenu-SafeArea-412x915.png
+?? docs/screenshots/Master-Followup-MainMenu-SafeArea-430x932.png
+?? docs/screenshots/Master-Followup-MainMenu.png
+?? docs/screenshots/Master-MainMenu-SafeArea-360x800.png
+?? docs/screenshots/Master-MainMenu-SafeArea-375x812.png
+?? docs/screenshots/Master-MainMenu-SafeArea-390x844.png
+?? docs/screenshots/Master-MainMenu-SafeArea-393x852.png
+?? docs/screenshots/Master-MainMenu-SafeArea-402x874.png
+?? docs/screenshots/Master-MainMenu-SafeArea-412x915.png
+?? docs/screenshots/Master-MainMenu-SafeArea-430x932.png
+?? docs/screenshots/Master-Round1-Battle.png
+?? docs/screenshots/Master-Round1-MainMenu.png
+?? docs/screenshots/Master-Round2-Battle.png
+?? docs/screenshots/Master-Round2-MainMenu.png
+?? docs/screenshots/Master-Visual-Comparison.png
+?? docs/screenshots/Master-WeaponMotionPreview.png
+?? docs/screenshots/Master-WeaponSelection.png
+?? tools/audit-master-production.py
+?? tools/build-master-asset-pack.py
+?? tools/extract-production-assets.py
+?? unity-client/Assets/HitMe/Art/Production.meta
+?? unity-client/Assets/HitMe/Art/Production/
+?? unity-client/Assets/HitMe/Editor/MasterProductionSetup.cs
+?? unity-client/Assets/HitMe/Editor/MasterProductionSetup.cs.meta
+?? unity-client/Assets/HitMe/Editor/ProductionArtSetup.cs
+?? unity-client/Assets/HitMe/Editor/ProductionArtSetup.cs.meta
+?? unity-client/Assets/HitMe/Resources/Production.meta
+?? unity-client/Assets/HitMe/Resources/Production/
+?? unity-client/Assets/HitMe/Scripts/UI/ImageCover.cs
+?? unity-client/Assets/HitMe/Scripts/UI/ImageCover.cs.meta
+?? unity-client/Assets/HitMe/Scripts/Visuals/CharacterShowcaseMotion.cs
+?? unity-client/Assets/HitMe/Scripts/Visuals/CharacterShowcaseMotion.cs.meta
+?? unity-client/Assets/HitMe/Scripts/Visuals/EnvironmentLayerDefinition.cs
+?? unity-client/Assets/HitMe/Scripts/Visuals/EnvironmentLayerDefinition.cs.meta
+?? unity-client/Assets/HitMe/Scripts/Visuals/EnvironmentLayerView.cs
+?? unity-client/Assets/HitMe/Scripts/Visuals/EnvironmentLayerView.cs.meta
+?? unity-client/Assets/HitMe/Scripts/Visuals/ProductionVisualPack.cs
+?? unity-client/Assets/HitMe/Scripts/Visuals/ProductionVisualPack.cs.meta
+?? unity-client/Assets/HitMe/Tests/CharacterEditMode/MasterProductionTests.cs
+?? unity-client/Assets/HitMe/Tests/CharacterEditMode/MasterProductionTests.cs.meta
+?? unity-client/Assets/HitMe/Tests/CharacterEditMode/ProductionArtworkTests.cs
+?? unity-client/Assets/HitMe/Tests/CharacterEditMode/ProductionArtworkTests.cs.meta
+?? unity-client/Assets/HitMe/Tests/PlayMode/MasterProductionFlowTests.cs
+?? unity-client/Assets/HitMe/Tests/PlayMode/MasterProductionFlowTests.cs.meta
+?? unity-client/Assets/HitMe/Tests/PlayMode/ProductionArtworkFlowTests.cs
+?? unity-client/Assets/HitMe/Tests/PlayMode/ProductionArtworkFlowTests.cs.meta

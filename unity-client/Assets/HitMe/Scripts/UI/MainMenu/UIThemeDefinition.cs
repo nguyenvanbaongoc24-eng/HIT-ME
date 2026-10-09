@@ -4,6 +4,8 @@ namespace HitMe.UI {
 [CreateAssetMenu(menuName="HIT ME/UI Theme")]
 public sealed class UIThemeDefinition : ScriptableObject {
  public Sprite paper,brick,ink,card,logo,shadow,background;
+ public Sprite[] featureArtwork;
+ public Sprite staticCharacterPreview;
  public Sprite[] icons; public string[] iconIds;
  public SpriteAtlas atlas;
  public GameObject entryPrefab;

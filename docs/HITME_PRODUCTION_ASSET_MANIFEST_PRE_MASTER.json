@@ -1,0 +1,1176 @@
+{
+  "readOnly": true,
+  "sourceImagesEdited": false,
+  "conceptImported": false,
+  "records": [
+    {
+      "asset_id": "ref_Concept_characters_2",
+      "asset_name": "Concept characters 2.png",
+      "source": "D:\\HIT ME\\Picture\\Concept characters 2.png",
+      "destination": "none: reference only",
+      "intended_use": "Art direction, never runtime sprite sheet/UI",
+      "required_dimensions": "separate production exports needed",
+      "source_dimensions": [
+        1536,
+        1024
+      ],
+      "transparency": false,
+      "alpha_extrema": null,
+      "pivot": "N/A",
+      "ppu": "N/A",
+      "sorting_layer": "N/A",
+      "animation_requirements": "real independent frames or rig layers",
+      "status": "A_CONCEPT_REFERENCE",
+      "sha256": "b2837e15bdd58d133ff395821ef254c113f399bbd118ea44bd144e4ca7301ed4"
+    },
+    {
+      "asset_id": "ref_Concept_characters",
+      "asset_name": "Concept characters.png",
+      "source": "D:\\HIT ME\\Picture\\Concept characters.png",
+      "destination": "none: reference only",
+      "intended_use": "Art direction, never runtime sprite sheet/UI",
+      "required_dimensions": "separate production exports needed",
+      "source_dimensions": [
+        1536,
+        1024
+      ],
+      "transparency": false,
+      "alpha_extrema": null,
+      "pivot": "N/A",
+      "ppu": "N/A",
+      "sorting_layer": "N/A",
+      "animation_requirements": "real independent frames or rig layers",
+      "status": "A_CONCEPT_REFERENCE",
+      "sha256": "1df2dc6ee8b270dfd42ebd1ec1ccd79018fa6fe18ffc43cf28cc095ff901450f"
+    },
+    {
+      "asset_id": "ref_MAIN_MENU",
+      "asset_name": "MAIN MENU.png",
+      "source": "D:\\HIT ME\\Picture\\MAIN MENU.png",
+      "destination": "none: reference only",
+      "intended_use": "Art direction, never runtime sprite sheet/UI",
+      "required_dimensions": "separate production exports needed",
+      "source_dimensions": [
+        941,
+        1672
+      ],
+      "transparency": false,
+      "alpha_extrema": null,
+      "pivot": "N/A",
+      "ppu": "N/A",
+      "sorting_layer": "N/A",
+      "animation_requirements": "real independent frames or rig layers",
+      "status": "A_CONCEPT_REFERENCE",
+      "sha256": "84baaac099e8ef6076f345ab30f7f171a67c3242845e11a54e4966b2da5a2798"
+    },
+    {
+      "asset_id": "ref_Play_in_game",
+      "asset_name": "Play in game.png",
+      "source": "D:\\HIT ME\\Picture\\Play in game.png",
+      "destination": "none: reference only",
+      "intended_use": "Art direction, never runtime sprite sheet/UI",
+      "required_dimensions": "separate production exports needed",
+      "source_dimensions": [
+        967,
+        1627
+      ],
+      "transparency": false,
+      "alpha_extrema": null,
+      "pivot": "N/A",
+      "ppu": "N/A",
+      "sorting_layer": "N/A",
+      "animation_requirements": "real independent frames or rig layers",
+      "status": "A_CONCEPT_REFERENCE",
+      "sha256": "d2eebdf4317b335cd7e5ee8d30e2c5b66c9f162ece6cbbc8216ed0e4f80a06cf"
+    },
+    {
+      "asset_id": "ref_UI_CONCEPT",
+      "asset_name": "UI CONCEPT.png",
+      "source": "D:\\HIT ME\\Picture\\UI CONCEPT.png",
+      "destination": "none: reference only",
+      "intended_use": "Art direction, never runtime sprite sheet/UI",
+      "required_dimensions": "separate production exports needed",
+      "source_dimensions": [
+        1536,
+        1024
+      ],
+      "transparency": true,
+      "alpha_extrema": [
+        19,
+        252
+      ],
+      "pivot": "N/A",
+      "ppu": "N/A",
+      "sorting_layer": "N/A",
+      "animation_requirements": "real independent frames or rig layers",
+      "status": "A_CONCEPT_REFERENCE",
+      "sha256": "97ba21d9b28ba189f0f8ee610412a4486002c2ba9549240f0a17268760e11de0"
+    },
+    {
+      "asset_id": "ref_UI_KIT",
+      "asset_name": "UI KIT.png",
+      "source": "D:\\HIT ME\\Picture\\UI KIT.png",
+      "destination": "none: reference only",
+      "intended_use": "Art direction, never runtime sprite sheet/UI",
+      "required_dimensions": "separate production exports needed",
+      "source_dimensions": [
+        1536,
+        1024
+      ],
+      "transparency": true,
+      "alpha_extrema": [
+        167,
+        251
+      ],
+      "pivot": "N/A",
+      "ppu": "N/A",
+      "sorting_layer": "N/A",
+      "animation_requirements": "real independent frames or rig layers",
+      "status": "A_CONCEPT_REFERENCE",
+      "sha256": "85ff048083f3b43b16587b96bbb7ba71e9e3c4aa4534079e4a8b71f57f981fe7"
+    },
+    {
+      "asset_id": "runtime_Arenas_LangQueBacBo_backdrop",
+      "asset_name": "backdrop",
+      "source": "unity-client/Assets/HitMe/Art/Arenas/LangQueBacBo/backdrop.png",
+      "destination": "unity-client/Assets/HitMe/Art/Arenas/LangQueBacBo/backdrop.png",
+      "intended_use": "Existing weapon/environment sprite",
+      "required_dimensions": "keep aspect; no baked UI text",
+      "source_dimensions": [
+        853,
+        1844
+      ],
+      "transparency": false,
+      "pivot": "{x: 0.5, y: 0.5}",
+      "ppu": "100",
+      "sorting_layer": "Default / Canvas environment/projectile order",
+      "animation_requirements": "composite background, no separate prop/crowd movement",
+      "status": "B_EXISTING_USABLE",
+      "alpha_bounds": null,
+      "cleanup_notes": "No cleanup blocker detected from metadata"
+    },
+    {
+      "asset_id": "runtime_Arenas_LangQueBacBo_sand",
+      "asset_name": "sand",
+      "source": "unity-client/Assets/HitMe/Art/Arenas/LangQueBacBo/sand.png",
+      "destination": "unity-client/Assets/HitMe/Art/Arenas/LangQueBacBo/sand.png",
+      "intended_use": "Existing weapon/environment sprite",
+      "required_dimensions": "keep aspect; no baked UI text",
+      "source_dimensions": [
+        1254,
+        1254
+      ],
+      "transparency": false,
+      "pivot": "{x: 0.5, y: 0.5}",
+      "ppu": "100",
+      "sorting_layer": "Default / Canvas environment/projectile order",
+      "animation_requirements": "composite background, no separate prop/crowd movement",
+      "status": "B_EXISTING_USABLE",
+      "alpha_bounds": null,
+      "cleanup_notes": "No cleanup blocker detected from metadata"
+    },
+    {
+      "asset_id": "runtime_Characters_Char01_Player_Idle_frame_000",
+      "asset_name": "frame_000",
+      "source": "unity-client/Assets/HitMe/Art/Characters/Char01_Player/Idle/frame_000.png",
+      "destination": "unity-client/Assets/HitMe/Art/Characters/Char01_Player/Idle/frame_000.png",
+      "intended_use": "One Idle sprite, code tween fallback",
+      "required_dimensions": "keep aspect; 70–75 logical px character height",
+      "source_dimensions": [
+        1146,
+        1373
+      ],
+      "transparency": true,
+      "pivot": "{x: 0.518, y: 0.0095}",
+      "ppu": "100",
+      "sorting_layer": "Default / Canvas ActorLayer sorted by foot Y",
+      "animation_requirements": "E: single-frame procedural fallback ready; no rig/multi-frame claim",
+      "status": "B_EXISTING_USABLE",
+      "alpha_bounds": [
+        31,
+        18,
+        1142,
+        1373
+      ],
+      "cleanup_notes": "No cleanup blocker detected from metadata"
+    },
+    {
+      "asset_id": "runtime_Characters_Char02_BotMale_Idle_frame_000",
+      "asset_name": "frame_000",
+      "source": "unity-client/Assets/HitMe/Art/Characters/Char02_BotMale/Idle/frame_000.png",
+      "destination": "unity-client/Assets/HitMe/Art/Characters/Char02_BotMale/Idle/frame_000.png",
+      "intended_use": "One Idle sprite, code tween fallback",
+      "required_dimensions": "keep aspect; 70–75 logical px character height",
+      "source_dimensions": [
+        1223,
+        1286
+      ],
+      "transparency": true,
+      "pivot": "{x: 0.505, y: 0.0311}",
+      "ppu": "100",
+      "sorting_layer": "Default / Canvas ActorLayer sorted by foot Y",
+      "animation_requirements": "E: single-frame procedural fallback ready; no rig/multi-frame claim",
+      "status": "B_EXISTING_USABLE",
+      "alpha_bounds": [
+        0,
+        51,
+        1205,
+        1252
+      ],
+      "cleanup_notes": "No cleanup blocker detected from metadata"
+    },
+    {
+      "asset_id": "runtime_Characters_Char03_BotFemale_Idle_frame_000",
+      "asset_name": "frame_000",
+      "source": "unity-client/Assets/HitMe/Art/Characters/Char03_BotFemale/Idle/frame_000.png",
+      "destination": "unity-client/Assets/HitMe/Art/Characters/Char03_BotFemale/Idle/frame_000.png",
+      "intended_use": "One Idle sprite, code tween fallback",
+      "required_dimensions": "keep aspect; 70–75 logical px character height",
+      "source_dimensions": [
+        1239,
+        1269
+      ],
+      "transparency": true,
+      "pivot": "{x: 0.51, y: 0.0134}",
+      "ppu": "100",
+      "sorting_layer": "Default / Canvas ActorLayer sorted by foot Y",
+      "animation_requirements": "E: single-frame procedural fallback ready; no rig/multi-frame claim",
+      "status": "B_EXISTING_USABLE",
+      "alpha_bounds": [
+        0,
+        10,
+        1225,
+        1255
+      ],
+      "cleanup_notes": "No cleanup blocker detected from metadata"
+    },
+    {
+      "asset_id": "runtime_UI_Buttons_brick",
+      "asset_name": "brick",
+      "source": "unity-client/Assets/HitMe/Art/UI/Buttons/brick.png",
+      "destination": "unity-client/Assets/HitMe/Art/UI/Buttons/brick.png",
+      "intended_use": "Native UI element; not production art polish",
+      "required_dimensions": "keep aspect; no baked UI text",
+      "source_dimensions": [
+        128,
+        128
+      ],
+      "transparency": true,
+      "pivot": "{x: 0.5, y: 0.5}",
+      "ppu": "100",
+      "sorting_layer": "Default / Canvas overlay UI",
+      "animation_requirements": "UI tween ready",
+      "status": "B_EXISTING_USABLE",
+      "alpha_bounds": [
+        2,
+        2,
+        126,
+        128
+      ],
+      "cleanup_notes": "No cleanup blocker detected from metadata"
+    },
+    {
+      "asset_id": "runtime_UI_Buttons_card",
+      "asset_name": "card",
+      "source": "unity-client/Assets/HitMe/Art/UI/Buttons/card.png",
+      "destination": "unity-client/Assets/HitMe/Art/UI/Buttons/card.png",
+      "intended_use": "Native UI element; not production art polish",
+      "required_dimensions": "keep aspect; no baked UI text",
+      "source_dimensions": [
+        128,
+        128
+      ],
+      "transparency": true,
+      "pivot": "{x: 0.5, y: 0.5}",
+      "ppu": "100",
+      "sorting_layer": "Default / Canvas overlay UI",
+      "animation_requirements": "UI tween ready",
+      "status": "B_EXISTING_USABLE",
+      "alpha_bounds": [
+        2,
+        2,
+        126,
+        128
+      ],
+      "cleanup_notes": "No cleanup blocker detected from metadata"
+    },
+    {
+      "asset_id": "runtime_UI_Buttons_ink",
+      "asset_name": "ink",
+      "source": "unity-client/Assets/HitMe/Art/UI/Buttons/ink.png",
+      "destination": "unity-client/Assets/HitMe/Art/UI/Buttons/ink.png",
+      "intended_use": "Native UI element; not production art polish",
+      "required_dimensions": "keep aspect; no baked UI text",
+      "source_dimensions": [
+        128,
+        128
+      ],
+      "transparency": true,
+      "pivot": "{x: 0.5, y: 0.5}",
+      "ppu": "100",
+      "sorting_layer": "Default / Canvas overlay UI",
+      "animation_requirements": "UI tween ready",
+      "status": "B_EXISTING_USABLE",
+      "alpha_bounds": [
+        2,
+        2,
+        126,
+        128
+      ],
+      "cleanup_notes": "No cleanup blocker detected from metadata"
+    },
+    {
+      "asset_id": "runtime_UI_Buttons_paper",
+      "asset_name": "paper",
+      "source": "unity-client/Assets/HitMe/Art/UI/Buttons/paper.png",
+      "destination": "unity-client/Assets/HitMe/Art/UI/Buttons/paper.png",
+      "intended_use": "Native UI element; not production art polish",
+      "required_dimensions": "keep aspect; no baked UI text",
+      "source_dimensions": [
+        128,
+        128
+      ],
+      "transparency": true,
+      "pivot": "{x: 0.5, y: 0.5}",
+      "ppu": "100",
+      "sorting_layer": "Default / Canvas overlay UI",
+      "animation_requirements": "UI tween ready",
+      "status": "B_EXISTING_USABLE",
+      "alpha_bounds": [
+        2,
+        2,
+        126,
+        128
+      ],
+      "cleanup_notes": "No cleanup blocker detected from metadata"
+    },
+    {
+      "asset_id": "runtime_UI_Icons_arrow",
+      "asset_name": "arrow",
+      "source": "unity-client/Assets/HitMe/Art/UI/Icons/arrow.png",
+      "destination": "unity-client/Assets/HitMe/Art/UI/Icons/arrow.png",
+      "intended_use": "Native UI element; not production art polish",
+      "required_dimensions": "keep aspect; no baked UI text",
+      "source_dimensions": [
+        192,
+        192
+      ],
+      "transparency": true,
+      "pivot": "{x: 0.5, y: 0.5}",
+      "ppu": "100",
+      "sorting_layer": "Default / Canvas overlay UI",
+      "animation_requirements": "UI tween ready",
+      "status": "C_USABLE_CLEANUP_RECOMMENDED",
+      "alpha_bounds": [
+        67,
+        41,
+        129,
+        153
+      ],
+      "cleanup_notes": "Large transparent padding; request trimmed source and repivot, do not auto-crop current foot asset"
+    },
+    {
+      "asset_id": "runtime_UI_Icons_bag",
+      "asset_name": "bag",
+      "source": "unity-client/Assets/HitMe/Art/UI/Icons/bag.png",
+      "destination": "unity-client/Assets/HitMe/Art/UI/Icons/bag.png",
+      "intended_use": "Native UI element; not production art polish",
+      "required_dimensions": "keep aspect; no baked UI text",
+      "source_dimensions": [
+        192,
+        192
+      ],
+      "transparency": true,
+      "pivot": "{x: 0.5, y: 0.5}",
+      "ppu": "100",
+      "sorting_layer": "Default / Canvas overlay UI",
+      "animation_requirements": "UI tween ready",
+      "status": "B_EXISTING_USABLE",
+      "alpha_bounds": [
+        37,
+        23,
+        157,
+        169
+      ],
+      "cleanup_notes": "No cleanup blocker detected from metadata"
+    },
+    {
+      "asset_id": "runtime_UI_Icons_cancel",
+      "asset_name": "cancel",
+      "source": "unity-client/Assets/HitMe/Art/UI/Icons/cancel.png",
+      "destination": "unity-client/Assets/HitMe/Art/UI/Icons/cancel.png",
+      "intended_use": "Native UI element; not production art polish",
+      "required_dimensions": "keep aspect; no baked UI text",
+      "source_dimensions": [
+        192,
+        192
+      ],
+      "transparency": true,
+      "pivot": "{x: 0.5, y: 0.5}",
+      "ppu": "100",
+      "sorting_layer": "Default / Canvas overlay UI",
+      "animation_requirements": "UI tween ready",
+      "status": "C_USABLE_CLEANUP_RECOMMENDED",
+      "alpha_bounds": [
+        41,
+        43,
+        153,
+        153
+      ],
+      "cleanup_notes": "Large transparent padding; request trimmed source and repivot, do not auto-crop current foot asset"
+    },
+    {
+      "asset_id": "runtime_UI_Icons_coin",
+      "asset_name": "coin",
+      "source": "unity-client/Assets/HitMe/Art/UI/Icons/coin.png",
+      "destination": "unity-client/Assets/HitMe/Art/UI/Icons/coin.png",
+      "intended_use": "Native UI element; not production art polish",
+      "required_dimensions": "keep aspect; no baked UI text",
+      "source_dimensions": [
+        192,
+        192
+      ],
+      "transparency": true,
+      "pivot": "{x: 0.5, y: 0.5}",
+      "ppu": "100",
+      "sorting_layer": "Default / Canvas overlay UI",
+      "animation_requirements": "UI tween ready",
+      "status": "B_EXISTING_USABLE",
+      "alpha_bounds": [
+        23,
+        23,
+        171,
+        171
+      ],
+      "cleanup_notes": "No cleanup blocker detected from metadata"
+    },
+    {
+      "asset_id": "runtime_UI_Icons_home",
+      "asset_name": "home",
+      "source": "unity-client/Assets/HitMe/Art/UI/Icons/home.png",
+      "destination": "unity-client/Assets/HitMe/Art/UI/Icons/home.png",
+      "intended_use": "Native UI element; not production art polish",
+      "required_dimensions": "keep aspect; no baked UI text",
+      "source_dimensions": [
+        192,
+        192
+      ],
+      "transparency": true,
+      "pivot": "{x: 0.5, y: 0.5}",
+      "ppu": "100",
+      "sorting_layer": "Default / Canvas overlay UI",
+      "animation_requirements": "UI tween ready",
+      "status": "B_EXISTING_USABLE",
+      "alpha_bounds": [
+        23,
+        25,
+        171,
+        171
+      ],
+      "cleanup_notes": "No cleanup blocker detected from metadata"
+    },
+    {
+      "asset_id": "runtime_UI_Icons_mail",
+      "asset_name": "mail",
+      "source": "unity-client/Assets/HitMe/Art/UI/Icons/mail.png",
+      "destination": "unity-client/Assets/HitMe/Art/UI/Icons/mail.png",
+      "intended_use": "Native UI element; not production art polish",
+      "required_dimensions": "keep aspect; no baked UI text",
+      "source_dimensions": [
+        192,
+        192
+      ],
+      "transparency": true,
+      "pivot": "{x: 0.5, y: 0.5}",
+      "ppu": "100",
+      "sorting_layer": "Default / Canvas overlay UI",
+      "animation_requirements": "UI tween ready",
+      "status": "C_USABLE_CLEANUP_RECOMMENDED",
+      "alpha_bounds": [
+        23,
+        49,
+        171,
+        151
+      ],
+      "cleanup_notes": "Large transparent padding; request trimmed source and repivot, do not auto-crop current foot asset"
+    },
+    {
+      "asset_id": "runtime_UI_Icons_map",
+      "asset_name": "map",
+      "source": "unity-client/Assets/HitMe/Art/UI/Icons/map.png",
+      "destination": "unity-client/Assets/HitMe/Art/UI/Icons/map.png",
+      "intended_use": "Native UI element; not production art polish",
+      "required_dimensions": "keep aspect; no baked UI text",
+      "source_dimensions": [
+        192,
+        192
+      ],
+      "transparency": true,
+      "pivot": "{x: 0.5, y: 0.5}",
+      "ppu": "100",
+      "sorting_layer": "Default / Canvas overlay UI",
+      "animation_requirements": "UI tween ready",
+      "status": "B_EXISTING_USABLE",
+      "alpha_bounds": [
+        17,
+        31,
+        177,
+        167
+      ],
+      "cleanup_notes": "No cleanup blocker detected from metadata"
+    },
+    {
+      "asset_id": "runtime_UI_Icons_people",
+      "asset_name": "people",
+      "source": "unity-client/Assets/HitMe/Art/UI/Icons/people.png",
+      "destination": "unity-client/Assets/HitMe/Art/UI/Icons/people.png",
+      "intended_use": "Native UI element; not production art polish",
+      "required_dimensions": "keep aspect; no baked UI text",
+      "source_dimensions": [
+        192,
+        192
+      ],
+      "transparency": true,
+      "pivot": "{x: 0.5, y: 0.5}",
+      "ppu": "100",
+      "sorting_layer": "Default / Canvas overlay UI",
+      "animation_requirements": "UI tween ready",
+      "status": "B_EXISTING_USABLE",
+      "alpha_bounds": [
+        0,
+        25,
+        192,
+        143
+      ],
+      "cleanup_notes": "No cleanup blocker detected from metadata"
+    },
+    {
+      "asset_id": "runtime_UI_Icons_practice",
+      "asset_name": "practice",
+      "source": "unity-client/Assets/HitMe/Art/UI/Icons/practice.png",
+      "destination": "unity-client/Assets/HitMe/Art/UI/Icons/practice.png",
+      "intended_use": "Native UI element; not production art polish",
+      "required_dimensions": "keep aspect; no baked UI text",
+      "source_dimensions": [
+        192,
+        192
+      ],
+      "transparency": true,
+      "pivot": "{x: 0.5, y: 0.5}",
+      "ppu": "100",
+      "sorting_layer": "Default / Canvas overlay UI",
+      "animation_requirements": "UI tween ready",
+      "status": "B_EXISTING_USABLE",
+      "alpha_bounds": [
+        49,
+        27,
+        167,
+        173
+      ],
+      "cleanup_notes": "No cleanup blocker detected from metadata"
+    },
+    {
+      "asset_id": "runtime_UI_Icons_quest",
+      "asset_name": "quest",
+      "source": "unity-client/Assets/HitMe/Art/UI/Icons/quest.png",
+      "destination": "unity-client/Assets/HitMe/Art/UI/Icons/quest.png",
+      "intended_use": "Native UI element; not production art polish",
+      "required_dimensions": "keep aspect; no baked UI text",
+      "source_dimensions": [
+        192,
+        192
+      ],
+      "transparency": true,
+      "pivot": "{x: 0.5, y: 0.5}",
+      "ppu": "100",
+      "sorting_layer": "Default / Canvas overlay UI",
+      "animation_requirements": "UI tween ready",
+      "status": "C_USABLE_CLEANUP_RECOMMENDED",
+      "alpha_bounds": [
+        39,
+        27,
+        155,
+        167
+      ],
+      "cleanup_notes": "Large transparent padding; request trimmed source and repivot, do not auto-crop current foot asset"
+    },
+    {
+      "asset_id": "runtime_UI_Icons_settings",
+      "asset_name": "settings",
+      "source": "unity-client/Assets/HitMe/Art/UI/Icons/settings.png",
+      "destination": "unity-client/Assets/HitMe/Art/UI/Icons/settings.png",
+      "intended_use": "Native UI element; not production art polish",
+      "required_dimensions": "keep aspect; no baked UI text",
+      "source_dimensions": [
+        192,
+        192
+      ],
+      "transparency": true,
+      "pivot": "{x: 0.5, y: 0.5}",
+      "ppu": "100",
+      "sorting_layer": "Default / Canvas overlay UI",
+      "animation_requirements": "UI tween ready",
+      "status": "B_EXISTING_USABLE",
+      "alpha_bounds": [
+        17,
+        17,
+        177,
+        177
+      ],
+      "cleanup_notes": "No cleanup blocker detected from metadata"
+    },
+    {
+      "asset_id": "runtime_UI_Icons_shop",
+      "asset_name": "shop",
+      "source": "unity-client/Assets/HitMe/Art/UI/Icons/shop.png",
+      "destination": "unity-client/Assets/HitMe/Art/UI/Icons/shop.png",
+      "intended_use": "Native UI element; not production art polish",
+      "required_dimensions": "keep aspect; no baked UI text",
+      "source_dimensions": [
+        192,
+        192
+      ],
+      "transparency": true,
+      "pivot": "{x: 0.5, y: 0.5}",
+      "ppu": "100",
+      "sorting_layer": "Default / Canvas overlay UI",
+      "animation_requirements": "UI tween ready",
+      "status": "B_EXISTING_USABLE",
+      "alpha_bounds": [
+        31,
+        35,
+        167,
+        163
+      ],
+      "cleanup_notes": "No cleanup blocker detected from metadata"
+    },
+    {
+      "asset_id": "runtime_UI_Icons_trophy",
+      "asset_name": "trophy",
+      "source": "unity-client/Assets/HitMe/Art/UI/Icons/trophy.png",
+      "destination": "unity-client/Assets/HitMe/Art/UI/Icons/trophy.png",
+      "intended_use": "Native UI element; not production art polish",
+      "required_dimensions": "keep aspect; no baked UI text",
+      "source_dimensions": [
+        192,
+        192
+      ],
+      "transparency": true,
+      "pivot": "{x: 0.5, y: 0.5}",
+      "ppu": "100",
+      "sorting_layer": "Default / Canvas overlay UI",
+      "animation_requirements": "UI tween ready",
+      "status": "B_EXISTING_USABLE",
+      "alpha_bounds": [
+        17,
+        29,
+        177,
+        169
+      ],
+      "cleanup_notes": "No cleanup blocker detected from metadata"
+    },
+    {
+      "asset_id": "runtime_UI_MainMenu_logo",
+      "asset_name": "logo",
+      "source": "unity-client/Assets/HitMe/Art/UI/MainMenu/logo.png",
+      "destination": "unity-client/Assets/HitMe/Art/UI/MainMenu/logo.png",
+      "intended_use": "Native UI element; not production art polish",
+      "required_dimensions": "keep aspect; no baked UI text",
+      "source_dimensions": [
+        640,
+        170
+      ],
+      "transparency": true,
+      "pivot": "{x: 0.5, y: 0.5}",
+      "ppu": "100",
+      "sorting_layer": "Default / Canvas overlay UI",
+      "animation_requirements": "UI tween ready",
+      "status": "B_EXISTING_USABLE",
+      "alpha_bounds": [
+        12,
+        9,
+        624,
+        160
+      ],
+      "cleanup_notes": "No cleanup blocker detected from metadata"
+    },
+    {
+      "asset_id": "runtime_UI_MainMenu_shadow",
+      "asset_name": "shadow",
+      "source": "unity-client/Assets/HitMe/Art/UI/MainMenu/shadow.png",
+      "destination": "unity-client/Assets/HitMe/Art/UI/MainMenu/shadow.png",
+      "intended_use": "Native UI element; not production art polish",
+      "required_dimensions": "keep aspect; no baked UI text",
+      "source_dimensions": [
+        256,
+        90
+      ],
+      "transparency": true,
+      "pivot": "{x: 0.5, y: 0.5}",
+      "ppu": "100",
+      "sorting_layer": "Default / Canvas overlay UI",
+      "animation_requirements": "UI tween ready",
+      "status": "B_EXISTING_USABLE",
+      "alpha_bounds": [
+        8,
+        8,
+        249,
+        83
+      ],
+      "cleanup_notes": "No cleanup blocker detected from metadata"
+    },
+    {
+      "asset_id": "runtime_Weapons_Chao_held",
+      "asset_name": "held",
+      "source": "unity-client/Assets/HitMe/Art/Weapons/Chao/held.png",
+      "destination": "unity-client/Assets/HitMe/Art/Weapons/Chao/held.png",
+      "intended_use": "Existing weapon/environment sprite",
+      "required_dimensions": "keep aspect; no baked UI text",
+      "source_dimensions": [
+        1536,
+        1024
+      ],
+      "transparency": true,
+      "pivot": "{x: 0.5, y: 0.5}",
+      "ppu": "100",
+      "sorting_layer": "Default / Canvas environment/projectile order",
+      "animation_requirements": "projectile spin/trail fallback ready",
+      "status": "B_EXISTING_USABLE",
+      "alpha_bounds": [
+        102,
+        101,
+        1456,
+        976
+      ],
+      "cleanup_notes": "No cleanup blocker detected from metadata"
+    },
+    {
+      "asset_id": "runtime_Weapons_DepToOng_held",
+      "asset_name": "held",
+      "source": "unity-client/Assets/HitMe/Art/Weapons/DepToOng/held.png",
+      "destination": "unity-client/Assets/HitMe/Art/Weapons/DepToOng/held.png",
+      "intended_use": "Existing weapon/environment sprite",
+      "required_dimensions": "keep aspect; no baked UI text",
+      "source_dimensions": [
+        1536,
+        1024
+      ],
+      "transparency": true,
+      "pivot": "{x: 0.5, y: 0.5}",
+      "ppu": "100",
+      "sorting_layer": "Default / Canvas environment/projectile order",
+      "animation_requirements": "projectile spin/trail fallback ready",
+      "status": "B_EXISTING_USABLE",
+      "alpha_bounds": [
+        33,
+        78,
+        1510,
+        1000
+      ],
+      "cleanup_notes": "No cleanup blocker detected from metadata"
+    },
+    {
+      "asset_id": "runtime_Weapons_Vot_held",
+      "asset_name": "held",
+      "source": "unity-client/Assets/HitMe/Art/Weapons/Vot/held.png",
+      "destination": "unity-client/Assets/HitMe/Art/Weapons/Vot/held.png",
+      "intended_use": "Existing weapon/environment sprite",
+      "required_dimensions": "keep aspect; no baked UI text",
+      "source_dimensions": [
+        1774,
+        887
+      ],
+      "transparency": true,
+      "pivot": "{x: 0.5, y: 0.5}",
+      "ppu": "100",
+      "sorting_layer": "Default / Canvas environment/projectile order",
+      "animation_requirements": "projectile spin/trail fallback ready",
+      "status": "B_EXISTING_USABLE",
+      "alpha_bounds": [
+        46,
+        9,
+        1754,
+        887
+      ],
+      "cleanup_notes": "No cleanup blocker detected from metadata"
+    },
+    {
+      "asset_id": "missing_NamLang_final",
+      "asset_name": "NamLang_final",
+      "source": "not supplied",
+      "destination": "unity-client/Assets/HitMe/Art/Characters/NamLang_final/",
+      "intended_use": "characters",
+      "required_dimensions": "256×256 frame export preferred for poses; preserve aspect/pivot, not a mandatory rescale",
+      "transparency": true,
+      "pivot": "foot pivot metadata per character",
+      "ppu": 100,
+      "sorting_layer": "Default / Canvas presentation order",
+      "animation_requirements": "real frame sequence or rig layers for required states",
+      "status": "D_WAITING_FOR_ARTWORK"
+    },
+    {
+      "asset_id": "missing_NuNangDong_pink",
+      "asset_name": "NuNangDong_pink",
+      "source": "not supplied",
+      "destination": "unity-client/Assets/HitMe/Art/Characters/NuNangDong_pink/",
+      "intended_use": "characters",
+      "required_dimensions": "256×256 frame export preferred for poses; preserve aspect/pivot, not a mandatory rescale",
+      "transparency": true,
+      "pivot": "foot pivot metadata per character",
+      "ppu": 100,
+      "sorting_layer": "Default / Canvas presentation order",
+      "animation_requirements": "real frame sequence or rig layers for required states",
+      "status": "D_WAITING_FOR_ARTWORK"
+    },
+    {
+      "asset_id": "missing_QuayBoy",
+      "asset_name": "QuayBoy",
+      "source": "not supplied",
+      "destination": "unity-client/Assets/HitMe/Art/Characters/QuayBoy/",
+      "intended_use": "characters",
+      "required_dimensions": "256×256 frame export preferred for poses; preserve aspect/pivot, not a mandatory rescale",
+      "transparency": true,
+      "pivot": "foot pivot metadata per character",
+      "ppu": 100,
+      "sorting_layer": "Default / Canvas presentation order",
+      "animation_requirements": "real frame sequence or rig layers for required states",
+      "status": "D_WAITING_FOR_ARTWORK"
+    },
+    {
+      "asset_id": "missing_CoBa",
+      "asset_name": "CoBa",
+      "source": "not supplied",
+      "destination": "unity-client/Assets/HitMe/Art/Characters/CoBa/",
+      "intended_use": "characters",
+      "required_dimensions": "256×256 frame export preferred for poses; preserve aspect/pivot, not a mandatory rescale",
+      "transparency": true,
+      "pivot": "foot pivot metadata per character",
+      "ppu": 100,
+      "sorting_layer": "Default / Canvas presentation order",
+      "animation_requirements": "real frame sequence or rig layers for required states",
+      "status": "D_WAITING_FOR_ARTWORK"
+    },
+    {
+      "asset_id": "missing_AnhTeen",
+      "asset_name": "AnhTeen",
+      "source": "not supplied",
+      "destination": "unity-client/Assets/HitMe/Art/Characters/AnhTeen/",
+      "intended_use": "characters",
+      "required_dimensions": "256×256 frame export preferred for poses; preserve aspect/pivot, not a mandatory rescale",
+      "transparency": true,
+      "pivot": "foot pivot metadata per character",
+      "ppu": 100,
+      "sorting_layer": "Default / Canvas presentation order",
+      "animation_requirements": "real frame sequence or rig layers for required states",
+      "status": "D_WAITING_FOR_ARTWORK"
+    },
+    {
+      "asset_id": "missing_ChoVang",
+      "asset_name": "ChoVang",
+      "source": "not supplied",
+      "destination": "unity-client/Assets/HitMe/Art/Characters/ChoVang/",
+      "intended_use": "characters",
+      "required_dimensions": "256×256 frame export preferred for poses; preserve aspect/pivot, not a mandatory rescale",
+      "transparency": true,
+      "pivot": "foot pivot metadata per character",
+      "ppu": 100,
+      "sorting_layer": "Default / Canvas presentation order",
+      "animation_requirements": "real frame sequence or rig layers for required states",
+      "status": "D_WAITING_FOR_ARTWORK"
+    },
+    {
+      "asset_id": "missing_MeoMun",
+      "asset_name": "MeoMun",
+      "source": "not supplied",
+      "destination": "unity-client/Assets/HitMe/Art/Characters/MeoMun/",
+      "intended_use": "characters",
+      "required_dimensions": "256×256 frame export preferred for poses; preserve aspect/pivot, not a mandatory rescale",
+      "transparency": true,
+      "pivot": "foot pivot metadata per character",
+      "ppu": 100,
+      "sorting_layer": "Default / Canvas presentation order",
+      "animation_requirements": "real frame sequence or rig layers for required states",
+      "status": "D_WAITING_FOR_ARTWORK"
+    },
+    {
+      "asset_id": "missing_Phone",
+      "asset_name": "Phone",
+      "source": "not supplied",
+      "destination": "unity-client/Assets/HitMe/Art/Weapons/Phone/",
+      "intended_use": "weapons",
+      "required_dimensions": "separate PNG/layer; dimensions per intended screen use",
+      "transparency": true,
+      "pivot": "center/grip/layer metadata",
+      "ppu": 100,
+      "sorting_layer": "Default / Canvas presentation order",
+      "animation_requirements": "single PNG supports fallback motion",
+      "status": "D_WAITING_FOR_ARTWORK"
+    },
+    {
+      "asset_id": "missing_MosquitoRacket",
+      "asset_name": "MosquitoRacket",
+      "source": "not supplied",
+      "destination": "unity-client/Assets/HitMe/Art/Weapons/MosquitoRacket/",
+      "intended_use": "weapons",
+      "required_dimensions": "separate PNG/layer; dimensions per intended screen use",
+      "transparency": true,
+      "pivot": "center/grip/layer metadata",
+      "ppu": 100,
+      "sorting_layer": "Default / Canvas presentation order",
+      "animation_requirements": "single PNG supports fallback motion",
+      "status": "D_WAITING_FOR_ARTWORK"
+    },
+    {
+      "asset_id": "missing_PickleballRacket",
+      "asset_name": "PickleballRacket",
+      "source": "not supplied",
+      "destination": "unity-client/Assets/HitMe/Art/Weapons/PickleballRacket/",
+      "intended_use": "weapons",
+      "required_dimensions": "separate PNG/layer; dimensions per intended screen use",
+      "transparency": true,
+      "pivot": "center/grip/layer metadata",
+      "ppu": 100,
+      "sorting_layer": "Default / Canvas presentation order",
+      "animation_requirements": "single PNG supports fallback motion",
+      "status": "D_WAITING_FOR_ARTWORK"
+    },
+    {
+      "asset_id": "missing_TV",
+      "asset_name": "TV",
+      "source": "not supplied",
+      "destination": "unity-client/Assets/HitMe/Art/Weapons/TV/",
+      "intended_use": "weapons",
+      "required_dimensions": "separate PNG/layer; dimensions per intended screen use",
+      "transparency": true,
+      "pivot": "center/grip/layer metadata",
+      "ppu": 100,
+      "sorting_layer": "Default / Canvas presentation order",
+      "animation_requirements": "single PNG supports fallback motion",
+      "status": "D_WAITING_FOR_ARTWORK"
+    },
+    {
+      "asset_id": "missing_MiniFridge",
+      "asset_name": "MiniFridge",
+      "source": "not supplied",
+      "destination": "unity-client/Assets/HitMe/Art/Weapons/MiniFridge/",
+      "intended_use": "weapons",
+      "required_dimensions": "separate PNG/layer; dimensions per intended screen use",
+      "transparency": true,
+      "pivot": "center/grip/layer metadata",
+      "ppu": 100,
+      "sorting_layer": "Default / Canvas presentation order",
+      "animation_requirements": "single PNG supports fallback motion",
+      "status": "D_WAITING_FOR_ARTWORK"
+    },
+    {
+      "asset_id": "missing_WeaponVariants",
+      "asset_name": "WeaponVariants",
+      "source": "not supplied",
+      "destination": "unity-client/Assets/HitMe/Art/Weapons/WeaponVariants/",
+      "intended_use": "weapons",
+      "required_dimensions": "separate PNG/layer; dimensions per intended screen use",
+      "transparency": true,
+      "pivot": "center/grip/layer metadata",
+      "ppu": 100,
+      "sorting_layer": "Default / Canvas presentation order",
+      "animation_requirements": "single PNG supports fallback motion",
+      "status": "D_WAITING_FOR_ARTWORK"
+    },
+    {
+      "asset_id": "missing_VillageLayers",
+      "asset_name": "VillageLayers",
+      "source": "not supplied",
+      "destination": "unity-client/Assets/HitMe/Art/Environment/VillageLayers/",
+      "intended_use": "environment",
+      "required_dimensions": "separate PNG/layer; dimensions per intended screen use",
+      "transparency": true,
+      "pivot": "center/grip/layer metadata",
+      "ppu": 100,
+      "sorting_layer": "Default / Canvas presentation order",
+      "animation_requirements": "real frame sequence or rig layers for required states",
+      "status": "D_WAITING_FOR_ARTWORK"
+    },
+    {
+      "asset_id": "missing_Flags",
+      "asset_name": "Flags",
+      "source": "not supplied",
+      "destination": "unity-client/Assets/HitMe/Art/Environment/Flags/",
+      "intended_use": "environment",
+      "required_dimensions": "separate PNG/layer; dimensions per intended screen use",
+      "transparency": true,
+      "pivot": "center/grip/layer metadata",
+      "ppu": 100,
+      "sorting_layer": "Default / Canvas presentation order",
+      "animation_requirements": "real frame sequence or rig layers for required states",
+      "status": "D_WAITING_FOR_ARTWORK"
+    },
+    {
+      "asset_id": "missing_Lanterns",
+      "asset_name": "Lanterns",
+      "source": "not supplied",
+      "destination": "unity-client/Assets/HitMe/Art/Environment/Lanterns/",
+      "intended_use": "environment",
+      "required_dimensions": "separate PNG/layer; dimensions per intended screen use",
+      "transparency": true,
+      "pivot": "center/grip/layer metadata",
+      "ppu": 100,
+      "sorting_layer": "Default / Canvas presentation order",
+      "animation_requirements": "real frame sequence or rig layers for required states",
+      "status": "D_WAITING_FOR_ARTWORK"
+    },
+    {
+      "asset_id": "missing_Leaves",
+      "asset_name": "Leaves",
+      "source": "not supplied",
+      "destination": "unity-client/Assets/HitMe/Art/Environment/Leaves/",
+      "intended_use": "environment",
+      "required_dimensions": "separate PNG/layer; dimensions per intended screen use",
+      "transparency": true,
+      "pivot": "center/grip/layer metadata",
+      "ppu": 100,
+      "sorting_layer": "Default / Canvas presentation order",
+      "animation_requirements": "real frame sequence or rig layers for required states",
+      "status": "D_WAITING_FOR_ARTWORK"
+    },
+    {
+      "asset_id": "missing_CrowdFrames",
+      "asset_name": "CrowdFrames",
+      "source": "not supplied",
+      "destination": "unity-client/Assets/HitMe/Art/Environment/CrowdFrames/",
+      "intended_use": "environment",
+      "required_dimensions": "separate PNG/layer; dimensions per intended screen use",
+      "transparency": true,
+      "pivot": "center/grip/layer metadata",
+      "ppu": 100,
+      "sorting_layer": "Default / Canvas presentation order",
+      "animation_requirements": "real frame sequence or rig layers for required states",
+      "status": "D_WAITING_FOR_ARTWORK"
+    },
+    {
+      "asset_id": "missing_Foreground",
+      "asset_name": "Foreground",
+      "source": "not supplied",
+      "destination": "unity-client/Assets/HitMe/Art/Environment/Foreground/",
+      "intended_use": "environment",
+      "required_dimensions": "separate PNG/layer; dimensions per intended screen use",
+      "transparency": true,
+      "pivot": "center/grip/layer metadata",
+      "ppu": 100,
+      "sorting_layer": "Default / Canvas presentation order",
+      "animation_requirements": "real frame sequence or rig layers for required states",
+      "status": "D_WAITING_FOR_ARTWORK"
+    },
+    {
+      "asset_id": "missing_PremiumSkins",
+      "asset_name": "PremiumSkins",
+      "source": "not supplied",
+      "destination": "unity-client/Assets/HitMe/Art/UI/PremiumSkins/",
+      "intended_use": "ui",
+      "required_dimensions": "separate PNG/layer; dimensions per intended screen use",
+      "transparency": true,
+      "pivot": "center/grip/layer metadata",
+      "ppu": 100,
+      "sorting_layer": "Default / Canvas presentation order",
+      "animation_requirements": "single PNG supports fallback motion",
+      "status": "D_WAITING_FOR_ARTWORK"
+    },
+    {
+      "asset_id": "missing_Portraits",
+      "asset_name": "Portraits",
+      "source": "not supplied",
+      "destination": "unity-client/Assets/HitMe/Art/UI/Portraits/",
+      "intended_use": "ui",
+      "required_dimensions": "separate PNG/layer; dimensions per intended screen use",
+      "transparency": true,
+      "pivot": "center/grip/layer metadata",
+      "ppu": 100,
+      "sorting_layer": "Default / Canvas presentation order",
+      "animation_requirements": "single PNG supports fallback motion",
+      "status": "D_WAITING_FOR_ARTWORK"
+    },
+    {
+      "asset_id": "missing_IllustratedCards",
+      "asset_name": "IllustratedCards",
+      "source": "not supplied",
+      "destination": "unity-client/Assets/HitMe/Art/UI/IllustratedCards/",
+      "intended_use": "ui",
+      "required_dimensions": "separate PNG/layer; dimensions per intended screen use",
+      "transparency": true,
+      "pivot": "center/grip/layer metadata",
+      "ppu": 100,
+      "sorting_layer": "Default / Canvas presentation order",
+      "animation_requirements": "single PNG supports fallback motion",
+      "status": "D_WAITING_FOR_ARTWORK"
+    },
+    {
+      "asset_id": "missing_HUDChatSkin",
+      "asset_name": "HUDChatSkin",
+      "source": "not supplied",
+      "destination": "unity-client/Assets/HitMe/Art/UI/HUDChatSkin/",
+      "intended_use": "ui",
+      "required_dimensions": "separate PNG/layer; dimensions per intended screen use",
+      "transparency": true,
+      "pivot": "center/grip/layer metadata",
+      "ppu": 100,
+      "sorting_layer": "Default / Canvas presentation order",
+      "animation_requirements": "single PNG supports fallback motion",
+      "status": "D_WAITING_FOR_ARTWORK"
+    },
+    {
+      "asset_id": "missing_DustFrames",
+      "asset_name": "DustFrames",
+      "source": "not supplied",
+      "destination": "unity-client/Assets/HitMe/Art/VFX/DustFrames/",
+      "intended_use": "vfx",
+      "required_dimensions": "separate PNG/layer; dimensions per intended screen use",
+      "transparency": true,
+      "pivot": "center/grip/layer metadata",
+      "ppu": 100,
+      "sorting_layer": "Default / Canvas presentation order",
+      "animation_requirements": "real frame sequence or rig layers for required states",
+      "status": "D_WAITING_FOR_ARTWORK"
+    },
+    {
+      "asset_id": "missing_ImpactFrames",
+      "asset_name": "ImpactFrames",
+      "source": "not supplied",
+      "destination": "unity-client/Assets/HitMe/Art/VFX/ImpactFrames/",
+      "intended_use": "vfx",
+      "required_dimensions": "separate PNG/layer; dimensions per intended screen use",
+      "transparency": true,
+      "pivot": "center/grip/layer metadata",
+      "ppu": 100,
+      "sorting_layer": "Default / Canvas presentation order",
+      "animation_requirements": "real frame sequence or rig layers for required states",
+      "status": "D_WAITING_FOR_ARTWORK"
+    },
+    {
+      "asset_id": "missing_TrailTexture",
+      "asset_name": "TrailTexture",
+      "source": "not supplied",
+      "destination": "unity-client/Assets/HitMe/Art/VFX/TrailTexture/",
+      "intended_use": "vfx",
+      "required_dimensions": "separate PNG/layer; dimensions per intended screen use",
+      "transparency": true,
+      "pivot": "center/grip/layer metadata",
+      "ppu": 100,
+      "sorting_layer": "Default / Canvas presentation order",
+      "animation_requirements": "real frame sequence or rig layers for required states",
+      "status": "D_WAITING_FOR_ARTWORK"
+    },
+    {
+      "asset_id": "missing_ConfettiFrames",
+      "asset_name": "ConfettiFrames",
+      "source": "not supplied",
+      "destination": "unity-client/Assets/HitMe/Art/VFX/ConfettiFrames/",
+      "intended_use": "vfx",
+      "required_dimensions": "separate PNG/layer; dimensions per intended screen use",
+      "transparency": true,
+      "pivot": "center/grip/layer metadata",
+      "ppu": 100,
+      "sorting_layer": "Default / Canvas presentation order",
+      "animation_requirements": "real frame sequence or rig layers for required states",
+      "status": "D_WAITING_FOR_ARTWORK"
+    }
+  ]
+}

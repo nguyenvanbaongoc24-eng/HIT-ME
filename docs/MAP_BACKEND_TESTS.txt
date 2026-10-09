@@ -1,0 +1,34 @@
+
+> test
+> tsx --test tests/*.test.ts
+
+(node:46732) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ two real WS clients play three rounds to server-confirmed draw and durable reward (8635.1008ms)
+(node:29776) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ shared C# parity: first_target (3.8481ms)
+✔ shared C# parity: simultaneous (0.4919ms)
+✔ shared C# parity: winner (0.3096ms)
+✔ shared C# parity: ordinal_tie (0.2853ms)
+✔ shared C# parity: behind (0.2312ms)
+✔ rounded boundary grid and rays (2.4143ms)
+✔ 2 players privacy, simultaneous ready, complete match and reward once (18.1953ms)
+✔ 3 players privacy, simultaneous ready, complete match and reward once (10.6691ms)
+✔ 6 players privacy, simultaneous ready, complete match and reward once (14.719ms)
+✔ timeout proposal, reconnect private snapshot, waiting disconnect expiry and code expiry (3.4618ms)
+✔ unconfirmed timeout blocks without invented action (1.5776ms)
+✔ durable guest token, inventory, ledger and private farm cap (34.6197ms)
+✔ quest events dedupe and claim exactly once (2.4463ms)
+✔ real WebSocket auth, room join, resume and unauthorized reward rejection (168.4266ms)
+(node:32020) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ WSS handshake verifies the test CA certificate (164.5587ms)
+ℹ tests 16
+ℹ suites 0
+ℹ pass 16
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 10204.7763

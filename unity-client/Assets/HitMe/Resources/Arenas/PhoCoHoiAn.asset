@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 063f94636ffa9b44997b7b88659d10e3, type: 3}
+  m_Name: PhoCoHoiAn
+  m_EditorClassIdentifier: HitMe.Runtime::HitMe.UI.ArenaArtDefinition
+  backdrop: {fileID: 0}
+  sand: {fileID: 21300000, guid: 761542cd32979a94f8526cc18bf86665, type: 3}
+  environmentPrefab: {fileID: 0}
+  mapId: PhoCoHoiAn
+  displayNameVi: "Ph\u1ED1 C\u1ED5 H\u1ED9i An"
+  displayNameEn: Hoi An Ancient Town
+  previewSprite: {fileID: 0}
+  borderSprite: {fileID: 0}
+  centerDecoration: {fileID: 21300000, guid: 73c031bb6f37b6d4ebdcebd4ecd084ac, type: 3}
+  shadowOverlay: {fileID: 0}
+  backgroundLayers: []
+  foregroundLayers: []
+  motionProfile: {fileID: 11400000, guid: 7e01770d78d3f8740a4baf2f4805608d, type: 2}
+  ambientEffectProfile: {fileID: 0}
+  audioProfile: {fileID: 0}
+  lightingProfile: {r: 1, g: 1, b: 1, a: 1}
+  performanceTier: 2
+  unlockState: 1

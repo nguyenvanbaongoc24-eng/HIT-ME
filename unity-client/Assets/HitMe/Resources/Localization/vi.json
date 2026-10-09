@@ -186,7 +186,7 @@
     },
     {
       "key": "mapLangQueBacBo",
-      "value": "Làng quê Bắc Bộ"
+      "value": "Sân Đình Bắc Bộ"
     },
     {
       "key": "mapChoVietNam",
@@ -651,6 +651,122 @@
     {
       "key": "offlineVisualChoice",
       "value": "Hình ảnh cho Bot/preview; tài khoản online do server quản lý."
+    },
+    {
+      "key": "artStaticPreview",
+      "value": "Xem artwork tĩnh · Preview"
+    },
+    {
+      "key": "artPreviewPolicy",
+      "value": "Bản tĩnh tách/chỉnh bằng AI từ concept. Chưa có rig hoặc frame animation; không trang bị vào trận đấu."
+    },
+    {
+      "key": "packRoster",
+      "value": "Bộ nhân vật & động vật"
+    },
+    {
+      "key": "packWeapons",
+      "value": "Bộ vũ khí · Xem trước"
+    },
+    {
+      "key": "packStaticPolicy",
+      "value": "7 sprite tĩnh thật · Motion phụ minh họa 6 trạng thái. Chưa có rig/frame. Không đổi avatar online."
+    },
+    {
+      "key": "packWeaponPolicy",
+      "value": "PNG & cấu hình visual thật. Đây là gallery; các ID mới chưa có luật/server nên không trang bị vào trận."
+    },
+    {
+      "key": "rosterVisual_BlackBoy",
+      "value": "Nam tóc đen"
+    },
+    {
+      "key": "rosterVisual_PinkGirl",
+      "value": "Nữ tóc hồng"
+    },
+    {
+      "key": "rosterVisual_BlondBoy",
+      "value": "Nam tóc vàng"
+    },
+    {
+      "key": "rosterVisual_NonLaBoy",
+      "value": "Nón lá"
+    },
+    {
+      "key": "rosterVisual_CapBoy",
+      "value": "Mũ lưỡi trai"
+    },
+    {
+      "key": "rosterVisual_GoldenDog",
+      "value": "Chó vàng"
+    },
+    {
+      "key": "rosterVisual_BlackCat",
+      "value": "Mèo mun"
+    },
+    {
+      "key": "weaponVisual_Slipper",
+      "value": "Dép tổ ong"
+    },
+    {
+      "key": "weaponVisual_Smartphone",
+      "value": "Điện thoại"
+    },
+    {
+      "key": "weaponVisual_MosquitoRacket",
+      "value": "Vợt muỗi"
+    },
+    {
+      "key": "weaponVisual_PickleballPaddle",
+      "value": "Vợt pickleball"
+    },
+    {
+      "key": "weaponVisual_BeerMug",
+      "value": "Cốc bia"
+    },
+    {
+      "key": "weaponVisual_FryingPan",
+      "value": "Chảo"
+    },
+    {
+      "key": "weaponVisual_Television",
+      "value": "TV"
+    },
+    {
+      "key": "weaponVisual_Refrigerator",
+      "value": "Tủ lạnh"
+    },
+    {
+      "key": "weaponVisual_PlasticStool",
+      "value": "Ghế nhựa"
+    },
+    {
+      "key": "mapPhoCoHoiAn",
+      "value": "Phố Cổ Hội An"
+    },
+    {
+      "key": "mapArtPartial",
+      "value": "Art tích hợp · PARTIAL"
+    },
+    {
+      "key": "mapFallbackPreview",
+      "value": "FALLBACK: floor chung; chưa có artwork địa điểm."
+    },
+    {
+      "key": "mapOfflinePolicy",
+      "value": "Chỉ cấu hình map offline. Online chưa hỗ trợ đồng bộ map."
+    },
+    {
+      "key": "mapConfirm",
+      "value": "Xác nhận map offline"
+    },
+    {
+      "key": "mapConfirmFallback",
+      "value": "Dùng fallback offline"
+    },
+    {
+      "key": "mapSharedFloor",
+      "value": "FALLBACK • FLOOR CHUNG"
     }
   ]
 }

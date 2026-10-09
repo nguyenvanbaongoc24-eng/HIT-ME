@@ -1,0 +1,32 @@
+[
+  {
+    "path": "index.html",
+    "status": 200,
+    "bytes": 3430,
+    "diskBytes": 3430
+  },
+  {
+    "path": "Build/Web.loader.js",
+    "status": 200,
+    "bytes": 48779,
+    "diskBytes": 48779
+  },
+  {
+    "path": "Build/Web.data.unityweb",
+    "status": 200,
+    "bytes": 29085126,
+    "diskBytes": 29085126
+  },
+  {
+    "path": "Build/Web.framework.js.unityweb",
+    "status": 200,
+    "bytes": 75205,
+    "diskBytes": 75205
+  },
+  {
+    "path": "Build/Web.wasm.unityweb",
+    "status": 200,
+    "bytes": 9531854,
+    "diskBytes": 9531854
+  }
+]

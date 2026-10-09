@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a305293c720f9304e9a5a3364ee9ea5b, type: 3}
+  m_Name: BattleLantern
+  m_EditorClassIdentifier: HitMe.Runtime::HitMe.Visuals.EnvironmentLayerDefinition
+  layerId: BattleLantern
+  sprite: {fileID: 21300000, guid: b67c7098a6fae6945a64cef6e89e54ca, type: 3}
+  anchor: {x: 0.04, y: 0.83}
+  referenceSize: {x: 25, y: 50}
+  pivot: {x: 0.5, y: 1}
+  motion: 1
+  amplitude: 2
+  speed: 1
+  provenance: Independent AI-derived static cutout. Whole-sprite motion fallback, no cloth/leaf rig.

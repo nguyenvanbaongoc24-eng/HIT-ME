@@ -1,0 +1,399 @@
+{
+  "inventory": {
+    "png": 69,
+    "prefabs": 21,
+    "animationClips": 0,
+    "scenes": [
+      "Battle.unity",
+      "Boot.unity",
+      "CharacterSelect.unity",
+      "Lobby.unity",
+      "MainMenu.unity",
+      "Result.unity"
+    ],
+    "uiKitPrefabs": [
+      "HitMeBottomNavigation.prefab",
+      "HitMeButtonPrimary.prefab",
+      "HitMeButtonSecondary.prefab",
+      "HitMeButtonTertiary.prefab",
+      "HitMeCharacterCard.prefab",
+      "HitMeCharacterSelection.prefab",
+      "HitMeChatPanel.prefab",
+      "HitMeFeatureCard.prefab",
+      "HitMeIconButton.prefab",
+      "HitMeMapCard.prefab",
+      "HitMeMapSelection.prefab",
+      "HitMePlayerHUD.prefab",
+      "HitMePopup.prefab",
+      "HitMeTopBar.prefab",
+      "HitMeWeaponCard.prefab",
+      "HitMeWeaponSelection.prefab"
+    ]
+  },
+  "sourceArtwork": [
+    {
+      "filename": "Concept characters 2.png",
+      "format": "PNG",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "alphaRange": null,
+      "status": "REFERENCE_ONLY",
+      "sha256": "b2837e15bdd58d133ff395821ef254c113f399bbd118ea44bd144e4ca7301ed4"
+    },
+    {
+      "filename": "Concept characters.png",
+      "format": "PNG",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "alphaRange": null,
+      "status": "REFERENCE_ONLY",
+      "sha256": "1df2dc6ee8b270dfd42ebd1ec1ccd79018fa6fe18ffc43cf28cc095ff901450f"
+    },
+    {
+      "filename": "MAIN MENU.png",
+      "format": "PNG",
+      "dimensions": [
+        941,
+        1672
+      ],
+      "alphaRange": null,
+      "status": "REFERENCE_ONLY",
+      "sha256": "84baaac099e8ef6076f345ab30f7f171a67c3242845e11a54e4966b2da5a2798"
+    },
+    {
+      "filename": "Phố Cổ Hội An.jpg",
+      "format": "JPEG",
+      "dimensions": [
+        1344,
+        896
+      ],
+      "alphaRange": null,
+      "status": "REFERENCE_ONLY",
+      "sha256": "9f5e7d4f45ea6950a0cfebe169825381f638243198d646e220a73c45da3d09ff"
+    },
+    {
+      "filename": "Play in game.png",
+      "format": "PNG",
+      "dimensions": [
+        967,
+        1627
+      ],
+      "alphaRange": null,
+      "status": "REFERENCE_ONLY",
+      "sha256": "d2eebdf4317b335cd7e5ee8d30e2c5b66c9f162ece6cbbc8216ed0e4f80a06cf"
+    },
+    {
+      "filename": "Sân Đình Bắc Bộ.jpg",
+      "format": "JPEG",
+      "dimensions": [
+        1400,
+        1004
+      ],
+      "alphaRange": null,
+      "status": "REFERENCE_ONLY",
+      "sha256": "926a8b1e0eb167e364a1dc15b113bd1d7d2c3395f08e495ab632249b5aa445ac"
+    },
+    {
+      "filename": "UI CONCEPT.png",
+      "format": "PNG",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "alphaRange": [
+        19,
+        252
+      ],
+      "status": "REFERENCE_ONLY",
+      "sha256": "97ba21d9b28ba189f0f8ee610412a4486002c2ba9549240f0a17268760e11de0"
+    },
+    {
+      "filename": "UI KIT.png",
+      "format": "PNG",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "alphaRange": [
+        167,
+        251
+      ],
+      "status": "REFERENCE_ONLY",
+      "sha256": "85ff048083f3b43b16587b96bbb7ba71e9e3c4aa4534079e4a8b71f57f981fe7"
+    }
+  ],
+  "maps": [
+    {
+      "mapId": "LangQueBacBo",
+      "definition": "unity-client/Assets/HitMe/Resources/Arenas/LangQueBacBo.asset",
+      "status": "PARTIAL",
+      "offlineFallbackSelectable": true,
+      "onlineMapSync": "MISSING: client uses default map; local choices not sent to server",
+      "assets": [
+        {
+          "assetId": "LangQueBacBo_previewSprite",
+          "targetPath": "unity-client/Assets/HitMe/Art/Production/Environments/battle-clean.png",
+          "status": "VERIFIED",
+          "usage": "Independent imported art; missing layers not inferred.",
+          "dimensions": [
+            967,
+            1627
+          ],
+          "transparent": false,
+          "sha256": "a859b6d71440f5244f6fd70ec62bb7304011521d7179a82e7ac51ac099b1a189"
+        },
+        {
+          "assetId": "LangQueBacBo_floorSprite",
+          "targetPath": "unity-client/Assets/HitMe/Art/Production/Environments/stone-tile.png",
+          "status": "VERIFIED",
+          "usage": "Independent imported art; missing layers not inferred.",
+          "dimensions": [
+            160,
+            100
+          ],
+          "transparent": false,
+          "sha256": "6fbf206576e4dcdde932d96060481578666481cdd8c8dc77b8d899497f9e6fa2"
+        },
+        {
+          "assetId": "LangQueBacBo_borderSprite",
+          "targetPath": null,
+          "status": "MISSING",
+          "usage": "Independent imported art; missing layers not inferred."
+        },
+        {
+          "assetId": "LangQueBacBo_centerDecoration",
+          "targetPath": "unity-client/Assets/HitMe/Art/Production/Environments/LotusMedallion.png",
+          "status": "VERIFIED",
+          "usage": "Independent imported art; missing layers not inferred.",
+          "dimensions": [
+            471,
+            468
+          ],
+          "transparent": true,
+          "sha256": "2f35f6a6f49cdfbede5878da0699f32ce0fccb6f24ef7879469432f8854d3096"
+        },
+        {
+          "assetId": "LangQueBacBo_backgroundComposite",
+          "targetPath": "unity-client/Assets/HitMe/Art/Production/Environments/battle-clean.png",
+          "status": "VERIFIED",
+          "usage": "Independent imported art; missing layers not inferred.",
+          "dimensions": [
+            967,
+            1627
+          ],
+          "transparent": false,
+          "sha256": "a859b6d71440f5244f6fd70ec62bb7304011521d7179a82e7ac51ac099b1a189"
+        },
+        {
+          "assetId": "LangQueBacBo_backgroundFar",
+          "targetPath": null,
+          "status": "MISSING",
+          "usage": "Independent imported art; missing layers not inferred."
+        },
+        {
+          "assetId": "LangQueBacBo_backgroundMid",
+          "targetPath": null,
+          "status": "MISSING",
+          "usage": "Independent imported art; missing layers not inferred."
+        },
+        {
+          "assetId": "LangQueBacBo_foregroundProps",
+          "targetPath": null,
+          "status": "MISSING",
+          "usage": "Independent imported art; missing layers not inferred."
+        },
+        {
+          "assetId": "LangQueBacBo_shadowOverlay",
+          "targetPath": null,
+          "status": "MISSING",
+          "usage": "Independent imported art; missing layers not inferred."
+        }
+      ],
+      "isolatedDecorations": [
+        "FestivalFlag",
+        "BanyanBranch",
+        "Lantern",
+        "Audience"
+      ],
+      "motionProfile": "unity-client/Assets/HitMe/Resources/Motion/MapEnvironment.asset",
+      "ambientEffectProfile": null,
+      "audioProfile": null,
+      "missingMotionSprites": [
+        "independent far/mid layers",
+        "dust sprite/tree shadow layers"
+      ]
+    },
+    {
+      "mapId": "PhoCoHoiAn",
+      "definition": "unity-client/Assets/HitMe/Resources/Arenas/PhoCoHoiAn.asset",
+      "status": "BLOCKED_BY_ARTWORK",
+      "offlineFallbackSelectable": true,
+      "onlineMapSync": "MISSING: client uses default map; local choices not sent to server",
+      "assets": [
+        {
+          "assetId": "PhoCoHoiAn_previewSprite",
+          "targetPath": null,
+          "status": "MISSING",
+          "usage": "Independent imported art; missing layers not inferred."
+        },
+        {
+          "assetId": "PhoCoHoiAn_floorSprite",
+          "targetPath": "unity-client/Assets/HitMe/Art/Production/Environments/stone-tile.png",
+          "status": "VERIFIED",
+          "usage": "Shared fallback floor/decoration, not location-specific artwork.",
+          "dimensions": [
+            160,
+            100
+          ],
+          "transparent": false,
+          "sha256": "6fbf206576e4dcdde932d96060481578666481cdd8c8dc77b8d899497f9e6fa2"
+        },
+        {
+          "assetId": "PhoCoHoiAn_borderSprite",
+          "targetPath": null,
+          "status": "MISSING",
+          "usage": "Independent imported art; missing layers not inferred."
+        },
+        {
+          "assetId": "PhoCoHoiAn_centerDecoration",
+          "targetPath": "unity-client/Assets/HitMe/Art/Production/Environments/LotusMedallion.png",
+          "status": "VERIFIED",
+          "usage": "Shared fallback floor/decoration, not location-specific artwork.",
+          "dimensions": [
+            471,
+            468
+          ],
+          "transparent": true,
+          "sha256": "2f35f6a6f49cdfbede5878da0699f32ce0fccb6f24ef7879469432f8854d3096"
+        },
+        {
+          "assetId": "PhoCoHoiAn_backgroundComposite",
+          "targetPath": null,
+          "status": "MISSING",
+          "usage": "Independent imported art; missing layers not inferred."
+        },
+        {
+          "assetId": "PhoCoHoiAn_backgroundFar",
+          "targetPath": null,
+          "status": "MISSING",
+          "usage": "Independent imported art; missing layers not inferred."
+        },
+        {
+          "assetId": "PhoCoHoiAn_backgroundMid",
+          "targetPath": null,
+          "status": "MISSING",
+          "usage": "Independent imported art; missing layers not inferred."
+        },
+        {
+          "assetId": "PhoCoHoiAn_foregroundProps",
+          "targetPath": null,
+          "status": "MISSING",
+          "usage": "Independent imported art; missing layers not inferred."
+        },
+        {
+          "assetId": "PhoCoHoiAn_shadowOverlay",
+          "targetPath": null,
+          "status": "MISSING",
+          "usage": "Independent imported art; missing layers not inferred."
+        }
+      ],
+      "isolatedDecorations": [],
+      "motionProfile": "unity-client/Assets/HitMe/Resources/Motion/MapEnvironment.asset",
+      "ambientEffectProfile": null,
+      "audioProfile": null,
+      "missingMotionSprites": [
+        "lantern glow/falling leaf/background walkers"
+      ]
+    },
+    {
+      "mapId": "VinhHaLong",
+      "definition": "unity-client/Assets/HitMe/Resources/Arenas/VinhHaLong.asset",
+      "status": "BLOCKED_BY_ARTWORK",
+      "offlineFallbackSelectable": true,
+      "onlineMapSync": "MISSING: client uses default map; local choices not sent to server",
+      "assets": [
+        {
+          "assetId": "VinhHaLong_previewSprite",
+          "targetPath": null,
+          "status": "MISSING",
+          "usage": "Independent imported art; missing layers not inferred."
+        },
+        {
+          "assetId": "VinhHaLong_floorSprite",
+          "targetPath": "unity-client/Assets/HitMe/Art/Production/Environments/stone-tile.png",
+          "status": "VERIFIED",
+          "usage": "Shared fallback floor/decoration, not location-specific artwork.",
+          "dimensions": [
+            160,
+            100
+          ],
+          "transparent": false,
+          "sha256": "6fbf206576e4dcdde932d96060481578666481cdd8c8dc77b8d899497f9e6fa2"
+        },
+        {
+          "assetId": "VinhHaLong_borderSprite",
+          "targetPath": null,
+          "status": "MISSING",
+          "usage": "Independent imported art; missing layers not inferred."
+        },
+        {
+          "assetId": "VinhHaLong_centerDecoration",
+          "targetPath": "unity-client/Assets/HitMe/Art/Production/Environments/LotusMedallion.png",
+          "status": "VERIFIED",
+          "usage": "Shared fallback floor/decoration, not location-specific artwork.",
+          "dimensions": [
+            471,
+            468
+          ],
+          "transparent": true,
+          "sha256": "2f35f6a6f49cdfbede5878da0699f32ce0fccb6f24ef7879469432f8854d3096"
+        },
+        {
+          "assetId": "VinhHaLong_backgroundComposite",
+          "targetPath": null,
+          "status": "MISSING",
+          "usage": "Independent imported art; missing layers not inferred."
+        },
+        {
+          "assetId": "VinhHaLong_backgroundFar",
+          "targetPath": null,
+          "status": "MISSING",
+          "usage": "Independent imported art; missing layers not inferred."
+        },
+        {
+          "assetId": "VinhHaLong_backgroundMid",
+          "targetPath": null,
+          "status": "MISSING",
+          "usage": "Independent imported art; missing layers not inferred."
+        },
+        {
+          "assetId": "VinhHaLong_foregroundProps",
+          "targetPath": null,
+          "status": "MISSING",
+          "usage": "Independent imported art; missing layers not inferred."
+        },
+        {
+          "assetId": "VinhHaLong_shadowOverlay",
+          "targetPath": null,
+          "status": "MISSING",
+          "usage": "Independent imported art; missing layers not inferred."
+        }
+      ],
+      "isolatedDecorations": [],
+      "motionProfile": "unity-client/Assets/HitMe/Resources/Motion/MapEnvironment.asset",
+      "ambientEffectProfile": null,
+      "audioProfile": null,
+      "missingMotionSprites": [
+        "water/wave layers",
+        "boat sprites",
+        "bird sprites",
+        "cloud sprites"
+      ]
+    }
+  ],
+  "note": "Verified denotes actual asset/import metadata, not completed map artwork or real-device readiness."
+}

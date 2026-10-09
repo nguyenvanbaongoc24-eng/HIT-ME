@@ -1,0 +1,273 @@
+[
+  {
+    "source": "C:\\Users\\LENOVO\\.codex\\generated_images\\01a119c8-2e1f-7b80-b157-90323eb08e7e\\exec-dd507b4d-1d93-4cb1-a1b8-98032192bd6f.png",
+    "target": "unity-client\\Assets\\HitMe\\Art\\Production\\MainMenu\\village-clean.png",
+    "operation": "AI edit; not an original-source crop",
+    "crop": null,
+    "width": 941,
+    "height": 1672,
+    "alpha": null,
+    "sha256": "82044ceb484ed3fccc5c34ef8279877d4eda22d22d58ef9d7b6890713eb52fed",
+    "status": "Usable with limitations",
+    "runtimeUse": "Bound to existing runtime UI / arena"
+  },
+  {
+    "source": "C:\\Users\\LENOVO\\.codex\\generated_images\\01a119c8-2e1f-7b80-b157-90323eb08e7e\\exec-7e6fde29-92c1-4b12-8cc9-2528038c27d2.png",
+    "target": "unity-client\\Assets\\HitMe\\Art\\Production\\Environments\\battle-clean.png",
+    "operation": "AI edit; not an original-source crop",
+    "crop": null,
+    "width": 967,
+    "height": 1627,
+    "alpha": null,
+    "sha256": "a859b6d71440f5244f6fd70ec62bb7304011521d7179a82e7ac51ac099b1a189",
+    "status": "Usable with limitations",
+    "runtimeUse": "Bound to existing runtime UI / arena"
+  },
+  {
+    "source": "C:\\Users\\LENOVO\\.codex\\generated_images\\01a119c8-2e1f-7b80-b157-90323eb08e7e\\exec-824bb3d6-6610-4706-accf-a21ae253ede0.png",
+    "target": "unity-client\\Assets\\HitMe\\Art\\Production\\UI\\logo.png",
+    "operation": "AI edit; not an original-source crop",
+    "crop": null,
+    "width": 1774,
+    "height": 887,
+    "alpha": [
+      0,
+      255
+    ],
+    "sha256": "9bf8caa681063881c6dce67830c51188ac97a30d02379711bf44579ae098a882",
+    "status": "Usable with limitations",
+    "runtimeUse": "Bound to existing runtime UI / arena"
+  },
+  {
+    "source": "C:\\Users\\LENOVO\\.codex\\generated_images\\01a119c8-2e1f-7b80-b157-90323eb08e7e\\exec-2572e7bb-ccd6-4c16-90c9-26139257d335.png",
+    "target": "unity-client\\Assets\\HitMe\\Art\\Production\\Characters\\pink-static-preview.png",
+    "operation": "AI edit; not an original-source crop",
+    "crop": null,
+    "width": 1312,
+    "height": 1199,
+    "alpha": [
+      0,
+      255
+    ],
+    "sha256": "7193c8251188c19e776b060ef436393537fe8e68637a5edeef7bf8b12aba6097",
+    "status": "Usable with limitations",
+    "runtimeUse": "Static preview popup only"
+  },
+  {
+    "source": "C:\\Users\\LENOVO\\.codex\\generated_images\\01a119c8-2e1f-7b80-b157-90323eb08e7e\\exec-e89dd1f6-06d0-4a1c-8360-95c20643b87b.png",
+    "target": "unity-client\\Assets\\HitMe\\Art\\Production\\UI\\gold.png",
+    "operation": "Crop of genuine generated blank UI texture",
+    "crop": [
+      0,
+      0,
+      724,
+      362
+    ],
+    "width": 655,
+    "height": 196,
+    "alpha": [
+      0,
+      255
+    ],
+    "sha256": "87ccaf35acb9f5b4e24d1b9509489f5ca9d669a37cbed6bf1be07ad99e3ef2fd",
+    "status": "Usable with limitations",
+    "runtimeUse": "Bound to existing runtime UI / arena"
+  },
+  {
+    "source": "C:\\Users\\LENOVO\\.codex\\generated_images\\01a119c8-2e1f-7b80-b157-90323eb08e7e\\exec-e89dd1f6-06d0-4a1c-8360-95c20643b87b.png",
+    "target": "unity-client\\Assets\\HitMe\\Art\\Production\\UI\\red.png",
+    "operation": "Crop of genuine generated blank UI texture",
+    "crop": [
+      724,
+      0,
+      1448,
+      362
+    ],
+    "width": 657,
+    "height": 194,
+    "alpha": [
+      0,
+      255
+    ],
+    "sha256": "84891320cdf1ccd1e0084b3646901de4170d946af62af649e472a2a8177a945f",
+    "status": "Usable with limitations",
+    "runtimeUse": "Bound to existing runtime UI / arena"
+  },
+  {
+    "source": "C:\\Users\\LENOVO\\.codex\\generated_images\\01a119c8-2e1f-7b80-b157-90323eb08e7e\\exec-e89dd1f6-06d0-4a1c-8360-95c20643b87b.png",
+    "target": "unity-client\\Assets\\HitMe\\Art\\Production\\UI\\teal.png",
+    "operation": "Crop of genuine generated blank UI texture",
+    "crop": [
+      1448,
+      0,
+      2172,
+      362
+    ],
+    "width": 656,
+    "height": 195,
+    "alpha": [
+      0,
+      255
+    ],
+    "sha256": "9ad297bc656ae8193ba7d9291437b8bb035c1cf6b93de6508fb7fbc0c4914696",
+    "status": "Usable with limitations",
+    "runtimeUse": "Imported only; not bound to runtime yet"
+  },
+  {
+    "source": "C:\\Users\\LENOVO\\.codex\\generated_images\\01a119c8-2e1f-7b80-b157-90323eb08e7e\\exec-e89dd1f6-06d0-4a1c-8360-95c20643b87b.png",
+    "target": "unity-client\\Assets\\HitMe\\Art\\Production\\UI\\card.png",
+    "operation": "Crop of genuine generated blank UI texture",
+    "crop": [
+      0,
+      362,
+      724,
+      724
+    ],
+    "width": 649,
+    "height": 254,
+    "alpha": [
+      0,
+      255
+    ],
+    "sha256": "08bf4955b57d1b578bad4e52e4261a47094f2ce19b551d039ba9190391e146ff",
+    "status": "Usable with limitations",
+    "runtimeUse": "Bound to existing runtime UI / arena"
+  },
+  {
+    "source": "C:\\Users\\LENOVO\\.codex\\generated_images\\01a119c8-2e1f-7b80-b157-90323eb08e7e\\exec-e89dd1f6-06d0-4a1c-8360-95c20643b87b.png",
+    "target": "unity-client\\Assets\\HitMe\\Art\\Production\\UI\\parchment.png",
+    "operation": "Crop of genuine generated blank UI texture",
+    "crop": [
+      724,
+      362,
+      1448,
+      724
+    ],
+    "width": 652,
+    "height": 267,
+    "alpha": [
+      0,
+      255
+    ],
+    "sha256": "df2e705e6509df1eb82b1a886b553d4499b8c181bed1cdd937dd39d7eb78af48",
+    "status": "Usable with limitations",
+    "runtimeUse": "Imported only; not bound to runtime yet"
+  },
+  {
+    "source": "C:\\Users\\LENOVO\\.codex\\generated_images\\01a119c8-2e1f-7b80-b157-90323eb08e7e\\exec-e89dd1f6-06d0-4a1c-8360-95c20643b87b.png",
+    "target": "unity-client\\Assets\\HitMe\\Art\\Production\\UI\\nav.png",
+    "operation": "Crop of genuine generated blank UI texture",
+    "crop": [
+      1448,
+      362,
+      2172,
+      724
+    ],
+    "width": 657,
+    "height": 184,
+    "alpha": [
+      0,
+      255
+    ],
+    "sha256": "d51a4727402a067dc47c9ed0beab3049a0e644196f185931c970e0a811bf2ff5",
+    "status": "Usable with limitations",
+    "runtimeUse": "Bound to existing runtime UI / arena"
+  },
+  {
+    "source": "D:\\HIT ME\\Picture\\UI CONCEPT.png",
+    "target": "unity-client\\Assets\\HitMe\\Art\\Production\\MainMenu\\feature-map.png",
+    "operation": "Opaque illustration crop; no transparency claim",
+    "crop": [
+      439,
+      434,
+      581,
+      530
+    ],
+    "width": 142,
+    "height": 96,
+    "alpha": [
+      234,
+      250
+    ],
+    "sha256": "0dc4c5061f4f5c4db42572b2ec820ea8b02d30786a23e8aa4fa3b7f5a91c47a0",
+    "status": "Usable with limitations",
+    "runtimeUse": "Bound to existing runtime UI / arena"
+  },
+  {
+    "source": "D:\\HIT ME\\Picture\\UI CONCEPT.png",
+    "target": "unity-client\\Assets\\HitMe\\Art\\Production\\MainMenu\\feature-character.png",
+    "operation": "Opaque illustration crop; no transparency claim",
+    "crop": [
+      596,
+      434,
+      736,
+      531
+    ],
+    "width": 140,
+    "height": 97,
+    "alpha": [
+      239,
+      251
+    ],
+    "sha256": "d228909736d3d6f4c647a93bbb9ea9b911d903eb003756fcee14f55e2efe17f4",
+    "status": "Usable with limitations",
+    "runtimeUse": "Bound to existing runtime UI / arena"
+  },
+  {
+    "source": "D:\\HIT ME\\Picture\\UI CONCEPT.png",
+    "target": "unity-client\\Assets\\HitMe\\Art\\Production\\MainMenu\\feature-collection.png",
+    "operation": "Opaque illustration crop; no transparency claim",
+    "crop": [
+      750,
+      435,
+      887,
+      531
+    ],
+    "width": 137,
+    "height": 96,
+    "alpha": [
+      242,
+      252
+    ],
+    "sha256": "5c925f7c1cd501fc2188acd5aea37e12474265f48eadeab531e7c7b5d1a11a86",
+    "status": "Usable with limitations",
+    "runtimeUse": "Bound to existing runtime UI / arena"
+  },
+  {
+    "source": "D:\\HIT ME\\Picture\\UI CONCEPT.png",
+    "target": "unity-client\\Assets\\HitMe\\Art\\Production\\MainMenu\\feature-ranking.png",
+    "operation": "Opaque illustration crop; no transparency claim",
+    "crop": [
+      901,
+      435,
+      1041,
+      531
+    ],
+    "width": 140,
+    "height": 96,
+    "alpha": [
+      233,
+      251
+    ],
+    "sha256": "0402efdcc6b60804171adc958d0bea0977fce501223d226f17868e4a0790a147",
+    "status": "Usable with limitations",
+    "runtimeUse": "Bound to existing runtime UI / arena"
+  },
+  {
+    "source": "D:\\HIT ME\\Picture\\Play in game.png",
+    "target": "unity-client\\Assets\\HitMe\\Art\\Production\\Environments\\stone-tile.png",
+    "operation": "Opaque courtyard texture crop",
+    "crop": [
+      300,
+      550,
+      460,
+      650
+    ],
+    "width": 160,
+    "height": 100,
+    "alpha": null,
+    "sha256": "6fbf206576e4dcdde932d96060481578666481cdd8c8dc77b8d899497f9e6fa2",
+    "status": "Usable with limitations",
+    "runtimeUse": "Bound to existing runtime UI / arena"
+  }
+]

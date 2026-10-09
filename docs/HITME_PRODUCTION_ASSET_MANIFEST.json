@@ -1,1176 +1,2324 @@
 {
-  "readOnly": true,
-  "sourceImagesEdited": false,
-  "conceptImported": false,
-  "records": [
+  "sourceOriginalsChanged": false,
+  "animationReadyMeaning": "True only for real multi-frame or rig-ready assets; procedural motion does not qualify.",
+  "sources": [
     {
-      "asset_id": "ref_Concept_characters_2",
-      "asset_name": "Concept characters 2.png",
-      "source": "D:\\HIT ME\\Picture\\Concept characters 2.png",
-      "destination": "none: reference only",
-      "intended_use": "Art direction, never runtime sprite sheet/UI",
-      "required_dimensions": "separate production exports needed",
-      "source_dimensions": [
+      "filename": "Concept characters 2.png",
+      "format": "PNG",
+      "dimensions": [
         1536,
         1024
       ],
-      "transparency": false,
-      "alpha_extrema": null,
-      "pivot": "N/A",
-      "ppu": "N/A",
-      "sorting_layer": "N/A",
-      "animation_requirements": "real independent frames or rig layers",
-      "status": "A_CONCEPT_REFERENCE",
-      "sha256": "b2837e15bdd58d133ff395821ef254c113f399bbd118ea44bd144e4ca7301ed4"
+      "alphaRange": null,
+      "transparent": false,
+      "status": "REFERENCE_ONLY",
+      "extractionStatus": "NEEDS_RECONSTRUCTION",
+      "visualContent": "Additional composite character, animal and prop references.",
+      "extractionFeasibility": "Opaque composite: independent transparent exports require reconstruction; safe rectangular skin/texture crops only where clean. No automatic rig/frame slicing.",
+      "intendedUnityUsage": "Reference for separate PNGs, SO definitions and existing prefabs; never a whole interactive screen or animation sheet.",
+      "sha256": "b2837e15bdd58d133ff395821ef254c113f399bbd118ea44bd144e4ca7301ed4",
+      "usage": "Reference only as a whole sheet. Independently cropped/reconstructed sprites are separate assets."
     },
     {
-      "asset_id": "ref_Concept_characters",
-      "asset_name": "Concept characters.png",
-      "source": "D:\\HIT ME\\Picture\\Concept characters.png",
-      "destination": "none: reference only",
-      "intended_use": "Art direction, never runtime sprite sheet/UI",
-      "required_dimensions": "separate production exports needed",
-      "source_dimensions": [
+      "filename": "Concept characters.png",
+      "format": "PNG",
+      "dimensions": [
         1536,
         1024
       ],
-      "transparency": false,
-      "alpha_extrema": null,
-      "pivot": "N/A",
-      "ppu": "N/A",
-      "sorting_layer": "N/A",
-      "animation_requirements": "real independent frames or rig layers",
-      "status": "A_CONCEPT_REFERENCE",
-      "sha256": "1df2dc6ee8b270dfd42ebd1ec1ccd79018fa6fe18ffc43cf28cc095ff901450f"
+      "alphaRange": null,
+      "transparent": false,
+      "status": "REFERENCE_ONLY",
+      "extractionStatus": "NEEDS_RECONSTRUCTION",
+      "visualContent": "Composite human/animal/weapon design references.",
+      "extractionFeasibility": "Opaque composite: independent transparent exports require reconstruction; safe rectangular skin/texture crops only where clean. No automatic rig/frame slicing.",
+      "intendedUnityUsage": "Reference for separate PNGs, SO definitions and existing prefabs; never a whole interactive screen or animation sheet.",
+      "sha256": "1df2dc6ee8b270dfd42ebd1ec1ccd79018fa6fe18ffc43cf28cc095ff901450f",
+      "usage": "Reference only as a whole sheet. Independently cropped/reconstructed sprites are separate assets."
     },
     {
-      "asset_id": "ref_MAIN_MENU",
-      "asset_name": "MAIN MENU.png",
-      "source": "D:\\HIT ME\\Picture\\MAIN MENU.png",
-      "destination": "none: reference only",
-      "intended_use": "Art direction, never runtime sprite sheet/UI",
-      "required_dimensions": "separate production exports needed",
-      "source_dimensions": [
+      "filename": "MAIN MENU.png",
+      "format": "PNG",
+      "dimensions": [
         941,
         1672
       ],
-      "transparency": false,
-      "alpha_extrema": null,
-      "pivot": "N/A",
-      "ppu": "N/A",
-      "sorting_layer": "N/A",
-      "animation_requirements": "real independent frames or rig layers",
-      "status": "A_CONCEPT_REFERENCE",
-      "sha256": "84baaac099e8ef6076f345ab30f7f171a67c3242845e11a54e4966b2da5a2798"
+      "alphaRange": null,
+      "transparent": false,
+      "status": "REFERENCE_ONLY",
+      "extractionStatus": "NEEDS_RECONSTRUCTION",
+      "visualContent": "Village setting with baked branding, buttons, navigation and profile HUD.",
+      "extractionFeasibility": "Opaque composite: independent transparent exports require reconstruction; safe rectangular skin/texture crops only where clean. No automatic rig/frame slicing.",
+      "intendedUnityUsage": "Reference for separate PNGs, SO definitions and existing prefabs; never a whole interactive screen or animation sheet.",
+      "sha256": "84baaac099e8ef6076f345ab30f7f171a67c3242845e11a54e4966b2da5a2798",
+      "usage": "Reference only as a whole sheet. Independently cropped/reconstructed sprites are separate assets."
     },
     {
-      "asset_id": "ref_Play_in_game",
-      "asset_name": "Play in game.png",
-      "source": "D:\\HIT ME\\Picture\\Play in game.png",
-      "destination": "none: reference only",
-      "intended_use": "Art direction, never runtime sprite sheet/UI",
-      "required_dimensions": "separate production exports needed",
-      "source_dimensions": [
+      "filename": "Play in game.png",
+      "format": "PNG",
+      "dimensions": [
         967,
         1627
       ],
-      "transparency": false,
-      "alpha_extrema": null,
-      "pivot": "N/A",
-      "ppu": "N/A",
-      "sorting_layer": "N/A",
-      "animation_requirements": "real independent frames or rig layers",
-      "status": "A_CONCEPT_REFERENCE",
-      "sha256": "d2eebdf4317b335cd7e5ee8d30e2c5b66c9f162ece6cbbc8216ed0e4f80a06cf"
+      "alphaRange": null,
+      "transparent": false,
+      "status": "REFERENCE_ONLY",
+      "extractionStatus": "EXTRACTABLE",
+      "visualContent": "Stone arena, spectators, actors and baked battle HUD.",
+      "extractionFeasibility": "Opaque composite: independent transparent exports require reconstruction; safe rectangular skin/texture crops only where clean. No automatic rig/frame slicing.",
+      "intendedUnityUsage": "Reference for separate PNGs, SO definitions and existing prefabs; never a whole interactive screen or animation sheet.",
+      "sha256": "d2eebdf4317b335cd7e5ee8d30e2c5b66c9f162ece6cbbc8216ed0e4f80a06cf",
+      "usage": "Reference only as a whole sheet. Independently cropped/reconstructed sprites are separate assets."
     },
     {
-      "asset_id": "ref_UI_CONCEPT",
-      "asset_name": "UI CONCEPT.png",
-      "source": "D:\\HIT ME\\Picture\\UI CONCEPT.png",
-      "destination": "none: reference only",
-      "intended_use": "Art direction, never runtime sprite sheet/UI",
-      "required_dimensions": "separate production exports needed",
-      "source_dimensions": [
+      "filename": "UI CONCEPT.png",
+      "format": "PNG",
+      "dimensions": [
         1536,
         1024
       ],
-      "transparency": true,
-      "alpha_extrema": [
+      "alphaRange": [
         19,
         252
       ],
-      "pivot": "N/A",
-      "ppu": "N/A",
-      "sorting_layer": "N/A",
-      "animation_requirements": "real independent frames or rig layers",
-      "status": "A_CONCEPT_REFERENCE",
-      "sha256": "97ba21d9b28ba189f0f8ee610412a4486002c2ba9549240f0a17268760e11de0"
+      "transparent": false,
+      "status": "REFERENCE_ONLY",
+      "extractionStatus": "EXTRACTABLE",
+      "visualContent": "Composite interface and feature artwork references.",
+      "extractionFeasibility": "Opaque composite: independent transparent exports require reconstruction; safe rectangular skin/texture crops only where clean. No automatic rig/frame slicing.",
+      "intendedUnityUsage": "Reference for separate PNGs, SO definitions and existing prefabs; never a whole interactive screen or animation sheet.",
+      "sha256": "97ba21d9b28ba189f0f8ee610412a4486002c2ba9549240f0a17268760e11de0",
+      "usage": "Reference only as a whole sheet. Independently cropped/reconstructed sprites are separate assets."
     },
     {
-      "asset_id": "ref_UI_KIT",
-      "asset_name": "UI KIT.png",
-      "source": "D:\\HIT ME\\Picture\\UI KIT.png",
-      "destination": "none: reference only",
-      "intended_use": "Art direction, never runtime sprite sheet/UI",
-      "required_dimensions": "separate production exports needed",
-      "source_dimensions": [
+      "filename": "UI KIT.png",
+      "format": "PNG",
+      "dimensions": [
         1536,
         1024
       ],
-      "transparency": true,
-      "alpha_extrema": [
+      "alphaRange": [
         167,
         251
       ],
-      "pivot": "N/A",
-      "ppu": "N/A",
-      "sorting_layer": "N/A",
-      "animation_requirements": "real independent frames or rig layers",
-      "status": "A_CONCEPT_REFERENCE",
-      "sha256": "85ff048083f3b43b16587b96bbb7ba71e9e3c4aa4534079e4a8b71f57f981fe7"
-    },
+      "transparent": false,
+      "status": "REFERENCE_ONLY",
+      "extractionStatus": "EXTRACTABLE",
+      "visualContent": "Composite UI skins, icons and labels.",
+      "extractionFeasibility": "Opaque composite: independent transparent exports require reconstruction; safe rectangular skin/texture crops only where clean. No automatic rig/frame slicing.",
+      "intendedUnityUsage": "Reference for separate PNGs, SO definitions and existing prefabs; never a whole interactive screen or animation sheet.",
+      "sha256": "85ff048083f3b43b16587b96bbb7ba71e9e3c4aa4534079e4a8b71f57f981fe7",
+      "usage": "Reference only as a whole sheet. Independently cropped/reconstructed sprites are separate assets."
+    }
+  ],
+  "assets": [
     {
-      "asset_id": "runtime_Arenas_LangQueBacBo_backdrop",
-      "asset_name": "backdrop",
-      "source": "unity-client/Assets/HitMe/Art/Arenas/LangQueBacBo/backdrop.png",
-      "destination": "unity-client/Assets/HitMe/Art/Arenas/LangQueBacBo/backdrop.png",
-      "intended_use": "Existing weapon/environment sprite",
-      "required_dimensions": "keep aspect; no baked UI text",
-      "source_dimensions": [
+      "assetId": "Arenas_LangQueBacBo_backdrop",
+      "category": "Arenas",
+      "sourceFile": "D:\\HIT ME\\unity-client\\Assets\\HitMe\\Art\\Arenas\\LangQueBacBo\\backdrop.png",
+      "targetPath": "Assets/HitMe/Art/Arenas/LangQueBacBo/backdrop.png",
+      "dimensions": [
         853,
         1844
       ],
-      "transparency": false,
-      "pivot": "{x: 0.5, y: 0.5}",
-      "ppu": "100",
-      "sorting_layer": "Default / Canvas environment/projectile order",
-      "animation_requirements": "composite background, no separate prop/crowd movement",
-      "status": "B_EXISTING_USABLE",
-      "alpha_bounds": null,
-      "cleanup_notes": "No cleanup blocker detected from metadata"
+      "transparent": false,
+      "alphaRange": null,
+      "pixelsPerUnit": 100.0,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "slicing": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "animationReady": false,
+      "status": "FALLBACK",
+      "dependencies": [],
+      "sha256": "af8b39868cfb933aa2500c81b5c7222ca52f67e3e2c53d9675bfa750a350faf1",
+      "notes": "Existing art preserved; native UI icons/skins remain fallback where no concept export exists."
     },
     {
-      "asset_id": "runtime_Arenas_LangQueBacBo_sand",
-      "asset_name": "sand",
-      "source": "unity-client/Assets/HitMe/Art/Arenas/LangQueBacBo/sand.png",
-      "destination": "unity-client/Assets/HitMe/Art/Arenas/LangQueBacBo/sand.png",
-      "intended_use": "Existing weapon/environment sprite",
-      "required_dimensions": "keep aspect; no baked UI text",
-      "source_dimensions": [
+      "assetId": "Arenas_LangQueBacBo_sand",
+      "category": "Arenas",
+      "sourceFile": "D:\\HIT ME\\unity-client\\Assets\\HitMe\\Art\\Arenas\\LangQueBacBo\\sand.png",
+      "targetPath": "Assets/HitMe/Art/Arenas/LangQueBacBo/sand.png",
+      "dimensions": [
         1254,
         1254
       ],
-      "transparency": false,
-      "pivot": "{x: 0.5, y: 0.5}",
-      "ppu": "100",
-      "sorting_layer": "Default / Canvas environment/projectile order",
-      "animation_requirements": "composite background, no separate prop/crowd movement",
-      "status": "B_EXISTING_USABLE",
-      "alpha_bounds": null,
-      "cleanup_notes": "No cleanup blocker detected from metadata"
+      "transparent": false,
+      "alphaRange": null,
+      "pixelsPerUnit": 100.0,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "slicing": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "animationReady": false,
+      "status": "FALLBACK",
+      "dependencies": [],
+      "sha256": "b725e256ee679696f2b5654e626a22964fe87aa9ca293cf86a4595ac736e7906",
+      "notes": "Existing art preserved; native UI icons/skins remain fallback where no concept export exists."
     },
     {
-      "asset_id": "runtime_Characters_Char01_Player_Idle_frame_000",
-      "asset_name": "frame_000",
-      "source": "unity-client/Assets/HitMe/Art/Characters/Char01_Player/Idle/frame_000.png",
-      "destination": "unity-client/Assets/HitMe/Art/Characters/Char01_Player/Idle/frame_000.png",
-      "intended_use": "One Idle sprite, code tween fallback",
-      "required_dimensions": "keep aspect; 70–75 logical px character height",
-      "source_dimensions": [
+      "assetId": "Characters_Char01_Player_Idle_frame_000",
+      "category": "Characters",
+      "sourceFile": "D:\\HIT ME\\unity-client\\Assets\\HitMe\\Art\\Characters\\Char01_Player\\Idle\\frame_000.png",
+      "targetPath": "Assets/HitMe/Art/Characters/Char01_Player/Idle/frame_000.png",
+      "dimensions": [
         1146,
         1373
       ],
-      "transparency": true,
-      "pivot": "{x: 0.518, y: 0.0095}",
-      "ppu": "100",
-      "sorting_layer": "Default / Canvas ActorLayer sorted by foot Y",
-      "animation_requirements": "E: single-frame procedural fallback ready; no rig/multi-frame claim",
-      "status": "B_EXISTING_USABLE",
-      "alpha_bounds": [
-        31,
-        18,
-        1142,
-        1373
+      "transparent": true,
+      "alphaRange": [
+        0,
+        255
       ],
-      "cleanup_notes": "No cleanup blocker detected from metadata"
+      "pixelsPerUnit": 100.0,
+      "pivot": [
+        0.518,
+        0.0095
+      ],
+      "slicing": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "animationReady": false,
+      "status": "INTEGRATED",
+      "dependencies": [],
+      "sha256": "7b95ab3b9dfd14c9ccd1858191eeb06979f8fca7166efff657a832c5489f8d9c",
+      "notes": "Existing art preserved; native UI icons/skins remain fallback where no concept export exists."
     },
     {
-      "asset_id": "runtime_Characters_Char02_BotMale_Idle_frame_000",
-      "asset_name": "frame_000",
-      "source": "unity-client/Assets/HitMe/Art/Characters/Char02_BotMale/Idle/frame_000.png",
-      "destination": "unity-client/Assets/HitMe/Art/Characters/Char02_BotMale/Idle/frame_000.png",
-      "intended_use": "One Idle sprite, code tween fallback",
-      "required_dimensions": "keep aspect; 70–75 logical px character height",
-      "source_dimensions": [
+      "assetId": "Characters_Char02_BotMale_Idle_frame_000",
+      "category": "Characters",
+      "sourceFile": "D:\\HIT ME\\unity-client\\Assets\\HitMe\\Art\\Characters\\Char02_BotMale\\Idle\\frame_000.png",
+      "targetPath": "Assets/HitMe/Art/Characters/Char02_BotMale/Idle/frame_000.png",
+      "dimensions": [
         1223,
         1286
       ],
-      "transparency": true,
-      "pivot": "{x: 0.505, y: 0.0311}",
-      "ppu": "100",
-      "sorting_layer": "Default / Canvas ActorLayer sorted by foot Y",
-      "animation_requirements": "E: single-frame procedural fallback ready; no rig/multi-frame claim",
-      "status": "B_EXISTING_USABLE",
-      "alpha_bounds": [
+      "transparent": true,
+      "alphaRange": [
         0,
-        51,
-        1205,
-        1252
+        255
       ],
-      "cleanup_notes": "No cleanup blocker detected from metadata"
+      "pixelsPerUnit": 100.0,
+      "pivot": [
+        0.505,
+        0.0311
+      ],
+      "slicing": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "animationReady": false,
+      "status": "INTEGRATED",
+      "dependencies": [],
+      "sha256": "d731d8c7766eb9b8dd23a63f00e833d6405145f43e5a592a543fc4c717183b8a",
+      "notes": "Existing art preserved; native UI icons/skins remain fallback where no concept export exists."
     },
     {
-      "asset_id": "runtime_Characters_Char03_BotFemale_Idle_frame_000",
-      "asset_name": "frame_000",
-      "source": "unity-client/Assets/HitMe/Art/Characters/Char03_BotFemale/Idle/frame_000.png",
-      "destination": "unity-client/Assets/HitMe/Art/Characters/Char03_BotFemale/Idle/frame_000.png",
-      "intended_use": "One Idle sprite, code tween fallback",
-      "required_dimensions": "keep aspect; 70–75 logical px character height",
-      "source_dimensions": [
+      "assetId": "Characters_Char03_BotFemale_Idle_frame_000",
+      "category": "Characters",
+      "sourceFile": "D:\\HIT ME\\unity-client\\Assets\\HitMe\\Art\\Characters\\Char03_BotFemale\\Idle\\frame_000.png",
+      "targetPath": "Assets/HitMe/Art/Characters/Char03_BotFemale/Idle/frame_000.png",
+      "dimensions": [
         1239,
         1269
       ],
-      "transparency": true,
-      "pivot": "{x: 0.51, y: 0.0134}",
-      "ppu": "100",
-      "sorting_layer": "Default / Canvas ActorLayer sorted by foot Y",
-      "animation_requirements": "E: single-frame procedural fallback ready; no rig/multi-frame claim",
-      "status": "B_EXISTING_USABLE",
-      "alpha_bounds": [
+      "transparent": true,
+      "alphaRange": [
         0,
-        10,
-        1225,
-        1255
+        255
       ],
-      "cleanup_notes": "No cleanup blocker detected from metadata"
+      "pixelsPerUnit": 100.0,
+      "pivot": [
+        0.51,
+        0.0134
+      ],
+      "slicing": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "animationReady": false,
+      "status": "INTEGRATED",
+      "dependencies": [],
+      "sha256": "6efc5c3d1ae27ec765cd2696fbd3bad002f96fd3d8fbd478b278bd812c8e7d0d",
+      "notes": "Existing art preserved; native UI icons/skins remain fallback where no concept export exists."
     },
     {
-      "asset_id": "runtime_UI_Buttons_brick",
-      "asset_name": "brick",
-      "source": "unity-client/Assets/HitMe/Art/UI/Buttons/brick.png",
-      "destination": "unity-client/Assets/HitMe/Art/UI/Buttons/brick.png",
-      "intended_use": "Native UI element; not production art polish",
-      "required_dimensions": "keep aspect; no baked UI text",
-      "source_dimensions": [
-        128,
-        128
+      "assetId": "Production_Animals_BlackCat",
+      "category": "Animals",
+      "sourceFile": "C:\\Users\\LENOVO\\.codex\\generated_images\\01a119c8-2e1f-7b80-b157-90323eb08e7e\\exec-bf3a069e-a58e-4eb4-a658-b818b057c56f.png",
+      "targetPath": "Assets/HitMe/Art/Production/Animals/BlackCat.png",
+      "dimensions": [
+        367,
+        494
       ],
-      "transparency": true,
-      "pivot": "{x: 0.5, y: 0.5}",
-      "ppu": "100",
-      "sorting_layer": "Default / Canvas overlay UI",
-      "animation_requirements": "UI tween ready",
-      "status": "B_EXISTING_USABLE",
-      "alpha_bounds": [
-        2,
-        2,
-        126,
-        128
-      ],
-      "cleanup_notes": "No cleanup blocker detected from metadata"
-    },
-    {
-      "asset_id": "runtime_UI_Buttons_card",
-      "asset_name": "card",
-      "source": "unity-client/Assets/HitMe/Art/UI/Buttons/card.png",
-      "destination": "unity-client/Assets/HitMe/Art/UI/Buttons/card.png",
-      "intended_use": "Native UI element; not production art polish",
-      "required_dimensions": "keep aspect; no baked UI text",
-      "source_dimensions": [
-        128,
-        128
-      ],
-      "transparency": true,
-      "pivot": "{x: 0.5, y: 0.5}",
-      "ppu": "100",
-      "sorting_layer": "Default / Canvas overlay UI",
-      "animation_requirements": "UI tween ready",
-      "status": "B_EXISTING_USABLE",
-      "alpha_bounds": [
-        2,
-        2,
-        126,
-        128
-      ],
-      "cleanup_notes": "No cleanup blocker detected from metadata"
-    },
-    {
-      "asset_id": "runtime_UI_Buttons_ink",
-      "asset_name": "ink",
-      "source": "unity-client/Assets/HitMe/Art/UI/Buttons/ink.png",
-      "destination": "unity-client/Assets/HitMe/Art/UI/Buttons/ink.png",
-      "intended_use": "Native UI element; not production art polish",
-      "required_dimensions": "keep aspect; no baked UI text",
-      "source_dimensions": [
-        128,
-        128
-      ],
-      "transparency": true,
-      "pivot": "{x: 0.5, y: 0.5}",
-      "ppu": "100",
-      "sorting_layer": "Default / Canvas overlay UI",
-      "animation_requirements": "UI tween ready",
-      "status": "B_EXISTING_USABLE",
-      "alpha_bounds": [
-        2,
-        2,
-        126,
-        128
-      ],
-      "cleanup_notes": "No cleanup blocker detected from metadata"
-    },
-    {
-      "asset_id": "runtime_UI_Buttons_paper",
-      "asset_name": "paper",
-      "source": "unity-client/Assets/HitMe/Art/UI/Buttons/paper.png",
-      "destination": "unity-client/Assets/HitMe/Art/UI/Buttons/paper.png",
-      "intended_use": "Native UI element; not production art polish",
-      "required_dimensions": "keep aspect; no baked UI text",
-      "source_dimensions": [
-        128,
-        128
-      ],
-      "transparency": true,
-      "pivot": "{x: 0.5, y: 0.5}",
-      "ppu": "100",
-      "sorting_layer": "Default / Canvas overlay UI",
-      "animation_requirements": "UI tween ready",
-      "status": "B_EXISTING_USABLE",
-      "alpha_bounds": [
-        2,
-        2,
-        126,
-        128
-      ],
-      "cleanup_notes": "No cleanup blocker detected from metadata"
-    },
-    {
-      "asset_id": "runtime_UI_Icons_arrow",
-      "asset_name": "arrow",
-      "source": "unity-client/Assets/HitMe/Art/UI/Icons/arrow.png",
-      "destination": "unity-client/Assets/HitMe/Art/UI/Icons/arrow.png",
-      "intended_use": "Native UI element; not production art polish",
-      "required_dimensions": "keep aspect; no baked UI text",
-      "source_dimensions": [
-        192,
-        192
-      ],
-      "transparency": true,
-      "pivot": "{x: 0.5, y: 0.5}",
-      "ppu": "100",
-      "sorting_layer": "Default / Canvas overlay UI",
-      "animation_requirements": "UI tween ready",
-      "status": "C_USABLE_CLEANUP_RECOMMENDED",
-      "alpha_bounds": [
-        67,
-        41,
-        129,
-        153
-      ],
-      "cleanup_notes": "Large transparent padding; request trimmed source and repivot, do not auto-crop current foot asset"
-    },
-    {
-      "asset_id": "runtime_UI_Icons_bag",
-      "asset_name": "bag",
-      "source": "unity-client/Assets/HitMe/Art/UI/Icons/bag.png",
-      "destination": "unity-client/Assets/HitMe/Art/UI/Icons/bag.png",
-      "intended_use": "Native UI element; not production art polish",
-      "required_dimensions": "keep aspect; no baked UI text",
-      "source_dimensions": [
-        192,
-        192
-      ],
-      "transparency": true,
-      "pivot": "{x: 0.5, y: 0.5}",
-      "ppu": "100",
-      "sorting_layer": "Default / Canvas overlay UI",
-      "animation_requirements": "UI tween ready",
-      "status": "B_EXISTING_USABLE",
-      "alpha_bounds": [
-        37,
-        23,
-        157,
-        169
-      ],
-      "cleanup_notes": "No cleanup blocker detected from metadata"
-    },
-    {
-      "asset_id": "runtime_UI_Icons_cancel",
-      "asset_name": "cancel",
-      "source": "unity-client/Assets/HitMe/Art/UI/Icons/cancel.png",
-      "destination": "unity-client/Assets/HitMe/Art/UI/Icons/cancel.png",
-      "intended_use": "Native UI element; not production art polish",
-      "required_dimensions": "keep aspect; no baked UI text",
-      "source_dimensions": [
-        192,
-        192
-      ],
-      "transparency": true,
-      "pivot": "{x: 0.5, y: 0.5}",
-      "ppu": "100",
-      "sorting_layer": "Default / Canvas overlay UI",
-      "animation_requirements": "UI tween ready",
-      "status": "C_USABLE_CLEANUP_RECOMMENDED",
-      "alpha_bounds": [
-        41,
-        43,
-        153,
-        153
-      ],
-      "cleanup_notes": "Large transparent padding; request trimmed source and repivot, do not auto-crop current foot asset"
-    },
-    {
-      "asset_id": "runtime_UI_Icons_coin",
-      "asset_name": "coin",
-      "source": "unity-client/Assets/HitMe/Art/UI/Icons/coin.png",
-      "destination": "unity-client/Assets/HitMe/Art/UI/Icons/coin.png",
-      "intended_use": "Native UI element; not production art polish",
-      "required_dimensions": "keep aspect; no baked UI text",
-      "source_dimensions": [
-        192,
-        192
-      ],
-      "transparency": true,
-      "pivot": "{x: 0.5, y: 0.5}",
-      "ppu": "100",
-      "sorting_layer": "Default / Canvas overlay UI",
-      "animation_requirements": "UI tween ready",
-      "status": "B_EXISTING_USABLE",
-      "alpha_bounds": [
-        23,
-        23,
-        171,
-        171
-      ],
-      "cleanup_notes": "No cleanup blocker detected from metadata"
-    },
-    {
-      "asset_id": "runtime_UI_Icons_home",
-      "asset_name": "home",
-      "source": "unity-client/Assets/HitMe/Art/UI/Icons/home.png",
-      "destination": "unity-client/Assets/HitMe/Art/UI/Icons/home.png",
-      "intended_use": "Native UI element; not production art polish",
-      "required_dimensions": "keep aspect; no baked UI text",
-      "source_dimensions": [
-        192,
-        192
-      ],
-      "transparency": true,
-      "pivot": "{x: 0.5, y: 0.5}",
-      "ppu": "100",
-      "sorting_layer": "Default / Canvas overlay UI",
-      "animation_requirements": "UI tween ready",
-      "status": "B_EXISTING_USABLE",
-      "alpha_bounds": [
-        23,
-        25,
-        171,
-        171
-      ],
-      "cleanup_notes": "No cleanup blocker detected from metadata"
-    },
-    {
-      "asset_id": "runtime_UI_Icons_mail",
-      "asset_name": "mail",
-      "source": "unity-client/Assets/HitMe/Art/UI/Icons/mail.png",
-      "destination": "unity-client/Assets/HitMe/Art/UI/Icons/mail.png",
-      "intended_use": "Native UI element; not production art polish",
-      "required_dimensions": "keep aspect; no baked UI text",
-      "source_dimensions": [
-        192,
-        192
-      ],
-      "transparency": true,
-      "pivot": "{x: 0.5, y: 0.5}",
-      "ppu": "100",
-      "sorting_layer": "Default / Canvas overlay UI",
-      "animation_requirements": "UI tween ready",
-      "status": "C_USABLE_CLEANUP_RECOMMENDED",
-      "alpha_bounds": [
-        23,
-        49,
-        171,
-        151
-      ],
-      "cleanup_notes": "Large transparent padding; request trimmed source and repivot, do not auto-crop current foot asset"
-    },
-    {
-      "asset_id": "runtime_UI_Icons_map",
-      "asset_name": "map",
-      "source": "unity-client/Assets/HitMe/Art/UI/Icons/map.png",
-      "destination": "unity-client/Assets/HitMe/Art/UI/Icons/map.png",
-      "intended_use": "Native UI element; not production art polish",
-      "required_dimensions": "keep aspect; no baked UI text",
-      "source_dimensions": [
-        192,
-        192
-      ],
-      "transparency": true,
-      "pivot": "{x: 0.5, y: 0.5}",
-      "ppu": "100",
-      "sorting_layer": "Default / Canvas overlay UI",
-      "animation_requirements": "UI tween ready",
-      "status": "B_EXISTING_USABLE",
-      "alpha_bounds": [
-        17,
-        31,
-        177,
-        167
-      ],
-      "cleanup_notes": "No cleanup blocker detected from metadata"
-    },
-    {
-      "asset_id": "runtime_UI_Icons_people",
-      "asset_name": "people",
-      "source": "unity-client/Assets/HitMe/Art/UI/Icons/people.png",
-      "destination": "unity-client/Assets/HitMe/Art/UI/Icons/people.png",
-      "intended_use": "Native UI element; not production art polish",
-      "required_dimensions": "keep aspect; no baked UI text",
-      "source_dimensions": [
-        192,
-        192
-      ],
-      "transparency": true,
-      "pivot": "{x: 0.5, y: 0.5}",
-      "ppu": "100",
-      "sorting_layer": "Default / Canvas overlay UI",
-      "animation_requirements": "UI tween ready",
-      "status": "B_EXISTING_USABLE",
-      "alpha_bounds": [
+      "transparent": true,
+      "alphaRange": [
         0,
-        25,
-        192,
-        143
+        254
       ],
-      "cleanup_notes": "No cleanup blocker detected from metadata"
+      "pixelsPerUnit": 128.0,
+      "pivot": [
+        0.5,
+        0.0
+      ],
+      "slicing": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "animationReady": false,
+      "status": "INTEGRATED",
+      "dependencies": [
+        "C:\\Users\\LENOVO\\.codex\\generated_images\\01a119c8-2e1f-7b80-b157-90323eb08e7e\\exec-bf3a069e-a58e-4eb4-a658-b818b057c56f.png"
+      ],
+      "sha256": "58a6230e500f4f506563ae8e04b8fe9706f16f42a1015494ba291b2f69e6b10f",
+      "notes": "Static sprite; procedural motion is separate from real frame/rig animation. Imported-only assets explicitly listed in gap report."
     },
     {
-      "asset_id": "runtime_UI_Icons_practice",
-      "asset_name": "practice",
-      "source": "unity-client/Assets/HitMe/Art/UI/Icons/practice.png",
-      "destination": "unity-client/Assets/HitMe/Art/UI/Icons/practice.png",
-      "intended_use": "Native UI element; not production art polish",
-      "required_dimensions": "keep aspect; no baked UI text",
-      "source_dimensions": [
-        192,
-        192
+      "assetId": "Production_Animals_GoldenDog",
+      "category": "Animals",
+      "sourceFile": "C:\\Users\\LENOVO\\.codex\\generated_images\\01a119c8-2e1f-7b80-b157-90323eb08e7e\\exec-bf3a069e-a58e-4eb4-a658-b818b057c56f.png",
+      "targetPath": "Assets/HitMe/Art/Production/Animals/GoldenDog.png",
+      "dimensions": [
+        370,
+        496
       ],
-      "transparency": true,
-      "pivot": "{x: 0.5, y: 0.5}",
-      "ppu": "100",
-      "sorting_layer": "Default / Canvas overlay UI",
-      "animation_requirements": "UI tween ready",
-      "status": "B_EXISTING_USABLE",
-      "alpha_bounds": [
-        49,
-        27,
-        167,
-        173
+      "transparent": true,
+      "alphaRange": [
+        0,
+        254
       ],
-      "cleanup_notes": "No cleanup blocker detected from metadata"
+      "pixelsPerUnit": 128.0,
+      "pivot": [
+        0.5,
+        0.0
+      ],
+      "slicing": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "animationReady": false,
+      "status": "INTEGRATED",
+      "dependencies": [
+        "C:\\Users\\LENOVO\\.codex\\generated_images\\01a119c8-2e1f-7b80-b157-90323eb08e7e\\exec-bf3a069e-a58e-4eb4-a658-b818b057c56f.png"
+      ],
+      "sha256": "d98252fcb8955cc394e05d8d69ec726c98bba8d34f45468fea488f0945b61d7a",
+      "notes": "Static sprite; procedural motion is separate from real frame/rig animation. Imported-only assets explicitly listed in gap report."
     },
     {
-      "asset_id": "runtime_UI_Icons_quest",
-      "asset_name": "quest",
-      "source": "unity-client/Assets/HitMe/Art/UI/Icons/quest.png",
-      "destination": "unity-client/Assets/HitMe/Art/UI/Icons/quest.png",
-      "intended_use": "Native UI element; not production art polish",
-      "required_dimensions": "keep aspect; no baked UI text",
-      "source_dimensions": [
-        192,
-        192
+      "assetId": "Production_Characters_BlondBoy",
+      "category": "Characters",
+      "sourceFile": "C:\\Users\\LENOVO\\.codex\\generated_images\\01a119c8-2e1f-7b80-b157-90323eb08e7e\\exec-bf3a069e-a58e-4eb4-a658-b818b057c56f.png",
+      "targetPath": "Assets/HitMe/Art/Production/Characters/BlondBoy.png",
+      "dimensions": [
+        367,
+        500
       ],
-      "transparency": true,
-      "pivot": "{x: 0.5, y: 0.5}",
-      "ppu": "100",
-      "sorting_layer": "Default / Canvas overlay UI",
-      "animation_requirements": "UI tween ready",
-      "status": "C_USABLE_CLEANUP_RECOMMENDED",
-      "alpha_bounds": [
-        39,
-        27,
-        155,
-        167
+      "transparent": true,
+      "alphaRange": [
+        0,
+        254
       ],
-      "cleanup_notes": "Large transparent padding; request trimmed source and repivot, do not auto-crop current foot asset"
+      "pixelsPerUnit": 128.0,
+      "pivot": [
+        0.5,
+        0.0
+      ],
+      "slicing": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "animationReady": false,
+      "status": "INTEGRATED",
+      "dependencies": [
+        "C:\\Users\\LENOVO\\.codex\\generated_images\\01a119c8-2e1f-7b80-b157-90323eb08e7e\\exec-bf3a069e-a58e-4eb4-a658-b818b057c56f.png"
+      ],
+      "sha256": "7b3a465cd89991fffd59956ee3542b04c71df309606c65b38a995060eb4d4601",
+      "notes": "Static sprite; procedural motion is separate from real frame/rig animation. Imported-only assets explicitly listed in gap report."
     },
     {
-      "asset_id": "runtime_UI_Icons_settings",
-      "asset_name": "settings",
-      "source": "unity-client/Assets/HitMe/Art/UI/Icons/settings.png",
-      "destination": "unity-client/Assets/HitMe/Art/UI/Icons/settings.png",
-      "intended_use": "Native UI element; not production art polish",
-      "required_dimensions": "keep aspect; no baked UI text",
-      "source_dimensions": [
-        192,
-        192
+      "assetId": "Production_Characters_CapBoy",
+      "category": "Characters",
+      "sourceFile": "C:\\Users\\LENOVO\\.codex\\generated_images\\01a119c8-2e1f-7b80-b157-90323eb08e7e\\exec-bf3a069e-a58e-4eb4-a658-b818b057c56f.png",
+      "targetPath": "Assets/HitMe/Art/Production/Characters/CapBoy.png",
+      "dimensions": [
+        366,
+        496
       ],
-      "transparency": true,
-      "pivot": "{x: 0.5, y: 0.5}",
-      "ppu": "100",
-      "sorting_layer": "Default / Canvas overlay UI",
-      "animation_requirements": "UI tween ready",
-      "status": "B_EXISTING_USABLE",
-      "alpha_bounds": [
-        17,
-        17,
-        177,
-        177
+      "transparent": true,
+      "alphaRange": [
+        0,
+        254
       ],
-      "cleanup_notes": "No cleanup blocker detected from metadata"
+      "pixelsPerUnit": 128.0,
+      "pivot": [
+        0.23,
+        0.0
+      ],
+      "slicing": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "animationReady": false,
+      "status": "INTEGRATED",
+      "dependencies": [
+        "C:\\Users\\LENOVO\\.codex\\generated_images\\01a119c8-2e1f-7b80-b157-90323eb08e7e\\exec-bf3a069e-a58e-4eb4-a658-b818b057c56f.png"
+      ],
+      "sha256": "2a1320b2e31490437d25a7c62258f9172e94e6edb5ecf61b46a2657231ae9ac6",
+      "notes": "Static sprite; procedural motion is separate from real frame/rig animation. Imported-only assets explicitly listed in gap report."
     },
     {
-      "asset_id": "runtime_UI_Icons_shop",
-      "asset_name": "shop",
-      "source": "unity-client/Assets/HitMe/Art/UI/Icons/shop.png",
-      "destination": "unity-client/Assets/HitMe/Art/UI/Icons/shop.png",
-      "intended_use": "Native UI element; not production art polish",
-      "required_dimensions": "keep aspect; no baked UI text",
-      "source_dimensions": [
-        192,
-        192
+      "assetId": "Production_Characters_NonLaBoy",
+      "category": "Characters",
+      "sourceFile": "C:\\Users\\LENOVO\\.codex\\generated_images\\01a119c8-2e1f-7b80-b157-90323eb08e7e\\exec-bf3a069e-a58e-4eb4-a658-b818b057c56f.png",
+      "targetPath": "Assets/HitMe/Art/Production/Characters/NonLaBoy.png",
+      "dimensions": [
+        433,
+        498
       ],
-      "transparency": true,
-      "pivot": "{x: 0.5, y: 0.5}",
-      "ppu": "100",
-      "sorting_layer": "Default / Canvas overlay UI",
-      "animation_requirements": "UI tween ready",
-      "status": "B_EXISTING_USABLE",
-      "alpha_bounds": [
-        31,
-        35,
-        167,
-        163
+      "transparent": true,
+      "alphaRange": [
+        0,
+        254
       ],
-      "cleanup_notes": "No cleanup blocker detected from metadata"
+      "pixelsPerUnit": 128.0,
+      "pivot": [
+        0.28,
+        0.0
+      ],
+      "slicing": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "animationReady": false,
+      "status": "INTEGRATED",
+      "dependencies": [
+        "C:\\Users\\LENOVO\\.codex\\generated_images\\01a119c8-2e1f-7b80-b157-90323eb08e7e\\exec-bf3a069e-a58e-4eb4-a658-b818b057c56f.png"
+      ],
+      "sha256": "08b1b82ff391589482d6c0288347719923c243aeb8a0f9f75a89341d1f385406",
+      "notes": "Static sprite; procedural motion is separate from real frame/rig animation. Imported-only assets explicitly listed in gap report."
     },
     {
-      "asset_id": "runtime_UI_Icons_trophy",
-      "asset_name": "trophy",
-      "source": "unity-client/Assets/HitMe/Art/UI/Icons/trophy.png",
-      "destination": "unity-client/Assets/HitMe/Art/UI/Icons/trophy.png",
-      "intended_use": "Native UI element; not production art polish",
-      "required_dimensions": "keep aspect; no baked UI text",
-      "source_dimensions": [
-        192,
-        192
+      "assetId": "Production_Characters_pink-static-preview",
+      "category": "Characters",
+      "sourceFile": "C:\\Users\\LENOVO\\.codex\\generated_images\\01a119c8-2e1f-7b80-b157-90323eb08e7e\\exec-2572e7bb-ccd6-4c16-90c9-26139257d335.png",
+      "targetPath": "Assets/HitMe/Art/Production/Characters/pink-static-preview.png",
+      "dimensions": [
+        1312,
+        1199
       ],
-      "transparency": true,
-      "pivot": "{x: 0.5, y: 0.5}",
-      "ppu": "100",
-      "sorting_layer": "Default / Canvas overlay UI",
-      "animation_requirements": "UI tween ready",
-      "status": "B_EXISTING_USABLE",
-      "alpha_bounds": [
-        17,
-        29,
-        177,
-        169
+      "transparent": true,
+      "alphaRange": [
+        0,
+        255
       ],
-      "cleanup_notes": "No cleanup blocker detected from metadata"
+      "pixelsPerUnit": 100.0,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "slicing": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "animationReady": false,
+      "status": "INTEGRATED",
+      "dependencies": [
+        "C:\\Users\\LENOVO\\.codex\\generated_images\\01a119c8-2e1f-7b80-b157-90323eb08e7e\\exec-2572e7bb-ccd6-4c16-90c9-26139257d335.png"
+      ],
+      "sha256": "7193c8251188c19e776b060ef436393537fe8e68637a5edeef7bf8b12aba6097",
+      "notes": "Static sprite; procedural motion is separate from real frame/rig animation. Imported-only assets explicitly listed in gap report."
     },
     {
-      "asset_id": "runtime_UI_MainMenu_logo",
-      "asset_name": "logo",
-      "source": "unity-client/Assets/HitMe/Art/UI/MainMenu/logo.png",
-      "destination": "unity-client/Assets/HitMe/Art/UI/MainMenu/logo.png",
-      "intended_use": "Native UI element; not production art polish",
-      "required_dimensions": "keep aspect; no baked UI text",
-      "source_dimensions": [
-        640,
-        170
+      "assetId": "Production_Characters_Portraits_BlackBoy",
+      "category": "Characters",
+      "sourceFile": "D:\\HIT ME\\unity-client\\Assets\\HitMe\\Art\\Characters\\Char01_Player\\Idle\\frame_000.png",
+      "targetPath": "Assets/HitMe/Art/Production/Characters/Portraits/BlackBoy.png",
+      "dimensions": [
+        1146,
+        796
       ],
-      "transparency": true,
-      "pivot": "{x: 0.5, y: 0.5}",
-      "ppu": "100",
-      "sorting_layer": "Default / Canvas overlay UI",
-      "animation_requirements": "UI tween ready",
-      "status": "B_EXISTING_USABLE",
-      "alpha_bounds": [
-        12,
-        9,
-        624,
-        160
+      "transparent": true,
+      "alphaRange": [
+        0,
+        255
       ],
-      "cleanup_notes": "No cleanup blocker detected from metadata"
+      "pixelsPerUnit": 100.0,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "slicing": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "animationReady": false,
+      "status": "INTEGRATED",
+      "dependencies": [
+        "D:\\HIT ME\\unity-client\\Assets\\HitMe\\Art\\Characters\\Char01_Player\\Idle\\frame_000.png"
+      ],
+      "sha256": "bcf714769c81fda8c9034604956e4bc0b34aa0b564997b32414a028b4b533cdb",
+      "notes": "Static sprite; procedural motion is separate from real frame/rig animation. Imported-only assets explicitly listed in gap report."
     },
     {
-      "asset_id": "runtime_UI_MainMenu_shadow",
-      "asset_name": "shadow",
-      "source": "unity-client/Assets/HitMe/Art/UI/MainMenu/shadow.png",
-      "destination": "unity-client/Assets/HitMe/Art/UI/MainMenu/shadow.png",
-      "intended_use": "Native UI element; not production art polish",
-      "required_dimensions": "keep aspect; no baked UI text",
-      "source_dimensions": [
-        256,
-        90
+      "assetId": "Production_Characters_Portraits_BlackCat",
+      "category": "Characters",
+      "sourceFile": "D:\\HIT ME\\unity-client\\Assets\\HitMe\\Art\\Production\\Animals\\BlackCat.png",
+      "targetPath": "Assets/HitMe/Art/Production/Characters/Portraits/BlackCat.png",
+      "dimensions": [
+        367,
+        286
       ],
-      "transparency": true,
-      "pivot": "{x: 0.5, y: 0.5}",
-      "ppu": "100",
-      "sorting_layer": "Default / Canvas overlay UI",
-      "animation_requirements": "UI tween ready",
-      "status": "B_EXISTING_USABLE",
-      "alpha_bounds": [
-        8,
-        8,
-        249,
-        83
+      "transparent": true,
+      "alphaRange": [
+        0,
+        254
       ],
-      "cleanup_notes": "No cleanup blocker detected from metadata"
+      "pixelsPerUnit": 100.0,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "slicing": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "animationReady": false,
+      "status": "INTEGRATED",
+      "dependencies": [
+        "D:\\HIT ME\\unity-client\\Assets\\HitMe\\Art\\Production\\Animals\\BlackCat.png"
+      ],
+      "sha256": "f4c64d5835aa486cd56722d64b121cfc7b53c99cfd2a5d5f82d5aaee64e4f211",
+      "notes": "Static sprite; procedural motion is separate from real frame/rig animation. Imported-only assets explicitly listed in gap report."
     },
     {
-      "asset_id": "runtime_Weapons_Chao_held",
-      "asset_name": "held",
-      "source": "unity-client/Assets/HitMe/Art/Weapons/Chao/held.png",
-      "destination": "unity-client/Assets/HitMe/Art/Weapons/Chao/held.png",
-      "intended_use": "Existing weapon/environment sprite",
-      "required_dimensions": "keep aspect; no baked UI text",
-      "source_dimensions": [
-        1536,
-        1024
+      "assetId": "Production_Characters_Portraits_BlondBoy",
+      "category": "Characters",
+      "sourceFile": "D:\\HIT ME\\unity-client\\Assets\\HitMe\\Art\\Production\\Characters\\BlondBoy.png",
+      "targetPath": "Assets/HitMe/Art/Production/Characters/Portraits/BlondBoy.png",
+      "dimensions": [
+        367,
+        290
       ],
-      "transparency": true,
-      "pivot": "{x: 0.5, y: 0.5}",
-      "ppu": "100",
-      "sorting_layer": "Default / Canvas environment/projectile order",
-      "animation_requirements": "projectile spin/trail fallback ready",
-      "status": "B_EXISTING_USABLE",
-      "alpha_bounds": [
-        102,
-        101,
-        1456,
-        976
+      "transparent": true,
+      "alphaRange": [
+        0,
+        254
       ],
-      "cleanup_notes": "No cleanup blocker detected from metadata"
+      "pixelsPerUnit": 100.0,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "slicing": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "animationReady": false,
+      "status": "INTEGRATED",
+      "dependencies": [
+        "D:\\HIT ME\\unity-client\\Assets\\HitMe\\Art\\Production\\Characters\\BlondBoy.png"
+      ],
+      "sha256": "9b65cd15dae0fae1b4b6db85062d7cc94f62c13ebf2217e468a57983765a7ca2",
+      "notes": "Static sprite; procedural motion is separate from real frame/rig animation. Imported-only assets explicitly listed in gap report."
     },
     {
-      "asset_id": "runtime_Weapons_DepToOng_held",
-      "asset_name": "held",
-      "source": "unity-client/Assets/HitMe/Art/Weapons/DepToOng/held.png",
-      "destination": "unity-client/Assets/HitMe/Art/Weapons/DepToOng/held.png",
-      "intended_use": "Existing weapon/environment sprite",
-      "required_dimensions": "keep aspect; no baked UI text",
-      "source_dimensions": [
-        1536,
-        1024
+      "assetId": "Production_Characters_Portraits_CapBoy",
+      "category": "Characters",
+      "sourceFile": "D:\\HIT ME\\unity-client\\Assets\\HitMe\\Art\\Production\\Characters\\CapBoy.png",
+      "targetPath": "Assets/HitMe/Art/Production/Characters/Portraits/CapBoy.png",
+      "dimensions": [
+        366,
+        287
       ],
-      "transparency": true,
-      "pivot": "{x: 0.5, y: 0.5}",
-      "ppu": "100",
-      "sorting_layer": "Default / Canvas environment/projectile order",
-      "animation_requirements": "projectile spin/trail fallback ready",
-      "status": "B_EXISTING_USABLE",
-      "alpha_bounds": [
-        33,
-        78,
-        1510,
-        1000
+      "transparent": true,
+      "alphaRange": [
+        0,
+        254
       ],
-      "cleanup_notes": "No cleanup blocker detected from metadata"
+      "pixelsPerUnit": 100.0,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "slicing": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "animationReady": false,
+      "status": "INTEGRATED",
+      "dependencies": [
+        "D:\\HIT ME\\unity-client\\Assets\\HitMe\\Art\\Production\\Characters\\CapBoy.png"
+      ],
+      "sha256": "b8a1dc08b7e959be28e6256f245e3ee954d7f376f12054807ad0e9abf36ac83d",
+      "notes": "Static sprite; procedural motion is separate from real frame/rig animation. Imported-only assets explicitly listed in gap report."
     },
     {
-      "asset_id": "runtime_Weapons_Vot_held",
-      "asset_name": "held",
-      "source": "unity-client/Assets/HitMe/Art/Weapons/Vot/held.png",
-      "destination": "unity-client/Assets/HitMe/Art/Weapons/Vot/held.png",
-      "intended_use": "Existing weapon/environment sprite",
-      "required_dimensions": "keep aspect; no baked UI text",
-      "source_dimensions": [
+      "assetId": "Production_Characters_Portraits_GoldenDog",
+      "category": "Characters",
+      "sourceFile": "D:\\HIT ME\\unity-client\\Assets\\HitMe\\Art\\Production\\Animals\\GoldenDog.png",
+      "targetPath": "Assets/HitMe/Art/Production/Characters/Portraits/GoldenDog.png",
+      "dimensions": [
+        370,
+        287
+      ],
+      "transparent": true,
+      "alphaRange": [
+        0,
+        254
+      ],
+      "pixelsPerUnit": 100.0,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "slicing": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "animationReady": false,
+      "status": "INTEGRATED",
+      "dependencies": [
+        "D:\\HIT ME\\unity-client\\Assets\\HitMe\\Art\\Production\\Animals\\GoldenDog.png"
+      ],
+      "sha256": "bddfd955ba14f7b1dc6d36829984e45e69e8dd73df50d7541f5ffc46d29e1989",
+      "notes": "Static sprite; procedural motion is separate from real frame/rig animation. Imported-only assets explicitly listed in gap report."
+    },
+    {
+      "assetId": "Production_Characters_Portraits_LegacyBotFemale",
+      "category": "Characters",
+      "sourceFile": "D:\\HIT ME\\unity-client\\Assets\\HitMe\\Art\\Characters\\Char03_BotFemale\\Idle\\frame_000.png",
+      "targetPath": "Assets/HitMe/Art/Production/Characters/Portraits/LegacyBotFemale.png",
+      "dimensions": [
+        1239,
+        736
+      ],
+      "transparent": true,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "pixelsPerUnit": 100.0,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "slicing": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "animationReady": false,
+      "status": "INTEGRATED",
+      "dependencies": [
+        "D:\\HIT ME\\unity-client\\Assets\\HitMe\\Art\\Characters\\Char03_BotFemale\\Idle\\frame_000.png"
+      ],
+      "sha256": "7fd5a9ed262f3d3c2a7af641637ade219fc9093868a9a50c5504b6760e545138",
+      "notes": "Static sprite; procedural motion is separate from real frame/rig animation. Imported-only assets explicitly listed in gap report."
+    },
+    {
+      "assetId": "Production_Characters_Portraits_LegacyBotMale",
+      "category": "Characters",
+      "sourceFile": "D:\\HIT ME\\unity-client\\Assets\\HitMe\\Art\\Characters\\Char02_BotMale\\Idle\\frame_000.png",
+      "targetPath": "Assets/HitMe/Art/Production/Characters/Portraits/LegacyBotMale.png",
+      "dimensions": [
+        1223,
+        745
+      ],
+      "transparent": true,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "pixelsPerUnit": 100.0,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "slicing": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "animationReady": false,
+      "status": "INTEGRATED",
+      "dependencies": [
+        "D:\\HIT ME\\unity-client\\Assets\\HitMe\\Art\\Characters\\Char02_BotMale\\Idle\\frame_000.png"
+      ],
+      "sha256": "cd7cfe232c68a71a515eb3c73ef0f30f69c3c8ba73df70adcd65305ed91b53a1",
+      "notes": "Static sprite; procedural motion is separate from real frame/rig animation. Imported-only assets explicitly listed in gap report."
+    },
+    {
+      "assetId": "Production_Characters_Portraits_NonLaBoy",
+      "category": "Characters",
+      "sourceFile": "D:\\HIT ME\\unity-client\\Assets\\HitMe\\Art\\Production\\Characters\\NonLaBoy.png",
+      "targetPath": "Assets/HitMe/Art/Production/Characters/Portraits/NonLaBoy.png",
+      "dimensions": [
+        433,
+        288
+      ],
+      "transparent": true,
+      "alphaRange": [
+        0,
+        254
+      ],
+      "pixelsPerUnit": 100.0,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "slicing": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "animationReady": false,
+      "status": "INTEGRATED",
+      "dependencies": [
+        "D:\\HIT ME\\unity-client\\Assets\\HitMe\\Art\\Production\\Characters\\NonLaBoy.png"
+      ],
+      "sha256": "91f817cacc01b67beb71de359deca07cd4543593c45d609108a468f9f328a0f1",
+      "notes": "Static sprite; procedural motion is separate from real frame/rig animation. Imported-only assets explicitly listed in gap report."
+    },
+    {
+      "assetId": "Production_Characters_Portraits_PinkGirl",
+      "category": "Characters",
+      "sourceFile": "D:\\HIT ME\\unity-client\\Assets\\HitMe\\Art\\Production\\Characters\\pink-static-preview.png",
+      "targetPath": "Assets/HitMe/Art/Production/Characters/Portraits/PinkGirl.png",
+      "dimensions": [
+        1312,
+        695
+      ],
+      "transparent": true,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "pixelsPerUnit": 100.0,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "slicing": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "animationReady": false,
+      "status": "INTEGRATED",
+      "dependencies": [
+        "D:\\HIT ME\\unity-client\\Assets\\HitMe\\Art\\Production\\Characters\\pink-static-preview.png"
+      ],
+      "sha256": "aa5c710f49aae035359ffbd24d26f4780440f350e692fd81a8fd9ec64493c086",
+      "notes": "Static sprite; procedural motion is separate from real frame/rig animation. Imported-only assets explicitly listed in gap report."
+    },
+    {
+      "assetId": "Production_Environments_Audience",
+      "category": "Environments",
+      "sourceFile": "C:\\Users\\LENOVO\\.codex\\generated_images\\01a119c8-2e1f-7b80-b157-90323eb08e7e\\exec-1b43430f-24fc-4ba1-b16b-6d5c794f3841.png",
+      "targetPath": "Assets/HitMe/Art/Production/Environments/Audience.png",
+      "dimensions": [
+        564,
+        399
+      ],
+      "transparent": true,
+      "alphaRange": [
+        0,
+        254
+      ],
+      "pixelsPerUnit": 100.0,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "slicing": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "animationReady": false,
+      "status": "INTEGRATED",
+      "dependencies": [
+        "C:\\Users\\LENOVO\\.codex\\generated_images\\01a119c8-2e1f-7b80-b157-90323eb08e7e\\exec-1b43430f-24fc-4ba1-b16b-6d5c794f3841.png"
+      ],
+      "sha256": "027d1205dc8a756ef6390aee1a1135f41c1dbbc37ed8b5f1a124a9d609953190",
+      "notes": "Static sprite; procedural motion is separate from real frame/rig animation. Imported-only assets explicitly listed in gap report."
+    },
+    {
+      "assetId": "Production_Environments_BanyanBranch",
+      "category": "Environments",
+      "sourceFile": "C:\\Users\\LENOVO\\.codex\\generated_images\\01a119c8-2e1f-7b80-b157-90323eb08e7e\\exec-1b43430f-24fc-4ba1-b16b-6d5c794f3841.png",
+      "targetPath": "Assets/HitMe/Art/Production/Environments/BanyanBranch.png",
+      "dimensions": [
+        545,
+        430
+      ],
+      "transparent": true,
+      "alphaRange": [
+        0,
+        254
+      ],
+      "pixelsPerUnit": 100.0,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "slicing": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "animationReady": false,
+      "status": "INTEGRATED",
+      "dependencies": [
+        "C:\\Users\\LENOVO\\.codex\\generated_images\\01a119c8-2e1f-7b80-b157-90323eb08e7e\\exec-1b43430f-24fc-4ba1-b16b-6d5c794f3841.png"
+      ],
+      "sha256": "a7fce6328a1b038176c4dc9943ffeb6a44a94fa45d5eb8a168565d3dac11af7e",
+      "notes": "Static sprite; procedural motion is separate from real frame/rig animation. Imported-only assets explicitly listed in gap report."
+    },
+    {
+      "assetId": "Production_Environments_battle-clean",
+      "category": "Environments",
+      "sourceFile": "C:\\Users\\LENOVO\\.codex\\generated_images\\01a119c8-2e1f-7b80-b157-90323eb08e7e\\exec-7e6fde29-92c1-4b12-8cc9-2528038c27d2.png",
+      "targetPath": "Assets/HitMe/Art/Production/Environments/battle-clean.png",
+      "dimensions": [
+        967,
+        1627
+      ],
+      "transparent": false,
+      "alphaRange": null,
+      "pixelsPerUnit": 100.0,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "slicing": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "animationReady": false,
+      "status": "INTEGRATED",
+      "dependencies": [
+        "C:\\Users\\LENOVO\\.codex\\generated_images\\01a119c8-2e1f-7b80-b157-90323eb08e7e\\exec-7e6fde29-92c1-4b12-8cc9-2528038c27d2.png"
+      ],
+      "sha256": "a859b6d71440f5244f6fd70ec62bb7304011521d7179a82e7ac51ac099b1a189",
+      "notes": "Static sprite; procedural motion is separate from real frame/rig animation. Imported-only assets explicitly listed in gap report."
+    },
+    {
+      "assetId": "Production_Environments_FestivalFlag",
+      "category": "Environments",
+      "sourceFile": "C:\\Users\\LENOVO\\.codex\\generated_images\\01a119c8-2e1f-7b80-b157-90323eb08e7e\\exec-1b43430f-24fc-4ba1-b16b-6d5c794f3841.png",
+      "targetPath": "Assets/HitMe/Art/Production/Environments/FestivalFlag.png",
+      "dimensions": [
+        486,
+        392
+      ],
+      "transparent": true,
+      "alphaRange": [
+        0,
+        254
+      ],
+      "pixelsPerUnit": 100.0,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "slicing": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "animationReady": false,
+      "status": "INTEGRATED",
+      "dependencies": [
+        "C:\\Users\\LENOVO\\.codex\\generated_images\\01a119c8-2e1f-7b80-b157-90323eb08e7e\\exec-1b43430f-24fc-4ba1-b16b-6d5c794f3841.png"
+      ],
+      "sha256": "6ccb7a52b6dfad71a3750638384662b7594cf00b37d3a2ea5f122413288e32f8",
+      "notes": "Static sprite; procedural motion is separate from real frame/rig animation. Imported-only assets explicitly listed in gap report."
+    },
+    {
+      "assetId": "Production_Environments_Lantern",
+      "category": "Environments",
+      "sourceFile": "C:\\Users\\LENOVO\\.codex\\generated_images\\01a119c8-2e1f-7b80-b157-90323eb08e7e\\exec-1b43430f-24fc-4ba1-b16b-6d5c794f3841.png",
+      "targetPath": "Assets/HitMe/Art/Production/Environments/Lantern.png",
+      "dimensions": [
+        258,
+        529
+      ],
+      "transparent": true,
+      "alphaRange": [
+        0,
+        254
+      ],
+      "pixelsPerUnit": 100.0,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "slicing": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "animationReady": false,
+      "status": "INTEGRATED",
+      "dependencies": [
+        "C:\\Users\\LENOVO\\.codex\\generated_images\\01a119c8-2e1f-7b80-b157-90323eb08e7e\\exec-1b43430f-24fc-4ba1-b16b-6d5c794f3841.png"
+      ],
+      "sha256": "1f4d4a125231522a475dacec0813a47ac5f481f523ae0115b9beb3fba8d051ee",
+      "notes": "Static sprite; procedural motion is separate from real frame/rig animation. Imported-only assets explicitly listed in gap report."
+    },
+    {
+      "assetId": "Production_Environments_LotusMedallion",
+      "category": "Environments",
+      "sourceFile": "C:\\Users\\LENOVO\\.codex\\generated_images\\01a119c8-2e1f-7b80-b157-90323eb08e7e\\exec-1b43430f-24fc-4ba1-b16b-6d5c794f3841.png",
+      "targetPath": "Assets/HitMe/Art/Production/Environments/LotusMedallion.png",
+      "dimensions": [
+        471,
+        468
+      ],
+      "transparent": true,
+      "alphaRange": [
+        0,
+        254
+      ],
+      "pixelsPerUnit": 100.0,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "slicing": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "animationReady": false,
+      "status": "INTEGRATED",
+      "dependencies": [
+        "C:\\Users\\LENOVO\\.codex\\generated_images\\01a119c8-2e1f-7b80-b157-90323eb08e7e\\exec-1b43430f-24fc-4ba1-b16b-6d5c794f3841.png"
+      ],
+      "sha256": "2f35f6a6f49cdfbede5878da0699f32ce0fccb6f24ef7879469432f8854d3096",
+      "notes": "Static sprite; procedural motion is separate from real frame/rig animation. Imported-only assets explicitly listed in gap report."
+    },
+    {
+      "assetId": "Production_Environments_stone-tile",
+      "category": "Environments",
+      "sourceFile": "D:\\HIT ME\\Picture\\Play in game.png",
+      "targetPath": "Assets/HitMe/Art/Production/Environments/stone-tile.png",
+      "dimensions": [
+        160,
+        100
+      ],
+      "transparent": false,
+      "alphaRange": null,
+      "pixelsPerUnit": 100.0,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "slicing": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "animationReady": false,
+      "status": "INTEGRATED",
+      "dependencies": [
+        "D:\\HIT ME\\Picture\\Play in game.png"
+      ],
+      "sha256": "6fbf206576e4dcdde932d96060481578666481cdd8c8dc77b8d899497f9e6fa2",
+      "notes": "Static sprite; procedural motion is separate from real frame/rig animation. Imported-only assets explicitly listed in gap report."
+    },
+    {
+      "assetId": "Production_Environments_TeaProps",
+      "category": "Environments",
+      "sourceFile": "C:\\Users\\LENOVO\\.codex\\generated_images\\01a119c8-2e1f-7b80-b157-90323eb08e7e\\exec-1b43430f-24fc-4ba1-b16b-6d5c794f3841.png",
+      "targetPath": "Assets/HitMe/Art/Production/Environments/TeaProps.png",
+      "dimensions": [
+        373,
+        352
+      ],
+      "transparent": true,
+      "alphaRange": [
+        0,
+        254
+      ],
+      "pixelsPerUnit": 100.0,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "slicing": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "animationReady": false,
+      "status": "INTEGRATED",
+      "dependencies": [
+        "C:\\Users\\LENOVO\\.codex\\generated_images\\01a119c8-2e1f-7b80-b157-90323eb08e7e\\exec-1b43430f-24fc-4ba1-b16b-6d5c794f3841.png"
+      ],
+      "sha256": "2b8f11c1073810c193d8696868b29ddb9fa91ef4752dc66071b456835cc38e7d",
+      "notes": "Static sprite; procedural motion is separate from real frame/rig animation. Imported-only assets explicitly listed in gap report."
+    },
+    {
+      "assetId": "Production_MainMenu_feature-character",
+      "category": "MainMenu",
+      "sourceFile": "D:\\HIT ME\\Picture\\UI CONCEPT.png",
+      "targetPath": "Assets/HitMe/Art/Production/MainMenu/feature-character.png",
+      "dimensions": [
+        140,
+        97
+      ],
+      "transparent": false,
+      "alphaRange": [
+        239,
+        251
+      ],
+      "pixelsPerUnit": 100.0,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "slicing": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "animationReady": false,
+      "status": "INTEGRATED",
+      "dependencies": [
+        "D:\\HIT ME\\Picture\\UI CONCEPT.png"
+      ],
+      "sha256": "d228909736d3d6f4c647a93bbb9ea9b911d903eb003756fcee14f55e2efe17f4",
+      "notes": "Static sprite; procedural motion is separate from real frame/rig animation. Imported-only assets explicitly listed in gap report."
+    },
+    {
+      "assetId": "Production_MainMenu_feature-collection",
+      "category": "MainMenu",
+      "sourceFile": "D:\\HIT ME\\Picture\\UI CONCEPT.png",
+      "targetPath": "Assets/HitMe/Art/Production/MainMenu/feature-collection.png",
+      "dimensions": [
+        137,
+        96
+      ],
+      "transparent": false,
+      "alphaRange": [
+        242,
+        252
+      ],
+      "pixelsPerUnit": 100.0,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "slicing": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "animationReady": false,
+      "status": "INTEGRATED",
+      "dependencies": [
+        "D:\\HIT ME\\Picture\\UI CONCEPT.png"
+      ],
+      "sha256": "5c925f7c1cd501fc2188acd5aea37e12474265f48eadeab531e7c7b5d1a11a86",
+      "notes": "Static sprite; procedural motion is separate from real frame/rig animation. Imported-only assets explicitly listed in gap report."
+    },
+    {
+      "assetId": "Production_MainMenu_feature-map",
+      "category": "MainMenu",
+      "sourceFile": "D:\\HIT ME\\Picture\\UI CONCEPT.png",
+      "targetPath": "Assets/HitMe/Art/Production/MainMenu/feature-map.png",
+      "dimensions": [
+        142,
+        96
+      ],
+      "transparent": false,
+      "alphaRange": [
+        234,
+        250
+      ],
+      "pixelsPerUnit": 100.0,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "slicing": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "animationReady": false,
+      "status": "INTEGRATED",
+      "dependencies": [
+        "D:\\HIT ME\\Picture\\UI CONCEPT.png"
+      ],
+      "sha256": "0dc4c5061f4f5c4db42572b2ec820ea8b02d30786a23e8aa4fa3b7f5a91c47a0",
+      "notes": "Static sprite; procedural motion is separate from real frame/rig animation. Imported-only assets explicitly listed in gap report."
+    },
+    {
+      "assetId": "Production_MainMenu_feature-ranking",
+      "category": "MainMenu",
+      "sourceFile": "D:\\HIT ME\\Picture\\UI CONCEPT.png",
+      "targetPath": "Assets/HitMe/Art/Production/MainMenu/feature-ranking.png",
+      "dimensions": [
+        140,
+        96
+      ],
+      "transparent": false,
+      "alphaRange": [
+        233,
+        251
+      ],
+      "pixelsPerUnit": 100.0,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "slicing": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "animationReady": false,
+      "status": "INTEGRATED",
+      "dependencies": [
+        "D:\\HIT ME\\Picture\\UI CONCEPT.png"
+      ],
+      "sha256": "0402efdcc6b60804171adc958d0bea0977fce501223d226f17868e4a0790a147",
+      "notes": "Static sprite; procedural motion is separate from real frame/rig animation. Imported-only assets explicitly listed in gap report."
+    },
+    {
+      "assetId": "Production_MainMenu_village-clean",
+      "category": "MainMenu",
+      "sourceFile": "C:\\Users\\LENOVO\\.codex\\generated_images\\01a119c8-2e1f-7b80-b157-90323eb08e7e\\exec-dd507b4d-1d93-4cb1-a1b8-98032192bd6f.png",
+      "targetPath": "Assets/HitMe/Art/Production/MainMenu/village-clean.png",
+      "dimensions": [
+        941,
+        1672
+      ],
+      "transparent": false,
+      "alphaRange": null,
+      "pixelsPerUnit": 100.0,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "slicing": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "animationReady": false,
+      "status": "INTEGRATED",
+      "dependencies": [
+        "C:\\Users\\LENOVO\\.codex\\generated_images\\01a119c8-2e1f-7b80-b157-90323eb08e7e\\exec-dd507b4d-1d93-4cb1-a1b8-98032192bd6f.png"
+      ],
+      "sha256": "82044ceb484ed3fccc5c34ef8279877d4eda22d22d58ef9d7b6890713eb52fed",
+      "notes": "Static sprite; procedural motion is separate from real frame/rig animation. Imported-only assets explicitly listed in gap report."
+    },
+    {
+      "assetId": "Production_UI_card",
+      "category": "UI",
+      "sourceFile": "C:\\Users\\LENOVO\\.codex\\generated_images\\01a119c8-2e1f-7b80-b157-90323eb08e7e\\exec-e89dd1f6-06d0-4a1c-8360-95c20643b87b.png",
+      "targetPath": "Assets/HitMe/Art/Production/UI/card.png",
+      "dimensions": [
+        649,
+        254
+      ],
+      "transparent": true,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "pixelsPerUnit": 100.0,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "slicing": [
+        64.0,
+        64.0,
+        64.0,
+        64.0
+      ],
+      "animationReady": false,
+      "status": "INTEGRATED",
+      "dependencies": [
+        "C:\\Users\\LENOVO\\.codex\\generated_images\\01a119c8-2e1f-7b80-b157-90323eb08e7e\\exec-e89dd1f6-06d0-4a1c-8360-95c20643b87b.png"
+      ],
+      "sha256": "08bf4955b57d1b578bad4e52e4261a47094f2ce19b551d039ba9190391e146ff",
+      "notes": "Static sprite; procedural motion is separate from real frame/rig animation. Imported-only assets explicitly listed in gap report."
+    },
+    {
+      "assetId": "Production_UI_gold",
+      "category": "UI",
+      "sourceFile": "C:\\Users\\LENOVO\\.codex\\generated_images\\01a119c8-2e1f-7b80-b157-90323eb08e7e\\exec-e89dd1f6-06d0-4a1c-8360-95c20643b87b.png",
+      "targetPath": "Assets/HitMe/Art/Production/UI/gold.png",
+      "dimensions": [
+        655,
+        196
+      ],
+      "transparent": true,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "pixelsPerUnit": 100.0,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "slicing": [
+        64.0,
+        64.0,
+        64.0,
+        64.0
+      ],
+      "animationReady": false,
+      "status": "INTEGRATED",
+      "dependencies": [
+        "C:\\Users\\LENOVO\\.codex\\generated_images\\01a119c8-2e1f-7b80-b157-90323eb08e7e\\exec-e89dd1f6-06d0-4a1c-8360-95c20643b87b.png"
+      ],
+      "sha256": "87ccaf35acb9f5b4e24d1b9509489f5ca9d669a37cbed6bf1be07ad99e3ef2fd",
+      "notes": "Static sprite; procedural motion is separate from real frame/rig animation. Imported-only assets explicitly listed in gap report."
+    },
+    {
+      "assetId": "Production_UI_logo",
+      "category": "UI",
+      "sourceFile": "C:\\Users\\LENOVO\\.codex\\generated_images\\01a119c8-2e1f-7b80-b157-90323eb08e7e\\exec-824bb3d6-6610-4706-accf-a21ae253ede0.png",
+      "targetPath": "Assets/HitMe/Art/Production/UI/logo.png",
+      "dimensions": [
         1774,
         887
       ],
-      "transparency": true,
-      "pivot": "{x: 0.5, y: 0.5}",
-      "ppu": "100",
-      "sorting_layer": "Default / Canvas environment/projectile order",
-      "animation_requirements": "projectile spin/trail fallback ready",
-      "status": "B_EXISTING_USABLE",
-      "alpha_bounds": [
-        46,
-        9,
-        1754,
+      "transparent": true,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "pixelsPerUnit": 100.0,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "slicing": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "animationReady": false,
+      "status": "INTEGRATED",
+      "dependencies": [
+        "C:\\Users\\LENOVO\\.codex\\generated_images\\01a119c8-2e1f-7b80-b157-90323eb08e7e\\exec-824bb3d6-6610-4706-accf-a21ae253ede0.png"
+      ],
+      "sha256": "9bf8caa681063881c6dce67830c51188ac97a30d02379711bf44579ae098a882",
+      "notes": "Static sprite; procedural motion is separate from real frame/rig animation. Imported-only assets explicitly listed in gap report."
+    },
+    {
+      "assetId": "Production_UI_nav",
+      "category": "UI",
+      "sourceFile": "C:\\Users\\LENOVO\\.codex\\generated_images\\01a119c8-2e1f-7b80-b157-90323eb08e7e\\exec-e89dd1f6-06d0-4a1c-8360-95c20643b87b.png",
+      "targetPath": "Assets/HitMe/Art/Production/UI/nav.png",
+      "dimensions": [
+        657,
+        184
+      ],
+      "transparent": true,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "pixelsPerUnit": 100.0,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "slicing": [
+        64.0,
+        64.0,
+        64.0,
+        64.0
+      ],
+      "animationReady": false,
+      "status": "INTEGRATED",
+      "dependencies": [
+        "C:\\Users\\LENOVO\\.codex\\generated_images\\01a119c8-2e1f-7b80-b157-90323eb08e7e\\exec-e89dd1f6-06d0-4a1c-8360-95c20643b87b.png"
+      ],
+      "sha256": "d51a4727402a067dc47c9ed0beab3049a0e644196f185931c970e0a811bf2ff5",
+      "notes": "Static sprite; procedural motion is separate from real frame/rig animation. Imported-only assets explicitly listed in gap report."
+    },
+    {
+      "assetId": "Production_UI_parchment",
+      "category": "UI",
+      "sourceFile": "C:\\Users\\LENOVO\\.codex\\generated_images\\01a119c8-2e1f-7b80-b157-90323eb08e7e\\exec-e89dd1f6-06d0-4a1c-8360-95c20643b87b.png",
+      "targetPath": "Assets/HitMe/Art/Production/UI/parchment.png",
+      "dimensions": [
+        652,
+        267
+      ],
+      "transparent": true,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "pixelsPerUnit": 100.0,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "slicing": [
+        64.0,
+        64.0,
+        64.0,
+        64.0
+      ],
+      "animationReady": false,
+      "status": "READY_TO_IMPORT",
+      "dependencies": [
+        "C:\\Users\\LENOVO\\.codex\\generated_images\\01a119c8-2e1f-7b80-b157-90323eb08e7e\\exec-e89dd1f6-06d0-4a1c-8360-95c20643b87b.png"
+      ],
+      "sha256": "df2e705e6509df1eb82b1a886b553d4499b8c181bed1cdd937dd39d7eb78af48",
+      "notes": "Static sprite; procedural motion is separate from real frame/rig animation. Imported-only assets explicitly listed in gap report."
+    },
+    {
+      "assetId": "Production_UI_red",
+      "category": "UI",
+      "sourceFile": "C:\\Users\\LENOVO\\.codex\\generated_images\\01a119c8-2e1f-7b80-b157-90323eb08e7e\\exec-e89dd1f6-06d0-4a1c-8360-95c20643b87b.png",
+      "targetPath": "Assets/HitMe/Art/Production/UI/red.png",
+      "dimensions": [
+        657,
+        194
+      ],
+      "transparent": true,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "pixelsPerUnit": 100.0,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "slicing": [
+        64.0,
+        64.0,
+        64.0,
+        64.0
+      ],
+      "animationReady": false,
+      "status": "INTEGRATED",
+      "dependencies": [
+        "C:\\Users\\LENOVO\\.codex\\generated_images\\01a119c8-2e1f-7b80-b157-90323eb08e7e\\exec-e89dd1f6-06d0-4a1c-8360-95c20643b87b.png"
+      ],
+      "sha256": "84891320cdf1ccd1e0084b3646901de4170d946af62af649e472a2a8177a945f",
+      "notes": "Static sprite; procedural motion is separate from real frame/rig animation. Imported-only assets explicitly listed in gap report."
+    },
+    {
+      "assetId": "Production_UI_teal",
+      "category": "UI",
+      "sourceFile": "C:\\Users\\LENOVO\\.codex\\generated_images\\01a119c8-2e1f-7b80-b157-90323eb08e7e\\exec-e89dd1f6-06d0-4a1c-8360-95c20643b87b.png",
+      "targetPath": "Assets/HitMe/Art/Production/UI/teal.png",
+      "dimensions": [
+        656,
+        195
+      ],
+      "transparent": true,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "pixelsPerUnit": 100.0,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "slicing": [
+        64.0,
+        64.0,
+        64.0,
+        64.0
+      ],
+      "animationReady": false,
+      "status": "READY_TO_IMPORT",
+      "dependencies": [
+        "C:\\Users\\LENOVO\\.codex\\generated_images\\01a119c8-2e1f-7b80-b157-90323eb08e7e\\exec-e89dd1f6-06d0-4a1c-8360-95c20643b87b.png"
+      ],
+      "sha256": "9ad297bc656ae8193ba7d9291437b8bb035c1cf6b93de6508fb7fbc0c4914696",
+      "notes": "Static sprite; procedural motion is separate from real frame/rig animation. Imported-only assets explicitly listed in gap report."
+    },
+    {
+      "assetId": "Production_Weapons_BeerMug",
+      "category": "Weapons",
+      "sourceFile": "C:\\Users\\LENOVO\\.codex\\generated_images\\01a119c8-2e1f-7b80-b157-90323eb08e7e\\exec-21f872be-6aa1-44f8-95e7-f711dd23a161.png",
+      "targetPath": "Assets/HitMe/Art/Production/Weapons/BeerMug.png",
+      "dimensions": [
+        317,
+        338
+      ],
+      "transparent": true,
+      "alphaRange": [
+        0,
+        254
+      ],
+      "pixelsPerUnit": 64.0,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "slicing": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "animationReady": false,
+      "status": "INTEGRATED",
+      "dependencies": [
+        "C:\\Users\\LENOVO\\.codex\\generated_images\\01a119c8-2e1f-7b80-b157-90323eb08e7e\\exec-21f872be-6aa1-44f8-95e7-f711dd23a161.png"
+      ],
+      "sha256": "688fc7ebc1edc7ba88a3f0896798eb234dd036cd3fdf91ae040861de65696008",
+      "notes": "Static sprite; procedural motion is separate from real frame/rig animation. Imported-only assets explicitly listed in gap report."
+    },
+    {
+      "assetId": "Production_Weapons_MosquitoRacket",
+      "category": "Weapons",
+      "sourceFile": "C:\\Users\\LENOVO\\.codex\\generated_images\\01a119c8-2e1f-7b80-b157-90323eb08e7e\\exec-21f872be-6aa1-44f8-95e7-f711dd23a161.png",
+      "targetPath": "Assets/HitMe/Art/Production/Weapons/MosquitoRacket.png",
+      "dimensions": [
+        350,
+        329
+      ],
+      "transparent": true,
+      "alphaRange": [
+        0,
+        254
+      ],
+      "pixelsPerUnit": 64.0,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "slicing": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "animationReady": false,
+      "status": "INTEGRATED",
+      "dependencies": [
+        "C:\\Users\\LENOVO\\.codex\\generated_images\\01a119c8-2e1f-7b80-b157-90323eb08e7e\\exec-21f872be-6aa1-44f8-95e7-f711dd23a161.png"
+      ],
+      "sha256": "f4ef454f82856e0233621d6298cbfcee20f644b3faa764de36af12913484e1dc",
+      "notes": "Static sprite; procedural motion is separate from real frame/rig animation. Imported-only assets explicitly listed in gap report."
+    },
+    {
+      "assetId": "Production_Weapons_PickleballPaddle",
+      "category": "Weapons",
+      "sourceFile": "C:\\Users\\LENOVO\\.codex\\generated_images\\01a119c8-2e1f-7b80-b157-90323eb08e7e\\exec-c44b557e-b206-46d7-b265-48dd17ebe2fc.png",
+      "targetPath": "Assets/HitMe/Art/Production/Weapons/PickleballPaddle.png",
+      "dimensions": [
+        1220,
+        1205
+      ],
+      "transparent": true,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "pixelsPerUnit": 64.0,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "slicing": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "animationReady": false,
+      "status": "INTEGRATED",
+      "dependencies": [
+        "C:\\Users\\LENOVO\\.codex\\generated_images\\01a119c8-2e1f-7b80-b157-90323eb08e7e\\exec-c44b557e-b206-46d7-b265-48dd17ebe2fc.png"
+      ],
+      "sha256": "2e07137262b5375e715b3848c94b00c621f60f22de75f3ead0f1d87c0f499ccd",
+      "notes": "Static sprite; procedural motion is separate from real frame/rig animation. Imported-only assets explicitly listed in gap report."
+    },
+    {
+      "assetId": "Production_Weapons_PlasticStool",
+      "category": "Weapons",
+      "sourceFile": "C:\\Users\\LENOVO\\.codex\\generated_images\\01a119c8-2e1f-7b80-b157-90323eb08e7e\\exec-21f872be-6aa1-44f8-95e7-f711dd23a161.png",
+      "targetPath": "Assets/HitMe/Art/Production/Weapons/PlasticStool.png",
+      "dimensions": [
+        368,
+        327
+      ],
+      "transparent": true,
+      "alphaRange": [
+        0,
+        254
+      ],
+      "pixelsPerUnit": 64.0,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "slicing": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "animationReady": false,
+      "status": "INTEGRATED",
+      "dependencies": [
+        "C:\\Users\\LENOVO\\.codex\\generated_images\\01a119c8-2e1f-7b80-b157-90323eb08e7e\\exec-21f872be-6aa1-44f8-95e7-f711dd23a161.png"
+      ],
+      "sha256": "82f1c66a59b7880f495e14c2054ca71bf6a4aa3f54ca82aa320433999ae33099",
+      "notes": "Static sprite; procedural motion is separate from real frame/rig animation. Imported-only assets explicitly listed in gap report."
+    },
+    {
+      "assetId": "Production_Weapons_Refrigerator",
+      "category": "Weapons",
+      "sourceFile": "C:\\Users\\LENOVO\\.codex\\generated_images\\01a119c8-2e1f-7b80-b157-90323eb08e7e\\exec-21f872be-6aa1-44f8-95e7-f711dd23a161.png",
+      "targetPath": "Assets/HitMe/Art/Production/Weapons/Refrigerator.png",
+      "dimensions": [
+        285,
+        333
+      ],
+      "transparent": true,
+      "alphaRange": [
+        0,
+        254
+      ],
+      "pixelsPerUnit": 64.0,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "slicing": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "animationReady": false,
+      "status": "INTEGRATED",
+      "dependencies": [
+        "C:\\Users\\LENOVO\\.codex\\generated_images\\01a119c8-2e1f-7b80-b157-90323eb08e7e\\exec-21f872be-6aa1-44f8-95e7-f711dd23a161.png"
+      ],
+      "sha256": "ba37ff8166510922eb645b37c9280aeee95d973ffc82cc65baf2a2247b27deaf",
+      "notes": "Static sprite; procedural motion is separate from real frame/rig animation. Imported-only assets explicitly listed in gap report."
+    },
+    {
+      "assetId": "Production_Weapons_Smartphone",
+      "category": "Weapons",
+      "sourceFile": "C:\\Users\\LENOVO\\.codex\\generated_images\\01a119c8-2e1f-7b80-b157-90323eb08e7e\\exec-21f872be-6aa1-44f8-95e7-f711dd23a161.png",
+      "targetPath": "Assets/HitMe/Art/Production/Weapons/Smartphone.png",
+      "dimensions": [
+        268,
+        323
+      ],
+      "transparent": true,
+      "alphaRange": [
+        0,
+        254
+      ],
+      "pixelsPerUnit": 64.0,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "slicing": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "animationReady": false,
+      "status": "INTEGRATED",
+      "dependencies": [
+        "C:\\Users\\LENOVO\\.codex\\generated_images\\01a119c8-2e1f-7b80-b157-90323eb08e7e\\exec-21f872be-6aa1-44f8-95e7-f711dd23a161.png"
+      ],
+      "sha256": "8f7fa4c69bef76bf8dff658a11640c69a98e8fdec7a30a44128d39f698e5e93b",
+      "notes": "Static sprite; procedural motion is separate from real frame/rig animation. Imported-only assets explicitly listed in gap report."
+    },
+    {
+      "assetId": "Production_Weapons_Television",
+      "category": "Weapons",
+      "sourceFile": "C:\\Users\\LENOVO\\.codex\\generated_images\\01a119c8-2e1f-7b80-b157-90323eb08e7e\\exec-21f872be-6aa1-44f8-95e7-f711dd23a161.png",
+      "targetPath": "Assets/HitMe/Art/Production/Weapons/Television.png",
+      "dimensions": [
+        384,
+        330
+      ],
+      "transparent": true,
+      "alphaRange": [
+        0,
+        254
+      ],
+      "pixelsPerUnit": 64.0,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "slicing": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "animationReady": false,
+      "status": "INTEGRATED",
+      "dependencies": [
+        "C:\\Users\\LENOVO\\.codex\\generated_images\\01a119c8-2e1f-7b80-b157-90323eb08e7e\\exec-21f872be-6aa1-44f8-95e7-f711dd23a161.png"
+      ],
+      "sha256": "88493d0043c4ace128f391417114a4e74beed0f5f425f841e954432e8e52022c",
+      "notes": "Static sprite; procedural motion is separate from real frame/rig animation. Imported-only assets explicitly listed in gap report."
+    },
+    {
+      "assetId": "UI_Buttons_brick",
+      "category": "UI",
+      "sourceFile": "D:\\HIT ME\\unity-client\\Assets\\HitMe\\Art\\UI\\Buttons\\brick.png",
+      "targetPath": "Assets/HitMe/Art/UI/Buttons/brick.png",
+      "dimensions": [
+        128,
+        128
+      ],
+      "transparent": true,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "pixelsPerUnit": 100.0,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "slicing": [
+        32.0,
+        32.0,
+        32.0,
+        32.0
+      ],
+      "animationReady": false,
+      "status": "FALLBACK",
+      "dependencies": [],
+      "sha256": "5a77f255ec3e7b259a13b2e08d6ac13ed7e254fd862061813c9b3a363b276e00",
+      "notes": "Existing art preserved; native UI icons/skins remain fallback where no concept export exists."
+    },
+    {
+      "assetId": "UI_Buttons_card",
+      "category": "UI",
+      "sourceFile": "D:\\HIT ME\\unity-client\\Assets\\HitMe\\Art\\UI\\Buttons\\card.png",
+      "targetPath": "Assets/HitMe/Art/UI/Buttons/card.png",
+      "dimensions": [
+        128,
+        128
+      ],
+      "transparent": true,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "pixelsPerUnit": 100.0,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "slicing": [
+        32.0,
+        32.0,
+        32.0,
+        32.0
+      ],
+      "animationReady": false,
+      "status": "FALLBACK",
+      "dependencies": [],
+      "sha256": "b5ff2d4cc3328f721e7894ddafde7a11e4a29fe6126bb1af1d3aaa163c922486",
+      "notes": "Existing art preserved; native UI icons/skins remain fallback where no concept export exists."
+    },
+    {
+      "assetId": "UI_Buttons_ink",
+      "category": "UI",
+      "sourceFile": "D:\\HIT ME\\unity-client\\Assets\\HitMe\\Art\\UI\\Buttons\\ink.png",
+      "targetPath": "Assets/HitMe/Art/UI/Buttons/ink.png",
+      "dimensions": [
+        128,
+        128
+      ],
+      "transparent": true,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "pixelsPerUnit": 100.0,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "slicing": [
+        32.0,
+        32.0,
+        32.0,
+        32.0
+      ],
+      "animationReady": false,
+      "status": "FALLBACK",
+      "dependencies": [],
+      "sha256": "e0ae5b750b639f5f3fdafe046f683f58885e36eaa601bde4226664b61ef489d0",
+      "notes": "Existing art preserved; native UI icons/skins remain fallback where no concept export exists."
+    },
+    {
+      "assetId": "UI_Buttons_paper",
+      "category": "UI",
+      "sourceFile": "D:\\HIT ME\\unity-client\\Assets\\HitMe\\Art\\UI\\Buttons\\paper.png",
+      "targetPath": "Assets/HitMe/Art/UI/Buttons/paper.png",
+      "dimensions": [
+        128,
+        128
+      ],
+      "transparent": true,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "pixelsPerUnit": 100.0,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "slicing": [
+        32.0,
+        32.0,
+        32.0,
+        32.0
+      ],
+      "animationReady": false,
+      "status": "FALLBACK",
+      "dependencies": [],
+      "sha256": "ab7b4a57a7b67ba02b938d37798595fbce03d0c379277d19fb9f007ff93cbaae",
+      "notes": "Existing art preserved; native UI icons/skins remain fallback where no concept export exists."
+    },
+    {
+      "assetId": "UI_Icons_arrow",
+      "category": "UI",
+      "sourceFile": "D:\\HIT ME\\unity-client\\Assets\\HitMe\\Art\\UI\\Icons\\arrow.png",
+      "targetPath": "Assets/HitMe/Art/UI/Icons/arrow.png",
+      "dimensions": [
+        192,
+        192
+      ],
+      "transparent": true,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "pixelsPerUnit": 100.0,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "slicing": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "animationReady": false,
+      "status": "FALLBACK",
+      "dependencies": [],
+      "sha256": "cac261ff4d4e6d4120b9f929f994f0810a5aa580fb48abf9cf829cdee6d42134",
+      "notes": "Existing art preserved; native UI icons/skins remain fallback where no concept export exists."
+    },
+    {
+      "assetId": "UI_Icons_bag",
+      "category": "UI",
+      "sourceFile": "D:\\HIT ME\\unity-client\\Assets\\HitMe\\Art\\UI\\Icons\\bag.png",
+      "targetPath": "Assets/HitMe/Art/UI/Icons/bag.png",
+      "dimensions": [
+        192,
+        192
+      ],
+      "transparent": true,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "pixelsPerUnit": 100.0,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "slicing": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "animationReady": false,
+      "status": "FALLBACK",
+      "dependencies": [],
+      "sha256": "141198f7ffb21aa18d8720144f6c635c5624f7a57239a102a266ab76c7db54f4",
+      "notes": "Existing art preserved; native UI icons/skins remain fallback where no concept export exists."
+    },
+    {
+      "assetId": "UI_Icons_cancel",
+      "category": "UI",
+      "sourceFile": "D:\\HIT ME\\unity-client\\Assets\\HitMe\\Art\\UI\\Icons\\cancel.png",
+      "targetPath": "Assets/HitMe/Art/UI/Icons/cancel.png",
+      "dimensions": [
+        192,
+        192
+      ],
+      "transparent": true,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "pixelsPerUnit": 100.0,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "slicing": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "animationReady": false,
+      "status": "FALLBACK",
+      "dependencies": [],
+      "sha256": "477a0db4628e46f130e0bdb8fdb8a5b466e89c08bac486f2602ccb6f04e08f0b",
+      "notes": "Existing art preserved; native UI icons/skins remain fallback where no concept export exists."
+    },
+    {
+      "assetId": "UI_Icons_coin",
+      "category": "UI",
+      "sourceFile": "D:\\HIT ME\\unity-client\\Assets\\HitMe\\Art\\UI\\Icons\\coin.png",
+      "targetPath": "Assets/HitMe/Art/UI/Icons/coin.png",
+      "dimensions": [
+        192,
+        192
+      ],
+      "transparent": true,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "pixelsPerUnit": 100.0,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "slicing": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "animationReady": false,
+      "status": "FALLBACK",
+      "dependencies": [],
+      "sha256": "21738bd57094c496879ea8d096d2e3cd5b6c9b24c3f6fe8952fdca0f9894eb7f",
+      "notes": "Existing art preserved; native UI icons/skins remain fallback where no concept export exists."
+    },
+    {
+      "assetId": "UI_Icons_home",
+      "category": "UI",
+      "sourceFile": "D:\\HIT ME\\unity-client\\Assets\\HitMe\\Art\\UI\\Icons\\home.png",
+      "targetPath": "Assets/HitMe/Art/UI/Icons/home.png",
+      "dimensions": [
+        192,
+        192
+      ],
+      "transparent": true,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "pixelsPerUnit": 100.0,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "slicing": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "animationReady": false,
+      "status": "FALLBACK",
+      "dependencies": [],
+      "sha256": "a6979d89241856ce0efdd22feb52cb949645ad071aec4f8481ec655792809166",
+      "notes": "Existing art preserved; native UI icons/skins remain fallback where no concept export exists."
+    },
+    {
+      "assetId": "UI_Icons_mail",
+      "category": "UI",
+      "sourceFile": "D:\\HIT ME\\unity-client\\Assets\\HitMe\\Art\\UI\\Icons\\mail.png",
+      "targetPath": "Assets/HitMe/Art/UI/Icons/mail.png",
+      "dimensions": [
+        192,
+        192
+      ],
+      "transparent": true,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "pixelsPerUnit": 100.0,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "slicing": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "animationReady": false,
+      "status": "FALLBACK",
+      "dependencies": [],
+      "sha256": "5bf5b23dcd6b821f51b8f6ee5cd234e10a66f6b7238ef0ef25ac915a41509de6",
+      "notes": "Existing art preserved; native UI icons/skins remain fallback where no concept export exists."
+    },
+    {
+      "assetId": "UI_Icons_map",
+      "category": "UI",
+      "sourceFile": "D:\\HIT ME\\unity-client\\Assets\\HitMe\\Art\\UI\\Icons\\map.png",
+      "targetPath": "Assets/HitMe/Art/UI/Icons/map.png",
+      "dimensions": [
+        192,
+        192
+      ],
+      "transparent": true,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "pixelsPerUnit": 100.0,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "slicing": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "animationReady": false,
+      "status": "FALLBACK",
+      "dependencies": [],
+      "sha256": "6ecafcd8446425d2d83c2e4424e381944de0fc0bc04e0220a8804dca3aff1e61",
+      "notes": "Existing art preserved; native UI icons/skins remain fallback where no concept export exists."
+    },
+    {
+      "assetId": "UI_Icons_people",
+      "category": "UI",
+      "sourceFile": "D:\\HIT ME\\unity-client\\Assets\\HitMe\\Art\\UI\\Icons\\people.png",
+      "targetPath": "Assets/HitMe/Art/UI/Icons/people.png",
+      "dimensions": [
+        192,
+        192
+      ],
+      "transparent": true,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "pixelsPerUnit": 100.0,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "slicing": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "animationReady": false,
+      "status": "FALLBACK",
+      "dependencies": [],
+      "sha256": "0cbed778d671ab50add3ca8335fcdb0d707460bc24208e026daaf519a616c6d6",
+      "notes": "Existing art preserved; native UI icons/skins remain fallback where no concept export exists."
+    },
+    {
+      "assetId": "UI_Icons_practice",
+      "category": "UI",
+      "sourceFile": "D:\\HIT ME\\unity-client\\Assets\\HitMe\\Art\\UI\\Icons\\practice.png",
+      "targetPath": "Assets/HitMe/Art/UI/Icons/practice.png",
+      "dimensions": [
+        192,
+        192
+      ],
+      "transparent": true,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "pixelsPerUnit": 100.0,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "slicing": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "animationReady": false,
+      "status": "FALLBACK",
+      "dependencies": [],
+      "sha256": "9ffc06b3eab773e9af5dd853187948faefffa70a0aeb6cc5c8612bf34b771e1a",
+      "notes": "Existing art preserved; native UI icons/skins remain fallback where no concept export exists."
+    },
+    {
+      "assetId": "UI_Icons_quest",
+      "category": "UI",
+      "sourceFile": "D:\\HIT ME\\unity-client\\Assets\\HitMe\\Art\\UI\\Icons\\quest.png",
+      "targetPath": "Assets/HitMe/Art/UI/Icons/quest.png",
+      "dimensions": [
+        192,
+        192
+      ],
+      "transparent": true,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "pixelsPerUnit": 100.0,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "slicing": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "animationReady": false,
+      "status": "FALLBACK",
+      "dependencies": [],
+      "sha256": "304d58c1a9f6f5a67743d272371b870f7bd9157a031eef04a424bddb21c7afd4",
+      "notes": "Existing art preserved; native UI icons/skins remain fallback where no concept export exists."
+    },
+    {
+      "assetId": "UI_Icons_settings",
+      "category": "UI",
+      "sourceFile": "D:\\HIT ME\\unity-client\\Assets\\HitMe\\Art\\UI\\Icons\\settings.png",
+      "targetPath": "Assets/HitMe/Art/UI/Icons/settings.png",
+      "dimensions": [
+        192,
+        192
+      ],
+      "transparent": true,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "pixelsPerUnit": 100.0,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "slicing": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "animationReady": false,
+      "status": "FALLBACK",
+      "dependencies": [],
+      "sha256": "6ac8e9646db8442bd21995f8ce4a31d8d736ae5ec8df154920a2405821b4dcad",
+      "notes": "Existing art preserved; native UI icons/skins remain fallback where no concept export exists."
+    },
+    {
+      "assetId": "UI_Icons_shop",
+      "category": "UI",
+      "sourceFile": "D:\\HIT ME\\unity-client\\Assets\\HitMe\\Art\\UI\\Icons\\shop.png",
+      "targetPath": "Assets/HitMe/Art/UI/Icons/shop.png",
+      "dimensions": [
+        192,
+        192
+      ],
+      "transparent": true,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "pixelsPerUnit": 100.0,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "slicing": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "animationReady": false,
+      "status": "FALLBACK",
+      "dependencies": [],
+      "sha256": "2a3ad23453a0711391eb5a07f8b7fe47fcc2435968514ef3b9aebea17ddcd50e",
+      "notes": "Existing art preserved; native UI icons/skins remain fallback where no concept export exists."
+    },
+    {
+      "assetId": "UI_Icons_trophy",
+      "category": "UI",
+      "sourceFile": "D:\\HIT ME\\unity-client\\Assets\\HitMe\\Art\\UI\\Icons\\trophy.png",
+      "targetPath": "Assets/HitMe/Art/UI/Icons/trophy.png",
+      "dimensions": [
+        192,
+        192
+      ],
+      "transparent": true,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "pixelsPerUnit": 100.0,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "slicing": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "animationReady": false,
+      "status": "FALLBACK",
+      "dependencies": [],
+      "sha256": "0d4f7285af3b38fe341a587ccc69f6f4040b9592591393781533fee81965671d",
+      "notes": "Existing art preserved; native UI icons/skins remain fallback where no concept export exists."
+    },
+    {
+      "assetId": "UI_MainMenu_logo",
+      "category": "UI",
+      "sourceFile": "D:\\HIT ME\\unity-client\\Assets\\HitMe\\Art\\UI\\MainMenu\\logo.png",
+      "targetPath": "Assets/HitMe/Art/UI/MainMenu/logo.png",
+      "dimensions": [
+        640,
+        170
+      ],
+      "transparent": true,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "pixelsPerUnit": 100.0,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "slicing": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "animationReady": false,
+      "status": "FALLBACK",
+      "dependencies": [],
+      "sha256": "9be65f29c3ddb34c3bece05c4687652e70b69d80d564b9a2fce4996e4834bd43",
+      "notes": "Existing art preserved; native UI icons/skins remain fallback where no concept export exists."
+    },
+    {
+      "assetId": "UI_MainMenu_shadow",
+      "category": "UI",
+      "sourceFile": "D:\\HIT ME\\unity-client\\Assets\\HitMe\\Art\\UI\\MainMenu\\shadow.png",
+      "targetPath": "Assets/HitMe/Art/UI/MainMenu/shadow.png",
+      "dimensions": [
+        256,
+        90
+      ],
+      "transparent": true,
+      "alphaRange": [
+        0,
+        85
+      ],
+      "pixelsPerUnit": 100.0,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "slicing": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "animationReady": false,
+      "status": "FALLBACK",
+      "dependencies": [],
+      "sha256": "a6015b4ed052a214e98ba44c38c98e2cd642cf1dffb043e519155613e901e355",
+      "notes": "Existing art preserved; native UI icons/skins remain fallback where no concept export exists."
+    },
+    {
+      "assetId": "Weapons_Chao_held",
+      "category": "Weapons",
+      "sourceFile": "D:\\HIT ME\\unity-client\\Assets\\HitMe\\Art\\Weapons\\Chao\\held.png",
+      "targetPath": "Assets/HitMe/Art/Weapons/Chao/held.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "transparent": true,
+      "alphaRange": [
+        0,
+        254
+      ],
+      "pixelsPerUnit": 100.0,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "slicing": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "animationReady": false,
+      "status": "INTEGRATED",
+      "dependencies": [],
+      "sha256": "381d10fedab4a80a944a31d479ef1934c5a84c85bae5024b3ba989fb5d498e12",
+      "notes": "Existing art preserved; native UI icons/skins remain fallback where no concept export exists."
+    },
+    {
+      "assetId": "Weapons_DepToOng_held",
+      "category": "Weapons",
+      "sourceFile": "D:\\HIT ME\\unity-client\\Assets\\HitMe\\Art\\Weapons\\DepToOng\\held.png",
+      "targetPath": "Assets/HitMe/Art/Weapons/DepToOng/held.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "transparent": true,
+      "alphaRange": [
+        0,
+        254
+      ],
+      "pixelsPerUnit": 100.0,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "slicing": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "animationReady": false,
+      "status": "INTEGRATED",
+      "dependencies": [],
+      "sha256": "212e648b75dbeeb728dec52ea7884b8685a3f7ab135635a93cdc1eb52d3b3c9a",
+      "notes": "Existing art preserved; native UI icons/skins remain fallback where no concept export exists."
+    },
+    {
+      "assetId": "Weapons_Vot_held",
+      "category": "Weapons",
+      "sourceFile": "D:\\HIT ME\\unity-client\\Assets\\HitMe\\Art\\Weapons\\Vot\\held.png",
+      "targetPath": "Assets/HitMe/Art/Weapons/Vot/held.png",
+      "dimensions": [
+        1774,
         887
       ],
-      "cleanup_notes": "No cleanup blocker detected from metadata"
-    },
-    {
-      "asset_id": "missing_NamLang_final",
-      "asset_name": "NamLang_final",
-      "source": "not supplied",
-      "destination": "unity-client/Assets/HitMe/Art/Characters/NamLang_final/",
-      "intended_use": "characters",
-      "required_dimensions": "256×256 frame export preferred for poses; preserve aspect/pivot, not a mandatory rescale",
-      "transparency": true,
-      "pivot": "foot pivot metadata per character",
-      "ppu": 100,
-      "sorting_layer": "Default / Canvas presentation order",
-      "animation_requirements": "real frame sequence or rig layers for required states",
-      "status": "D_WAITING_FOR_ARTWORK"
-    },
-    {
-      "asset_id": "missing_NuNangDong_pink",
-      "asset_name": "NuNangDong_pink",
-      "source": "not supplied",
-      "destination": "unity-client/Assets/HitMe/Art/Characters/NuNangDong_pink/",
-      "intended_use": "characters",
-      "required_dimensions": "256×256 frame export preferred for poses; preserve aspect/pivot, not a mandatory rescale",
-      "transparency": true,
-      "pivot": "foot pivot metadata per character",
-      "ppu": 100,
-      "sorting_layer": "Default / Canvas presentation order",
-      "animation_requirements": "real frame sequence or rig layers for required states",
-      "status": "D_WAITING_FOR_ARTWORK"
-    },
-    {
-      "asset_id": "missing_QuayBoy",
-      "asset_name": "QuayBoy",
-      "source": "not supplied",
-      "destination": "unity-client/Assets/HitMe/Art/Characters/QuayBoy/",
-      "intended_use": "characters",
-      "required_dimensions": "256×256 frame export preferred for poses; preserve aspect/pivot, not a mandatory rescale",
-      "transparency": true,
-      "pivot": "foot pivot metadata per character",
-      "ppu": 100,
-      "sorting_layer": "Default / Canvas presentation order",
-      "animation_requirements": "real frame sequence or rig layers for required states",
-      "status": "D_WAITING_FOR_ARTWORK"
-    },
-    {
-      "asset_id": "missing_CoBa",
-      "asset_name": "CoBa",
-      "source": "not supplied",
-      "destination": "unity-client/Assets/HitMe/Art/Characters/CoBa/",
-      "intended_use": "characters",
-      "required_dimensions": "256×256 frame export preferred for poses; preserve aspect/pivot, not a mandatory rescale",
-      "transparency": true,
-      "pivot": "foot pivot metadata per character",
-      "ppu": 100,
-      "sorting_layer": "Default / Canvas presentation order",
-      "animation_requirements": "real frame sequence or rig layers for required states",
-      "status": "D_WAITING_FOR_ARTWORK"
-    },
-    {
-      "asset_id": "missing_AnhTeen",
-      "asset_name": "AnhTeen",
-      "source": "not supplied",
-      "destination": "unity-client/Assets/HitMe/Art/Characters/AnhTeen/",
-      "intended_use": "characters",
-      "required_dimensions": "256×256 frame export preferred for poses; preserve aspect/pivot, not a mandatory rescale",
-      "transparency": true,
-      "pivot": "foot pivot metadata per character",
-      "ppu": 100,
-      "sorting_layer": "Default / Canvas presentation order",
-      "animation_requirements": "real frame sequence or rig layers for required states",
-      "status": "D_WAITING_FOR_ARTWORK"
-    },
-    {
-      "asset_id": "missing_ChoVang",
-      "asset_name": "ChoVang",
-      "source": "not supplied",
-      "destination": "unity-client/Assets/HitMe/Art/Characters/ChoVang/",
-      "intended_use": "characters",
-      "required_dimensions": "256×256 frame export preferred for poses; preserve aspect/pivot, not a mandatory rescale",
-      "transparency": true,
-      "pivot": "foot pivot metadata per character",
-      "ppu": 100,
-      "sorting_layer": "Default / Canvas presentation order",
-      "animation_requirements": "real frame sequence or rig layers for required states",
-      "status": "D_WAITING_FOR_ARTWORK"
-    },
-    {
-      "asset_id": "missing_MeoMun",
-      "asset_name": "MeoMun",
-      "source": "not supplied",
-      "destination": "unity-client/Assets/HitMe/Art/Characters/MeoMun/",
-      "intended_use": "characters",
-      "required_dimensions": "256×256 frame export preferred for poses; preserve aspect/pivot, not a mandatory rescale",
-      "transparency": true,
-      "pivot": "foot pivot metadata per character",
-      "ppu": 100,
-      "sorting_layer": "Default / Canvas presentation order",
-      "animation_requirements": "real frame sequence or rig layers for required states",
-      "status": "D_WAITING_FOR_ARTWORK"
-    },
-    {
-      "asset_id": "missing_Phone",
-      "asset_name": "Phone",
-      "source": "not supplied",
-      "destination": "unity-client/Assets/HitMe/Art/Weapons/Phone/",
-      "intended_use": "weapons",
-      "required_dimensions": "separate PNG/layer; dimensions per intended screen use",
-      "transparency": true,
-      "pivot": "center/grip/layer metadata",
-      "ppu": 100,
-      "sorting_layer": "Default / Canvas presentation order",
-      "animation_requirements": "single PNG supports fallback motion",
-      "status": "D_WAITING_FOR_ARTWORK"
-    },
-    {
-      "asset_id": "missing_MosquitoRacket",
-      "asset_name": "MosquitoRacket",
-      "source": "not supplied",
-      "destination": "unity-client/Assets/HitMe/Art/Weapons/MosquitoRacket/",
-      "intended_use": "weapons",
-      "required_dimensions": "separate PNG/layer; dimensions per intended screen use",
-      "transparency": true,
-      "pivot": "center/grip/layer metadata",
-      "ppu": 100,
-      "sorting_layer": "Default / Canvas presentation order",
-      "animation_requirements": "single PNG supports fallback motion",
-      "status": "D_WAITING_FOR_ARTWORK"
-    },
-    {
-      "asset_id": "missing_PickleballRacket",
-      "asset_name": "PickleballRacket",
-      "source": "not supplied",
-      "destination": "unity-client/Assets/HitMe/Art/Weapons/PickleballRacket/",
-      "intended_use": "weapons",
-      "required_dimensions": "separate PNG/layer; dimensions per intended screen use",
-      "transparency": true,
-      "pivot": "center/grip/layer metadata",
-      "ppu": 100,
-      "sorting_layer": "Default / Canvas presentation order",
-      "animation_requirements": "single PNG supports fallback motion",
-      "status": "D_WAITING_FOR_ARTWORK"
-    },
-    {
-      "asset_id": "missing_TV",
-      "asset_name": "TV",
-      "source": "not supplied",
-      "destination": "unity-client/Assets/HitMe/Art/Weapons/TV/",
-      "intended_use": "weapons",
-      "required_dimensions": "separate PNG/layer; dimensions per intended screen use",
-      "transparency": true,
-      "pivot": "center/grip/layer metadata",
-      "ppu": 100,
-      "sorting_layer": "Default / Canvas presentation order",
-      "animation_requirements": "single PNG supports fallback motion",
-      "status": "D_WAITING_FOR_ARTWORK"
-    },
-    {
-      "asset_id": "missing_MiniFridge",
-      "asset_name": "MiniFridge",
-      "source": "not supplied",
-      "destination": "unity-client/Assets/HitMe/Art/Weapons/MiniFridge/",
-      "intended_use": "weapons",
-      "required_dimensions": "separate PNG/layer; dimensions per intended screen use",
-      "transparency": true,
-      "pivot": "center/grip/layer metadata",
-      "ppu": 100,
-      "sorting_layer": "Default / Canvas presentation order",
-      "animation_requirements": "single PNG supports fallback motion",
-      "status": "D_WAITING_FOR_ARTWORK"
-    },
-    {
-      "asset_id": "missing_WeaponVariants",
-      "asset_name": "WeaponVariants",
-      "source": "not supplied",
-      "destination": "unity-client/Assets/HitMe/Art/Weapons/WeaponVariants/",
-      "intended_use": "weapons",
-      "required_dimensions": "separate PNG/layer; dimensions per intended screen use",
-      "transparency": true,
-      "pivot": "center/grip/layer metadata",
-      "ppu": 100,
-      "sorting_layer": "Default / Canvas presentation order",
-      "animation_requirements": "single PNG supports fallback motion",
-      "status": "D_WAITING_FOR_ARTWORK"
-    },
-    {
-      "asset_id": "missing_VillageLayers",
-      "asset_name": "VillageLayers",
-      "source": "not supplied",
-      "destination": "unity-client/Assets/HitMe/Art/Environment/VillageLayers/",
-      "intended_use": "environment",
-      "required_dimensions": "separate PNG/layer; dimensions per intended screen use",
-      "transparency": true,
-      "pivot": "center/grip/layer metadata",
-      "ppu": 100,
-      "sorting_layer": "Default / Canvas presentation order",
-      "animation_requirements": "real frame sequence or rig layers for required states",
-      "status": "D_WAITING_FOR_ARTWORK"
-    },
-    {
-      "asset_id": "missing_Flags",
-      "asset_name": "Flags",
-      "source": "not supplied",
-      "destination": "unity-client/Assets/HitMe/Art/Environment/Flags/",
-      "intended_use": "environment",
-      "required_dimensions": "separate PNG/layer; dimensions per intended screen use",
-      "transparency": true,
-      "pivot": "center/grip/layer metadata",
-      "ppu": 100,
-      "sorting_layer": "Default / Canvas presentation order",
-      "animation_requirements": "real frame sequence or rig layers for required states",
-      "status": "D_WAITING_FOR_ARTWORK"
-    },
-    {
-      "asset_id": "missing_Lanterns",
-      "asset_name": "Lanterns",
-      "source": "not supplied",
-      "destination": "unity-client/Assets/HitMe/Art/Environment/Lanterns/",
-      "intended_use": "environment",
-      "required_dimensions": "separate PNG/layer; dimensions per intended screen use",
-      "transparency": true,
-      "pivot": "center/grip/layer metadata",
-      "ppu": 100,
-      "sorting_layer": "Default / Canvas presentation order",
-      "animation_requirements": "real frame sequence or rig layers for required states",
-      "status": "D_WAITING_FOR_ARTWORK"
-    },
-    {
-      "asset_id": "missing_Leaves",
-      "asset_name": "Leaves",
-      "source": "not supplied",
-      "destination": "unity-client/Assets/HitMe/Art/Environment/Leaves/",
-      "intended_use": "environment",
-      "required_dimensions": "separate PNG/layer; dimensions per intended screen use",
-      "transparency": true,
-      "pivot": "center/grip/layer metadata",
-      "ppu": 100,
-      "sorting_layer": "Default / Canvas presentation order",
-      "animation_requirements": "real frame sequence or rig layers for required states",
-      "status": "D_WAITING_FOR_ARTWORK"
-    },
-    {
-      "asset_id": "missing_CrowdFrames",
-      "asset_name": "CrowdFrames",
-      "source": "not supplied",
-      "destination": "unity-client/Assets/HitMe/Art/Environment/CrowdFrames/",
-      "intended_use": "environment",
-      "required_dimensions": "separate PNG/layer; dimensions per intended screen use",
-      "transparency": true,
-      "pivot": "center/grip/layer metadata",
-      "ppu": 100,
-      "sorting_layer": "Default / Canvas presentation order",
-      "animation_requirements": "real frame sequence or rig layers for required states",
-      "status": "D_WAITING_FOR_ARTWORK"
-    },
-    {
-      "asset_id": "missing_Foreground",
-      "asset_name": "Foreground",
-      "source": "not supplied",
-      "destination": "unity-client/Assets/HitMe/Art/Environment/Foreground/",
-      "intended_use": "environment",
-      "required_dimensions": "separate PNG/layer; dimensions per intended screen use",
-      "transparency": true,
-      "pivot": "center/grip/layer metadata",
-      "ppu": 100,
-      "sorting_layer": "Default / Canvas presentation order",
-      "animation_requirements": "real frame sequence or rig layers for required states",
-      "status": "D_WAITING_FOR_ARTWORK"
-    },
-    {
-      "asset_id": "missing_PremiumSkins",
-      "asset_name": "PremiumSkins",
-      "source": "not supplied",
-      "destination": "unity-client/Assets/HitMe/Art/UI/PremiumSkins/",
-      "intended_use": "ui",
-      "required_dimensions": "separate PNG/layer; dimensions per intended screen use",
-      "transparency": true,
-      "pivot": "center/grip/layer metadata",
-      "ppu": 100,
-      "sorting_layer": "Default / Canvas presentation order",
-      "animation_requirements": "single PNG supports fallback motion",
-      "status": "D_WAITING_FOR_ARTWORK"
-    },
-    {
-      "asset_id": "missing_Portraits",
-      "asset_name": "Portraits",
-      "source": "not supplied",
-      "destination": "unity-client/Assets/HitMe/Art/UI/Portraits/",
-      "intended_use": "ui",
-      "required_dimensions": "separate PNG/layer; dimensions per intended screen use",
-      "transparency": true,
-      "pivot": "center/grip/layer metadata",
-      "ppu": 100,
-      "sorting_layer": "Default / Canvas presentation order",
-      "animation_requirements": "single PNG supports fallback motion",
-      "status": "D_WAITING_FOR_ARTWORK"
-    },
-    {
-      "asset_id": "missing_IllustratedCards",
-      "asset_name": "IllustratedCards",
-      "source": "not supplied",
-      "destination": "unity-client/Assets/HitMe/Art/UI/IllustratedCards/",
-      "intended_use": "ui",
-      "required_dimensions": "separate PNG/layer; dimensions per intended screen use",
-      "transparency": true,
-      "pivot": "center/grip/layer metadata",
-      "ppu": 100,
-      "sorting_layer": "Default / Canvas presentation order",
-      "animation_requirements": "single PNG supports fallback motion",
-      "status": "D_WAITING_FOR_ARTWORK"
-    },
-    {
-      "asset_id": "missing_HUDChatSkin",
-      "asset_name": "HUDChatSkin",
-      "source": "not supplied",
-      "destination": "unity-client/Assets/HitMe/Art/UI/HUDChatSkin/",
-      "intended_use": "ui",
-      "required_dimensions": "separate PNG/layer; dimensions per intended screen use",
-      "transparency": true,
-      "pivot": "center/grip/layer metadata",
-      "ppu": 100,
-      "sorting_layer": "Default / Canvas presentation order",
-      "animation_requirements": "single PNG supports fallback motion",
-      "status": "D_WAITING_FOR_ARTWORK"
-    },
-    {
-      "asset_id": "missing_DustFrames",
-      "asset_name": "DustFrames",
-      "source": "not supplied",
-      "destination": "unity-client/Assets/HitMe/Art/VFX/DustFrames/",
-      "intended_use": "vfx",
-      "required_dimensions": "separate PNG/layer; dimensions per intended screen use",
-      "transparency": true,
-      "pivot": "center/grip/layer metadata",
-      "ppu": 100,
-      "sorting_layer": "Default / Canvas presentation order",
-      "animation_requirements": "real frame sequence or rig layers for required states",
-      "status": "D_WAITING_FOR_ARTWORK"
-    },
-    {
-      "asset_id": "missing_ImpactFrames",
-      "asset_name": "ImpactFrames",
-      "source": "not supplied",
-      "destination": "unity-client/Assets/HitMe/Art/VFX/ImpactFrames/",
-      "intended_use": "vfx",
-      "required_dimensions": "separate PNG/layer; dimensions per intended screen use",
-      "transparency": true,
-      "pivot": "center/grip/layer metadata",
-      "ppu": 100,
-      "sorting_layer": "Default / Canvas presentation order",
-      "animation_requirements": "real frame sequence or rig layers for required states",
-      "status": "D_WAITING_FOR_ARTWORK"
-    },
-    {
-      "asset_id": "missing_TrailTexture",
-      "asset_name": "TrailTexture",
-      "source": "not supplied",
-      "destination": "unity-client/Assets/HitMe/Art/VFX/TrailTexture/",
-      "intended_use": "vfx",
-      "required_dimensions": "separate PNG/layer; dimensions per intended screen use",
-      "transparency": true,
-      "pivot": "center/grip/layer metadata",
-      "ppu": 100,
-      "sorting_layer": "Default / Canvas presentation order",
-      "animation_requirements": "real frame sequence or rig layers for required states",
-      "status": "D_WAITING_FOR_ARTWORK"
-    },
-    {
-      "asset_id": "missing_ConfettiFrames",
-      "asset_name": "ConfettiFrames",
-      "source": "not supplied",
-      "destination": "unity-client/Assets/HitMe/Art/VFX/ConfettiFrames/",
-      "intended_use": "vfx",
-      "required_dimensions": "separate PNG/layer; dimensions per intended screen use",
-      "transparency": true,
-      "pivot": "center/grip/layer metadata",
-      "ppu": 100,
-      "sorting_layer": "Default / Canvas presentation order",
-      "animation_requirements": "real frame sequence or rig layers for required states",
-      "status": "D_WAITING_FOR_ARTWORK"
+      "transparent": true,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "pixelsPerUnit": 100.0,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "slicing": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "animationReady": false,
+      "status": "INTEGRATED",
+      "dependencies": [],
+      "sha256": "e4070f1a2423b436a72d23497667699ab679b5cafe7f1f5227b8f080cf0c9de1",
+      "notes": "Existing art preserved; native UI icons/skins remain fallback where no concept export exists."
     }
   ]
 }

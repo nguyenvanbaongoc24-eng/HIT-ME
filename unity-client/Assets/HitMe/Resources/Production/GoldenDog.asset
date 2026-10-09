@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a9cb75c70a0b4d4588bdff5eff76796, type: 3}
+  m_Name: GoldenDog
+  m_EditorClassIdentifier: HitMe.Runtime::HitMe.Characters.CharacterDefinition
+  characterId: Visual_GoldenDog
+  displayName: "Ch\xF3 v\xE0ng"
+  artBrief: Static production showcase. Six states use procedural visual motion; no invented frames or online ID.
+  animations:
+  - state: 0
+    frames:
+    - {fileID: 21300000, guid: f314f50b1d9f3cd419bed77df90ebc9e, type: 3}
+    clip: {fileID: 0}
+    framesPerSecond: 1
+    loop: 1
+  defaultWeapon: {fileID: 0}
+  footPivot: {x: 0.5, y: 0}
+  visualScale: 1
+  referenceHeight: 74
+  authoredFacing: 1
+  portrait: {fileID: 21300000, guid: 5ba0ffd7f6c9ae6428b7950e35391214, type: 3}
+  shadow: {fileID: 21300000, guid: 055b5cbdb1ff9d049af1c2587e8dea3d, type: 3}
+  motionProfile: {fileID: 11400000, guid: 714cf3c6b38c78946a4a9478993a0b4c, type: 2}
+  visualPrefab: {fileID: 0}

@@ -31,7 +31,8 @@ namespace HitMe.Characters
         [Min(.1f)] public float visualScale=1;
         [Range(70,75)] public float referenceHeight=74;
         public FacingDirection authoredFacing=FacingDirection.Right;
-        public Sprite portrait;
+        public Sprite portrait,shadow;
+        public HitMe.Visuals.CharacterMotionProfile motionProfile;
         public GameObject visualPrefab;
         public CharacterAnimation Animation(VisualState state)
         { foreach(var a in animations) if(a!=null && a.state==state)return a; return null; }

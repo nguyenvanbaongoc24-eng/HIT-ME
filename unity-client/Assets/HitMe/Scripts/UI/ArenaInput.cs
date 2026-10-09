@@ -17,6 +17,6 @@ namespace HitMe.UI
         {
             if (e.pointerId == pointerId && (e.position - down).sqrMagnitude >= view.DragThreshold * view.DragThreshold) view.Aim(e.position);
         }
-        public void OnPointerUp(PointerEventData e) { if (e.pointerId == pointerId) pointerId = int.MinValue; }
+        public void OnPointerUp(PointerEventData e) { if (e.pointerId == pointerId) { pointerId = int.MinValue; view.SnapAimVisual(); } }
     }
 }

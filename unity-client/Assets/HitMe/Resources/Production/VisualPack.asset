@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d66f4a23e2443f44db2549c7ef93e832, type: 3}
+  m_Name: VisualPack
+  m_EditorClassIdentifier: HitMe.Runtime::HitMe.Visuals.ProductionVisualPack
+  roster:
+  - {fileID: 11400000, guid: 4751f21773622c141856a8a2b1a1579a, type: 2}
+  - {fileID: 11400000, guid: bb94c7e2eacd15d4787830c6555847b7, type: 2}
+  - {fileID: 11400000, guid: e24f8d34cc8e1c64c800b1d2043cbc0b, type: 2}
+  - {fileID: 11400000, guid: de6697f15a57cda46930ec376ef44a89, type: 2}
+  - {fileID: 11400000, guid: 24dbf0824470eee45b8e0f6b4c12de67, type: 2}
+  - {fileID: 11400000, guid: 80e8be7d0ed54a146974296720af7a72, type: 2}
+  - {fileID: 11400000, guid: 241a7ff1635d7f74b9a434037ad6b0ab, type: 2}
+  weapons:
+  - {fileID: 11400000, guid: a387b81ffdec7854cb9d4042a2932460, type: 2}
+  - {fileID: 11400000, guid: 85f1ff5f857499c41b5ddd83e9414b82, type: 2}
+  - {fileID: 11400000, guid: 9ca37c4fea448254b9c324be34362eea, type: 2}
+  - {fileID: 11400000, guid: 3b0133905a5fdc44d824360dc555349f, type: 2}
+  - {fileID: 11400000, guid: b93d291ce54a07d4a9f398c73be69454, type: 2}
+  - {fileID: 11400000, guid: ad42f0607108bf343b59a3436f0893cb, type: 2}
+  - {fileID: 11400000, guid: de612ce628213ae46b9fb11f65be7db1, type: 2}
+  - {fileID: 11400000, guid: 355395e80824fea449e8b60bc4ebb8ac, type: 2}
+  - {fileID: 11400000, guid: 4f77ad1a69254e94d86a8ac7dddd01eb, type: 2}
+  menuLayers:
+  - {fileID: 11400000, guid: 053ebbe4311907041931bdc475a10249, type: 2}
+  - {fileID: 11400000, guid: ec1d37e0b985ba1418456a058a5a49be, type: 2}
+  - {fileID: 11400000, guid: 1eeb189070946c64d868e909080b6bb1, type: 2}
+  - {fileID: 11400000, guid: e6fbbb86f991bcd43bb625138cc66635, type: 2}
+  battleLayers:
+  - {fileID: 11400000, guid: 3c917241872a217468d724fb8d24a57f, type: 2}
+  - {fileID: 11400000, guid: 374397016cb49f243b6e402e6dc1f8cb, type: 2}
+  - {fileID: 11400000, guid: 289804635f9451648a6cbd3e6f564109, type: 2}
+  - {fileID: 11400000, guid: ca5522356dae9d143bb5938008be0c29, type: 2}
+  centerLotus: {fileID: 21300000, guid: 73c031bb6f37b6d4ebdcebd4ecd084ac, type: 3}

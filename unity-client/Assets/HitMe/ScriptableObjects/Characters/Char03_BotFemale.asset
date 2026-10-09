@@ -52,5 +52,7 @@ MonoBehaviour:
   visualScale: 1.025
   referenceHeight: 74
   authoredFacing: -1
-  portrait: {fileID: 0}
+  portrait: {fileID: 21300000, guid: a3e0768cd3a978a40b85c37fffe5cd2f, type: 3}
+  shadow: {fileID: 0}
+  motionProfile: {fileID: 0}
   visualPrefab: {fileID: 8117850123794079012, guid: a6ccbd67f65718e4fb7ca4a8be305fc0, type: 3}

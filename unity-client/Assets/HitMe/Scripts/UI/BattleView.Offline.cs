@@ -65,7 +65,7 @@ namespace HitMe.UI
             floor.Find("ArenaLabel").gameObject.SetActive(ArenaMaps.Selected!=0);
             var view=Match.ViewFor("player"); bool placement=Match.Phase==MatchPhase.Placement;
             bool changed=paintedPhase!=Match.Phase || paintedRound!=Match.Round;
-            if(changed) { ReleaseProjectiles();if(Match.Phase==MatchPhase.RoundResult&&Match.Resolution!=null)foreach(var t in Match.Resolution.Throws)impactFeedback.ConfirmedImpact(ToCanvas(t.End),t.Hit); }
+            if(changed) { ReleaseProjectiles();if(Match.Phase==MatchPhase.RoundResult&&Match.Resolution!=null)foreach(var t in Match.Resolution.Throws){impactFeedback.ConfirmedImpact(ToCanvas(t.End),t.Hit);ConfirmedCrowdResponse(t.Hit);} }
             VisibleActorCount=0;
             for(int i=0;i<actors.Length;i++)
             {
@@ -103,12 +103,7 @@ namespace HitMe.UI
                 var eliminated=Match.Resolution.Health.Where(h=>h.Eliminated).ToArray();
                 if(eliminated.Length>0)status.text+=" · "+Strings.Get("eliminated")+" "+eliminated.Length.ToString();
             }
-            aim.gameObject.SetActive(placement && view[0].Action!=null && view[0].Action.CanThrow);
-            if(aim.gameObject.activeSelf)
-            {
-                var a=view[0].Action; var start=ToCanvas(a.Position); var end=ToCanvas(Config.ArenaGeometry.ProjectileCollision(a.Position,a.Direction,Config.projectileRadius)); var delta=end-start;
-                aim.anchoredPosition=(start+end)/2; aim.sizeDelta=new Vector2(delta.magnitude,2); aim.localRotation=Quaternion.Euler(0,0,Mathf.Atan2(delta.y,delta.x)*Mathf.Rad2Deg);
-            }
+            if(placement && view[0].Action!=null && view[0].Action.CanThrow) ShowProductionAim(view[0].Action.Position,view[0].Action.Direction,view[0].Stage==InputStage.Locked); else if(Match.Phase!=MatchPhase.Reveal) aim.GetComponent<ProductionAimIndicator>().Hide(Match.Phase==MatchPhase.Throw);
             if(Match.Phase==MatchPhase.Throw)
             {
                 if(projectiles.Count==0)foreach(var t in Match.Resolution.Throws)projectiles.Add(CreateWeaponProjectile(t.Thrower,t.Origin));

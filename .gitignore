@@ -4,3 +4,5 @@ packages/*/dist/
 *.log
 .env
 .env.*
+
+.vercel/

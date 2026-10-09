@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f511ff86f6f3c84488537f9436b02a43, type: 3}
+  m_Name: PlasticStool
+  m_EditorClassIdentifier: HitMe.Runtime::HitMe.Characters.WeaponDefinition
+  weaponId: Visual_PlasticStool
+  displayName: PlasticStool
+  heldSprite: {fileID: 21300000, guid: 44381306d45ffd743aec281fd5812cc6, type: 3}
+  projectileSprite: {fileID: 21300000, guid: 44381306d45ffd743aec281fd5812cc6, type: 3}
+  icon: {fileID: 21300000, guid: 44381306d45ffd743aec281fd5812cc6, type: 3}
+  handAnchor: {x: 0.7, y: 0.5}
+  gripPivot: {x: 0.5, y: 0.2}
+  visualSize: 12
+  flightSpinDegreesPerSecond: 120
+  trailEnabled: 1
+  trailWidth: 2.1
+  trailColor: {r: 0.9, g: 0.75, b: 0.5, a: 0.2}
+  impactSprite: {fileID: 0}

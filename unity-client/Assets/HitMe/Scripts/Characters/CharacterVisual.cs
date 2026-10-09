@@ -26,7 +26,7 @@ namespace HitMe.Characters
             definition=data; legacy=fallback; legacyId=id; image=GetComponent<Image>(); image.raycastTarget=false;
             Facing=data!=null?data.authoredFacing:FacingDirection.Right;
             direction=new Vector2((int)Facing,0); initialized=true; presented=false;
-            motion=Resources.Load<CharacterMotionProfile>("Motion/Character");
+            motion=data!=null&&data.motionProfile!=null?data.motionProfile:Resources.Load<CharacterMotionProfile>("Motion/Character");
         }
         public void SetFacing(Vector2 aim)
         {

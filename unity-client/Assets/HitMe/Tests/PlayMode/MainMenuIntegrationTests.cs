@@ -31,7 +31,7 @@ public sealed class MainMenuIntegrationTests {
   }
   view.SafeAreaOverride=null;view.Settings();yield return null;Button(view.Content,"MenuModal/Panel/Language").onClick.Invoke();yield return null;Assert.AreEqual("en",Strings.Language);Assert.AreEqual("QUICK PLAY",view.Content.Find("PrimaryActions/QuickMatch/Label").GetComponent<TextMeshProUGUI>().text);view.CloseModal();
   view.Practice();yield return null;int before=OfflineRunContext.Settings.BotCount;Button(view.Content,"MenuModal/Panel/BotCount").onClick.Invoke();yield return null;Assert.AreNotEqual(before,OfflineRunContext.Settings.BotCount);view.CloseModal();
-  view.Maps();yield return null;Button(view.Content,"MenuModal/Panel/Map2").onClick.Invoke();yield return null;Assert.AreEqual(2,ArenaMaps.Selected);view.CloseModal();ArenaMaps.Selected=0;
+  view.Maps();yield return null;Button(view.Content,"MenuModal/Panel/Map2").onClick.Invoke();yield return null;Button(view.Content,"MenuModal/Panel/ConfirmMap").onClick.Invoke();yield return null;Assert.AreEqual(2,ArenaMaps.Selected);view.CloseModal();ArenaMaps.Selected=0;
   Button(view.Content,"SecondaryFeatures/Ranking").onClick.Invoke();yield return null;Assert.IsTrue(view.Content.Find("MenuModal/Panel/Message").GetComponent<TextMeshProUGUI>().text.Contains("Coming soon"));view.CloseModal();
   Button(view.Content,"PrimaryActions/QuickMatch").onClick.Invoke();yield return null;Assert.IsNotNull(view.Content.Find("MenuModal/Panel/Connect"));Button(view.Content,"MenuModal/Panel/Cancel").onClick.Invoke();yield return null;Assert.IsTrue(Button(view.Content,"PrimaryActions/QuickMatch").interactable);
   // A fixture snapshot verifies binding only; no development data is embedded in the product UI.

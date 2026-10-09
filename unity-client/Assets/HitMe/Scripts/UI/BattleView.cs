@@ -94,25 +94,27 @@ namespace HitMe.UI
             float w = root.rect.width, h = root.rect.height;
             if (w <= 0 || h <= 0) { w = Config.referenceWidth; h = Config.referenceHeight; }
             Viewport = new ArenaViewport(w, h, Config,(Screen.height-CurrentSafeArea.yMax)/canvas.scaleFactor,CurrentSafeArea.yMin/canvas.scaleFactor);
-            var arenaArt=ArenaMaps.LoadSelected();
+            var arenaArt=ArenaMaps.ForBattle(online);
             bool hasBackdrop=arenaArt!=null && arenaArt.backdrop!=null;
             var bg = Box("StandsPlaceholder", root, new Vector2(w, h), Vector2.zero, C(107, 66, 57)); Stretch(bg.rectTransform);
-            if(hasBackdrop) {bg.sprite=arenaArt.backdrop;bg.color=Color.white;}
+            if(hasBackdrop) {bg.sprite=arenaArt.backdrop;bg.color=Color.white;bg.gameObject.AddComponent<ImageCover>();}
             for (int i = 0; !hasBackdrop && i < 4; i++)
                 ArenaSurface("StandTierPlaceholder", root, new Vector2((float)Viewport.OuterWidth + 38 + i * 70, (float)Viewport.OuterHeight + 40 + i * 80), Vector2.zero, i % 2 == 0 ? C(139, 86, 66) : C(179, 114, 77), .965f);
-            ArenaSurface("WallShadow", root, new Vector2((float)Viewport.OuterWidth + 8, (float)Viewport.OuterHeight + 10), new Vector2(0, -4), ink);
-            ArenaSurface("WallPlaceholder", root, new Vector2((float)Viewport.OuterWidth, (float)Viewport.OuterHeight), Vector2.zero, C(223, 162, 79));
-            ArenaSurface("WallInnerPlaceholder", root, new Vector2((float)Viewport.OuterWidth - 9, (float)Viewport.OuterHeight - 9), Vector2.zero, C(146, 84, 48));
+            var visualFloorSize = new Vector2((float)(2 * Config.ArenaGeometry.Bounds.MaxX * Viewport.Scale), (float)(2 * Config.ArenaGeometry.Bounds.MaxY * Viewport.Scale));
+            ArenaSurface("WallShadow", root, visualFloorSize + new Vector2(18,18), new Vector2(0,-2), ink);
+            ArenaSurface("WallPlaceholder", root, visualFloorSize + new Vector2(14,14), Vector2.zero, C(250,213,151));
+            ArenaSurface("WallInnerPlaceholder", root, visualFloorSize + new Vector2(6,6), Vector2.zero, C(146,84,48));
             var arena = ArenaSurface("ArenaSandPlaceholder", root, new Vector2((float)(2 * Config.ArenaGeometry.Bounds.MaxX * Viewport.Scale), (float)(2 * Config.ArenaGeometry.Bounds.MaxY * Viewport.Scale)), Vector2.zero, C(238, 192, 121));
             floor = arena.rectTransform; arena.raycastTarget = true;
             arena.gameObject.AddComponent<ArenaInput>().view = this;
             if(arenaArt!=null && arenaArt.sand!=null)
             {
                 arena.gameObject.AddComponent<Mask>().showMaskGraphic=false;
-                var sand=Box("ArenaSandSprite",floor,floor.sizeDelta,Vector2.zero,Color.white);Stretch(sand.rectTransform);sand.sprite=arenaArt.sand;
+                var sand=Box("ArenaSandSprite",floor,floor.sizeDelta,Vector2.zero,Color.white);Stretch(sand.rectTransform);sand.sprite=arenaArt.sand;sand.type=Image.Type.Tiled;sand.pixelsPerUnitMultiplier=2;
             }
-            ArenaSurface("FloorMark", floor, floor.sizeDelta * .94f, Vector2.zero, C(215, 157, 89), .993f);
-            Label("ArenaLabel", floor, hasBackdrop?"":ArenaMaps.DisplayName+"\n"+Strings.Get("arenaPlaceholder"), new Vector2(200, 48), new Vector2(0, -110), 14).color = C(160, 100, 55);
+            var productionPack=HitMe.Visuals.ProductionVisualPack.Load();var center=arenaArt?.centerDecoration??productionPack?.centerLotus;if(center!=null){var medallion=Box("CenterLotusPattern",floor,new Vector2(144,144),Vector2.zero,new Color(1,1,1,.16f));medallion.sprite=center;medallion.preserveAspect=true;medallion.raycastTarget=false;}
+            ArenaSurface("FloorMark", floor, floor.sizeDelta * .94f, Vector2.zero, hasBackdrop?Color.clear:C(215, 157, 89), .993f);
+            Label("ArenaLabel", floor, hasBackdrop?"":ArenaMaps.DisplayName+"\n"+Strings.Get(arenaArt?.sand!=null?"mapSharedFloor":"arenaPlaceholder"), new Vector2(200, 48), new Vector2(0, -110), 14).color = C(160, 100, 55);
             CharacterManifest manifest = CharacterManifest.Load();
             var catalog = CharacterCatalog.Load();
             var actorLayer = Rect("ActorLayer", root, Vector2.zero, Vector2.zero); Stretch(actorLayer);
@@ -120,7 +122,7 @@ namespace HitMe.UI
             {
                 var actor = Rect("ActorFeet" + i, actorLayer, Vector2.zero, ToCanvas(demoPositions[i % 3])); actors[i] = actor;
                 float radius = (float)(Config.playerRadius * Viewport.Scale);
-                Ellipse("FootShadow", actor, new Vector2(radius * 2, radius), Vector2.zero, new Color(0,0,0,.18f));
+                var shadowSprite=Resources.Load<UIThemeDefinition>("UI/MainMenuTheme")?.shadow;if(shadowSprite!=null){var contactShadow=Box("FootShadow",actor,new Vector2(radius*2,radius),Vector2.zero,new Color(1,1,1,.75f));contactShadow.sprite=shadowSprite;contactShadow.raycastTarget=false;}else Ellipse("FootShadow", actor, new Vector2(radius * 2, radius), Vector2.zero, new Color(0,0,0,.18f));
                 Ellipse("FeetHitbox", actor, new Vector2(radius * 2, radius * 2), Vector2.zero, C(52, 61, 49), .78f);
                 Color tint = i == 0 ? C(43, 157, 147) : (i == 1 ? C(218, 109, 76) : C(121, 105, 182));
                 int visualSlot=online&&onlinePlayers!=null?onlinePlayers[i].avatar=="Char02_BotMale"?1:onlinePlayers[i].avatar=="Char03_BotFemale"?2:0:i;
@@ -145,7 +147,7 @@ namespace HitMe.UI
                 health.font = FoundationFonts.Symbols;
                 health.gameObject.AddComponent<HitMe.Visuals.FeedbackPulse>();
             }
-            aim = Box("AimLine", root, new Vector2(1, 2), Vector2.zero, C(18, 109, 103)).rectTransform; aim.gameObject.SetActive(false);
+            aim = Instantiate(Resources.Load<GameObject>("UI/Kit/ProductionAimIndicator"),floor,false).GetComponent<RectTransform>(); aim.name="ProductionAimIndicator";
             hud = Rect("SafeAreaHUD", root, Vector2.zero, Vector2.zero); Stretch(hud); UpdateSafeArea();
             float top = hud.rect.height / 2 - 23, bottom = -hud.rect.height / 2 + 34;
             float safeW = hud.rect.width;
@@ -200,7 +202,7 @@ namespace HitMe.UI
         {
             if (online) { OnlinePlace(screen); return; }
             if (Match != null) { MatchPlace(screen); return; }
-            if (Session.Place(FromPointer(screen), Time.unscaledTimeAsDouble)) { actors[0].gameObject.SetActive(true); actors[0].anchoredPosition = ToCanvas(Session.Position); aim.gameObject.SetActive(false); AdaptHudToPlayer(); }
+            if (Session.Place(FromPointer(screen), Time.unscaledTimeAsDouble)) { actors[0].gameObject.SetActive(true); actors[0].anchoredPosition = ToCanvas(Session.Position); aim.GetComponent<ProductionAimIndicator>().Hide(); AdaptHudToPlayer(); }
         }
         void AdaptHudToPlayer()
         {
@@ -234,27 +236,26 @@ namespace HitMe.UI
             if (Match != null) { MatchAim(screen); return; }
             if (!Session.Aim(FromPointer(screen), Time.unscaledTimeAsDouble)) return;
             Point end = Config.ArenaGeometry.ProjectileCollision(Session.Position, Session.Direction, Config.projectileRadius);
-            Vector2 a = ToCanvas(Session.Position), b = ToCanvas(end), delta = b - a;
-            aim.gameObject.SetActive(true); aim.anchoredPosition = (a + b) / 2;
-            aim.sizeDelta = new Vector2(delta.magnitude, 2); aim.localRotation = Quaternion.Euler(0, 0, Mathf.Atan2(delta.y, delta.x) * Mathf.Rad2Deg);
+            ShowProductionAim(Session.Position,Session.Direction,Session.Locked);
         }
         public void StartPlacement()
         {
             Session.Start(Time.unscaledTimeAsDouble);
             foreach (var actor in actors) actor.gameObject.SetActive(false);
-            VisibleActorCount = 0; aim.gameObject.SetActive(false); status.text = Strings.Get("hint"); readyText.text = Strings.Get("ready");
+            VisibleActorCount = 0; aim.GetComponent<ProductionAimIndicator>().Hide(); status.text = Strings.Get("hint"); readyText.text = Strings.Get("ready");
         }
         void OnReady()
         {
             if (online) { NetworkSession.Instance.Action("lock"); return; }
             if (Match != null) { PumpBots(Time.unscaledTimeAsDouble); Match.Tick(Time.unscaledTimeAsDouble); Match.Lock("player", Time.unscaledTimeAsDouble); PaintMatch(); return; }
             if (Session.Phase == BattlePhase.LayoutPreview || Session.Phase == BattlePhase.AwaitingRules) StartPlacement();
-            else if (Session.Ready(Time.unscaledTimeAsDouble)) readyText.text = Strings.Get("locked");
+            else if (Session.Ready(Time.unscaledTimeAsDouble)) {readyText.text = Strings.Get("locked");if(Session.HasAim)ShowProductionAim(Session.Position,Session.Direction,true);}
         }
         void Update()
         {
             if (!initialized) return;
             SyncKitHUD();
+            mapMotion?.SetFocused(CanPlace || (online?NetworkSession.Instance.Room?.phase=="Throw":Match!=null?Match.Phase==MatchPhase.Throw:Session.Phase==BattlePhase.Reveal));
             if (root.rect.size != previousSize || CurrentSafeArea != previousSafeArea) { Rebuild(); return; }
             if (offlineLaunch != null) offlineLaunch.gameObject.SetActive(Session.Phase == BattlePhase.LayoutPreview);
             if (online) { PaintOnline(); return; }
@@ -262,6 +263,7 @@ namespace HitMe.UI
             BattlePhase old = Session.Phase; Session.Tick(Time.unscaledTimeAsDouble);
             if (Session.Phase == BattlePhase.Placement)
             {
+                if(Session.HasAim)ShowProductionAim(Session.Position,Session.Direction,Session.Locked);
                 double seconds = System.Math.Max(0, Session.Deadline - Time.unscaledTimeAsDouble);
                 int second = (int)System.Math.Ceiling(seconds);
                 if (second != lastTimerSecond) { timer.text = second.ToString(); lastTimerSecond = second; }
@@ -271,7 +273,7 @@ namespace HitMe.UI
             if (old != Session.Phase && Session.Phase == BattlePhase.Reveal)
             {
                 for (int i = 1; i < 3; i++) actors[i].gameObject.SetActive(true);
-                VisibleActorCount = 3; aim.gameObject.SetActive(false); revealAt = Time.unscaledTime; status.text = Strings.Get("reveal");
+                VisibleActorCount = 3; aim.GetComponent<ProductionAimIndicator>().Hide(); revealAt = Time.unscaledTime; status.text = Strings.Get("reveal");
             }
             if (Session.Phase == BattlePhase.Reveal && Time.unscaledTime - revealAt >= Config.revealSeconds) Session.FinishReveal();
             if (Session.Phase == BattlePhase.AwaitingRules)
