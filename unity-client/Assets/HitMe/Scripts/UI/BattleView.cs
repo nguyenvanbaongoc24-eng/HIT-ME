@@ -84,7 +84,7 @@ namespace HitMe.UI
         }
         Button Button(string name, Transform parent, string text, Vector2 size, Vector2 pos, UnityEngine.Events.UnityAction click, Color color)
         {
-            var widget=HitMeWidgetFactory.Create(name=="Ready"?"HitMeButtonPrimary":"HitMeButtonTertiary",parent);widget.name=name;var image=widget.background;image.color=color;var r=widget.GetComponent<RectTransform>();r.sizeDelta=size;r.anchoredPosition=pos;widget.title.gameObject.SetActive(false);widget.detail.gameObject.SetActive(false);widget.icon.gameObject.SetActive(false);var b=widget.action;b.onClick.AddListener(click);
+            var widget=HitMeWidgetFactory.Create(name=="Ready"?"HitMeButtonPrimary":"HitMeButtonTertiary",parent);widget.name=name;var image=widget.background;image.color=color;var r=widget.GetComponent<RectTransform>();r.sizeDelta=size;r.anchoredPosition=pos;widget.title.gameObject.SetActive(false);widget.detail.gameObject.SetActive(false);widget.icon.gameObject.SetActive(false);var b=widget.action;b.onClick.AddListener(()=>{if(name=="Ready")HitMe.Audio.HitMeAudio.Play("sfx_ready");click();});
             Label("Label", image.transform, text, size-new Vector2(6,4),Vector2.zero,14);
             return b;
         }

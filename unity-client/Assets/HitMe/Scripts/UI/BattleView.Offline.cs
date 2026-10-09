@@ -25,6 +25,7 @@ namespace HitMe.UI
         public void StartOffline(MatchSettings settings)
         {
             Initialize(); presentationThrowSeconds=settings.ThrowSeconds; Match=new OfflineMatch(Config,settings,Time.unscaledTimeAsDouble);
+            OfflineRunContext.Stats=new NetMatchStats[settings.BotCount+1];for(int i=0;i<OfflineRunContext.Stats.Length;i++)OfflineRunContext.Stats[i]=new NetMatchStats{id=i==0?"player":"bot-"+i};
             scheduledRound=-1;scheduledBots.Clear();bots.Clear(); for(int i=1;i<=settings.BotCount;i++) bots.Add("bot-"+i,new BotController(settings.Seed+(uint)i*7919,settings.Difficulty));
             actors=new RectTransform[settings.BotCount+1]; portraitItems=new RectTransform[actors.Length*3]; portraitPositions=new Vector2[portraitItems.Length];
             paintedPhase=(MatchPhase)(-1); paintedRound=-1; resultNavigated=false; Rebuild();
@@ -65,7 +66,8 @@ namespace HitMe.UI
             floor.Find("ArenaLabel").gameObject.SetActive(ArenaMaps.Selected!=0);
             var view=Match.ViewFor("player"); bool placement=Match.Phase==MatchPhase.Placement;
             bool changed=paintedPhase!=Match.Phase || paintedRound!=Match.Round;
-            if(changed) { ReleaseProjectiles();if(Match.Phase==MatchPhase.RoundResult&&Match.Resolution!=null)foreach(var t in Match.Resolution.Throws){impactFeedback.ConfirmedImpact(ToCanvas(t.End),t.Hit);ConfirmedCrowdResponse(t.Hit);} }
+            if(changed&&Match.Phase==MatchPhase.RoundResult&&Match.Resolution!=null&&OfflineRunContext.Stats!=null)foreach(var t in Match.Resolution.Throws){var row=Array.Find(OfflineRunContext.Stats,s=>s.id==t.Thrower);if(row==null)continue;row.throws++;if(t.Hit){row.hits++;var target=Array.Find(OfflineRunContext.Stats,s=>s.id==t.Target);if(target!=null)target.received++;}else row.misses++;}
+            if(changed) { ReleaseProjectiles();if(Match.Phase==MatchPhase.Throw)HitMe.Audio.HitMeAudio.Play("sfx_throw");if(Match.Phase==MatchPhase.Reveal)HitMe.Audio.HitMeAudio.Play("sfx_reveal");if(Match.Phase==MatchPhase.RoundResult&&Match.Resolution!=null){foreach(var t in Match.Resolution.Throws){impactFeedback.ConfirmedImpact(ToCanvas(t.End),t.Hit);ConfirmedCrowdResponse(t.Hit);HitMe.Audio.HitMeAudio.Play(t.Hit?"sfx_hit_bop":"sfx_wall_thud");}foreach(var h in Match.Resolution.Health)if(h.Eliminated)HitMe.Audio.HitMeAudio.Play("sfx_eliminate");} }
             VisibleActorCount=0;
             for(int i=0;i<actors.Length;i++)
             {

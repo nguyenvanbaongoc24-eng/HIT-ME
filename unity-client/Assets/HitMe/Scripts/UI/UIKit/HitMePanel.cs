@@ -21,7 +21,8 @@ public sealed class HitMePanel : MonoBehaviour {
  public void Open(string title,string message){if(heading!=null)heading.text=title;if(body!=null)body.text=message;gameObject.SetActive(true);}
  public void Close(){var motion=GetComponent<UIMotionController>();if(motion!=null)motion.Exit(()=>gameObject.SetActive(false));else gameObject.SetActive(false);}
  public void BindValue(string data){if(value!=null)value.text=data??"—";}
- public void Select(int index){if(items==null)return;for(int i=0;i<items.Length;i++)if(items[i].State!=WidgetState.Locked&&items[i].State!=WidgetState.Disabled)items[i].SetState(i==index?WidgetState.Selected:WidgetState.Normal);}
+ public int SelectedIndex {get;private set;}
+ public void Select(int index){if(items==null||index<0||index>=items.Length)return;SelectedIndex=index;for(int i=0;i<items.Length;i++)if(items[i].State!=WidgetState.Locked&&items[i].State!=WidgetState.Disabled)items[i].SetState(i==index?WidgetState.Selected:WidgetState.Normal);}
  public void BindHealth(string playerName,int hp,bool eliminated){if(body!=null)body.text=playerName;if(value!=null)value.text=new string('♥',Mathf.Clamp(hp,0,3));if(items!=null)foreach(var item in items)item.SetState(eliminated?WidgetState.Eliminated:WidgetState.Normal);}
  public void BindBattle(int round,float seconds){if(roundLabel!=null)roundLabel.text=Strings.Get("round")+" "+round;if(timerLabel!=null)timerLabel.text=Mathf.Max(0,seconds).ToString("0.0",System.Globalization.CultureInfo.InvariantCulture);}
  public void SetChatAvailable(bool available,string reason){if(input!=null)input.interactable=available;if(confirm!=null)confirm.interactable=available;if(body!=null)body.text=reason??"";}

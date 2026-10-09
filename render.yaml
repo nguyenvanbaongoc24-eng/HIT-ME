@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: hit-me-server
+    runtime: node
+    rootDir: multiplayer-server
+    plan: free
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    healthCheckPath: /health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: BEHIND_PROXY
+        value: "true"
+      - key: ALLOWED_ORIGINS
+        value: "https://hit-me-game.vercel.app,http://localhost:8791,http://127.0.0.1:8791"
+      - key: DB_PATH
+        value: "data/hitme.sqlite"
+      - key: NEXT_PUBLIC_SUPABASE_URL
+        value: "https://ucvnnovebjawcmavgxyg.supabase.co"
+      - key: NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY
+        value: "sb_publishable_ZzZXMcXNDm3GHeVyBG83WA_5UPMETZ_"

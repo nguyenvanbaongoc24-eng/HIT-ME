@@ -17,7 +17,7 @@ public sealed class HitMeWidget : MonoBehaviour {
  public WidgetState initialState;
  public WidgetState State {get;private set;}
  string language; bool boundTitle,boundDetail;
- void Awake(){if(action!=null)action.onClick.AddListener(()=>activated.Invoke());RefreshLocalization();SetState(initialState);}
+ void Awake(){if(action!=null)action.onClick.AddListener(()=>{HitMe.Audio.HitMeAudio.Play("sfx_ui_click");activated.Invoke();});RefreshLocalization();SetState(initialState);}
  void Update(){if(language!=Strings.Language)RefreshLocalization();}
  public void RefreshLocalization(){language=Strings.Language;if(!boundTitle&&title!=null)title.text=string.IsNullOrEmpty(titleKey)?"":Strings.Get(titleKey);if(!boundDetail&&detail!=null)detail.text=string.IsNullOrEmpty(detailKey)?"":Strings.Get(detailKey);if(loading!=null){var label=loading.GetComponent<TMP_Text>();if(label!=null)label.text=Strings.Get("menuLoading");}}
  public void Bind(string label,string description=null,Sprite sprite=null){boundTitle=label!=null;boundDetail=description!=null;if(title!=null&&label!=null)title.text=label;if(detail!=null&&description!=null)detail.text=description;if(icon!=null){icon.sprite=sprite;icon.enabled=sprite!=null;}}

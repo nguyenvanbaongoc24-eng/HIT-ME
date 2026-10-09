@@ -5,8 +5,9 @@
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <title>HIT ME</title>
   <style>
-    *{box-sizing:border-box}html,body{width:100%;height:100%;margin:0;overflow:hidden;background:#6b4239;font-family:Arial,sans-serif}
-    #game{position:relative;width:100%;height:100dvh;max-width:min(540px,calc(100dvh * 430 / 932));margin:auto}
+    *{box-sizing:border-box}html,body{width:100%;height:100%;margin:0;overflow:hidden;overscroll-behavior:none;background:#6b4239;font-family:Arial,sans-serif}
+    body{position:fixed;inset:0}
+    #game{position:fixed;left:0;top:0;width:100%;height:100vh;height:100dvh}
     canvas{display:block;width:100%;height:100%;touch-action:none}
     #loading{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;background:#6b4239;color:white;padding:env(safe-area-inset-top) 20px env(safe-area-inset-bottom)}
     progress{width:70%;height:16px;accent-color:#238c81}#message{text-align:center;margin:20px;max-width:320px}
@@ -25,8 +26,12 @@ const buildUrl='Build',config={
 const script=document.createElement('script');script.src=buildUrl+'/Web.loader.js';
 script.onload=()=>createUnityInstance(canvas,config,p=>document.getElementById('progress').value=p).then(instance=>{window.hitMeUnity=instance;loading.style.display='none';syncSafeArea();}).catch(error=>{message.textContent='Không tải được game: '+error;});
 script.onerror=()=>message.textContent='Không tải được Unity loader. Kiểm tra máy chủ và kết nối.';
-function syncSafeArea(){if(!window.hitMeUnity)return;const style=getComputedStyle(document.getElementById('safe-area-probe')),bounds=canvas.getBoundingClientRect();const num=x=>parseFloat(x)||0;window.hitMeUnity.SendMessage('WebMobileBridge','SetSafeArea',JSON.stringify({left:Math.max(0,num(style.paddingLeft)-bounds.left)/bounds.width,right:Math.max(0,num(style.paddingRight)-(innerWidth-bounds.right))/bounds.width,top:num(style.paddingTop)/bounds.height,bottom:num(style.paddingBottom)/bounds.height}));}
-window.addEventListener('resize',syncSafeArea);if(window.visualViewport)visualViewport.addEventListener('resize',syncSafeArea);
+function syncSafeArea(){if(!window.hitMeUnity)return;const style=getComputedStyle(document.getElementById('safe-area-probe')),bounds=canvas.getBoundingClientRect();const num=x=>parseFloat(x)||0;window.hitMeUnity.SendMessage('WebMobileBridge','SetSafeArea',JSON.stringify({left:Math.max(0,num(style.paddingLeft)-bounds.left)/bounds.width,right:Math.max(0,num(style.paddingRight)-(innerWidth-bounds.right))/bounds.width,top:Math.max(0,num(style.paddingTop)-bounds.top)/bounds.height,bottom:Math.max(0,num(style.paddingBottom)-(innerHeight-bounds.bottom))/bounds.height}));}
+// Resize only the presentation surface. Unity continues to own logical arena coordinates.
+function syncViewport(){const viewport=window.visualViewport,game=document.getElementById('game');game.style.width=(viewport?viewport.width:innerWidth)+'px';game.style.height=(viewport?viewport.height:innerHeight)+'px';game.style.left=(viewport?viewport.offsetLeft:0)+'px';game.style.top=(viewport?viewport.offsetTop:0)+'px';syncSafeArea();}
+window.addEventListener('resize',syncViewport);window.addEventListener('orientationchange',syncViewport);
+if(window.visualViewport){visualViewport.addEventListener('resize',syncViewport);visualViewport.addEventListener('scroll',syncViewport);}
+syncViewport();
 if(!new URLSearchParams(location.search).has('performance'))document.getElementById('performance').remove();
 document.body.appendChild(script);
 </script>

@@ -21,6 +21,7 @@ public static class HitMeWebBuild {
   public static void BuildMaps()=>BuildTo("MAP_WEB_BUILD.json");
   public static void BuildNorthernVillage()=>BuildTo("NORTHERN_VILLAGE_WEB_BUILD.json");
   public static void BuildAimVisual()=>BuildTo("AIM_WEB_BUILD.json");
+  public static void BuildProductionRelease()=>BuildTo("PRODUCTION_RELEASE_WEB_BUILD.json");
  public static void BuildArtwork()=>BuildTo("ARTWORK_WEB_BUILD.json");
  static void BuildTo(string reportFile){
   if(!BuildPipeline.IsBuildTargetSupported(BuildTargetGroup.WebGL,BuildTarget.WebGL))throw new InvalidOperationException("Web Build Support missing.");

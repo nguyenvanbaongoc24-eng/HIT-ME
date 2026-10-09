@@ -1,32 +1,32 @@
 [
   {
+    "bytes": 4078,
     "file": "index.html",
-    "bytes": 3430,
-    "sha256": "19167DD5C7A2AEBE4ECA2F9FFF19BA53E9BE17D80D21A86B71510BB482EFBD8B",
-    "matchesTestedBuild": true
+    "matches": true,
+    "sha256": "E53AF403EB2653C7A7CCF535F9D25F1D4AA4FB85EBF7910A8E4B59E4B6C40742"
   },
   {
+    "bytes": 30491434,
     "file": "Build\\Web.data.unityweb",
-    "bytes": 29085126,
-    "sha256": "87FCD87E6B1607585DEB766C949287FC3BC9C896BC289CFBF69015DD128694AF",
-    "matchesTestedBuild": true
+    "matches": true,
+    "sha256": "3A8B2D1F03C6F3559C5629123E83C7EA25D6E0D34E593367CD5FAD65B60E9CB2"
   },
   {
-    "file": "Build\\Web.framework.js.unityweb",
     "bytes": 75205,
-    "sha256": "D9038E01DFF81CE6B7289407535C718077E3DBAF2BB31EC2F040CA4F927816BE",
-    "matchesTestedBuild": true
+    "file": "Build\\Web.framework.js.unityweb",
+    "matches": true,
+    "sha256": "CF68443EBD83982447EFC532ABC04762AC14E4DAF6333486892A27BAAA8EF0E5"
   },
   {
-    "file": "Build\\Web.loader.js",
     "bytes": 48779,
-    "sha256": "1763D89741D73DD1847AD8F93FB793B3FFFB5A119804EE5E5B78ED72EFF7CA05",
-    "matchesTestedBuild": true
+    "file": "Build\\Web.loader.js",
+    "matches": true,
+    "sha256": "3BF3F435BA873ADF5AB4B2AB19940565BC71D23C1A3AB7626DDC28F74701E228"
   },
   {
+    "bytes": 9564985,
     "file": "Build\\Web.wasm.unityweb",
-    "bytes": 9531854,
-    "sha256": "4F1D681761956CF6232D61971580786B8FA9D0F55E5DC9D073D0563DC099646C",
-    "matchesTestedBuild": true
+    "matches": true,
+    "sha256": "C0668DECAC39F8D357909370F679809971C98BE58393F3937F07FA3694EA689F"
   }
 ]

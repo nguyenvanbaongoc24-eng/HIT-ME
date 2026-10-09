@@ -9,7 +9,8 @@ export function createServer(store:Store,options:{tls?:{key:Buffer;cert:Buffer};
   const handler:http.RequestListener=(req,res)=>{if(req.url==='/health'){res.writeHead(200,{'Content-Type':'application/json'});res.end(JSON.stringify({service:'hit-me',transport:options.tls?'wss':'ws-dev',players:clients.size}));}else{res.writeHead(404);res.end();}};
   const server=options.tls?https.createServer(options.tls,handler):http.createServer(handler);
   const wss=new WebSocketServer({noServer:true,maxPayload:8192});
-  server.on('upgrade',(req,socket,head)=>{const origin=req.headers.origin;if(req.url!=='/play'||origin&&!(options.allowedOrigins??['http://127.0.0.1:8791','http://localhost:8791']).includes(origin)){socket.destroy();return;}wss.handleUpgrade(req,socket,head,ws=>wss.emit('connection',ws,req));});
+  const defaultOrigins = ['http://127.0.0.1:8791','http://localhost:8791','https://hit-me-game.vercel.app'];
+  server.on('upgrade',(req,socket,head)=>{const origin=req.headers.origin;if(req.url!=='/play'||origin&&!(options.allowedOrigins??defaultOrigins).includes(origin)){socket.destroy();return;}wss.handleUpgrade(req,socket,head,ws=>wss.emit('connection',ws,req));});
   const send=(ws:WebSocket,data:unknown)=>{if(ws.readyState===WebSocket.OPEN)ws.send(JSON.stringify(data));};
   const broadcast=()=>{for(const [id,ws] of clients)send(ws,{type:'state',room:rooms.snapshot(id),profile:store.profile(id),serverTime:Date.now()});};
   wss.on('connection',ws=>{let player='';let alive=true;let budget=0;let windowStart=Date.now();const cache=new Map<string,unknown>();
@@ -23,6 +24,13 @@ export function createServer(store:Store,options:{tls?:{key:Buffer;cert:Buffer};
         case 'create':rooms.create(player,true);break;case 'join':if(typeof m.code!=='string')throw Error('invalid_code');rooms.join(player,m.code);break;
         case 'quick':rooms.quick(player);break;case 'ready':if(typeof m.ready!=='boolean')throw Error('invalid_ready');rooms.ready(player,m.ready);break;
         case 'leave':rooms.leave(player);break;case 'place':case 'aim':case 'lock':rooms.action(player,m.seq,m.type,m.value??null,m.round);break;
+        case 'profile':{
+          const room=rooms.membership.has(player)?rooms.room(player):null;
+          if(room&&room.phase!=='Waiting')throw Error('match_started');
+          store.updateProfile(player,m.name,m.avatar);
+          if(room){const member=room.players.find(p=>p.id===player)!;const profile=store.profile(player);member.name=profile.name;member.avatar=profile.avatar;}
+          break;
+        }
         case 'equip':store.equip(player,m.item);if(rooms.membership.has(player))rooms.room(player).players.find(p=>p.id===player)!.weapon=m.item;break;case 'claim':store.claim(player,m.period,m.kind);break;case 'heartbeat':break;
         default:throw Error('unsupported_request'); // reward / balance / result writes rejected
       }}
@@ -37,8 +45,10 @@ export function createServer(store:Store,options:{tls?:{key:Buffer;cert:Buffer};
 }
 if(process.argv[1]?.endsWith('main.js')||process.argv[1]?.endsWith('main.ts')){
   mkdirSync('data',{recursive:true});const tls=process.env.TLS_CERT&&process.env.TLS_KEY?{cert:readFileSync(process.env.TLS_CERT),key:readFileSync(process.env.TLS_KEY)}:undefined;
-  if(process.env.NODE_ENV==='production'&&!tls)throw Error('WSS requires TLS_CERT and TLS_KEY');
+  if(process.env.NODE_ENV==='production'&&!tls&&process.env.BEHIND_PROXY!=='true'&&process.env.RENDER!=='true')throw Error('WSS requires TLS_CERT and TLS_KEY');
   const service=createServer(new Store(process.env.DB_PATH??'data/hitme.sqlite'),{tls,proposedTimeout:process.env.PROPOSED_TIMEOUT!=="false",allowedOrigins:process.env.ALLOWED_ORIGINS?.split(',')});
-  if(!tls&&process.env.HOST&&!['127.0.0.1','localhost','::1'].includes(process.env.HOST))throw Error('Non-local listener requires WSS');
-  service.server.listen(Number(process.env.PORT??8788),process.env.HOST??'127.0.0.1',()=>console.log(`HIT ME ${tls?'WSS':'WS development'} listening on ${process.env.PORT??8788}`));
+  const behindProxy=process.env.BEHIND_PROXY==='true'||process.env.RENDER==='true';
+  if(!tls&&!behindProxy&&process.env.HOST&&!['127.0.0.1','localhost','::1'].includes(process.env.HOST))throw Error('Non-local listener requires WSS');
+  const host=process.env.HOST??(behindProxy?'0.0.0.0':'127.0.0.1');
+  service.server.listen(Number(process.env.PORT??8788),host,()=>console.log(`HIT ME ${tls?'WSS':behindProxy?'WS (Behind Proxy)':'WS development'} listening on ${host}:${process.env.PORT??8788}`));
 }

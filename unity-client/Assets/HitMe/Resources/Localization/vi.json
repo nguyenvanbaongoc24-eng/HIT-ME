@@ -767,6 +767,58 @@
     {
       "key": "mapSharedFloor",
       "value": "FALLBACK • FLOOR CHUNG"
+    },
+    {
+      "value": "Xác nhận",
+      "key": "menuConfirm"
+    },
+    {
+      "value": "Lưu tên hiển thị",
+      "key": "saveProfile"
+    },
+    {
+      "value": "Chưa có cấu hình WSS công khai hợp lệ.",
+      "key": "errorpublic_wss_required"
+    },
+    {
+      "value": "Tên cần 1–24 ký tự, không có mã điều khiển hoặc thẻ HTML.",
+      "key": "errorinvalid_name"
+    },
+    {
+      "value": "Nhân vật không khả dụng.",
+      "key": "errorinvalid_avatar"
+    },
+    {
+      "key": "audioSettings",
+      "value": "Âm thanh tạm"
+    },
+    {
+      "key": "audioMaster",
+      "value": "Âm lượng tổng"
+    },
+    {
+      "key": "audioSfx",
+      "value": "Hiệu ứng"
+    },
+    {
+      "key": "audioMusic",
+      "value": "Nhạc nền"
+    },
+    {
+      "key": "audioMute",
+      "value": "Tắt âm thanh"
+    },
+    {
+      "value": "Sao chép mã phòng",
+      "key": "copyRoomCode"
+    },
+    {
+      "value": "Người chơi · Ném / Trúng / Trượt / Nhận",
+      "key": "resultStatsHeader"
+    },
+    {
+      "value": "Trận offline · Không cộng tiền thưởng lâu dài",
+      "key": "offlineNoRewards"
     }
   ]
 }

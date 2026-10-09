@@ -1,0 +1,35 @@
+✔ two real WS clients play three rounds to server-confirmed draw and durable reward (8698.6884ms)
+(node:24064) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ Vietnamese nickname validation rejects markup, controls, invisible characters and excess length (3.2445ms)
+✔ real WS profile update is scoped to authenticated user and broadcasts lobby avatar (138.2171ms)
+✔ profile update preserves identity, balance and ownership and rejects arbitrary avatar (2.4481ms)
+✔ trial reward ledger records version and inactive beta cannot silently replace payouts (3.0784ms)
+✔ additive SQLite ledger upgrade preserves legacy balances and reward history (51.6544ms)
+(node:22780) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ shared C# parity: first_target (2.269ms)
+✔ shared C# parity: simultaneous (0.2714ms)
+✔ shared C# parity: winner (0.2031ms)
+✔ shared C# parity: ordinal_tie (0.193ms)
+✔ shared C# parity: behind (0.179ms)
+✔ rounded boundary grid and rays (2.0472ms)
+✔ 2 players privacy, simultaneous ready, complete match and reward once (18.927ms)
+✔ 3 players privacy, simultaneous ready, complete match and reward once (11.8131ms)
+✔ 6 players privacy, simultaneous ready, complete match and reward once (20.1705ms)
+✔ timeout proposal, reconnect private snapshot, waiting disconnect expiry and code expiry (6.8461ms)
+✔ unconfirmed timeout blocks without invented action (2.6994ms)
+✔ durable guest token, inventory, ledger and private farm cap (59.7128ms)
+✔ quest events dedupe and claim exactly once (3.6896ms)
+✔ real WebSocket auth, room join, resume and unauthorized reward rejection (189.9351ms)
+(node:35560) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ WSS handshake verifies the test CA certificate (224.5959ms)
+ℹ tests 21
+ℹ suites 0
+ℹ pass 21
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 9272.1946

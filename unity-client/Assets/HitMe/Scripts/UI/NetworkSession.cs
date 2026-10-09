@@ -16,13 +16,14 @@ namespace HitMe.UI
     [Serializable] public sealed class NetThrow { public string thrower,target; public NetPoint origin,end; public int damage; }
     [Serializable] public sealed class NetHealth { public string id; public int before,after; }
     [Serializable] public sealed class NetResolution { public string outcome,winner; public NetThrow[] throws; public NetHealth[] health; }
-    [Serializable] public sealed class NetRoom { public string id,code,owner,phase,match,timeoutPolicy; public int round; public double deadline,serverTime; public bool @private; public NetPlayer[] players; public NetResolution resolution; }
+    [Serializable] public sealed class NetMatchStats {public string id;public int throws,hits,misses,received;}
+    [Serializable] public sealed class NetRoom { public string id,code,owner,phase,match,timeoutPolicy; public int round; public double deadline,serverTime; public bool @private; public NetPlayer[] players; public NetResolution resolution; public NetMatchStats[] stats; }
     [Serializable] public sealed class NetItem { public string item; public int quantity; }
     [Serializable] public sealed class NetQuest { public string period,kind,state; public int target,progress; }
     [Serializable] public sealed class NetReward { public string match,outcome;public int coins,xp;public double created; }
     [Serializable] public sealed class NetProfile { public string id,name,avatar,equipped; public int xp,coins,level; public NetItem[] inventory; public NetQuest[] quests; public NetReward[] history; }
     [Serializable] public sealed class NetEnvelope { public string type,id,token,message,request; public NetRoom room; public NetProfile profile; public double serverTime; }
-    [Serializable] sealed class NetRequest { public string type,request,name,token,code,item,period,kind; public bool ready; public int seq,round; public NetPoint value; }
+    [Serializable] sealed class NetRequest { public string type,request,name,avatar,token,code,item,period,kind; public bool ready; public int seq,round; public NetPoint value; }
     public sealed class NetworkSession : MonoBehaviour
     {
         public static NetworkSession Instance {get;private set;}
@@ -44,7 +45,7 @@ namespace HitMe.UI
 #endif
         public static NetworkSession Ensure(){if(Instance!=null)return Instance;return new GameObject("NetworkSession").AddComponent<NetworkSession>();}
         void Awake(){if(Instance!=null){Destroy(gameObject);return;}Instance=this;DontDestroyOnLoad(gameObject);}
-        public void Connect(string url,string name){endpoint=url;guestName=name;intentionalClose=false;attempts=0;Open();}
+        public void Connect(string url,string name){if(!NetworkEndpointSettings.IsAllowed(url)){Error="public_wss_required";Revision++;return;}endpoint=url;guestName=name;intentionalClose=false;attempts=0;Open();}
         void Open(){Error="";nextRetry=double.PositiveInfinity;
 #if UNITY_WEBGL && !UNITY_EDITOR
             HitMeNetConnect(endpoint);
@@ -83,6 +84,7 @@ namespace HitMe.UI
 #endif
         }
         public void Command(string type,string argument="",bool ready=false){Send(new NetRequest{type=type,code=argument,item=argument,ready=ready});}
+        public void SaveProfile(string name,string avatar){Send(new NetRequest{type="profile",name=name,avatar=avatar});}
         public void Action(string type,NetPoint point=null){if(Self==null||Self.locked||Room.phase!="Placement")return;Send(new NetRequest{type=type,value=point,round=Room.round,seq=++seq});}
         public void Claim(NetQuest q){Send(new NetRequest{type="claim",kind=q.kind,period=q.period});}
         void OnDestroy(){if(Instance==this)Instance=null;intentionalClose=true;

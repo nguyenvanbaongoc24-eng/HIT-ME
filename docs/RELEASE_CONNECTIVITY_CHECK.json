@@ -1,0 +1,22 @@
+{
+  "checkedAt": "2026-10-09T17:08:24.2938465+07:00",
+  "supabase": {
+    "anonymousAuth": "NOT_TESTED",
+    "status": 401,
+    "url": "https://ucvnnovebjawcmavgxyg.supabase.co",
+    "rls": "NOT_TESTED",
+    "message": "Unregistered API key",
+    "migrationsApplied": false
+  },
+  "vercel": {
+    "url": "https://hit-me-eta.vercel.app/",
+    "projectAccessible": false,
+    "status": 404
+  },
+  "localBackend": {
+    "service": "hit-me",
+    "transport": "ws-dev",
+    "players": 0
+  },
+  "localFrontend": "http://127.0.0.1:8791/"
+}

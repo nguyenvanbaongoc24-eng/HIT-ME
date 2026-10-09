@@ -1,0 +1,198 @@
+{
+  "picture": [
+    {
+      "file": "Concept characters 2.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB"
+    },
+    {
+      "file": "Concept characters.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB"
+    },
+    {
+      "file": "MAIN MENU.png",
+      "size": [
+        941,
+        1672
+      ],
+      "mode": "RGB"
+    },
+    {
+      "file": "Match Result.png",
+      "size": [
+        1024,
+        1536
+      ],
+      "mode": "RGB"
+    },
+    {
+      "file": "Phố Cổ Hội An.jpg",
+      "size": [
+        1344,
+        896
+      ],
+      "mode": "RGB"
+    },
+    {
+      "file": "Play in game.png",
+      "size": [
+        967,
+        1627
+      ],
+      "mode": "RGB"
+    },
+    {
+      "file": "Sân Đình Bắc Bộ.jpg",
+      "size": [
+        1400,
+        1004
+      ],
+      "mode": "RGB"
+    },
+    {
+      "file": "UI CONCEPT.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "file": "UI KIT.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA"
+    }
+  ],
+  "audio": [
+    {
+      "file": "SFX\\HitMe_Audio_Placeholders\\audio\\amb_crowd_murmur_loop.wav",
+      "channels": 2,
+      "rate": 44100,
+      "seconds": 12.0
+    },
+    {
+      "file": "SFX\\HitMe_Audio_Placeholders\\audio\\bgm_match_loop.wav",
+      "channels": 2,
+      "rate": 44100,
+      "seconds": 16.0
+    },
+    {
+      "file": "SFX\\HitMe_Audio_Placeholders\\audio\\bgm_menu_loop.wav",
+      "channels": 2,
+      "rate": 44100,
+      "seconds": 21.333
+    },
+    {
+      "file": "SFX\\HitMe_Audio_Placeholders\\audio\\sfx_chat_pop.wav",
+      "channels": 1,
+      "rate": 44100,
+      "seconds": 0.12
+    },
+    {
+      "file": "SFX\\HitMe_Audio_Placeholders\\audio\\sfx_coin.wav",
+      "channels": 1,
+      "rate": 44100,
+      "seconds": 0.7
+    },
+    {
+      "file": "SFX\\HitMe_Audio_Placeholders\\audio\\sfx_countdown_last.wav",
+      "channels": 1,
+      "rate": 44100,
+      "seconds": 0.2
+    },
+    {
+      "file": "SFX\\HitMe_Audio_Placeholders\\audio\\sfx_countdown_tick.wav",
+      "channels": 1,
+      "rate": 44100,
+      "seconds": 0.09
+    },
+    {
+      "file": "SFX\\HitMe_Audio_Placeholders\\audio\\sfx_eliminate.wav",
+      "channels": 1,
+      "rate": 44100,
+      "seconds": 0.9
+    },
+    {
+      "file": "SFX\\HitMe_Audio_Placeholders\\audio\\sfx_error.wav",
+      "channels": 1,
+      "rate": 44100,
+      "seconds": 0.32
+    },
+    {
+      "file": "SFX\\HitMe_Audio_Placeholders\\audio\\sfx_heart_break.wav",
+      "channels": 1,
+      "rate": 44100,
+      "seconds": 0.32
+    },
+    {
+      "file": "SFX\\HitMe_Audio_Placeholders\\audio\\sfx_hit_bop.wav",
+      "channels": 1,
+      "rate": 44100,
+      "seconds": 0.35
+    },
+    {
+      "file": "SFX\\HitMe_Audio_Placeholders\\audio\\sfx_lose.wav",
+      "channels": 1,
+      "rate": 44100,
+      "seconds": 1.4
+    },
+    {
+      "file": "SFX\\HitMe_Audio_Placeholders\\audio\\sfx_purchase.wav",
+      "channels": 1,
+      "rate": 44100,
+      "seconds": 0.9
+    },
+    {
+      "file": "SFX\\HitMe_Audio_Placeholders\\audio\\sfx_ready.wav",
+      "channels": 1,
+      "rate": 44100,
+      "seconds": 0.8
+    },
+    {
+      "file": "SFX\\HitMe_Audio_Placeholders\\audio\\sfx_reveal.wav",
+      "channels": 1,
+      "rate": 44100,
+      "seconds": 0.4
+    },
+    {
+      "file": "SFX\\HitMe_Audio_Placeholders\\audio\\sfx_tap_place.wav",
+      "channels": 1,
+      "rate": 44100,
+      "seconds": 0.14
+    },
+    {
+      "file": "SFX\\HitMe_Audio_Placeholders\\audio\\sfx_throw.wav",
+      "channels": 1,
+      "rate": 44100,
+      "seconds": 0.42
+    },
+    {
+      "file": "SFX\\HitMe_Audio_Placeholders\\audio\\sfx_ui_click.wav",
+      "channels": 1,
+      "rate": 44100,
+      "seconds": 0.06
+    },
+    {
+      "file": "SFX\\HitMe_Audio_Placeholders\\audio\\sfx_wall_thud.wav",
+      "channels": 1,
+      "rate": 44100,
+      "seconds": 0.25
+    },
+    {
+      "file": "SFX\\HitMe_Audio_Placeholders\\audio\\sfx_win.wav",
+      "channels": 1,
+      "rate": 44100,
+      "seconds": 1.6
+    }
+  ]
+}

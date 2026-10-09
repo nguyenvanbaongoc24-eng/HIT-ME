@@ -11,7 +11,8 @@ using HitMe.Core;
 using HitMe.Visuals;
 namespace HitMe.Tests {
 public sealed class NorthernVillageTests {
- static void Capture(string name){var image=ScreenCapture.CaptureScreenshotAsTexture();File.WriteAllBytes(Path.GetFullPath(Path.Combine(Application.dataPath,"../../docs/screenshots/Northern-"+name+".png")),image.EncodeToPNG());Object.Destroy(image);}
+ static readonly string EvidenceDirectory=Path.GetFullPath(Path.Combine(Application.dataPath,"../../docs/screenshots/Northern-Run-"+System.DateTime.UtcNow.ToString("yyyyMMdd-HHmmss")));
+ static void Capture(string name){Directory.CreateDirectory(EvidenceDirectory);var image=ScreenCapture.CaptureScreenshotAsTexture();File.WriteAllBytes(Path.Combine(EvidenceDirectory,name+".png"),image.EncodeToPNG());Object.Destroy(image);}
  [UnityTest] public IEnumerator LayersPreserveSixFeetResponsivePrivacyAndRealCombat(){int saved=ArenaMaps.Selected;ArenaMaps.Selected=0;OfflineRunContext.Requested=false;SceneManager.LoadScene("Battle");yield return null;yield return null;
   var view=Object.FindAnyObjectByType<BattleView>();
   foreach(var size in new[]{new Vector2Int(360,800),new Vector2Int(375,812),new Vector2Int(390,844),new Vector2Int(402,874),new Vector2Int(430,932)}){

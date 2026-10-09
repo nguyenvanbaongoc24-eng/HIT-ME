@@ -8,6 +8,7 @@ namespace HitMe.UI
         public static bool Requested;
         public static MatchSettings Settings = new MatchSettings();
         public static RoundResolution Result; public static int Rounds;
+        public static NetMatchStats[] Stats;
         static bool loaded;
         public static void LoadDefaults()
         {

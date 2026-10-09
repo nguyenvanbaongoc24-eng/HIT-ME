@@ -2,14 +2,15 @@ import { randomBytes,randomUUID } from 'node:crypto';
 import { Action,Point,Fighter,valid,normalize,resolve,rules } from './combat.js';
 import { Store } from './store.js';
 export interface Member extends Fighter {name:string;weapon:string;avatar:string;ready:boolean;connected:boolean;disconnectedAt:number;seq:number;action:Action|null;locked:boolean;previous:Point}
-export interface Room {id:string;code:string;owner:string;private:boolean;expires:number;players:Member[];phase:string;round:number;deadline:number;match:string;resolution:ReturnType<typeof resolve>|null;started:number;validActions:number;submitted:string[]}
+export interface MatchStats {id:string;throws:number;hits:number;misses:number;received:number}
+export interface Room {id:string;code:string;owner:string;private:boolean;expires:number;players:Member[];phase:string;round:number;deadline:number;match:string;resolution:ReturnType<typeof resolve>|null;started:number;validActions:number;submitted:string[];stats:MatchStats[]}
 export class Rooms {
   rooms=new Map<string,Room>();membership=new Map<string,string>();
   private seed=2026;
   private randomPosition(){const next=()=>{this.seed^=this.seed<<13;this.seed^=this.seed>>>17;this.seed^=this.seed<<5;return (this.seed>>>0)/4294967296;};for(let i=0;i<64;i++){const p={x:(next()*2-1)*(rules.width/2-rules.playerRadius),y:(next()*2-1)*(rules.height/2-rules.playerRadius)};if(valid(p))return p;}return {x:0,y:0};}
   constructor(public store:Store,public now=()=>Date.now(),public proposedTimeout=true,public graceMs=30000){}
   room(player:string){const room=this.rooms.get(this.membership.get(player)??'');if(!room)throw Error('not_in_room');return room;}
-  create(id:string,privateRoom=true){if(this.membership.has(id))throw Error('already_in_room');const r:Room={id:randomUUID(),code:randomBytes(4).toString('hex').toUpperCase(),owner:id,private:privateRoom,expires:this.now()+30*60000,players:[],phase:'Waiting',round:0,deadline:0,match:'',resolution:null,started:0,validActions:0,submitted:[]};this.rooms.set(r.id,r);this.add(r,id);return r;}
+  create(id:string,privateRoom=true){if(this.membership.has(id))throw Error('already_in_room');const r:Room={id:randomUUID(),code:randomBytes(4).toString('hex').toUpperCase(),owner:id,private:privateRoom,expires:this.now()+30*60000,players:[],phase:'Waiting',round:0,deadline:0,match:'',resolution:null,started:0,validActions:0,submitted:[],stats:[]};this.rooms.set(r.id,r);this.add(r,id);return r;}
   add(r:Room,id:string){if(this.membership.has(id)||r.phase!=='Waiting'||r.players.length>=6||r.expires<this.now())throw Error('room_unavailable');const p=this.store.profile(id);r.players.push({id,name:p.name,weapon:p.equipped,avatar:p.avatar,hp:rules.maxHp,ready:false,connected:true,disconnectedAt:0,seq:0,action:null,locked:false,previous:this.randomPosition()});this.membership.set(id,r.id);return r;}
   join(id:string,code:string){const r=[...this.rooms.values()].find(r=>r.code===code.toUpperCase());if(!r)throw Error('invalid_code');return this.add(r,id);}
   quick(id:string){const r=[...this.rooms.values()].find(r=>!r.private&&r.phase==='Waiting'&&r.players.length<6&&r.expires>=this.now());return r?this.add(r,id):this.create(id,false);}
@@ -34,13 +35,14 @@ export class Rooms {
     if(!this.rooms.has(r.id))continue;
     if(r.phase==='Waiting'&&r.expires<this.now()){for(const p of r.players)this.membership.delete(p.id);this.rooms.delete(r.id);continue;}
     if(this.now()<r.deadline)continue;
-    if(r.phase==='Countdown'){r.match=randomUUID();r.started=this.now();r.validActions=0;r.submitted=[];r.round=0;for(const p of r.players){p.hp=rules.maxHp;p.previous=this.randomPosition();}this.next(r);}
+    if(r.phase==='Countdown'){r.match=randomUUID();r.started=this.now();r.validActions=0;r.submitted=[];r.stats=r.players.map(p=>({id:p.id,throws:0,hits:0,misses:0,received:0}));r.round=0;for(const p of r.players){p.hp=rules.maxHp;p.previous=this.randomPosition();}this.next(r);}
     else if(r.phase==='Placement')this.reveal(r);
     else if(r.phase==='Reveal'){r.phase='Throw';r.deadline=this.now()+rules.throwMs;}
     else if(r.phase==='Throw'){for(const h of r.resolution!.health)r.players.find(p=>p.id===h.id)!.hp=h.after;r.phase='RoundResult';r.deadline=this.now()+rules.resultMs;
+      for(const result of r.resolution!.throws){const row=r.stats.find(s=>s.id===result.thrower)!;row.throws++;if(result.target){row.hits++;r.stats.find(s=>s.id===result.target)!.received++;}else row.misses++;}
       for(const hit of r.resolution!.throws.filter(t=>t.target))this.store.event(`${r.match}:${r.round}:${hit.thrower}:ValidHit`,hit.thrower,'ValidHit');}
     else if(r.phase==='RoundResult'){if(r.resolution!.outcome==='Ongoing')this.next(r);else {if(r.players.every(p=>r.submitted.includes(p.id)))this.store.reward(r.match,r.players.map(p=>p.id),r.resolution!.winner,r.private,true);r.phase='MatchResult';r.deadline=0;}}
   }}
   snapshot(id:string){if(!this.membership.has(id))return null;const r=this.room(id);const hidden=['Placement','Waiting','Countdown','RequirementsBlocked'].includes(r.phase);
-    return {id:r.id,code:r.code,owner:r.owner,private:r.private,phase:r.phase,round:r.round,deadline:r.deadline,serverTime:this.now(),match:r.match,timeoutPolicy:this.proposedTimeout?'PROPOSED_STAY_SKIP':'UNCONFIRMED',players:r.players.map(p=>({id:p.id,name:p.name,weapon:p.weapon,avatar:p.avatar,hp:p.hp,ready:p.ready,connected:p.connected,locked:p.locked,seq:p.id===id?p.seq:undefined,action:hidden&&p.id!==id?null:p.action})),resolution:hidden?null:r.resolution};}
+    return {id:r.id,code:r.code,owner:r.owner,private:r.private,phase:r.phase,round:r.round,deadline:r.deadline,serverTime:this.now(),match:r.match,timeoutPolicy:this.proposedTimeout?'PROPOSED_STAY_SKIP':'UNCONFIRMED',players:r.players.map(p=>({id:p.id,name:p.name,weapon:p.weapon,avatar:p.avatar,hp:p.hp,ready:p.ready,connected:p.connected,locked:p.locked,seq:p.id===id?p.seq:undefined,action:hidden&&p.id!==id?null:p.action})),resolution:hidden?null:r.resolution,stats:r.phase==='MatchResult'?r.stats:[]};}
 }

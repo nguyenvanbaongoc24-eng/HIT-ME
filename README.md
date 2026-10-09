@@ -2,7 +2,7 @@
 
 Open **unity-client/** in Unity Hub. The root Assets/Packages/ProjectSettings are the preserved GitHub starter; current gameplay and artwork live in unity-client.
 
-The tested Unity Web release is **web-release/**. Vercel deploys it using the root vercel.json (Framework Other, Root Directory repository root). Latest validation: 83/83 EditMode, 32/32 PlayMode; Web Build succeeded with 0 errors / 4 warnings. See docs/HITME_AIM_VISUAL_QA.md and docs/DEPLOYMENT_HANDOFF.md. Supabase is not runtime-connected yet; see docs/SUPABASE_CONNECTION_HANDOFF.md. The older foundation notes below describe earlier stages.
+The tested local Unity Web package is **web-release/**; root vercel.json is configured for static hosting. Latest validation: 83/83 EditMode, 34/34 PlayMode, 21/21 backend tests; Web Build succeeded with 0 errors / 1 TMP shader warning. Viewport gutters, confirmed character selection, local profile editing, lobby portraits, result counters and temporary SFX integration are implemented. **Production release is BLOCKED**: Supabase public key returns 401, requested Vercel alias returns 404, and public WSS hosting/production artwork gates remain unresolved. See docs/HITME_PRODUCTION_RELEASE_REPORT.md. The older foundation notes below describe earlier stages.
 
 ---
 # HIT ME

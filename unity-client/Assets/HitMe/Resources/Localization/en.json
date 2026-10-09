@@ -767,6 +767,58 @@
     {
       "key": "mapSharedFloor",
       "value": "FALLBACK • SHARED FLOOR"
+    },
+    {
+      "value": "Confirm",
+      "key": "menuConfirm"
+    },
+    {
+      "value": "Save display name",
+      "key": "saveProfile"
+    },
+    {
+      "value": "A valid public WSS endpoint is required.",
+      "key": "errorpublic_wss_required"
+    },
+    {
+      "value": "Use 1–24 characters without controls or HTML tags.",
+      "key": "errorinvalid_name"
+    },
+    {
+      "value": "Character unavailable.",
+      "key": "errorinvalid_avatar"
+    },
+    {
+      "key": "audioSettings",
+      "value": "Temporary audio"
+    },
+    {
+      "key": "audioMaster",
+      "value": "Master volume"
+    },
+    {
+      "key": "audioSfx",
+      "value": "Sound effects"
+    },
+    {
+      "key": "audioMusic",
+      "value": "Music"
+    },
+    {
+      "key": "audioMute",
+      "value": "Mute"
+    },
+    {
+      "value": "Copy room code",
+      "key": "copyRoomCode"
+    },
+    {
+      "value": "Player · Throws / Hits / Misses / Received",
+      "key": "resultStatsHeader"
+    },
+    {
+      "value": "Offline match · No persistent rewards",
+      "key": "offlineNoRewards"
     }
   ]
 }
