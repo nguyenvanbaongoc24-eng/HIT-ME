@@ -7,6 +7,13 @@ public sealed class WebMobileBridge : MonoBehaviour {
  public static Rect SafeArea {get{if(insets==Vector4.zero)return Screen.safeArea;return new Rect(insets.x*Screen.width,insets.w*Screen.height,(1-insets.x-insets.z)*Screen.width,(1-insets.y-insets.w)*Screen.height);}}
  public static void Ensure(){if(instance!=null)return;var go=new GameObject("WebMobileBridge");instance=go.AddComponent<WebMobileBridge>();DontDestroyOnLoad(go);SetQuality(LowQuality);}
  public static void SetQuality(bool low){PlayerPrefs.SetInt("LowQuality",low?1:0);Application.targetFrameRate=low?30:60;QualitySettings.vSyncCount=0;PlayerPrefs.Save();}
+ public static void CopyRoomCode(string code){
+ #if UNITY_WEBGL && !UNITY_EDITOR
+ HitMeCopyText(code);
+ #else
+ GUIUtility.systemCopyBuffer=code;
+ #endif
+ }
  public static void ShareRoom(string code){var invitation="https://hit-me-game.vercel.app/?room="+System.Uri.EscapeDataString(code);
  #if UNITY_WEBGL && !UNITY_EDITOR
  HitMeShareInvite(invitation);
@@ -20,6 +27,7 @@ public sealed class WebMobileBridge : MonoBehaviour {
  #if UNITY_WEBGL && !UNITY_EDITOR
  [DllImport("__Internal")]static extern void HitMePerformance(float fps,float maxMs,int target);
  [DllImport("__Internal")]static extern void HitMeShareInvite(string invitation);
+ [DllImport("__Internal")]static extern void HitMeCopyText(string text);
  #endif
  void Update(){frames++;elapsed+=Time.unscaledDeltaTime;worst=Mathf.Max(worst,Time.unscaledDeltaTime);if(elapsed<2)return;
  #if UNITY_WEBGL && !UNITY_EDITOR

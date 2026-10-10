@@ -19,3 +19,5 @@ The seven-entry ProductionVisualPack gallery contains independent static preview
 Required production assets: clean weapon-free bodies or separate rig layers for each approved roster member; authored Idle/Aim/Throw/Hit/Eliminated/Victory frames or rig clips; separate hand/grip anchors; transparent portraits. PinkGirl currently has a baked racket, so interchangeable held weapons/weapon disappearance during Throw are BLOCKED by weapon-free artwork. Other procedural motion is verified as presentation only, not claimed as authored animation.
 
 Runtime motion evidence: fresh ProductionMotion-* PlayMode capture sequences; exact final directory recorded in sprint delivery. Tests observe changing artwork over time, all combat states, and fixed logical feet/hitboxes.
+
+Final motion evidence: docs/screenshots/ProductionMotion-20261010-050035/ (25 actual PlayMode frames + timestamps: Idle, Aim, Locked, Reveal, Throw, FollowThrough, Hit, Eliminated/Victory). Public menu uses selected PinkGirl after Supabase save/refresh. This verifies procedural runtime motion, not new authored animation clips.

@@ -10,7 +10,8 @@ using UnityEngine.TestTools;
 using TMPro;
 namespace HitMe.Tests {
 public sealed class MasterProductionFlowTests {
- static void Capture(string name){var texture=ScreenCapture.CaptureScreenshotAsTexture();File.WriteAllBytes(Path.GetFullPath(Path.Combine(Application.dataPath,"../../docs/screenshots/"+name+".png")),texture.EncodeToPNG());Object.Destroy(texture);}
+ static readonly string CaptureDirectory=Path.GetFullPath(Path.Combine(Application.dataPath,"../../docs/screenshots/Master-Run-"+System.DateTime.UtcNow.ToString("yyyyMMdd-HHmmss")));
+ static void Capture(string name){Directory.CreateDirectory(CaptureDirectory);var texture=ScreenCapture.CaptureScreenshotAsTexture();try{File.WriteAllBytes(Path.Combine(CaptureDirectory,name+".png"),texture.EncodeToPNG());}finally{Object.Destroy(texture);}}
  [UnityTest] public IEnumerator ProductionGalleriesRenderWithoutEquippingUnconfirmedIds(){
   Strings.Load("vi");SceneManager.LoadScene("MainMenu");yield return null;yield return null;yield return null;var view=Object.FindAnyObjectByType<MainMenuView>();int character=CosmeticPreview.Character,weapon=CosmeticPreview.Weapon;
   view.ProductionRoster();yield return null;yield return new WaitForSecondsRealtime(.3f);Assert.AreEqual(7,view.Content.Find("MenuModal").GetComponentsInChildren<CharacterVisual>().Length);foreach(var t in view.Content.Find("MenuModal").GetComponentsInChildren<TMP_Text>())Assert.IsFalse(t.isTextOverflowing,t.text);Capture("Master-CharacterSelection");view.CloseModal();yield return new WaitForSecondsRealtime(.3f);

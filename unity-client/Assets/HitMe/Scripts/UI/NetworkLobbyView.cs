@@ -9,7 +9,7 @@ namespace HitMe.UI
         NetworkSession net;Transform content;Text info;InputField code;string page="lobby";bool weekly;int revision=-1;
         string L(string key)=>Strings.Get(key);
         void RoomRoster(NetRoom room){
-            B("copyRoomCode",170,()=>GUIUtility.systemCopyBuffer=room.code);
+            B("copyRoomCode",170,()=>WebMobileBridge.CopyRoomCode(room.code));
             B("shareRoomInvite",120,()=>WebMobileBridge.ShareRoom(room.code));
             for(int i=0;i<room.players.Length;i++){
                 var player=room.players[i];float y=70-i*37;

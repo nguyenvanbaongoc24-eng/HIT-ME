@@ -26,3 +26,56 @@
 - Prefab definitions are reused; this sprint changes runtime UI/controllers/bridges, not independent gameplay controllers.
 - No Phaser/TypeScript prototype source, combat resolver, bot policy or production schema was rewritten.
 
+
+## Runtime verification
+- PASS: local and public nickname/character save and refresh restore; public auto authentication, Quick searching real 1-player room and Cancel.
+- PASS: canvas origin (0,0), exact viewport coverage at 360x800, 390x844, 393x852, 402x874, 430x932. See MOBILE_UX_VIEWPORTS.json and screenshot folder MobileOnline-20261010. Device safe-area hardware remains NOT_TESTED.
+- PASS: real two-account public Render probe (MOBILE_ONLINE_PUBLIC_PROBE.json); this is protocol/REST evidence, not two isolated browser UIs.
+- PASS: PlayMode 39/39 after clipboard bridge, 2026-10-10 05:00 UTC. An intermediate run failed because an old screenshot path was locked; Capture now writes per-run paths. One earlier attempt without HITME_LIVE_TEST_URL was ignored, not counted as a pass.
+- Existing prefabs: no prefab assets changed in this sprint. Runtime UI reuses Independent UI Kit factory and existing character definitions.
+- Git runtime release: main 50b5a9e; Vercel served matching data/wasm/session JS. HTML differed only by CRLF checkout normalization. Clipboard correction is being rebuilt separately.
+
+
+## Changed files (runtime release)
+- docs/HITME_CHARACTER_RUNTIME_ASSET_AUDIT.md
+- docs/HITME_MOBILE_UX_ONLINE_FIX_REPORT.md
+- docs/HITME_QUICK_MATCH_E2E_TEST.md
+- docs/MOBILE_ONLINE_LOCAL_PROBE.json
+- docs/MOBILE_UX_EDITMODE.xml
+- docs/MOBILE_UX_PLAYMODE.xml
+- docs/screenshots/MobileOnline-20261010/Local-ProfileSaved-390x844.png
+- docs/screenshots/MobileOnline-20261010/Local-Queue-390x844.png
+- multiplayer-server/scripts/mobile-online-probe.ts
+- multiplayer-server/src/main.ts
+- multiplayer-server/src/rooms.ts
+- multiplayer-server/src/store.ts
+- multiplayer-server/src/supabase-auth.ts
+- multiplayer-server/tests/quick-auth.test.ts
+- multiplayer-server/tests/web-session.test.ts
+- unity-client/Assets/HitMe/Plugins/WebGL/HitMeMobile.jslib
+- unity-client/Assets/HitMe/Plugins/WebGL/HitMeNetwork.jslib
+- unity-client/Assets/HitMe/Resources/Localization/en.json
+- unity-client/Assets/HitMe/Resources/Localization/vi.json
+- unity-client/Assets/HitMe/Scripts/UI/MainMenu/MainMenuController.cs
+- unity-client/Assets/HitMe/Scripts/UI/MainMenu/MainMenuView.Profile.cs
+- unity-client/Assets/HitMe/Scripts/UI/MainMenu/MainMenuView.Profile.cs.meta
+- unity-client/Assets/HitMe/Scripts/UI/MainMenu/MainMenuView.cs
+- unity-client/Assets/HitMe/Scripts/UI/NetworkLobbyView.cs
+- unity-client/Assets/HitMe/Scripts/UI/NetworkSession.cs
+- unity-client/Assets/HitMe/Scripts/UI/WebMobileBridge.cs
+- unity-client/Assets/HitMe/Tests/PlayMode/MainMenuIntegrationTests.cs
+- unity-client/Assets/HitMe/Tests/PlayMode/MobileOnlineUxTests.cs
+- unity-client/Assets/HitMe/Tests/PlayMode/MobileOnlineUxTests.cs.meta
+- unity-client/Assets/HitMe/Tests/PlayMode/NetworkPresentationTests.cs
+- unity-client/Assets/HitMe/Tests/PlayMode/Phase1MenuFlowTests.cs
+- unity-client/Assets/HitMe/Tests/PlayMode/Phase2APolishTests.cs
+- unity-client/Assets/WebGLTemplates/HitMePortrait/hitme-session.js
+- unity-client/Assets/WebGLTemplates/HitMePortrait/hitme-session.js.meta
+- unity-client/Assets/WebGLTemplates/HitMePortrait/index.html
+- vercel.json
+- web-release/Build/Web.data.unityweb
+- web-release/Build/Web.framework.js.unityweb
+- web-release/Build/Web.loader.js
+- web-release/Build/Web.wasm.unityweb
+- web-release/hitme-session.js
+- web-release/index.html
