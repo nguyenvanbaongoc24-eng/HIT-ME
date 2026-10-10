@@ -84,9 +84,9 @@ namespace HitMe.Characters
         void UpdateWeapon()
         {
             var weapon=Weapon;
-            bool visible=weapon!=null && weapon.heldSprite!=null && State!=VisualState.Eliminated && State!=VisualState.Throw;
+            bool visible=definition?.bakedHeldWeapon!=true && weapon!=null && weapon.heldSprite!=null && State!=VisualState.Eliminated && State!=VisualState.Throw;
             if(!visible){if(heldWeapon!=null)heldWeapon.gameObject.SetActive(false);return;}
-            if(heldWeapon==null) { var go=new GameObject("HeldWeaponSprite",typeof(RectTransform),typeof(Image));go.transform.SetParent(transform,false);heldWeapon=go.GetComponent<Image>();heldWeapon.raycastTarget=false; }
+            if(heldWeapon==null) { var go=new GameObject("HeldWeaponSprite",typeof(RectTransform),typeof(Image));go.transform.SetParent(artwork!=null?artwork.transform:transform,false);heldWeapon=go.GetComponent<Image>();heldWeapon.raycastTarget=false; }
             heldWeapon.gameObject.SetActive(true);heldWeapon.sprite=weapon.heldSprite;heldWeapon.preserveAspect=true;
             var r=heldWeapon.rectTransform;r.anchorMin=r.anchorMax=weapon.handAnchor;r.anchoredPosition=Vector2.zero;
             float size=Mathf.Min(weapon.visualSize,image.rectTransform.rect.width*.4f,image.rectTransform.rect.height*.3f);r.pivot=weapon.gripPivot;

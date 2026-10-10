@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: HitMe.Runtime::HitMe.Characters.CharacterDefinition
   characterId: Char03_BotFemale
   displayName: "C\xF4 b\xE9 tinh ngh\u1ECBch"
-  artBrief: "N\u1EEF t\xF3c bu\u1ED9c hoa h\u1ED3ng, hoodie h\u1ED3ng h\xECnh th\u1ECF, short \u0111en, d\xE9p h\u1ED3ng."
+  artBrief: Pink-haired girl; independent transparent PNG with baked racket. Single frame with procedural acting; weapon swaps require weapon-free artwork.
   animations:
   - state: 0
     frames:
-    - {fileID: 21300000, guid: ffedbf93f43a70942b849b97257bef3b, type: 3}
+    - {fileID: 21300000, guid: 8e4befe12746c164dab993c583067352, type: 3}
     clip: {fileID: 0}
     framesPerSecond: 8
     loop: 1
@@ -48,11 +48,12 @@ MonoBehaviour:
     framesPerSecond: 8
     loop: 1
   defaultWeapon: {fileID: 11400000, guid: 8f5197c4b48de174eb7a33ce19c9061e, type: 2}
-  footPivot: {x: 0.51, y: 0.0134}
+  bakedHeldWeapon: 1
+  footPivot: {x: 0.5, y: 0}
   visualScale: 1.025
   referenceHeight: 74
-  authoredFacing: -1
-  portrait: {fileID: 21300000, guid: a3e0768cd3a978a40b85c37fffe5cd2f, type: 3}
+  authoredFacing: 1
+  portrait: {fileID: 21300000, guid: 3f068f708f0a255408cbe1bf3484a27f, type: 3}
   shadow: {fileID: 0}
   motionProfile: {fileID: 0}
   visualPrefab: {fileID: 8117850123794079012, guid: a6ccbd67f65718e4fb7ca4a8be305fc0, type: 3}

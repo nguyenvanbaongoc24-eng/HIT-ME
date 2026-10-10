@@ -10,6 +10,15 @@ namespace HitMe.Tests
 {
     public class ReleaseFlowTests
     {
+        [UnityTest] public IEnumerator AudioHasListenerAndPlaysImportedClip(){
+            SceneManager.LoadScene("MainMenu");yield return null;yield return null;yield return null;
+            Assert.AreEqual(1,Object.FindObjectsByType<AudioListener>(FindObjectsSortMode.None).Length);
+            bool muted=HitMeAudio.Muted;HitMeAudio.Muted=false;var audio=HitMeAudio.Ensure();audio.Unlock();
+            HitMeAudio.Play("sfx_throw","listener-regression");yield return null;
+            Assert.IsTrue(System.Array.Exists(audio.GetComponents<AudioSource>(),s=>s.isPlaying&&s.clip!=null&&s.clip.name=="sfx_throw"));
+            Assert.AreEqual("wss://hit-me-zj17.onrender.com/play",NetworkEndpointSettings.ProductionEndpoint);
+            HitMeAudio.Muted=muted;LogAssert.NoUnexpectedReceived();
+        }
         [UnityTest] public IEnumerator CharacterSelectionRequiresConfirmationAndAudioPreferencesPersist(){
             foreach(var locale in new[]{"vi","en"}){Strings.Load(locale);foreach(var key in new[]{"menuConfirm","saveProfile","copyRoomCode","resultStatsHeader","offlineNoRewards","audioSettings","audioMaster","audioSfx","audioMusic","audioMute","errorpublic_wss_required","errorinvalid_name","errorinvalid_avatar"})Assert.That(Strings.Get(key),Does.Not.StartWith("["),locale+":"+key);}Strings.Load("vi");
             int saved=CosmeticPreview.Character;float volume=HitMeAudio.Master;

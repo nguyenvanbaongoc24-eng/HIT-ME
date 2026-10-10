@@ -28,9 +28,11 @@ namespace HitMe.Audio
         void ApplyVolumes(){float master=Muted?0:Master;foreach(var voice in voices)if(voice!=null)voice.volume=master*Sfx;if(music!=null)music.volume=master*Music;}
         void SceneLoaded(Scene scene,LoadSceneMode mode){music.Stop();if(unlocked)StartMusic(scene.name);}
         void StartMusic(string scene){if(clips.TryGetValue(scene=="Battle"?"bgm_match_loop":"bgm_menu_loop",out var clip)){music.clip=clip;music.Play();}}
-        void Update(){if(!unlocked&&(Mouse.current?.leftButton.wasPressedThisFrame==true||Touchscreen.current?.primaryTouch.press.wasPressedThisFrame==true)){unlocked=true;StartMusic(SceneManager.GetActiveScene().name);}}
+        public void Unlock(){if(unlocked)return;unlocked=true;StartMusic(SceneManager.GetActiveScene().name);}
+        void Update(){if(Mouse.current?.leftButton.wasPressedThisFrame==true||Touchscreen.current?.primaryTouch.press.wasPressedThisFrame==true)Unlock();}
         public bool Remember(string eventId){if(string.IsNullOrEmpty(eventId))return true;if(!played.Add(eventId))return false;order.Enqueue(eventId);if(order.Count>256)played.Remove(order.Dequeue());return true;}
-        public static void Play(string clip,string eventId=null){var audio=Ensure();if(!audio.Remember(eventId)||!audio.unlocked||Muted||!audio.clips.TryGetValue(clip,out var asset))return;
+        public static void Play(string clip,string eventId=null){var audio=Ensure();if(Mouse.current?.leftButton.isPressed==true||Touchscreen.current?.primaryTouch.press.isPressed==true)audio.Unlock();
+            if(!audio.unlocked||Muted||!audio.clips.TryGetValue(clip,out var asset)||!audio.Remember(eventId))return;
             var voice=audio.voices[audio.cursor++%audio.voices.Length];voice.Stop();voice.clip=asset;voice.Play();}
         void OnDestroy(){SceneManager.sceneLoaded-=SceneLoaded;if(instance==this)instance=null;}
     }

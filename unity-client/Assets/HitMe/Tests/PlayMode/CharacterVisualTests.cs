@@ -49,13 +49,13 @@ namespace HitMe.Tests
                 visual.SetFacing(Vector2.left);visual.Present(VisualState.Idle,Color.green,0);visual.Fit(74);
                 Assert.AreEqual(FacingDirection.Left,visual.Facing);Assert.AreEqual(-1,body.transform.localScale.x);Assert.AreSame(first,body.GetComponent<Image>().sprite);
                 visual.Present(VisualState.Idle,Color.green,.13f);Assert.AreSame(second,body.GetComponent<Image>().sprite);Assert.AreEqual(1,events.Count);
-                visual.SetFacing(Vector2.right);visual.Present(VisualState.Aim,Color.green,.2f);visual.Fit(74);Assert.AreEqual(1,body.transform.localScale.x);Assert.IsTrue(body.transform.Find("HeldWeaponSprite").gameObject.activeSelf);
+                visual.SetFacing(Vector2.right);visual.Present(VisualState.Aim,Color.green,.2f);visual.Fit(74);Assert.AreEqual(1,body.transform.localScale.x);Assert.IsTrue(body.transform.Find("MotionArtwork/HeldWeaponSprite").gameObject.activeSelf);
                 foreach(VisualState state in System.Enum.GetValues(typeof(VisualState)))
                 {
                     visual.Present(state,Color.white,1);visual.Fit(74);
                     Assert.AreEqual(original,feet.transform.position);Assert.AreEqual(hitbox,ring.transform.localToWorldMatrix);Assert.AreEqual(Vector2.zero,body.GetComponent<RectTransform>().anchoredPosition);
                     Assert.AreEqual(original,body.transform.TransformPoint(Vector3.zero),"Sprite pivot remains at feet.");
-                    if(state==VisualState.Throw || state==VisualState.Eliminated)Assert.IsFalse(body.transform.Find("HeldWeaponSprite").gameObject.activeSelf);
+                    if(state==VisualState.Throw || state==VisualState.Eliminated)Assert.IsFalse(body.transform.Find("MotionArtwork/HeldWeaponSprite").gameObject.activeSelf);
                 }
                 definition.animations=new[]{new CharacterAnimation {state=VisualState.Idle,frames=new[]{first}}};
                 visual.Present(VisualState.Hit,Color.white,2);Assert.AreSame(first,body.GetComponent<Image>().sprite,"Missing pose reuses real idle frame.");

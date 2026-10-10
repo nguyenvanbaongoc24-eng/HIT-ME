@@ -27,6 +27,7 @@ namespace HitMe.Characters
         [TextArea] public string artBrief;
         public CharacterAnimation[] animations = Array.Empty<CharacterAnimation>();
         public WeaponDefinition defaultWeapon;
+        [Tooltip("Artwork already includes a held weapon; suppress an overlapping cosmetic sprite.")] public bool bakedHeldWeapon;
         public Vector2 footPivot = new Vector2(.5f,0);
         [Min(.1f)] public float visualScale=1;
         [Range(70,75)] public float referenceHeight=74;
