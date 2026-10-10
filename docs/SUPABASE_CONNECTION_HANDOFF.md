@@ -18,8 +18,18 @@ This release is playable offline on static hosting. Online production and Supaba
 
 User supplied dashboard: https://supabase.com/dashboard/project/ucvnnovebjawcmavgxyg
 Project reference: `ucvnnovebjawcmavgxyg`.
-Expected API URL: `https://ucvnnovebjawcmavgxyg.supabase.co` (confirm in Dashboard Connect).
+Verified API URL: `https://ucvnnovebjawcmavgxyg.supabase.co`.
+Verified Publishable Key: `sb_publishable_ZzZXMcXNDm3GHeVyBG83WA_5UPMETZ_` (HTTP 200 at `/auth/v1/settings`).
 
-Still needed: publishable key from Settings > API Keys, desired Auth providers, confirmation whether database is empty / migration applied, and backend hosting/WSS endpoint. Configure secret key and database password directly in the server secret environment; do not send them in chat. These configuration names are a handoff, not an implemented runtime adapter.
+## Migration & Security Status: COMPLETED & VERIFIED (2026-10-10)
 
-Official references: https://supabase.com/docs/guides/getting-started/api-keys and https://supabase.com/docs/guides/auth/redirect-urls .
+1. **Migration 002 (Schema & Triggers)**:
+   - Các bảng trong schema `public`: `profiles`, `inventory`, `matches`, `reward_transactions`, `quests`, `quest_events` đã được tạo thành công trên database.
+   - Trigger `on_auth_user_created` tự động tạo profile và cấp vũ khí khởi đầu (`dep-to-ong`, `chao`, `vot`) khi người chơi đăng ký mới.
+2. **Anonymous Sign-ins**:
+   - Đã được kích hoạt trên Supabase Auth (`anonymous_users: true`).
+   - Đã kiểm tra luồng tạo Anonymous Guest Player qua script [test-anon-auth.ts](file:///d:/HIT%20ME/multiplayer-server/scripts/test-anon-auth.ts) -> Thành công tạo tài khoản và tự động sinh profile/inventory.
+3. **Migration 003 (Bảo mật RLS & Chống hack số dư)**:
+   - Đã áp dụng phân quyền cột: Người chơi chỉ được cập nhật `display_name`, `avatar`, `equipped_weapon`.
+   - Đã kiểm tra qua [test-rls-security.ts](file:///d:/HIT%20ME/multiplayer-server/scripts/test-rls-security.ts): Thử nghiệm client hack xu (`coins: 99999`) bị PostgreSQL chặn thẳng với mã lỗi HTTP 403 (`permission denied for table profiles`).
+

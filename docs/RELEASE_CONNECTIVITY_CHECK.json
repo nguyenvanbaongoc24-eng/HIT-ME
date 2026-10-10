@@ -1,12 +1,12 @@
 {
   "checkedAt": "2026-10-09T17:08:24.2938465+07:00",
   "supabase": {
-    "anonymousAuth": "NOT_TESTED",
-    "status": 401,
+    "anonymousAuth": "PASS",
+    "status": 200,
     "url": "https://ucvnnovebjawcmavgxyg.supabase.co",
-    "rls": "NOT_TESTED",
-    "message": "Unregistered API key",
-    "migrationsApplied": false
+    "rls": "ENFORCED",
+    "message": "Migration 002 & 003 applied; RLS and triggers verified",
+    "migrationsApplied": true
   },
   "vercel": {
     "url": "https://hit-me-eta.vercel.app/",

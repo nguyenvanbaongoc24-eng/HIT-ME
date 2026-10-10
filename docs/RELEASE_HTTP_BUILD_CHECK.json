@@ -1,0 +1,52 @@
+[
+  {
+    "status": 200,
+    "contentLength": [
+      "4078"
+    ],
+    "contentType": [
+      "text/html"
+    ],
+    "file": "index.html"
+  },
+  {
+    "status": 200,
+    "contentLength": [
+      "48779"
+    ],
+    "contentType": [
+      "text/javascript"
+    ],
+    "file": "Build/Web.loader.js"
+  },
+  {
+    "status": 200,
+    "contentLength": [
+      "75205"
+    ],
+    "contentType": [
+      "application/octet-stream"
+    ],
+    "file": "Build/Web.framework.js.unityweb"
+  },
+  {
+    "status": 200,
+    "contentLength": [
+      "30491434"
+    ],
+    "contentType": [
+      "application/octet-stream"
+    ],
+    "file": "Build/Web.data.unityweb"
+  },
+  {
+    "status": 200,
+    "contentLength": [
+      "9564985"
+    ],
+    "contentType": [
+      "application/octet-stream"
+    ],
+    "file": "Build/Web.wasm.unityweb"
+  }
+]
