@@ -20,3 +20,11 @@
 - Imported SFX are the existing temporary audio pack, not final studio recordings.
 
 - Fresh Unity Web Build: Succeeded, 0 errors (see PRODUCTION_RELEASE_WEB_BUILD.json). Backend: 21/21 passed.
+
+## Public delivery verified
+- Git main commit ed8c67f; Vercel production deployment 7qXCT7n6FtpY9a7HTo8e9p5xPXtm is Ready.
+- Public Web.data.unityweb HTTP 200; SHA256 equals fresh local release.
+- Actual 390x844 browser connection modal contains Render WSS and localized guest name. A first request hit the existing 15-second UI timeout; connection completed later and real profile/lobby opened. This UX timeout is still unresolved; do not claim seamless first connection.
+- Browser captured zero error-level console entries during this check.
+- Public Battle ran, but screenshot timing caught placement/spectating; use Battle-PlayMode.png for the actual three-body replacement evidence, not the empty public placement screenshot.
+- Browser audio audibility has not been measured. Unity playback/Listener verification passed; this report does not claim a physical-device listening test.
