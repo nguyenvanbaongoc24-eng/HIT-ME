@@ -1,0 +1,34 @@
+import {writeFileSync} from 'node:fs';
+import assert from 'node:assert/strict';
+import {WebSocket} from 'ws';
+const evidence:any={checkedAt:new Date().toISOString(),auth:{},wss:[]};
+const api='https://ucvnnovebjawcmavgxyg.supabase.co';
+const key=process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY||'sb_publishable_ZzZXMcXNDm3GHeVyBG83WA_5UPMETZ_';
+async function auth(){
+ const settings=await fetch(api+'/auth/v1/settings',{headers:{apikey:key}});const data:any=await settings.json();evidence.auth.settingsStatus=settings.status;evidence.auth.anonymousEnabled=data.external?.anonymous_users;
+ const users:any[]=[];
+ for(let i=0;i<2;i++){const r=await fetch(api+'/auth/v1/signup',{method:'POST',headers:{apikey:key,'Content-Type':'application/json'},body:JSON.stringify({data:{display_name:'QA Kiểm chứng '+i}})});const d:any=await r.json();evidence.auth['signup'+i]={http:r.status,hasSession:!!d.access_token,error:d.error_code||d.code};if(d.access_token)users.push(d);}
+ evidence.auth.distinctUsers=users.length===2&&users[0].user.id!==users[1].user.id;
+ for(let i=0;i<users.length;i++){const u=users[i];const headers={apikey:key,Authorization:'Bearer '+u.access_token};const r=await fetch(api+'/auth/v1/user',{headers});const d:any=await r.json();const p=await fetch(api+'/rest/v1/profiles?user_id=eq.'+u.user.id,{headers});const rows:any=await p.json();evidence.auth['user'+i]={verifiedIdentity:r.ok&&d.id===u.user.id,profileHttp:p.status,profileCount:Array.isArray(rows)?rows.length:null};if(users.length===2){const other=await fetch(api+'/rest/v1/profiles?user_id=eq.'+users[1-i].user.id,{headers});const row:any=await other.json();evidence.auth['user'+i].otherProfileHidden=other.ok&&Array.isArray(row)&&row.length===0;} }
+ for(let i=0;i<users.length;i++){
+  const u=users[i],headers={apikey:key,Authorization:'Bearer '+u.access_token,'Content-Type':'application/json',Prefer:'return=representation'};
+  const patch=await fetch(api+'/rest/v1/profiles?user_id=eq.'+u.user.id,{method:'PATCH',headers,body:JSON.stringify({display_name:'QA Nguyễn Kiểm',avatar:i?'Char02_BotMale':'Char01_Player'})});
+  const saved:any=await patch.json();evidence.auth['user'+i].nicknameAvatarSaved=patch.ok&&saved[0]?.display_name==='QA Nguyễn Kiểm';
+  const deny=await fetch(api+'/rest/v1/profiles?user_id=eq.'+u.user.id,{method:'PATCH',headers,body:JSON.stringify({coins:999999})});evidence.auth['user'+i].currencyWriteDenied=!deny.ok;
+  if(users.length===2){const cross=await fetch(api+'/rest/v1/profiles?user_id=eq.'+users[1-i].user.id,{method:'PATCH',headers,body:JSON.stringify({display_name:'QA Cross Denied'})});const rows:any=await cross.json();evidence.auth['user'+i].crossWriteDenied=!cross.ok||(Array.isArray(rows)&&rows.length===0);}
+  const refresh=await fetch(api+'/auth/v1/token?grant_type=refresh_token',{method:'POST',headers:{apikey:key,'Content-Type':'application/json'},body:JSON.stringify({refresh_token:u.refresh_token})});const renewed:any=await refresh.json();evidence.auth['user'+i].refreshSameIdentity=refresh.ok&&renewed.user?.id===u.user.id;
+  if(renewed.access_token){const read=await fetch(api+'/rest/v1/profiles?user_id=eq.'+u.user.id,{headers:{apikey:key,Authorization:'Bearer '+renewed.access_token}});const profile:any=await read.json();evidence.auth['user'+i].profilePersisted=read.ok&&profile[0]?.display_name==='QA Nguyễn Kiểm'&&profile[0]?.coins===0;const logout=await fetch(api+'/auth/v1/logout',{method:'POST',headers:{apikey:key,Authorization:'Bearer '+renewed.access_token}});evidence.auth['user'+i].logoutHttp=logout.status;}
+ }
+ // Invalid identity is a read-only negative test. No credentials or user records are logged.
+ const invalid=await fetch(api+'/auth/v1/user',{headers:{apikey:key,Authorization:'Bearer invalid'}});evidence.auth.invalidSessionHttp=invalid.status;
+}
+async function match(count:number){const clients:any[]=[];const summary:any={count,endpoint:'wss://hit-me-zj17.onrender.com/play',identity:'HIT ME guest tokens (not Supabase)',status:'FAIL'};evidence.wss.push(summary);
+ try {for(let i=0;i<count;i++){const ws=new WebSocket(summary.endpoint,{origin:'https://hit-me-game.vercel.app'});const c:any={ws,latest:null,welcome:null,errors:[],seq:0};clients.push(c);ws.on('message',raw=>{const m=JSON.parse(raw.toString());if(m.type==='state')c.latest=m;if(m.type==='welcome')c.welcome=m;if(m.type==='error')c.errors.push(m.message);});await new Promise<void>((resolve,reject)=>{ws.once('open',resolve);ws.once('error',reject);setTimeout(()=>reject(Error('handshake timeout')),15000).unref();});c.send=(type:string,values:any={})=>ws.send(JSON.stringify({type,request:'strict-'+Date.now()+'-'+(++c.seq),...values}));c.wait=async(check:()=>boolean)=>{const end=Date.now()+20000;while(!check()){if(Date.now()>end)throw Error('protocol timeout '+c.latest?.room?.phase);await new Promise(r=>setTimeout(r,25));}};c.send('hello',{name:'QA Việt '+i});await c.wait(()=>!!c.welcome);}
+ assert.equal(new Set(clients.map(c=>c.welcome.id)).size,count);const a=clients[0];a.send('create');await a.wait(()=>!!a.latest?.room);for(const c of clients.slice(1)){c.send('join',{code:a.latest.room.code});await c.wait(()=>c.latest?.room?.players.length===clients.indexOf(c)+1);}await a.wait(()=>a.latest.room.players.length===count);
+ for(const c of clients)c.send('ready',{ready:true});
+ for(let round=1;round<=3;round++){for(const c of clients)await c.wait(()=>c.latest?.room?.phase==='Placement'&&c.latest.room.round===round);for(let i=0;i<count;i++){const c=clients[i];c.send('place',{round,seq:round*3-2,value:{x:i%2?-400:400,y:Math.floor(i/2)*400-400}});c.send('aim',{round,seq:round*3-1,value:{x:i%2?1:-1,y:0}});c.send('lock',{round,seq:round*3});if(i===0){await c.wait(()=>c.latest.room.players.find((p:any)=>p.id===c.welcome.id).locked);assert.ok(c.latest.room.players.filter((p:any)=>p.id!==c.welcome.id).every((p:any)=>p.action===null));}}}
+ for(const c of clients)await c.wait(()=>c.latest?.room?.phase==='MatchResult');assert.ok(clients.every(c=>JSON.stringify(c.latest.room.resolution)===JSON.stringify(a.latest.room.resolution)));assert.equal(a.latest.room.resolution.outcome,'Draw');summary.status='PASS';summary.outcome='Draw';summary.sameResolution=true;summary.distinctIdentities=true;summary.placementPrivacy=true;summary.errors=clients.flatMap(c=>c.errors);summary.persistedHistory=clients.every(c=>c.latest.profile.history.length===1);summary.currency=clients.map(c=>c.latest.profile.coins);
+ }catch(e){summary.error=e instanceof Error?e.message:'probe failed';}finally{for(const c of clients){if(c.ws.readyState===WebSocket.OPEN)c.send?.('leave');c.ws.close();}}
+}
+try{await auth();await match(2);await match(6);}catch(e){evidence.error=e instanceof Error?e.message:'probe failed';}
+writeFileSync('../docs/STRICT_PUBLIC_SERVICE_PROBE.json',JSON.stringify(evidence,null,2));console.log(JSON.stringify(evidence,null,2));

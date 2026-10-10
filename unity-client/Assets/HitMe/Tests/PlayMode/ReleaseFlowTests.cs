@@ -16,6 +16,7 @@ namespace HitMe.Tests
             SceneManager.LoadScene("MainMenu");yield return null;yield return null;yield return null;
             var view=Object.FindAnyObjectByType<MainMenuView>();view.Characters();yield return null;
             var selection=view.Content.GetComponentInChildren<HitMePanel>();int next=(saved+1)%3;
+            var cardCorners=new Vector3[4];var confirmCorners=new Vector3[4];selection.items[2].GetComponent<RectTransform>().GetWorldCorners(cardCorners);view.Content.Find("MenuModal/Panel/ConfirmCharacter").GetComponent<RectTransform>().GetWorldCorners(confirmCorners);Assert.Greater(cardCorners[0].y,confirmCorners[1].y,"Third character card must stay above the confirmation button.");
             selection.items[next].activated.Invoke();Assert.AreEqual(saved,CosmeticPreview.Character);
             view.Content.Find("MenuModal/Panel/ConfirmCharacter").GetComponent<Button>().onClick.Invoke();yield return null;Assert.AreEqual(next,CosmeticPreview.Character);
             view.AudioSettings();yield return null;

@@ -1,0 +1,599 @@
+{
+  "picture": [
+    {
+      "path": "Picture\\Concept characters 2.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "alphaRange": [
+        255,
+        255
+      ],
+      "spriteMode": [],
+      "sha256": "b2837e15bdd58d133ff395821ef254c113f399bbd118ea44bd144e4ca7301ed4"
+    },
+    {
+      "path": "Picture\\Concept characters.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "alphaRange": [
+        255,
+        255
+      ],
+      "spriteMode": [],
+      "sha256": "1df2dc6ee8b270dfd42ebd1ec1ccd79018fa6fe18ffc43cf28cc095ff901450f"
+    },
+    {
+      "path": "Picture\\MAIN MENU.png",
+      "size": [
+        941,
+        1672
+      ],
+      "alphaRange": [
+        255,
+        255
+      ],
+      "spriteMode": [],
+      "sha256": "84baaac099e8ef6076f345ab30f7f171a67c3242845e11a54e4966b2da5a2798"
+    },
+    {
+      "path": "Picture\\Match Result.png",
+      "size": [
+        1024,
+        1536
+      ],
+      "alphaRange": [
+        255,
+        255
+      ],
+      "spriteMode": [],
+      "sha256": "473849c1d3fe727c06a724bef96ada122caad8caf82b8610d625ae8b746ad8df"
+    },
+    {
+      "path": "Picture\\Phố Cổ Hội An.jpg",
+      "size": [
+        1344,
+        896
+      ],
+      "alphaRange": [
+        255,
+        255
+      ],
+      "spriteMode": [],
+      "sha256": "9f5e7d4f45ea6950a0cfebe169825381f638243198d646e220a73c45da3d09ff"
+    },
+    {
+      "path": "Picture\\Play in game.png",
+      "size": [
+        967,
+        1627
+      ],
+      "alphaRange": [
+        255,
+        255
+      ],
+      "spriteMode": [],
+      "sha256": "d2eebdf4317b335cd7e5ee8d30e2c5b66c9f162ece6cbbc8216ed0e4f80a06cf"
+    },
+    {
+      "path": "Picture\\Sân Đình Bắc Bộ.jpg",
+      "size": [
+        1400,
+        1004
+      ],
+      "alphaRange": [
+        255,
+        255
+      ],
+      "spriteMode": [],
+      "sha256": "926a8b1e0eb167e364a1dc15b113bd1d7d2c3395f08e495ab632249b5aa445ac"
+    },
+    {
+      "path": "Picture\\UI CONCEPT.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "alphaRange": [
+        19,
+        252
+      ],
+      "spriteMode": [],
+      "sha256": "97ba21d9b28ba189f0f8ee610412a4486002c2ba9549240f0a17268760e11de0"
+    },
+    {
+      "path": "Picture\\UI KIT.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "alphaRange": [
+        167,
+        251
+      ],
+      "spriteMode": [],
+      "sha256": "85ff048083f3b43b16587b96bbb7ba71e9e3c4aa4534079e4a8b71f57f981fe7"
+    }
+  ],
+  "definitions": [
+    {
+      "id": "Char01_Player",
+      "definition": "unity-client\\Assets\\HitMe\\ScriptableObjects\\Characters\\Char01_Player.asset",
+      "sprites": [
+        {
+          "path": "unity-client\\Assets\\HitMe\\Art\\Characters\\Char01_Player\\Idle\\frame_000.png",
+          "size": [
+            1146,
+            1373
+          ],
+          "alphaRange": [
+            0,
+            255
+          ],
+          "spriteMode": [],
+          "sha256": "7b95ab3b9dfd14c9ccd1858191eeb06979f8fca7166efff657a832c5489f8d9c"
+        },
+        {
+          "path": "unity-client\\Assets\\HitMe\\Art\\Production\\Characters\\Portraits\\BlackBoy.png",
+          "size": [
+            1146,
+            796
+          ],
+          "alphaRange": [
+            0,
+            255
+          ],
+          "spriteMode": [],
+          "sha256": "bcf714769c81fda8c9034604956e4bc0b34aa0b564997b32414a028b4b533cdb"
+        }
+      ],
+      "frameCounts": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "prefab": "D:\\HIT ME\\unity-client\\Assets\\HitMe\\Prefabs\\Characters\\Char01_Player.prefab",
+      "activeBattleCatalog": true
+    },
+    {
+      "id": "Char02_BotMale",
+      "definition": "unity-client\\Assets\\HitMe\\ScriptableObjects\\Characters\\Char02_BotMale.asset",
+      "sprites": [
+        {
+          "path": "unity-client\\Assets\\HitMe\\Art\\Characters\\Char02_BotMale\\Idle\\frame_000.png",
+          "size": [
+            1223,
+            1286
+          ],
+          "alphaRange": [
+            0,
+            255
+          ],
+          "spriteMode": [],
+          "sha256": "d731d8c7766eb9b8dd23a63f00e833d6405145f43e5a592a543fc4c717183b8a"
+        },
+        {
+          "path": "unity-client\\Assets\\HitMe\\Art\\Production\\Characters\\Portraits\\LegacyBotMale.png",
+          "size": [
+            1223,
+            745
+          ],
+          "alphaRange": [
+            0,
+            255
+          ],
+          "spriteMode": [],
+          "sha256": "cd7cfe232c68a71a515eb3c73ef0f30f69c3c8ba73df70adcd65305ed91b53a1"
+        }
+      ],
+      "frameCounts": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "prefab": "D:\\HIT ME\\unity-client\\Assets\\HitMe\\Prefabs\\Characters\\Char02_BotMale.prefab",
+      "activeBattleCatalog": true
+    },
+    {
+      "id": "Char03_BotFemale",
+      "definition": "unity-client\\Assets\\HitMe\\ScriptableObjects\\Characters\\Char03_BotFemale.asset",
+      "sprites": [
+        {
+          "path": "unity-client\\Assets\\HitMe\\Art\\Characters\\Char03_BotFemale\\Idle\\frame_000.png",
+          "size": [
+            1239,
+            1269
+          ],
+          "alphaRange": [
+            0,
+            255
+          ],
+          "spriteMode": [],
+          "sha256": "6efc5c3d1ae27ec765cd2696fbd3bad002f96fd3d8fbd478b278bd812c8e7d0d"
+        },
+        {
+          "path": "unity-client\\Assets\\HitMe\\Art\\Production\\Characters\\Portraits\\LegacyBotFemale.png",
+          "size": [
+            1239,
+            736
+          ],
+          "alphaRange": [
+            0,
+            255
+          ],
+          "spriteMode": [],
+          "sha256": "7fd5a9ed262f3d3c2a7af641637ade219fc9093868a9a50c5504b6760e545138"
+        }
+      ],
+      "frameCounts": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "prefab": "D:\\HIT ME\\unity-client\\Assets\\HitMe\\Prefabs\\Characters\\Char03_BotFemale.prefab",
+      "activeBattleCatalog": true
+    },
+    {
+      "id": "Visual_BlackBoy",
+      "definition": "unity-client\\Assets\\HitMe\\Resources\\Production\\BlackBoy.asset",
+      "sprites": [
+        {
+          "path": "unity-client\\Assets\\HitMe\\Art\\Characters\\Char01_Player\\Idle\\frame_000.png",
+          "size": [
+            1146,
+            1373
+          ],
+          "alphaRange": [
+            0,
+            255
+          ],
+          "spriteMode": [],
+          "sha256": "7b95ab3b9dfd14c9ccd1858191eeb06979f8fca7166efff657a832c5489f8d9c"
+        },
+        {
+          "path": "unity-client\\Assets\\HitMe\\Art\\Production\\Characters\\Portraits\\BlackBoy.png",
+          "size": [
+            1146,
+            796
+          ],
+          "alphaRange": [
+            0,
+            255
+          ],
+          "spriteMode": [],
+          "sha256": "bcf714769c81fda8c9034604956e4bc0b34aa0b564997b32414a028b4b533cdb"
+        },
+        {
+          "path": "unity-client\\Assets\\HitMe\\Art\\UI\\MainMenu\\shadow.png",
+          "size": [
+            256,
+            90
+          ],
+          "alphaRange": [
+            0,
+            85
+          ],
+          "spriteMode": [],
+          "sha256": "a6015b4ed052a214e98ba44c38c98e2cd642cf1dffb043e519155613e901e355"
+        }
+      ],
+      "frameCounts": [
+        1
+      ],
+      "prefab": null,
+      "activeBattleCatalog": false
+    },
+    {
+      "id": "Visual_BlackCat",
+      "definition": "unity-client\\Assets\\HitMe\\Resources\\Production\\BlackCat.asset",
+      "sprites": [
+        {
+          "path": "unity-client\\Assets\\HitMe\\Art\\Production\\Animals\\BlackCat.png",
+          "size": [
+            367,
+            494
+          ],
+          "alphaRange": [
+            0,
+            254
+          ],
+          "spriteMode": [],
+          "sha256": "58a6230e500f4f506563ae8e04b8fe9706f16f42a1015494ba291b2f69e6b10f"
+        },
+        {
+          "path": "unity-client\\Assets\\HitMe\\Art\\Production\\Characters\\Portraits\\BlackCat.png",
+          "size": [
+            367,
+            286
+          ],
+          "alphaRange": [
+            0,
+            254
+          ],
+          "spriteMode": [],
+          "sha256": "f4c64d5835aa486cd56722d64b121cfc7b53c99cfd2a5d5f82d5aaee64e4f211"
+        },
+        {
+          "path": "unity-client\\Assets\\HitMe\\Art\\UI\\MainMenu\\shadow.png",
+          "size": [
+            256,
+            90
+          ],
+          "alphaRange": [
+            0,
+            85
+          ],
+          "spriteMode": [],
+          "sha256": "a6015b4ed052a214e98ba44c38c98e2cd642cf1dffb043e519155613e901e355"
+        }
+      ],
+      "frameCounts": [
+        1
+      ],
+      "prefab": null,
+      "activeBattleCatalog": false
+    },
+    {
+      "id": "Visual_BlondBoy",
+      "definition": "unity-client\\Assets\\HitMe\\Resources\\Production\\BlondBoy.asset",
+      "sprites": [
+        {
+          "path": "unity-client\\Assets\\HitMe\\Art\\Production\\Characters\\BlondBoy.png",
+          "size": [
+            367,
+            500
+          ],
+          "alphaRange": [
+            0,
+            254
+          ],
+          "spriteMode": [],
+          "sha256": "7b3a465cd89991fffd59956ee3542b04c71df309606c65b38a995060eb4d4601"
+        },
+        {
+          "path": "unity-client\\Assets\\HitMe\\Art\\Production\\Characters\\Portraits\\BlondBoy.png",
+          "size": [
+            367,
+            290
+          ],
+          "alphaRange": [
+            0,
+            254
+          ],
+          "spriteMode": [],
+          "sha256": "9b65cd15dae0fae1b4b6db85062d7cc94f62c13ebf2217e468a57983765a7ca2"
+        },
+        {
+          "path": "unity-client\\Assets\\HitMe\\Art\\UI\\MainMenu\\shadow.png",
+          "size": [
+            256,
+            90
+          ],
+          "alphaRange": [
+            0,
+            85
+          ],
+          "spriteMode": [],
+          "sha256": "a6015b4ed052a214e98ba44c38c98e2cd642cf1dffb043e519155613e901e355"
+        }
+      ],
+      "frameCounts": [
+        1
+      ],
+      "prefab": null,
+      "activeBattleCatalog": false
+    },
+    {
+      "id": "Visual_CapBoy",
+      "definition": "unity-client\\Assets\\HitMe\\Resources\\Production\\CapBoy.asset",
+      "sprites": [
+        {
+          "path": "unity-client\\Assets\\HitMe\\Art\\Production\\Characters\\CapBoy.png",
+          "size": [
+            366,
+            496
+          ],
+          "alphaRange": [
+            0,
+            254
+          ],
+          "spriteMode": [],
+          "sha256": "2a1320b2e31490437d25a7c62258f9172e94e6edb5ecf61b46a2657231ae9ac6"
+        },
+        {
+          "path": "unity-client\\Assets\\HitMe\\Art\\Production\\Characters\\Portraits\\CapBoy.png",
+          "size": [
+            366,
+            287
+          ],
+          "alphaRange": [
+            0,
+            254
+          ],
+          "spriteMode": [],
+          "sha256": "b8a1dc08b7e959be28e6256f245e3ee954d7f376f12054807ad0e9abf36ac83d"
+        },
+        {
+          "path": "unity-client\\Assets\\HitMe\\Art\\UI\\MainMenu\\shadow.png",
+          "size": [
+            256,
+            90
+          ],
+          "alphaRange": [
+            0,
+            85
+          ],
+          "spriteMode": [],
+          "sha256": "a6015b4ed052a214e98ba44c38c98e2cd642cf1dffb043e519155613e901e355"
+        }
+      ],
+      "frameCounts": [
+        1
+      ],
+      "prefab": null,
+      "activeBattleCatalog": false
+    },
+    {
+      "id": "Visual_GoldenDog",
+      "definition": "unity-client\\Assets\\HitMe\\Resources\\Production\\GoldenDog.asset",
+      "sprites": [
+        {
+          "path": "unity-client\\Assets\\HitMe\\Art\\Production\\Animals\\GoldenDog.png",
+          "size": [
+            370,
+            496
+          ],
+          "alphaRange": [
+            0,
+            254
+          ],
+          "spriteMode": [],
+          "sha256": "d98252fcb8955cc394e05d8d69ec726c98bba8d34f45468fea488f0945b61d7a"
+        },
+        {
+          "path": "unity-client\\Assets\\HitMe\\Art\\Production\\Characters\\Portraits\\GoldenDog.png",
+          "size": [
+            370,
+            287
+          ],
+          "alphaRange": [
+            0,
+            254
+          ],
+          "spriteMode": [],
+          "sha256": "bddfd955ba14f7b1dc6d36829984e45e69e8dd73df50d7541f5ffc46d29e1989"
+        },
+        {
+          "path": "unity-client\\Assets\\HitMe\\Art\\UI\\MainMenu\\shadow.png",
+          "size": [
+            256,
+            90
+          ],
+          "alphaRange": [
+            0,
+            85
+          ],
+          "spriteMode": [],
+          "sha256": "a6015b4ed052a214e98ba44c38c98e2cd642cf1dffb043e519155613e901e355"
+        }
+      ],
+      "frameCounts": [
+        1
+      ],
+      "prefab": null,
+      "activeBattleCatalog": false
+    },
+    {
+      "id": "Visual_NonLaBoy",
+      "definition": "unity-client\\Assets\\HitMe\\Resources\\Production\\NonLaBoy.asset",
+      "sprites": [
+        {
+          "path": "unity-client\\Assets\\HitMe\\Art\\Production\\Characters\\NonLaBoy.png",
+          "size": [
+            433,
+            498
+          ],
+          "alphaRange": [
+            0,
+            254
+          ],
+          "spriteMode": [],
+          "sha256": "08b1b82ff391589482d6c0288347719923c243aeb8a0f9f75a89341d1f385406"
+        },
+        {
+          "path": "unity-client\\Assets\\HitMe\\Art\\Production\\Characters\\Portraits\\NonLaBoy.png",
+          "size": [
+            433,
+            288
+          ],
+          "alphaRange": [
+            0,
+            254
+          ],
+          "spriteMode": [],
+          "sha256": "91f817cacc01b67beb71de359deca07cd4543593c45d609108a468f9f328a0f1"
+        },
+        {
+          "path": "unity-client\\Assets\\HitMe\\Art\\UI\\MainMenu\\shadow.png",
+          "size": [
+            256,
+            90
+          ],
+          "alphaRange": [
+            0,
+            85
+          ],
+          "spriteMode": [],
+          "sha256": "a6015b4ed052a214e98ba44c38c98e2cd642cf1dffb043e519155613e901e355"
+        }
+      ],
+      "frameCounts": [
+        1
+      ],
+      "prefab": null,
+      "activeBattleCatalog": false
+    },
+    {
+      "id": "Visual_PinkGirl",
+      "definition": "unity-client\\Assets\\HitMe\\Resources\\Production\\PinkGirl.asset",
+      "sprites": [
+        {
+          "path": "unity-client\\Assets\\HitMe\\Art\\Production\\Characters\\pink-static-preview.png",
+          "size": [
+            1312,
+            1199
+          ],
+          "alphaRange": [
+            0,
+            255
+          ],
+          "spriteMode": [],
+          "sha256": "7193c8251188c19e776b060ef436393537fe8e68637a5edeef7bf8b12aba6097"
+        },
+        {
+          "path": "unity-client\\Assets\\HitMe\\Art\\Production\\Characters\\Portraits\\PinkGirl.png",
+          "size": [
+            1312,
+            695
+          ],
+          "alphaRange": [
+            0,
+            255
+          ],
+          "spriteMode": [],
+          "sha256": "aa5c710f49aae035359ffbd24d26f4780440f350e692fd81a8fd9ec64493c086"
+        },
+        {
+          "path": "unity-client\\Assets\\HitMe\\Art\\UI\\MainMenu\\shadow.png",
+          "size": [
+            256,
+            90
+          ],
+          "alphaRange": [
+            0,
+            85
+          ],
+          "spriteMode": [],
+          "sha256": "a6015b4ed052a214e98ba44c38c98e2cd642cf1dffb043e519155613e901e355"
+        }
+      ],
+      "frameCounts": [
+        1
+      ],
+      "prefab": null,
+      "activeBattleCatalog": false
+    }
+  ]
+}

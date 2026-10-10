@@ -1,0 +1,79 @@
+{
+  "checkedAt": "2026-10-10T02:37:30.816Z",
+  "auth": {
+    "settingsStatus": 200,
+    "anonymousEnabled": true,
+    "signup0": {
+      "http": 200,
+      "hasSession": true
+    },
+    "signup1": {
+      "http": 200,
+      "hasSession": true
+    },
+    "distinctUsers": true,
+    "user0": {
+      "verifiedIdentity": true,
+      "profileHttp": 200,
+      "profileCount": 1,
+      "otherProfileHidden": true,
+      "nicknameAvatarSaved": true,
+      "currencyWriteDenied": true,
+      "crossWriteDenied": true,
+      "refreshSameIdentity": true,
+      "profilePersisted": true,
+      "logoutHttp": 204
+    },
+    "user1": {
+      "verifiedIdentity": true,
+      "profileHttp": 200,
+      "profileCount": 1,
+      "otherProfileHidden": true,
+      "nicknameAvatarSaved": true,
+      "currencyWriteDenied": true,
+      "crossWriteDenied": true,
+      "refreshSameIdentity": true,
+      "profilePersisted": true,
+      "logoutHttp": 204
+    },
+    "invalidSessionHttp": 403
+  },
+  "wss": [
+    {
+      "count": 2,
+      "endpoint": "wss://hit-me-zj17.onrender.com/play",
+      "identity": "HIT ME guest tokens (not Supabase)",
+      "status": "PASS",
+      "outcome": "Draw",
+      "sameResolution": true,
+      "distinctIdentities": true,
+      "placementPrivacy": true,
+      "errors": [],
+      "persistedHistory": true,
+      "currency": [
+        65,
+        65
+      ]
+    },
+    {
+      "count": 6,
+      "endpoint": "wss://hit-me-zj17.onrender.com/play",
+      "identity": "HIT ME guest tokens (not Supabase)",
+      "status": "PASS",
+      "outcome": "Draw",
+      "sameResolution": true,
+      "distinctIdentities": true,
+      "placementPrivacy": true,
+      "errors": [],
+      "persistedHistory": true,
+      "currency": [
+        65,
+        65,
+        65,
+        65,
+        65,
+        65
+      ]
+    }
+  ]
+}
