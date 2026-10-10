@@ -11,12 +11,12 @@
 - Queue expiry is configurable, default 120 seconds; private invite-code expiry remains 30 minutes. No combat timing/rules were changed.
 - Private entry presents Create/Join room-code actions, room roster, ready states, copy/share invitation. No endpoint input.
 
-## Test status (update with final run)
+## Final test status
 - EditMode: PASS 83/83.
 - PlayMode: PASS 39/39, final run 2026-10-10 04:42 UTC.
 - Backend: PASS 27/27, no skipped tests.
 - Actual two Supabase identities + local server Quick Match: PASS. See MOBILE_ONLINE_LOCAL_PROBE.json.
-- Fresh Web Build: PASS, 0 errors / 4 warnings, 160.7 seconds. Local HTTP: PASS index and hitme-session.js (200). Local actual UI: PASS auto authentication, profile nickname/avatar save and refresh restore, real one-player Quick queue and Cancel. Public deployment pending.
+- Fresh Web Build: PASS, 0 errors / 4 warnings, 156.14 seconds. Local HTTP: PASS index and hitme-session.js (200). Local and public actual UI: PASS auto authentication, profile nickname/avatar save and refresh restore, real one-player Quick queue, Cancel, private room creation and clipboard. Public production verified.
 - Physical iPhone, Safari/Zalo browser chrome, Dynamic Island touch and native share: NOT_TESTED, pending physical verification.
 
 ## Limits
@@ -33,7 +33,7 @@
 - PASS: real two-account public Render probe (MOBILE_ONLINE_PUBLIC_PROBE.json); this is protocol/REST evidence, not two isolated browser UIs.
 - PASS: PlayMode 39/39 after clipboard bridge, 2026-10-10 05:00 UTC. An intermediate run failed because an old screenshot path was locked; Capture now writes per-run paths. One earlier attempt without HITME_LIVE_TEST_URL was ignored, not counted as a pass.
 - Existing prefabs: no prefab assets changed in this sprint. Runtime UI reuses Independent UI Kit factory and existing character definitions.
-- Git runtime release: main 50b5a9e; Vercel served matching data/wasm/session JS. HTML differed only by CRLF checkout normalization. Clipboard correction is being rebuilt separately.
+- Git runtime release: main 50b5a9e; Vercel served matching data/wasm/session JS. HTML differed only by CRLF checkout normalization. Clipboard correction was rebuilt and verified on public.
 
 
 ## Changed files (runtime release)
@@ -83,8 +83,11 @@
 ## Final release checks
 - Runtime commit main 0d634b3: Vercel production Ready (screenshot Vercel-0d634b3-Ready.png), actual public data/wasm/framework/session.js match hashes; index equals after CRLF normalization.
 - Final Unity build: 0 errors, 4 warnings, 156.14 seconds (MOBILE_UX_WEB_BUILD.json).
-- Clipboard: local Web verified exact room code 9E8A2E22. Public verification initially retained old clipboard value; NOT PASS yet. HTML loader now disables Unity's internal IndexedDB build cache to force current assembly/framework during release validation. Tradeoff: full build download on each load until versioned asset caching is added.
+- Clipboard: PASS local exact code 9E8A2E22 and public exact code B4844E3D after fresh runtime load. Initial public verification retained the old value; it was not recorded as a pass. HTML loader now disables Unity's internal IndexedDB build cache to force current assembly/framework during release validation. Tradeoff: full build download on each load until versioned asset caching is added.
 - Public Console: no captured errors; UnityCache warns that CDN responses omit Content-Length. No measured mobile FPS claim.
 - Native share and physical iPhone Safari/Zalo/Dynamic Island: NOT_TESTED.
 - Server rooms live in memory and can disappear during Render redeploy. Coins/history use SQLite; persistent cloud economy remains NOT VERIFIED.
 
+- Final deployed runtime/wrapper: main 6d214aa, Vercel Ready, served index and runtime hashes verified. Browser Copy PASS screenshot Public-Clipboard-PASS.png. Physical/native share acceptance remains pending.
+- No new character artwork, authored animation clip, gameplay rule, bot behavior or Phaser source was changed. Existing motion frames are evidence of procedural presentation only.
+- Additional changed test harness: unity-client/Assets/HitMe/Tests/PlayMode/MasterProductionFlowTests.cs (per-run screenshot paths). No independent prefab assets modified.
