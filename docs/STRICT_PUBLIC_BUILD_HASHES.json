@@ -1,0 +1,33 @@
+[
+  {
+    "file": "index.html",
+    "bytes": 4047,
+    "sha256": "15C85A2C7C48EB71588222B14346524EBDD491F58BE16DF9BA20EFBA0BEC5B81",
+    "matches": false,
+    "matchesAfterGitLineEndingNormalization": true
+  },
+  {
+    "file": "Build/Web.loader.js",
+    "bytes": 48779,
+    "sha256": "3BF3F435BA873ADF5AB4B2AB19940565BC71D23C1A3AB7626DDC28F74701E228",
+    "matches": true
+  },
+  {
+    "file": "Build/Web.data.unityweb",
+    "bytes": 30490897,
+    "sha256": "145FFFC4B37B7C126677FEA731D782D31048E7EB73462ACF920A260800990F8C",
+    "matches": true
+  },
+  {
+    "file": "Build/Web.framework.js.unityweb",
+    "bytes": 75205,
+    "sha256": "2823BF1E50F26776498B1C8E7C3FF5A37331ECA9A36CC705EC658AFC046E1140",
+    "matches": true
+  },
+  {
+    "file": "Build/Web.wasm.unityweb",
+    "bytes": 9565889,
+    "sha256": "CCF69B24B2197D2027AC482C30296AC253862E3B044F1074D5A66016455D2D65",
+    "matches": true
+  }
+]

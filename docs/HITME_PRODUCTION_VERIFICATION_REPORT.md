@@ -34,3 +34,13 @@ Security: no secret/service key used, tokens stay only in probe memory. No destr
 Manual acceptance: on physical iPhone open public domain; check safe-area portrait and orientation; log in via the eventual Supabase adapter with two devices; save Vietnamese nicknames/avatars, refresh/logout/re-login; create/join room, lock actions, complete match, reconnect and compare outcomes; confirm hardware audio after gesture. Record device/browser/version and evidence. This flow cannot currently pass Supabase binding with the current runtime.
 
 Delivery: verified local Web Build served over HTTP8790; repair must be visually checked there before source delivery. Remote main advanced during audit; merge/cherry-pick must preserve its Render/Supabase updates. Production UI deployment proof will be added after Ready and public smoke verification. No full-production DONE claim.
+
+## Verified delivery supplement
+
+Source/client fix delivered to GitHub main as 969f3d97408336aa27b1ab925f53e0a0a8a44d4a, preserving remote 56cd7f6/de512a7. Vercel deployment 7WbUEeZUkt7SsGMTi2X4LeFvyQFx: Ready, current production domain https://hit-me-game.vercel.app/. Local and public CharacterSelection after screenshots prove all three labels remain above Confirm. Client fix only; no backend protocol or database migration deployed by this audit.
+
+STRICT_PUBLIC_BUILD_HASHES.json records four Unity runtime files byte-identical to tested package. Public index4047 bytes matches Git blob; Windows local index4078 bytes differs only by31 CRLF line endings, normalized SHA256 matches. Initial raw HTML hash mismatch was a verification-harness normalization issue, not stale deployment.
+
+Post-reload public Console: zero recorded error entries, two UnityCache warnings for missing Content-Length. Local Console had zero error/warning entries. No FPS or physical-device claim. Render HTTPS health responds200; transport ws-dev describes the internal HTTP process behind TLS proxy, not absence of public WSS TLS. Actual public protocol verification remains as separately scoped above.
+
+Public Battle402x874 screenshot was additionally recorded. Full Battle four-viewport matrix remains NOT_TESTED; viewport overrides applied to different active tabs during part of the run, and Result390/393 images were correctly relabelled. Do not derive responsive acceptance from filenames alone.
