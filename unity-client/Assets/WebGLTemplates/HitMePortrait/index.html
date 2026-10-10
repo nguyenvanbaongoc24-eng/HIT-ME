@@ -21,6 +21,7 @@
 const canvas=document.getElementById('unity-canvas'),loading=document.getElementById('loading'),message=document.getElementById('message');
 canvas.addEventListener('webglcontextlost',e=>{e.preventDefault();loading.style.display='flex';message.textContent='Mất kết nối đồ họa. Tải lại trang để tiếp tục.';});
 const buildUrl='Build',config={
+ cacheControl: function(){return 'no-store';},
  dataUrl:buildUrl+'/{{{ DATA_FILENAME }}}',frameworkUrl:buildUrl+'/{{{ FRAMEWORK_FILENAME }}}',codeUrl:buildUrl+'/{{{ CODE_FILENAME }}}',
  streamingAssetsUrl:'StreamingAssets',companyName:'{{{ COMPANY_NAME }}}',productName:'{{{ PRODUCT_NAME }}}',productVersion:'{{{ PRODUCT_VERSION }}}',
  autoSyncPersistentDataPath:true,devicePixelRatio:Math.min(window.devicePixelRatio||1,2),matchWebGLToCanvasSize:true
@@ -39,3 +40,4 @@ document.body.appendChild(script);
 </script>
 </body>
 </html>
+

@@ -79,3 +79,12 @@
 - web-release/Build/Web.wasm.unityweb
 - web-release/hitme-session.js
 - web-release/index.html
+
+## Final release checks
+- Runtime commit main 0d634b3: Vercel production Ready (screenshot Vercel-0d634b3-Ready.png), actual public data/wasm/framework/session.js match hashes; index equals after CRLF normalization.
+- Final Unity build: 0 errors, 4 warnings, 156.14 seconds (MOBILE_UX_WEB_BUILD.json).
+- Clipboard: local Web verified exact room code 9E8A2E22. Public verification initially retained old clipboard value; NOT PASS yet. HTML loader now disables Unity's internal IndexedDB build cache to force current assembly/framework during release validation. Tradeoff: full build download on each load until versioned asset caching is added.
+- Public Console: no captured errors; UnityCache warns that CDN responses omit Content-Length. No measured mobile FPS claim.
+- Native share and physical iPhone Safari/Zalo/Dynamic Island: NOT_TESTED.
+- Server rooms live in memory and can disappear during Render redeploy. Coins/history use SQLite; persistent cloud economy remains NOT VERIFIED.
+

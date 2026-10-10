@@ -11,4 +11,3 @@ Automation exposes one IAB browser profile with shared same-origin storage, and 
 
 ## Negative checks
 Backend tests cover queue duplicate/cancel/disconnect/reconnect, invalid identity, legacy balance preservation, incompatible version handling in implementation, and queue expiry. Browser-session tests preserve identity on transport failure and renew/create guest only after invalid refresh. Unity tests require real welcome before Connected, bounded reconnect failure, and avatar/profile UI without endpoint controls.
-

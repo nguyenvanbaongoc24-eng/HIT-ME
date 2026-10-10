@@ -4,27 +4,39 @@
     "status": 200,
     "local": "D4B11DACEEB98F0628654939E8FD596A2657484A00FB7D928545E20343149C30",
     "remote": "7531794989F20A910D9D2CEB06D0D29DC595D3A43E2F0DC6E0E54B5853B20912",
-    "equal": false
+    "equal": false,
+    "normalizedEqual": true
   },
   {
     "url": "https://hit-me-game.vercel.app/hitme-session.js",
     "status": 200,
     "local": "96059095D116C470E8921A564E9B52B23928EA6BE423506FE060BB9DC95DBD0D",
     "remote": "96059095D116C470E8921A564E9B52B23928EA6BE423506FE060BB9DC95DBD0D",
-    "equal": true
+    "equal": true,
+    "normalizedEqual": true
   },
   {
     "url": "https://hit-me-game.vercel.app/Build/Web.data.unityweb",
     "status": 200,
-    "local": "7CF38D4A74708E2F4F7D624B944906435A10E7A51361CACEC00444E40143C5F4",
-    "remote": "7CF38D4A74708E2F4F7D624B944906435A10E7A51361CACEC00444E40143C5F4",
-    "equal": true
+    "local": "92C2554DBAD2E3468C0054E8CE46E2D642F751ABDA17E09DF3E76A7093D0BC5E",
+    "remote": "92C2554DBAD2E3468C0054E8CE46E2D642F751ABDA17E09DF3E76A7093D0BC5E",
+    "equal": true,
+    "normalizedEqual": true
   },
   {
     "url": "https://hit-me-game.vercel.app/Build/Web.wasm.unityweb",
     "status": 200,
-    "local": "B6C16383C85F7714CF19906E33C57303306486E01A2E9B8ABE8E94A2672032C7",
-    "remote": "B6C16383C85F7714CF19906E33C57303306486E01A2E9B8ABE8E94A2672032C7",
-    "equal": true
+    "local": "A3D647FCF9720FDC89D580DBC07782C8DE669A42C148B06E0A76CD00C8D63F2C",
+    "remote": "A3D647FCF9720FDC89D580DBC07782C8DE669A42C148B06E0A76CD00C8D63F2C",
+    "equal": true,
+    "normalizedEqual": true
+  },
+  {
+    "url": "https://hit-me-game.vercel.app/Build/Web.framework.js.unityweb",
+    "status": 200,
+    "local": "2DBA4C7D6C8FAC03E00FFF33E8131DF58FFBE44C53974CD879E0EA8D45EBCFAF",
+    "remote": "2DBA4C7D6C8FAC03E00FFF33E8131DF58FFBE44C53974CD879E0EA8D45EBCFAF",
+    "equal": true,
+    "normalizedEqual": true
   }
 ]
