@@ -438,7 +438,7 @@
     },
     {
       "key": "errorinvalid_session",
-      "value": "Guest session expired. A new guest session is required."
+      "value": "Your session expired. Please retry."
     },
     {
       "key": "errorinvalid_position",
@@ -819,6 +819,66 @@
     {
       "value": "Offline match · No persistent rewards",
       "key": "offlineNoRewards"
+    },
+    {
+      "key": "matchedPlayers",
+      "value": "Players in room"
+    },
+    {
+      "key": "playerProfile",
+      "value": "PLAYER PROFILE"
+    },
+    {
+      "key": "connectionReady",
+      "value": "Connected"
+    },
+    {
+      "key": "connectionLost",
+      "value": "Disconnected"
+    },
+    {
+      "key": "connectionRetry",
+      "value": "Retry"
+    },
+    {
+      "key": "matchSearching",
+      "value": "FINDING A MATCH"
+    },
+    {
+      "key": "matchWaitingPlayers",
+      "value": "Waiting for real players"
+    },
+    {
+      "key": "connectionRetrying",
+      "value": "Reconnecting"
+    },
+    {
+      "key": "connectionFailed",
+      "value": "Unable to connect"
+    },
+    {
+      "key": "connectionConnecting",
+      "value": "Connecting..."
+    },
+    {
+      "key": "shareRoomInvite",
+      "value": "Share invitation"
+    },
+    {
+      "key": "errorprofile_unavailable",
+      "value": "Unable to load profile. Please retry."
+    },
+    {
+      "key": "matchQueueExpired",
+      "value": "Not enough players. Search again or practice with bots."
+    },
+    {
+      "key": "errorauth_configuration_missing",
+      "value": "Online is not ready. Please retry later."
+    },
+    {
+      "key": "errorauth_required",
+      "value": "Unable to authenticate your session. Please retry."
     }
   ]
 }

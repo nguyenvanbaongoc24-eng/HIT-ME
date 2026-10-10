@@ -438,7 +438,7 @@
     },
     {
       "key": "errorinvalid_session",
-      "value": "Phiên khách hết hạn. Cần phiên khách mới."
+      "value": "Phiên đăng nhập hết hạn. Vui lòng thử lại."
     },
     {
       "key": "errorinvalid_position",
@@ -819,6 +819,66 @@
     {
       "value": "Trận offline · Không cộng tiền thưởng lâu dài",
       "key": "offlineNoRewards"
+    },
+    {
+      "key": "matchedPlayers",
+      "value": "Người chơi trong phòng"
+    },
+    {
+      "key": "playerProfile",
+      "value": "HỒ SƠ NGƯỜI CHƠI"
+    },
+    {
+      "key": "connectionReady",
+      "value": "Đã kết nối"
+    },
+    {
+      "key": "connectionLost",
+      "value": "Mất kết nối"
+    },
+    {
+      "key": "connectionRetry",
+      "value": "Thử lại"
+    },
+    {
+      "key": "matchSearching",
+      "value": "ĐANG TÌM TRẬN"
+    },
+    {
+      "key": "matchWaitingPlayers",
+      "value": "Đang chờ người chơi thật"
+    },
+    {
+      "key": "connectionRetrying",
+      "value": "Đang thử kết nối lại"
+    },
+    {
+      "key": "connectionFailed",
+      "value": "Không thể kết nối"
+    },
+    {
+      "key": "connectionConnecting",
+      "value": "Đang kết nối..."
+    },
+    {
+      "key": "shareRoomInvite",
+      "value": "Chia sẻ lời mời"
+    },
+    {
+      "key": "errorprofile_unavailable",
+      "value": "Chưa tải được hồ sơ. Vui lòng thử lại."
+    },
+    {
+      "key": "matchQueueExpired",
+      "value": "Chưa đủ người chơi. Bạn có thể tìm lại hoặc luyện tập với Bot."
+    },
+    {
+      "key": "errorauth_configuration_missing",
+      "value": "Online chưa sẵn sàng. Vui lòng thử lại sau."
+    },
+    {
+      "key": "errorauth_required",
+      "value": "Không xác thực được phiên. Vui lòng thử lại."
     }
   ]
 }

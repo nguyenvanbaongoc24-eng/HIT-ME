@@ -17,22 +17,25 @@ namespace HitMe.UI
     [Serializable] public sealed class NetHealth { public string id; public int before,after; }
     [Serializable] public sealed class NetResolution { public string outcome,winner; public NetThrow[] throws; public NetHealth[] health; }
     [Serializable] public sealed class NetMatchStats {public string id;public int throws,hits,misses,received;}
-    [Serializable] public sealed class NetRoom { public string id,code,owner,phase,match,timeoutPolicy; public int round; public double deadline,serverTime; public bool @private; public NetPlayer[] players; public NetResolution resolution; public NetMatchStats[] stats; }
+    [Serializable] public sealed class NetRoom { public string id,code,owner,phase,match,timeoutPolicy; public int round,minimumPlayers,capacity; public double deadline,serverTime; public bool @private; public NetPlayer[] players; public NetResolution resolution; public NetMatchStats[] stats; }
     [Serializable] public sealed class NetItem { public string item; public int quantity; }
     [Serializable] public sealed class NetQuest { public string period,kind,state; public int target,progress; }
     [Serializable] public sealed class NetReward { public string match,outcome;public int coins,xp;public double created; }
     [Serializable] public sealed class NetProfile { public string id,name,avatar,equipped; public int xp,coins,level; public NetItem[] inventory; public NetQuest[] quests; public NetReward[] history; }
-    [Serializable] public sealed class NetEnvelope { public string type,id,token,message,request; public NetRoom room; public NetProfile profile; public double serverTime; }
-    [Serializable] sealed class NetRequest { public string type,request,name,avatar,token,code,item,period,kind; public bool ready; public int seq,round; public NetPoint value; }
+    [Serializable] public sealed class NetEnvelope { public string type,id,token,message,request,auth,code; public bool needsOnboarding; public NetRoom room; public NetProfile profile; public double serverTime; }
+    [Serializable] sealed class NetRequest { public string type,request,name,avatar,token,code,item,period,kind,version="hitme-v1"; public bool ready; public int seq,round; public NetPoint value; }
     public sealed class NetworkSession : MonoBehaviour
     {
         public static NetworkSession Instance {get;private set;}
         public NetRoom Room {get;private set;} public NetProfile Profile {get;private set;}
         public string PlayerId {get;private set;} public string Error {get;private set;}="";
+        public string InvitationCode {get;set;}="";
+        public bool NeedsOnboarding {get;private set;} public bool Connecting {get;private set;} public bool SupabaseAuthenticated {get;private set;}
+        public string ConnectionStatus=>Connected?"connectionReady":Connecting?attempts>0?"connectionRetrying":"connectionConnecting":attempts>=4?"connectionFailed":attempts>0?"connectionRetrying":"connectionLost";
         public bool Connected {get;private set;} public bool OnlineBattle {get;set;}
         public string ErrorText=>Error.Length==0?"":Strings.Get("error"+Error).StartsWith("[")?Strings.Get(Error):Strings.Get("error"+Error);
         public int Revision {get;private set;} int seq; string token="",endpoint="",guestName="Quest";
-        double serverOffset,nextRetry; int attempts; bool intentionalClose;
+        double serverOffset,nextRetry,openStarted; int attempts; bool intentionalClose;
         readonly ConcurrentQueue<string> incoming=new ConcurrentQueue<string>();
         public double ServerNow=>DateTimeOffset.UtcNow.ToUnixTimeMilliseconds()+serverOffset;
         public NetPlayer Self=>Room?.players==null?null:Array.Find(Room.players,p=>p.id==PlayerId);
@@ -45,8 +48,9 @@ namespace HitMe.UI
 #endif
         public static NetworkSession Ensure(){if(Instance!=null)return Instance;return new GameObject("NetworkSession").AddComponent<NetworkSession>();}
         void Awake(){if(Instance!=null){Destroy(gameObject);return;}Instance=this;DontDestroyOnLoad(gameObject);}
+        public void EnsureConnected(){if(Connected||Connecting)return;Connect(NetworkEndpointSettings.Current,PlayerPrefs.GetString("PlayerDisplayName",Strings.Language=="vi"?"Khách":"Guest"));}
         public void Connect(string url,string name){if(!NetworkEndpointSettings.IsAllowed(url)){Error="public_wss_required";Revision++;return;}endpoint=url;guestName=name;intentionalClose=false;attempts=0;Open();}
-        void Open(){Error="";nextRetry=double.PositiveInfinity;
+        void Open(){openStarted=Time.unscaledTimeAsDouble;Connected=false;Connecting=true;Revision++;Error="";nextRetry=double.PositiveInfinity;
 #if UNITY_WEBGL && !UNITY_EDITOR
             HitMeNetConnect(endpoint);
 #else
@@ -61,9 +65,16 @@ namespace HitMe.UI
 #endif
         public void Receive(string json){incoming.Enqueue(json);}
         void Update(){while(incoming.TryDequeue(out var json)){var e=JsonUtility.FromJson<NetEnvelope>(json);if(e==null)continue;
-            switch(e.type){case "opened":Connected=true;Send(new NetRequest{type="hello",name=guestName,token=token});break;
+            switch(e.type){case "opened":Send(new NetRequest{type="hello",name=guestName,token=token});break;
+                case "auth_ready":NeedsOnboarding=e.needsOnboarding;InvitationCode=e.code??"";break;
+                case "profile_saved":NeedsOnboarding=false;Revision++;break;
+                case "auth_failed":Error=e.message;nextRetry=Time.unscaledTimeAsDouble+Math.Min(30,Math.Pow(2,++attempts));Connecting=attempts<4;Revision++;break;
                 case "stored_token":token=e.token??"";break;
-                case "welcome":PlayerId=e.id;token=e.token;attempts=0;Error="";
+                case "welcome":
+#if UNITY_WEBGL && !UNITY_EDITOR
+                    if(e.auth!="supabase"){Error="auth_required";Connected=false;Connecting=false;intentionalClose=true;Revision++;break;}
+#endif
+                    if(PlayerId!=e.id){Room=null;Profile=null;}Connected=true;Connecting=false;Revision++;SupabaseAuthenticated=e.auth=="supabase";PlayerId=e.id;token=e.token;attempts=0;Error="";
 #if UNITY_WEBGL && !UNITY_EDITOR
                     HitMeNetSaveToken(token);
 #endif
@@ -74,8 +85,8 @@ namespace HitMe.UI
                 case "ack":Error="";Revision++;break;
                 case "error":Error=e.message;Revision++;break;
                 case "transport_error":Error=e.message;Revision++;break;
-                case "closed":Connected=false;Error="networkDisconnected";nextRetry=Time.unscaledTimeAsDouble+Math.Min(10,1+attempts++);Revision++;break;
-            }}if(!Connected&&!intentionalClose&&endpoint.Length>0&&Time.unscaledTimeAsDouble>=nextRetry){nextRetry=double.PositiveInfinity;Open();}}
+                case "closed":Connected=false;Error="networkDisconnected";nextRetry=Time.unscaledTimeAsDouble+Math.Min(30,Math.Pow(2,++attempts));Connecting=attempts<4;Revision++;break;
+            }}if(Connecting&&!Connected&&double.IsPositiveInfinity(nextRetry)&&Time.unscaledTimeAsDouble-openStarted>90){Error="networkConnectionFailed";nextRetry=Time.unscaledTimeAsDouble+Math.Min(30,Math.Pow(2,++attempts));Connecting=attempts<4;Revision++;}if(!Connected&&!intentionalClose&&attempts<4&&endpoint.Length>0&&Time.unscaledTimeAsDouble>=nextRetry){nextRetry=double.PositiveInfinity;Open();}}
         void Send(NetRequest r){r.request=Guid.NewGuid().ToString("N");var json=JsonUtility.ToJson(r);
 #if UNITY_WEBGL && !UNITY_EDITOR
             HitMeNetSend(json);
@@ -84,7 +95,7 @@ namespace HitMe.UI
 #endif
         }
         public void Command(string type,string argument="",bool ready=false){Send(new NetRequest{type=type,code=argument,item=argument,ready=ready});}
-        public void SaveProfile(string name,string avatar){Send(new NetRequest{type="profile",name=name,avatar=avatar});}
+        public void SaveProfile(string name,string avatar){PlayerPrefs.SetString("PlayerDisplayName",name);Send(new NetRequest{type="profile",name=name,avatar=avatar});}
         public void Action(string type,NetPoint point=null){if(Self==null||Self.locked||Room.phase!="Placement")return;Send(new NetRequest{type=type,value=point,round=Room.round,seq=++seq});}
         public void Claim(NetQuest q){Send(new NetRequest{type="claim",kind=q.kind,period=q.period});}
         void OnDestroy(){if(Instance==this)Instance=null;intentionalClose=true;

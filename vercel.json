@@ -4,9 +4,50 @@
   "buildCommand": "",
   "outputDirectory": "web-release",
   "headers": [
-    { "source": "/", "headers": [{ "key": "Cache-Control", "value": "no-cache" }] },
-    { "source": "/index.html", "headers": [{ "key": "Cache-Control", "value": "no-cache" }] },
-    { "source": "/Build/(.*)", "headers": [{ "key": "Cache-Control", "value": "public, max-age=0, must-revalidate" }] },
-    { "source": "/Build/(.*).wasm.unityweb", "headers": [{ "key": "Content-Type", "value": "application/octet-stream" }] }
+    {
+      "source": "/",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "no-cache"
+        }
+      ]
+    },
+    {
+      "source": "/index.html",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "no-cache"
+        }
+      ]
+    },
+    {
+      "source": "/Build/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, must-revalidate"
+        }
+      ]
+    },
+    {
+      "source": "/Build/(.*).wasm.unityweb",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "application/octet-stream"
+        }
+      ]
+    },
+    {
+      "source": "/hitme-session.js",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "no-cache"
+        }
+      ]
+    }
   ]
 }

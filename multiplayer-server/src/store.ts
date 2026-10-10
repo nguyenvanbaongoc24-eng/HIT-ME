@@ -28,6 +28,16 @@ export class Store {
     const id=randomUUID();token=randomBytes(32).toString('base64url');name=validateNickname(name??'Quest');
     this.db.exec('BEGIN IMMEDIATE');try{this.db.prepare('INSERT INTO profiles(id,name) VALUES(?,?)').run(id,name);this.db.prepare('INSERT INTO sessions VALUES(?,?,?)').run(hash(token),id,now+30*86400000);for(const item of ['dep-to-ong','chao','vot'])this.db.prepare('INSERT INTO inventory(player,item) VALUES(?,?)').run(id,item);this.db.exec('COMMIT');}catch(e){this.db.exec('ROLLBACK');throw e;}return {id,token};}
   profile(id:string):Record<string,any>{const p=this.db.prepare('SELECT * FROM profiles WHERE id=?').get(id) as Record<string,any>;if(!p)throw Error('unknown_player');return {...p,level:1+Math.floor(p.xp/100),inventory:this.db.prepare('SELECT item,quantity FROM inventory WHERE player=?').all(id),materials:[],craftingRecipes:[],history:this.db.prepare('SELECT * FROM rewards WHERE player=? ORDER BY created DESC LIMIT 20').all(id),quests:this.quests(id),expiredQuests:this.questArchive(id)};}
+  authenticated(user:{id:string;name:string;avatar:string}){
+    const id='supabase:'+user.id;
+    this.db.exec('BEGIN IMMEDIATE');try{
+      this.db.prepare('INSERT OR IGNORE INTO profiles(id,name,avatar) VALUES(?,?,?)').run(id,validateNickname(user.name),user.avatar);
+      this.updateProfile(id,user.name,user.avatar);
+      for(const item of ['dep-to-ong','chao','vot'])this.db.prepare('INSERT OR IGNORE INTO inventory(player,item) VALUES(?,?)').run(id,item);
+      this.db.exec('COMMIT');
+    }catch(e){this.db.exec('ROLLBACK');throw e;}
+    return {id,token:'',auth:'supabase'};
+  }
   questArchive(id:string){const periods=new Set(this.quests(id).map(q=>q.period));return this.db.prepare('SELECT period,kind,progress,claimed FROM quests WHERE player=?').all(id).filter(row=>!periods.has(String(row.period))).map(row=>({...row,state:row.claimed?'Claimed':'Expired'}));}
   quests(id:string){const today=new Date().toISOString().slice(0,10),week=Math.floor(Date.now()/(7*86400000)).toString();return ['MatchCompleted','MatchWon','ValidHit','MapPlayed','FriendMatchCompleted'].flatMap(kind=>[{period:today,kind,target:kind==='MatchCompleted'?3:1},{period:week,kind,target:kind==='MatchCompleted'?10:3}]).map(q=>{const row=this.db.prepare('SELECT progress,claimed FROM quests WHERE player=? AND period=? AND kind=?').get(id,q.period,q.kind) as any;const progress=row?.progress??0;return {...q,progress,state:row?.claimed?'Claimed':progress>=q.target?'Completed':'Active'};});}
   event(id:string,player:string,type:string){const own=!this.db.isTransaction;if(own)this.db.exec("BEGIN IMMEDIATE");try{this.applyEvent(id,player,type);if(own)this.db.exec("COMMIT");}catch(e){if(own)this.db.exec("ROLLBACK");throw e;}}

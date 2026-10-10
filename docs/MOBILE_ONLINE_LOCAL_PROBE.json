@@ -1,0 +1,19 @@
+{
+  "checkedAt": "2026-10-10T04:25:41.215Z",
+  "status": "PASS",
+  "identity": "Two separate real Supabase anonymous users",
+  "uiCoverage": "Protocol/REST evidence; not two physical browser sessions",
+  "distinctIdentities": true,
+  "endpoint": "ws://127.0.0.1:58955/play",
+  "public": false,
+  "namesAndAvatarsVerified": true,
+  "duplicateQueuePrevented": true,
+  "cancelVerified": true,
+  "sameAuthoritativeRoom": true,
+  "sameResult": true,
+  "outcome": "Draw",
+  "privacyVerified": true,
+  "rounds": 3,
+  "serverLedgerVerified": true,
+  "refreshRestoresIdentityAndProfile": true
+}

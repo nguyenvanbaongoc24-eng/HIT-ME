@@ -4,30 +4,31 @@ import {readFileSync,mkdirSync} from 'node:fs';
 import {WebSocketServer,WebSocket} from 'ws';
 import {Store,catalog,modes} from './store.js';
 import {Rooms} from './rooms.js';
-export function createServer(store:Store,options:{tls?:{key:Buffer;cert:Buffer};allowedOrigins?:string[];proposedTimeout?:boolean}={}){
-  const rooms=new Rooms(store,undefined,options.proposedTimeout??true),clients=new Map<string,WebSocket>();
-  const handler:http.RequestListener=(req,res)=>{if(req.url==='/health'){res.writeHead(200,{'Content-Type':'application/json'});res.end(JSON.stringify({service:'hit-me',transport:options.tls?'wss':'ws-dev',players:clients.size}));}else{res.writeHead(404);res.end();}};
+import {supabaseVerifier,AuthProfile} from './supabase-auth.js';
+export function createServer(store:Store,options:{tls?:{key:Buffer;cert:Buffer};allowedOrigins?:string[];proposedTimeout?:boolean;verifyIdentity?:(token:unknown)=>Promise<AuthProfile>;requireIdentity?:boolean;minimumPlayers?:number;queueTimeoutMs?:number}={}){
+  const rooms=new Rooms(store,undefined,options.proposedTimeout??true,30000,options.minimumPlayers??2,options.queueTimeoutMs??120000),clients=new Map<string,WebSocket>();
+  const handler:http.RequestListener=(req,res)=>{if(req.url==='/health'){res.writeHead(200,{'Content-Type':'application/json'});res.end(JSON.stringify({service:'hit-me',version:'mobile-ux-v2',authConfigured:!!options.verifyIdentity,authRequired:!!options.requireIdentity,minimumPlayers:rooms.minimumPlayers,transport:options.tls?'wss':'ws-dev',players:clients.size}));}else{res.writeHead(404);res.end();}};
   const server=options.tls?https.createServer(options.tls,handler):http.createServer(handler);
   const wss=new WebSocketServer({noServer:true,maxPayload:8192});
   const defaultOrigins = ['http://127.0.0.1:8791','http://localhost:8791','https://hit-me-game.vercel.app'];
   server.on('upgrade',(req,socket,head)=>{const origin=req.headers.origin;if(req.url!=='/play'||origin&&!(options.allowedOrigins??defaultOrigins).includes(origin)){socket.destroy();return;}wss.handleUpgrade(req,socket,head,ws=>wss.emit('connection',ws,req));});
   const send=(ws:WebSocket,data:unknown)=>{if(ws.readyState===WebSocket.OPEN)ws.send(JSON.stringify(data));};
   const broadcast=()=>{for(const [id,ws] of clients)send(ws,{type:'state',room:rooms.snapshot(id),profile:store.profile(id),serverTime:Date.now()});};
-  wss.on('connection',ws=>{let player='';let alive=true;let budget=0;let windowStart=Date.now();const cache=new Map<string,unknown>();
-    const authTimeout=setTimeout(()=>{if(!player)ws.close(4001,'auth_required');},10000);
+  wss.on('connection',ws=>{let player='';let authPending=false;let identityToken='';let alive=true;let budget=0;let windowStart=Date.now();const cache=new Map<string,unknown>();
+    const authTimeout=setTimeout(()=>{if(!player)ws.close(4001,'auth_required');},25000);
     ws.on('pong',()=>{alive=true;});(ws as any).heartbeat=()=>{if(!alive){ws.terminate();return;}alive=false;ws.ping();};
-    ws.on('message',raw=>{let request='';try{if(Date.now()-windowStart>1000){budget=0;windowStart=Date.now();}if(++budget>40)throw Error('rate_limited');const m=JSON.parse(raw.toString());request=m.request;
+    ws.on('message',async raw=>{let request='';try{if(Date.now()-windowStart>1000){budget=0;windowStart=Date.now();}if(++budget>40)throw Error('rate_limited');const m=JSON.parse(raw.toString());request=m.request;
       if(typeof request!=='string'||request.length>80||request.length<1)throw Error('request_required');
       if(cache.has(request)){send(ws,cache.get(request));return;}
-      if(m.type==='hello'){if(player)throw Error('already_authenticated');const session=store.guest(m.name,m.token);player=session.id;const old=clients.get(player);clients.set(player,ws);if(old&&old!==ws)old.close(4002,'session_replaced');rooms.reconnect(player);clearTimeout(authTimeout);send(ws,{type:'welcome',request,...session,catalog,modes});}
+      if(m.type==='hello'){if(player)throw Error('already_authenticated');if(authPending)throw Error('auth_pending');authPending=true;let session;try{if(m.accessToken){if(!options.verifyIdentity)throw Error('auth_configuration_missing');const identity=await options.verifyIdentity(m.accessToken);session=store.authenticated(identity);identityToken=m.accessToken;}else{if(options.requireIdentity&&!m.token)throw Error('auth_required');session=store.guest(m.name,m.token);}}finally{authPending=false;}if(ws.readyState!==WebSocket.OPEN)return;player=session.id;const old=clients.get(player);clients.set(player,ws);if(old&&old!==ws)old.close(4002,'session_replaced');rooms.reconnect(player);clearTimeout(authTimeout);send(ws,{type:'welcome',request,...session,catalog,modes});}
       else {if(!player)throw Error('auth_required');switch(m.type){
         case 'create':rooms.create(player,true);break;case 'join':if(typeof m.code!=='string')throw Error('invalid_code');rooms.join(player,m.code);break;
-        case 'quick':rooms.quick(player);break;case 'ready':if(typeof m.ready!=='boolean')throw Error('invalid_ready');rooms.ready(player,m.ready);break;
+        case 'quick':if(m.version&&m.version!=="hitme-v1")throw Error("incompatible_version");rooms.quick(player);break;case 'ready':if(typeof m.ready!=='boolean')throw Error('invalid_ready');rooms.ready(player,m.ready);break;
         case 'leave':rooms.leave(player);break;case 'place':case 'aim':case 'lock':rooms.action(player,m.seq,m.type,m.value??null,m.round);break;
         case 'profile':{
           const room=rooms.membership.has(player)?rooms.room(player):null;
           if(room&&room.phase!=='Waiting')throw Error('match_started');
-          store.updateProfile(player,m.name,m.avatar);
+          if(identityToken&&options.verifyIdentity){const identity=await options.verifyIdentity(m.accessToken||identityToken);if("supabase:"+identity.id!==player)throw Error("invalid_session");identityToken=m.accessToken||identityToken;store.updateProfile(player,identity.name,identity.avatar);}else store.updateProfile(player,m.name,m.avatar);
           if(room){const member=room.players.find(p=>p.id===player)!;const profile=store.profile(player);member.name=profile.name;member.avatar=profile.avatar;}
           break;
         }
@@ -46,7 +47,9 @@ export function createServer(store:Store,options:{tls?:{key:Buffer;cert:Buffer};
 if(process.argv[1]?.endsWith('main.js')||process.argv[1]?.endsWith('main.ts')){
   mkdirSync('data',{recursive:true});const tls=process.env.TLS_CERT&&process.env.TLS_KEY?{cert:readFileSync(process.env.TLS_CERT),key:readFileSync(process.env.TLS_KEY)}:undefined;
   if(process.env.NODE_ENV==='production'&&!tls&&process.env.BEHIND_PROXY!=='true'&&process.env.RENDER!=='true')throw Error('WSS requires TLS_CERT and TLS_KEY');
-  const service=createServer(new Store(process.env.DB_PATH??'data/hitme.sqlite'),{tls,proposedTimeout:process.env.PROPOSED_TIMEOUT!=="false",allowedOrigins:process.env.ALLOWED_ORIGINS?.split(',')});
+  const authUrl=process.env.NEXT_PUBLIC_SUPABASE_URL,authKey=process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY;
+  const verifyIdentity=authUrl&&authKey?supabaseVerifier(authUrl,authKey):undefined;
+  const service=createServer(new Store(process.env.DB_PATH??'data/hitme.sqlite'),{tls,verifyIdentity,minimumPlayers:Number(process.env.QUICK_MATCH_MIN_PLAYERS??2),queueTimeoutMs:Number(process.env.QUICK_QUEUE_TIMEOUT_MS??120000),requireIdentity:process.env.NODE_ENV==="production",proposedTimeout:process.env.PROPOSED_TIMEOUT!=="false",allowedOrigins:process.env.ALLOWED_ORIGINS?.split(',')});
   const behindProxy=process.env.BEHIND_PROXY==='true'||process.env.RENDER==='true';
   if(!tls&&!behindProxy&&process.env.HOST&&!['127.0.0.1','localhost','::1'].includes(process.env.HOST))throw Error('Non-local listener requires WSS');
   const host=process.env.HOST??(behindProxy?'0.0.0.0':'127.0.0.1');

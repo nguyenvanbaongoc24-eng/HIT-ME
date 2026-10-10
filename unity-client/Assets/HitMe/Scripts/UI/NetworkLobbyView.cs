@@ -6,12 +6,13 @@ namespace HitMe.UI
 {
     public sealed class NetworkLobbyView:MonoBehaviour
     {
-        NetworkSession net;Transform content;Text info;InputField endpoint,code,guestInput;string page="lobby";bool weekly;int revision=-1;
+        NetworkSession net;Transform content;Text info;InputField code;string page="lobby";bool weekly;int revision=-1;
         string L(string key)=>Strings.Get(key);
         void RoomRoster(NetRoom room){
             B("copyRoomCode",170,()=>GUIUtility.systemCopyBuffer=room.code);
+            B("shareRoomInvite",120,()=>WebMobileBridge.ShareRoom(room.code));
             for(int i=0;i<room.players.Length;i++){
-                var player=room.players[i];float y=108-i*37;
+                var player=room.players[i];float y=70-i*37;
                 var portrait=R("LobbyPortrait"+i,y,32);portrait.sizeDelta=new Vector2(32,32);portrait.anchoredPosition+=new Vector2(-148,0);
                 var image=portrait.gameObject.AddComponent<Image>();image.sprite=CharacterCatalog.Load()?.ForSlot(player.avatar=="Char02_BotMale"?1:player.avatar=="Char03_BotFemale"?2:0)?.portrait;image.preserveAspect=true;image.raycastTarget=false;
                 var label=T("LobbyPlayer"+i,player.name+(player.id==room.owner?" · "+L("roomOwner"):"")+" · "+L(player.ready?"locked":"notReady")+(player.connected?"":" · "+L("networkDisconnected")),y,13,34);
@@ -27,12 +28,13 @@ namespace HitMe.UI
         InputField Input(string id,string value,float y){var r=R(id,y);r.gameObject.AddComponent<Image>().color=new Color(.24f,.20f,.16f);var input=r.gameObject.AddComponent<InputField>();var text=T(id+"Text",value,y);text.transform.SetParent(r,false);text.rectTransform.anchoredPosition=Vector2.zero;input.textComponent=text;input.characterLimit=256;input.text=value;return input;}
         void Build(){for(int i=content.childCount-1;i>=0;i--){content.GetChild(i).gameObject.SetActive(false);Destroy(content.GetChild(i).gameObject);}T("Title","HIT ME · "+L("online"),340,26);
             B("settings",290,()=>{Strings.Load(Strings.Language=="vi"?"en":"vi");Build();});
-            if(!net.Connected||net.Profile==null){endpoint=Input("Endpoint",NetworkEndpointSettings.Current,205);guestInput=Input("GuestName","Quest",145);B("connect",85,()=>{PlayerPrefs.SetString("NetworkEndpoint",endpoint.text);net.Connect(endpoint.text,guestInput.text);});info=T("NetworkStatus",L("guestDevelopment")+"\n"+net.ErrorText,-10,14,100);B("sceneMainMenu",-290,()=>SceneManager.LoadScene("MainMenu"));return;}
-            if(net.Room!=null){var room=net.Room;T("RoomCode",L("roomCode")+": "+room.code,220,22);RoomRoster(room);
-                info=T("RoomPhase",L("network"+room.phase)+"\n"+net.ErrorText,-126,13,36);B("ready",-180,()=>net.Command("ready",ready:!net.Self.ready));B("leaveRoom",-240,()=>net.Command("leave"));return;}
+            if(!net.Connected||net.Profile==null){net.EnsureConnected();info=T("NetworkStatus",L(net.ConnectionStatus),110,18,90);B("connectionRetry",0,()=>net.Connect(NetworkEndpointSettings.Current,PlayerPrefs.GetString("PlayerDisplayName",L("menuGuest"))));B("sceneMainMenu",-290,()=>SceneManager.LoadScene("MainMenu"));return;}
+            if(net.Room!=null){var room=net.Room;T("RoomCode",L("roomCode")+": "+room.code+" · "+room.players.Length+"/6",220,22);RoomRoster(room);
+                info=T("RoomPhase",L("network"+room.phase)+"\n"+net.ErrorText,-146,13,36);if(room.@private)B("ready",-180,()=>net.Command("ready",ready:!net.Self.ready));B("leaveRoom",-240,()=>net.Command("leave"));return;}
             if(page=="profile"){var p=net.Profile;var nickname=Input("Nickname",p.name,185);nickname.characterLimit=24;B("saveProfile",135,()=>net.SaveProfile(nickname.text,p.avatar));T("Profile",p.name+"\n"+L("level")+": "+p.level+" · XP "+p.xp+"\n"+L("coins")+": "+p.coins+"\n"+L("equipped")+": "+L("item"+p.equipped)+"\n"+L("history")+": "+(p.history?.Length??0),0,18,180);var avatar=R("ProfileAvatar",235,50);avatar.sizeDelta=new Vector2(50,50);var image=avatar.gameObject.AddComponent<Image>();image.sprite=HitMe.Characters.CharacterCatalog.Load()?.ForSlot(p.avatar=="Char02_BotMale"?1:p.avatar=="Char03_BotFemale"?2:0)?.portrait;image.preserveAspect=true;image.raycastTarget=false;string history="";if(p.history!=null)for(int i=0;i<System.Math.Min(3,p.history.Length);i++){var match=p.history[i];history+=L(match.outcome=="draw"?"draw":match.outcome=="win"?"victory":"defeat")+" · "+match.coins+" "+L("coins")+" · XP "+match.xp+"\n";}T("MatchHistory",history,-135,14,86);}
             else if(page=="inventory"){T("CosmeticNotice",L("cosmeticWeapon"),230,14);float y=175;foreach(var item in net.Profile.inventory){var captured=item;bool weapon=item.item=="chao"||item.item=="vot"||item.item=="dep-to-ong";if(weapon){var card=HitMeWidgetFactory.Create("HitMeWeaponCard",content);card.name="equip";var rect=card.GetComponent<RectTransform>();rect.sizeDelta=new Vector2(342,48);rect.anchoredPosition=new Vector2(0,FitY(y));card.title.rectTransform.sizeDelta=new Vector2(252,30);card.title.rectTransform.anchoredPosition=new Vector2(25,0);card.selection.GetComponent<RectTransform>().sizeDelta=new Vector2(6,40);card.icon.rectTransform.sizeDelta=new Vector2(32,32);card.detail.gameObject.SetActive(false);card.icon.rectTransform.anchoredPosition=new Vector2(-137,0);var weaponDef=CharacterCatalog.Load()?.ForSlot(item.item=="chao"?1:item.item=="vot"?2:0)?.defaultWeapon;card.Bind(L("item"+item.item)+" × "+item.quantity,null,weaponDef?.heldSprite);card.activated.AddListener(()=>net.Command("equip",captured.item));card.SetState(net.Profile.equipped==item.item?WidgetState.Selected:WidgetState.Normal);}else T("MapCollectible",L("map"+item.item)+" × "+item.quantity,y);y-=48;if(y< -210)break;}}
             else if(page=="quests"){float y=225;foreach(var q in net.Profile.quests){if((q.period.Length!=10)!=weekly)continue;var captured=q;B("claimQuest",y,()=>net.Claim(captured));content.GetChild(content.childCount-1).GetComponentInChildren<Text>().text=L("questEvent"+q.kind)+" "+q.progress+"/"+q.target+" · "+L("quest"+q.state);y-=60;}T("QuestNote",L("questPayoutPending"),-110,13,60);B("weeklyQuests",-180,()=>{weekly=!weekly;Build();});}
+            else if(page=="private"){T("PrivateRoomActions",L("menuPrivate"),225,22);B("createRoom",145,()=>net.Command("create"));code=Input("RoomCodeInput","",65);code.characterLimit=8;B("joinRoom",-5,()=>net.Command("join",code.text.Trim()));}
             else{T("ProfileSummary",net.Profile.name+" · "+L("coins")+" "+net.Profile.coins,235,18);B("quickMatch",165,()=>net.Command("quick"));B("createRoom",110,()=>net.Command("create"));code=Input("RoomCodeInput","",55);code.characterLimit=8;B("joinRoom",0,()=>net.Command("join",code.text.Trim()));B("profile",-65,()=>{page="profile";Build();});B("inventory",-120,()=>{page="inventory";Build();});B("dailyQuests",-175,()=>{page="quests";Build();});}
             info=T("Error",net.ErrorText,-245,12);B("back",-300,()=>{if(page!="lobby"){page="lobby";Build();}else SceneManager.LoadScene("MainMenu");});}
         void Update(){if(net==null)return;if(net.Room!=null&&net.Room.phase!="Waiting"&&net.Room.phase!="Countdown"){net.OnlineBattle=true;SceneManager.LoadScene("Battle");return;}
@@ -40,7 +42,7 @@ namespace HitMe.UI
             // State updates at 10 Hz; rebuild only when room or displayed values change.
             string fingerprint=(net.Room?.id??"")+"|"+(net.Room?.phase??"")+"|"+JsonUtility.ToJson(net.Profile)+"|"+net.Error+"|"+page;
             if(net.Room?.players!=null)foreach(var p in net.Room.players)fingerprint+="|"+p.id+p.name+p.avatar+p.ready+p.connected;
-            if(fingerprint!=lastFingerprint){lastFingerprint=fingerprint;if(net.Room!=null||net.Profile!=null)Build();else if(info!=null)info.text=L("guestDevelopment")+"\n"+net.ErrorText;}}
+            if(fingerprint!=lastFingerprint){lastFingerprint=fingerprint;if(net.Room!=null||net.Profile!=null)Build();else if(info!=null)info.text=L(net.ConnectionStatus)+"\n"+net.ErrorText;}}
         string lastFingerprint="";
     }
 }

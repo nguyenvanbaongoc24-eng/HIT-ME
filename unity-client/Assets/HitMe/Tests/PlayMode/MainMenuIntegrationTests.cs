@@ -11,6 +11,9 @@ using HitMe.UI;
 using HitMe.Characters;
 namespace HitMe.Tests {
 public sealed class MainMenuIntegrationTests {
+ string savedEndpoint;
+ [UnitySetUp]public IEnumerator IsolateLiveBroadcast(){savedEndpoint=PlayerPrefs.GetString("NetworkEndpoint","");PlayerPrefs.SetString("NetworkEndpoint","ws://127.0.0.1:1/play");if(NetworkSession.Instance!=null)Object.Destroy(NetworkSession.Instance.gameObject);yield return null;}
+ [UnityTearDown]public IEnumerator RestoreEndpoint(){PlayerPrefs.SetString("NetworkEndpoint",savedEndpoint);if(NetworkSession.Instance!=null)Object.Destroy(NetworkSession.Instance.gameObject);yield return null;}
  static Rect Bounds(RectTransform r){var c=new Vector3[4];r.GetWorldCorners(c);return Rect.MinMaxRect(c[0].x,c[0].y,c[2].x,c[2].y);}
  static Button Button(Transform root,string path)=>root.Find(path).GetComponent<Button>();
  [UnityTest]public IEnumerator MenuSevenSizesSafeAreaLocalizationAndNavigation(){
@@ -33,7 +36,7 @@ public sealed class MainMenuIntegrationTests {
   view.Practice();yield return null;int before=OfflineRunContext.Settings.BotCount;Button(view.Content,"MenuModal/Panel/BotCount").onClick.Invoke();yield return null;Assert.AreNotEqual(before,OfflineRunContext.Settings.BotCount);view.CloseModal();
   view.Maps();yield return null;Button(view.Content,"MenuModal/Panel/Map2").onClick.Invoke();yield return null;Button(view.Content,"MenuModal/Panel/ConfirmMap").onClick.Invoke();yield return null;Assert.AreEqual(2,ArenaMaps.Selected);view.CloseModal();ArenaMaps.Selected=0;
   Button(view.Content,"SecondaryFeatures/Ranking").onClick.Invoke();yield return null;Assert.IsTrue(view.Content.Find("MenuModal/Panel/Message").GetComponent<TextMeshProUGUI>().text.Contains("Coming soon"));view.CloseModal();
-  Button(view.Content,"PrimaryActions/QuickMatch").onClick.Invoke();yield return null;Assert.IsNotNull(view.Content.Find("MenuModal/Panel/Connect"));Button(view.Content,"MenuModal/Panel/Cancel").onClick.Invoke();yield return null;Assert.IsTrue(Button(view.Content,"PrimaryActions/QuickMatch").interactable);
+  Button(view.Content,"PrimaryActions/QuickMatch").onClick.Invoke();yield return null;Assert.IsNull(view.Content.Find("MenuModal/Panel/Endpoint"));Assert.IsNotNull(view.Content.Find("MenuModal/Panel/CancelSearch"));Button(view.Content,"MenuModal/Panel/CancelSearch").onClick.Invoke();yield return null;Assert.IsTrue(Button(view.Content,"PrimaryActions/QuickMatch").interactable);
   // A fixture snapshot verifies binding only; no development data is embedded in the product UI.
   var net=NetworkSession.Instance;net.Receive("{\"type\":\"state\",\"profile\":{\"id\":\"fixture\",\"name\":\"Fixture Profile\",\"level\":4,\"coins\":217,\"xp\":321,\"avatar\":\"Char01_Player\",\"equipped\":\"chao\"}}");yield return null;yield return null;
   Assert.AreEqual("217",view.Content.Find("PlayerStatusWidget/CurrencyWidget").GetComponent<TextMeshProUGUI>().text);Assert.AreEqual("Fixture Profile",view.Content.Find("PlayerStatusWidget/PlayerName").GetComponent<TextMeshProUGUI>().text);
