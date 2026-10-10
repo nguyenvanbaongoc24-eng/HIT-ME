@@ -23,7 +23,7 @@
 | Public cross-device multiplayer | BLOCKED | Public WSS host, TLS and deployment access missing. Local tests are not public proof |
 | Lobby portraits and room-code copy | PASS | Reused UI Kit, canonical portraits, names/owner/Ready, six bounded roster rows; Unity actual-server profile test |
 | Versioned existing trial rewards | PASS | trial-v1 recorded in idempotent SQLite ledger; additive legacy-schema upgrade and duplicate/reopen preservation tested |
-| New beta reward production activation | BLOCKED | beta-v1 recorded disabled; daily cap, tie/draw and elimination-credit rules unresolved; existing amounts preserved |
+| New beta reward production activation | BLOCKED | beta-v1 recorded disabled; daily cap confirmed at 50 Xu/day; tie and elimination-credit rules unresolved; draw confirmed as 20 completion + 30 first place; existing amounts preserved |
 | Temporary WAV import and audio settings | PASS | 20 imported clips; master/SFX/music sliders + mute saved; resource references/settings/dedup tested |
 | Audio production quality / device listening | NOT_TESTED | Source pack explicitly synthetic placeholders; no auditory quality certification or iOS gesture/resume verification |
 | Match statistics counters | PASS | Throws/hits/misses/received from confirmed resolver results; backend conservation/dedup tests; offline result screenshot |
@@ -48,7 +48,7 @@ Exact created/modified paths are listed in `RELEASE_CHANGED_FILES.json`; the sta
 - Lobby renders portraits and names, updates its fingerprint when profile presentation changes, and exposes Copy room code. Existing all-ready auto-start behavior preserved; no new host-start rule inferred.
 - Server accumulates confirmed throw/hit/miss/received counters, publishes them at MatchResult only. Offline presentation accumulates the same categories without changing OfflineMatch. Elimination credit/rank tie rules are not inferred. Server result UI shows missing reward as a dash, not a fabricated zero grant.
 - Reused OfflineResultView adds actual counters, readable existing clean background and explicit no-permanent-offline-rewards notice. The composite Match Result.png remains reference-only; full podium/stat styling is not completed.
-- Existing trial payout values unchanged: win 100/50 XP, lose 40/20, draw 65/30; private trial cap unchanged. trial-v1 ledger metadata added safely; beta-v1 proposal (+20 participation, +30/+15/+10 rank, +5 elimination) remains disabled with unresolved rules null.
+- Existing trial payout values unchanged: win 100/50 XP, lose 40/20, draw 65/30; private trial cap unchanged. trial-v1 ledger metadata added safely; beta-v1 proposal (+20 participation, +30/+15/+10 rank, +5 elimination) remains disabled; user confirmed dailyCurrencyCap=50. Draw confirmed as 20 completion + 30 first place (before daily cap). Tie and elimination-credit rules remain unresolved; “cho cả hai” requires clarification.
 - Current local SQLite database backed up under ignored data/backups before the additive ledger upgrade. No Supabase database modified.
 
 ## Imported audio and actual bindings
@@ -103,6 +103,6 @@ Production remains blocked until:
 - Correct Supabase Project URL/public key for the same project; revoke the secret exposed in chat and put a replacement directly on the backend host. Then inspect live schema/data, anonymous-auth setting and RLS before any reviewed migration/adapter integration.
 - Access to the Vercel account/team/project owning HIT ME and the requested alias.
 - Persistent public backend host/deployment credentials, public WSS URL and valid TLS/origin configuration; verify two devices end-to-end, then 3–6 participants.
-- Confirmed tie/draw/elimination-credit/daily-cap rules and missing artwork/audio exports.
+- Confirmed tie/draw/elimination-credit rules and missing artwork/audio exports.
 
 No public multiplayer completion, Supabase persistence, physical-device compatibility, production visual completion or full production release is claimed.
