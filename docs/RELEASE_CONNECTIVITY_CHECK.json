@@ -13,6 +13,13 @@
     "projectAccessible": false,
     "status": 404
   },
+  "renderBackend": {
+    "service": "hit-me-server",
+    "status": 200,
+    "url": "https://hit-me-zj17.onrender.com/health",
+    "wss": "wss://hit-me-zj17.onrender.com/play",
+    "verified": true
+  },
   "localBackend": {
     "service": "hit-me",
     "transport": "ws-dev",
